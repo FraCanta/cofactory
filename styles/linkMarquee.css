@@ -4,7 +4,7 @@
   height: 8.5vw;
   overflow: hidden;
   position: relative;
-  z-index: 999;
+  z-index: 5;
 }
 /* nested div inside the container */
 .content2 {
