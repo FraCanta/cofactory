@@ -30,13 +30,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .marquee {
+  .marquee2 {
     font-size: 10vw;
 
     height: 12vw;
   }
 
-  .marquee span {
+  .marquee2 span {
     width: 40%;
   }
 }
