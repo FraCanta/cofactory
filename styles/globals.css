@@ -144,3 +144,10 @@ a {
 .lineMask p {
   margin: 0px;
 }
+
+@media screen and (max-width: 768px) {
+  .toggle {
+    width: 32px;
+    height: 18px;
+  }
+}

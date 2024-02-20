@@ -3,7 +3,7 @@ import { motion, Transition } from "framer-motion";
 
 const MenuButton = ({
   isOpen = false,
-  width = 24,
+  width = 40,
   height = 24,
   strokeWidth = 1,
 

@@ -71,7 +71,7 @@ const Navbar = ({ lang }) => {
               isOpen={isOpen}
               onClick={() => setOpen(!isOpen)}
               strokeWidth="3"
-              className="stroke-white dark:stroke-third"
+              className="stroke-white dark:stroke-third toggle"
               transition={{ ease: "easeOut", duration: 0.2 }}
               width="40"
               height="20"
