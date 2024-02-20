@@ -1,0 +1,42 @@
+.marquee2 {
+  font-size: 6vw;
+  color: #fff;
+  height: 8.5vw;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+}
+/* nested div inside the container */
+.content2 {
+  display: block;
+  width: 200%;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 12s linear infinite;
+}
+/* span with text */
+.marquee2 span {
+  float: left;
+  width: 25%;
+}
+/* keyframe */
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .marquee {
+    font-size: 10vw;
+
+    height: 12vw;
+  }
+
+  .marquee span {
+    width: 40%;
+  }
+}

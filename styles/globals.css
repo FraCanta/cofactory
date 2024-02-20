@@ -3,25 +3,144 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: #1b1b1c;
+  --logo1: #368b90;
+  --logo2: #bb5471;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@layer base {
+  body {
+    @apply dark:bg-white;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 834px) {
+  .bg-blur {
+    -webkit-filter: blur(180px); /* Ridotto il valore del blur */
+    filter: blur(180px); /* Ridotto il valore del blur */
+  }
+
+  .bg-blur .bg-circle {
+    top: 30%;
+  }
+
+  .bg-blur .bg-circle._4 {
+    margin-top: 30%;
+    margin-right: 10%;
+  }
+}
+
+/* Marquee styles */
+.marquee {
+  --gap: 6rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: fit-content;
+}
+
+.marquee__content .logo {
+  width: 120px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.active {
+  color: var(--red);
+}
+/* Enable animation */
+.enable-animation .marquee__content {
+  animation: scroll 8s linear infinite;
+}
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: fit-content;
+}
+
+/* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+.marquee--pos-absolute .marquee__content:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Enable position absolute animation on the duplicate content (last-child) */
+.enable-animation .marquee--pos-absolute .marquee__content:last-child {
+  animation-name: scroll-abs;
+}
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Other page demo styles */
+.marquee__content > * {
+  flex: 0 0 auto;
+  color: var(--main);
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.eapps-widget-toolbar {
+  display: none !important;
+}
+
+.huflDf {
+  display: none !important;
+}
+
+.bNlWwC {
+  margin-left: 0 !important;
+}
+
+.Main__Container-sc-1w4nyzp-0 .kzANES .es-main-container a {
+  display: none !important;
+}
+
+.lineMask {
+  overflow: hidden;
+}
+
+.lineMask p {
+  margin: 0px;
 }

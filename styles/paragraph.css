@@ -1,0 +1,24 @@
+.paragraph {
+  display: flex;
+  font-size: 40px;
+  max-width: 1280px;
+  flex-wrap: wrap;
+  line-height: 1.4;
+}
+
+.paragraph .word {
+  position: relative;
+  margin-right: 12px;
+  /* margin-top: 12px; */
+}
+
+.paragraph .word .shadow {
+  position: absolute;
+  opacity: 20%;
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph {
+    font-size: 25px;
+  }
+}

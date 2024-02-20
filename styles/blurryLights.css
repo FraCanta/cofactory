@@ -1,0 +1,47 @@
+.shape {
+  margin: 0 auto;
+  aspect-ratio: 1;
+  --width: 100%;
+  --scale: 1;
+  --opacity: 0.85;
+  --top: 0;
+  --left: 0;
+  --path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  --background: linear-gradient(#bb5471, #bb5471, #368b90, #368b90);
+  --offset: 0deg;
+  --speed: 200000ms;
+  clip-path: var(--path);
+  background: var(--background);
+  scale: var(--scale);
+  opacity: var(--opacity);
+  width: var(--width);
+  top: var(--top);
+  left: var(--left);
+  rotate: var(--offset);
+  mix-blend-mode: difference;
+  animation: turn var(--speed) linear forwards infinite;
+}
+@keyframes turn {
+  to {
+    rotate: calc(var(--offset) + 1turn);
+  }
+}
+
+.blur-container {
+  --blur: 40px;
+  filter: blur(var(--blur));
+  width: 100%;
+
+  display: grid;
+  overflow: hidden;
+}
+.blur-container > * {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+@media screen and (max-width: 850px) {
+  .shape {
+    scale: 3.5;
+  }
+}
