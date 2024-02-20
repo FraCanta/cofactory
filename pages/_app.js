@@ -4,10 +4,14 @@ import "@/styles/blurryLights.css";
 import "@/styles/line.css";
 import "@/styles/linkMarquee.css";
 import "@/styles/paragraph.css";
+import { ThemeProvider } from "next-themes";
+
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider attribute="class">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
