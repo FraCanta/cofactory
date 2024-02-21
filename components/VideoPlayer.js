@@ -22,7 +22,7 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative h-[50vh] lg:h-[80vh] w-full">
       <video
         id="videoPlayer"
         className="h-full w-full object-cover"
@@ -36,12 +36,12 @@ const VideoPlayer = () => {
       </video>
       {!isPlaying && (
         <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FAB02C] rounded-full p-8"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FAB02C] rounded-full p-6 lg:p-8"
           onClick={togglePlay}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-16 w-16 text-white opacity-75 hover:opacity-100 transition-opacity cursor-pointer"
+            className="h-8 w-8 lg:h-16 lg:w-16 text-white opacity-75 hover:opacity-100 transition-opacity cursor-pointer"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
