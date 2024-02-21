@@ -42,7 +42,7 @@ const SingleCases = () => {
             </div>
           </div>
 
-          <div className="h-full justify-between items-start lg:items-end flex flex-col">
+          <div className="h-full justify-between items-start lg:items-end flex flex-col gap-y-4">
             <h2 className="text-second text-[21.84px] font-normal font-['Sneak'] lowercase leading-[24.91px]">
               si sono conosciuti nel
             </h2>
@@ -94,8 +94,11 @@ const SingleCases = () => {
               storico marchio italiano di cioccolata.
             </p>
           </div>
-          <div className="h-[50vh] lg:h-[80vh] w-auto relative">
-            {/* <video src={require("./milka_video.mp4")} /> */}
+          <div className="h-[50vh] lg:h-[90vh] w-auto relative">
+            <video controls className="h-full w-full object-cover">
+              <source src="/assets/video/milka_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <Image src={Grid1} alt="" className="aspect-square object-cover" />
