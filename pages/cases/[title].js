@@ -13,6 +13,7 @@ import Grid5 from "@/public/assets/cases/milka4.jpg";
 import Grid6 from "@/public/assets/cases/milka5.jpg";
 import Pacchetti from "@/public/assets/cases/prova_valigette.png";
 import Line from "@/components/Line";
+import VideoPlayer from "@/components/VideoPlayer";
 const SingleCases = () => {
   return (
     <>
@@ -26,7 +27,7 @@ const SingleCases = () => {
       </div>
       <BlurryLights />
 
-      <section className="lg:py-[100px] text-white flex flex-col justify-center gap-y-[50px]">
+      <section className="pb-[50px] lg:py-[100px] text-white flex flex-col justify-center gap-y-[50px]">
         <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2">
           <div className="justify-between items-center flex">
             <div className="dark:text-third text-white text-[9vw] lg:text-[4vw] font-['ITC Clearface Std'] leading-[83.41px] flex items-center gap-4">
@@ -83,7 +84,7 @@ const SingleCases = () => {
           <div className="h-[50vh] lg:h-[80vh] w-auto relative">
             <Image src={Tablet} alt="" className="h-full w-full object-cover" />
           </div>
-          <div className="text-center font-medium leading-10 py-14 flex flex-col gap-6">
+          <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
             <h3 className="dark:text-third text-white text-[40px]">
               Quando i premi fanno gola a tutti!
             </h3>
@@ -94,12 +95,7 @@ const SingleCases = () => {
               storico marchio italiano di cioccolata.
             </p>
           </div>
-          <div className="h-[50vh] lg:h-[90vh] w-auto relative">
-            <video controls className="h-full w-full object-cover">
-              <source src="/assets/video/milka_video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <VideoPlayer />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <Image src={Grid1} alt="" className="aspect-square object-cover" />
             <Image src={Grid2} alt="" className="aspect-square object-cover" />
