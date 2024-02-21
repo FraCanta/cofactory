@@ -22,10 +22,10 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div className="relative h-[50vh] lg:h-[80vh] w-full">
+    <div className="relative h-[50vh] lg:h-screen fxl:h-[90vh] w-full">
       <video
         id="videoPlayer"
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover rounded-[15px]"
         onClick={togglePlay}
         autoPlay
         loop

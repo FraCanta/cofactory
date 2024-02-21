@@ -5,6 +5,7 @@ import Line from "@/components/Line";
 import Marquee from "@/components/Marquee/Marquee";
 import LavoriSec from "@/components/LavoriSec";
 import LinkMarquee from "@/components/LinkMarquee";
+import Head from "next/head";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Sneak-Regular.ttf" });
@@ -12,6 +13,9 @@ const myFont2 = localFont({ src: "../fonts/Sneak-Regular.ttf" });
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>Cofactory - Home</title>
+      </Head>
       <Hero>
         <h1
           className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}

@@ -4,6 +4,7 @@ import React from "react";
 import localFont from "next/font/local";
 import { IoChevronDownOutline } from "react-icons/io5";
 import Image from "next/image";
+import Link from "next/link";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 
@@ -32,12 +33,14 @@ const Works = () => {
       <div className="flex flex-col gap-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6  w-[90%] mx-auto ">
           <div className="relative aspect-square">
-            <Image
-              src="/assets/works/milka.png"
-              alt=""
-              fill
-              className="object-cover rounded-[15px] "
-            />
+            <Link href="/cases/milka">
+              <Image
+                src="/assets/works/milka.png"
+                alt=""
+                fill
+                className="object-cover rounded-[15px] "
+              />
+            </Link>
           </div>
           <div className="relative">
             {" "}
