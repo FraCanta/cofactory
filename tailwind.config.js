@@ -39,6 +39,7 @@ module.exports = {
       second: "#368b90",
       third: "#1b1b1c",
       white: "#ffffff",
+      yellow: "#daa444",
     },
   },
   plugins: [],

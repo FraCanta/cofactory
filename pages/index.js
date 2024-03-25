@@ -62,7 +62,7 @@ const Home = () => {
       <div className="w-[90%] mx-auto mt-10">
         <Line />
       </div>
-      <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen gap-8 md:gap-10 ">
+      <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white dark:text-third min-h-screen gap-8 md:gap-10 ">
         <Chat />
         <div className="flex flex-col gap-8 py-6 p-0 md:p-8">
           <h2 className={`${myFont.className} text-4xl lg:text-7xl`}>

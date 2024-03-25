@@ -45,7 +45,7 @@ const Chat = () => {
   const personColors = {
     person1: "pink",
     person2: "second",
-    person3: "white",
+    person3: "yellow",
     // Aggiungi altri colori per altre persone se necessario
   };
 
