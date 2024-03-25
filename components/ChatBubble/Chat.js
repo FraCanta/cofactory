@@ -10,7 +10,7 @@ const Chat = () => {
     },
     {
       message:
-        "Ciao [Brand A]! Anch'io sono contento di incontrarti! Ho sentito parlare molto bene di te e delle tue iniziative. Come posso aiutarti?",
+        "Ciao [Brand A]! Anch'io sono contento di incontrarti ! Ho sentito parlare molto bene di te e delle tue iniziative. Come posso aiutarti?",
       sender: "person2",
     },
     {
@@ -24,6 +24,9 @@ const Chat = () => {
       sender: "person2",
     },
     { message: "Hi bitches!", sender: "person3" },
+    { message: "Ciao", sender: "person2" },
+    { message: "Ciao", sender: "person1" },
+    { message: "Conoscete Cofactory?", sender: "person3" },
   ]);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [ref, inView] = useInView();
@@ -34,22 +37,22 @@ const Chat = () => {
         setCurrentMessageIndex((prevIndex) =>
           prevIndex < messages.length - 1 ? prevIndex + 1 : prevIndex
         );
-      }, 2000); // Delay between displaying messages in milliseconds
+      }, 1500); // Delay between displaying messages in milliseconds
       return () => clearTimeout(timeout);
     }
   }, [inView, currentMessageIndex, messages]);
 
   const personColors = {
-    person1: "bg-pink",
-    person2: "bg-second",
-    person3: "bg-white",
+    person1: "pink",
+    person2: "second",
+    person3: "white",
     // Aggiungi altri colori per altre persone se necessario
   };
 
   return (
     <div
       ref={ref}
-      className="discussion w-full mx-auto flex flex-col gap-6  max-w-full p-0 md:p-8 min-h-[80vh] snap-center "
+      className="discussion w-full mx-auto flex flex-col gap-6  max-w-full p-0 md:p-8 min-h-[90vh] snap-center "
     >
       {inView &&
         messages

@@ -62,20 +62,20 @@ const Home = () => {
       <div className="w-[90%] mx-auto mt-10">
         <Line />
       </div>
-      <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-[90vh] gap-10 bg-gray items-center">
+      <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-screen gap-8 md:gap-10 ">
         <Chat />
-        <div className="flex flex-col gap-8">
-          <h2 className="text-4xl lg:text-7xl">
+        <div className="flex flex-col gap-8 py-6 p-0 md:p-8">
+          <h2 className={`${myFont.className} text-4xl lg:text-7xl`}>
             Testo accattivante da mettere qui
           </h2>
-          <p className="text-xl lg:text-2xl">
+          <p className={`${myFont2.className} text-xl`}>
             un paragrafo che spieghi velocemente cosa avrebbero da guadagnarci e
             invitandoli a contattarvi. Un testo che arrivi fino al max il terzo
             rigo!
           </p>
           <Link
             href="/contatti"
-            className="flex gap-1 items-center text-xl uppercase hover:text-second"
+            className={`${myFont2.className} flex gap-1 items-center text-xl uppercase hover:text-second font-bold`}
             target="_blank"
           >
             contattaci <PiArrowUpRightThin />

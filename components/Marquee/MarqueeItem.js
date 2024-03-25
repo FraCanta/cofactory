@@ -67,7 +67,7 @@ const MarqueeItem = () => {
           key={index}
           src={imagePath}
           alt={`Image ${index + 1}`}
-          className="inline-block mr-[64px] w-[150px] h-[100px] object-contain"
+          className="inline-block mr-[64px] w-[150px] h-[100px] object-contain "
           animate={controls}
           custom={index} // Aggiungi un valore custom per distinguere le immagini
           transition={{ duration: 30, ease: "easeOut" }} // Transizione fluida durante la pausa

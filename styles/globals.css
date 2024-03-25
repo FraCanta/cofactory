@@ -13,6 +13,16 @@
   margin: 0;
 }
 
+@layer utilities {
+  .bg-pattern {
+    background-image: url("../public/assets/pattern.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: bottom right;
+  }
+}
+
 @layer base {
   body {
     @apply dark:bg-white;
