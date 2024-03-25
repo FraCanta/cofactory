@@ -62,7 +62,7 @@ const Home = () => {
       <div className="w-[90%] mx-auto mt-10">
         <Line />
       </div>
-      <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-[90vh] gap-10 ">
+      <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-[90vh] gap-10 bg-gray items-center">
         <Chat />
         <div className="flex flex-col gap-8">
           <h2 className="text-4xl lg:text-7xl">

@@ -49,7 +49,7 @@ const Chat = () => {
   return (
     <div
       ref={ref}
-      className="discussion w-full mx-auto flex flex-col gap-6  max-w-full p-8 min-h-[60vh] snap-center "
+      className="discussion w-full mx-auto flex flex-col gap-6  max-w-full p-0 md:p-8 min-h-[80vh] snap-center "
     >
       {inView &&
         messages
