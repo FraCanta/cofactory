@@ -55,7 +55,7 @@ function Footer() {
         <div className="flex items-end">Privacy Policy</div>
         <div></div>
         <div
-          className={`${myFont2.className} flex gap-8 text-[6vw] lg:text-[1.5vw] flex items-end`}
+          className={`${myFont2.className} flex gap-8 text-[6vw] lg:text-[1.5vw]  items-end`}
         >
           <Link
             href="https://www.google.com/"

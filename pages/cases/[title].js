@@ -1,7 +1,7 @@
 import Hero from "@/components/layout/Hero";
 import Image from "next/image";
 import React from "react";
-import CasoImg from "@/public/assets/cases/cover_milka.jpg";
+import CasoImg from "@/public/assets/cases/cover_milka.png";
 import BlurryLights from "@/components/layout/BlurryLights";
 import Icona from "@/public/assets/logo/per.svg";
 import Tablet from "@/public/assets/cases/milka1.jpg";
@@ -16,7 +16,7 @@ import Line from "@/components/Line";
 import VideoPlayer from "@/components/VideoPlayer";
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
-const myFont2 = localFont({ src: "../../fonts/Sneak-Regular.ttf" });
+const myFont2 = localFont({ src: "../../fonts/Raleway-Regular.ttf" });
 
 const SingleCases = () => {
   return (
@@ -26,14 +26,14 @@ const SingleCases = () => {
           src={CasoImg}
           alt=""
           fill
-          className="absolute top-0 left-0 object-cover !h-[75vh] lg:!h-[90vh] object-center"
+          className="absolute top-0 left-0 object-cover !h-[75vh] lg:!h-[100vh] "
         />
       </div>
       <BlurryLights />
 
-      <section className="pb-[50px] lg:py-[100px] text-white flex flex-col justify-center gap-y-[50px]">
-        <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div className="justify-between items-center flex">
+      <section className="pb-[50px] lg:py-[200px] text-white flex flex-col lg:flex-row justify-between  w-[90%] mx-auto gap-32">
+        <div className=" grid grid-cols-1  gap-4">
+          <div className="justify-between  flex flex-col">
             <div
               className={`${myFont.className} dark:text-third text-white text-[10vw] lg:text-[5vw] leading-[83.41px] flex items-center gap-4`}
             >
@@ -48,21 +48,6 @@ const SingleCases = () => {
               Toys Center{" "}
             </div>
           </div>
-
-          <div className="h-full justify-between items-start lg:items-end flex flex-col gap-y-4">
-            <h2
-              className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-[1.2vw] font-normal lowercase leading-[24.91px]`}
-            >
-              si sono conosciuti nel
-            </h2>
-            <h3
-              className={`${myFont2.className} dark:text-third text-white text-[21.84px] font-normal uppercase leading-[24.91px]`}
-            >
-              Natale 2023{" "}
-            </h3>
-          </div>
-        </div>
-        <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-y-[30px]">
           <div className="justify-between items-center flex ">
             <p
               className={`${myFont2.className} dark:text-third text-white text-[5vw] md:text-[3vw] lg:text-[1.8vw] 2xl:text-[1.3vw] 2xl:leading-[2.5vw]  flex  gap-4 h-full`}
@@ -75,15 +60,24 @@ const SingleCases = () => {
               Milka.
             </p>
           </div>
-
-          <div className="h-full justify-between items-start lg:items-end flex flex-col gap-y-4">
+        </div>
+        <div className="w-[90%] mx-auto grid grid-cols-1  gap-y-[30px]">
+          <div className="h-full justify-between  flex flex-col gap-y-4">
             <h2
               className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-[1.2vw] font-normal lowercase leading-[24.91px]`}
             >
-              si sono incontrati su
+              partner nel
             </h2>
+            <h3
+              className={`${myFont2.className} dark:text-third text-white text-[21.84px] font-normal uppercase leading-[24.91px]`}
+            >
+              Natale 2023{" "}
+            </h3>
+          </div>
+
+          <div className="h-full justify-between items-start flex flex-col gap-y-4">
             <ul
-              className={`${myFont2.className} flex flex-col gap-2 dark:text-third text-white lg:text-right text-[5vw] md:text-[3vw] lg:text-[1vw]`}
+              className={`${myFont2.className} flex  gap-2 dark:text-third text-white  text-[5vw] md:text-[3vw] lg:text-[1vw]`}
             >
               <li>box valigetta</li>
               <li>spot tv</li>

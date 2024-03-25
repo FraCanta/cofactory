@@ -5,7 +5,7 @@ import React from "react";
 import localFont from "next/font/local";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
-const myFont2 = localFont({ src: "../fonts/Sneak-Regular.ttf" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import { TbRectangleVerticalFilled } from "react-icons/tb";
 
 const paragraph =
@@ -41,7 +41,7 @@ const Factory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] mx-auto gap-y-6">
           <div>
             <h2
-              className={`${myFont.className} text-[25px] dark:text-third text-white uppercase flex items-center gap-1`}
+              className={`${myFont.className} text-[22px] dark:text-third text-white uppercase flex items-center gap-1`}
             >
               <TbRectangleVerticalFilled className="text-pink" /> Values
             </h2>
@@ -52,7 +52,7 @@ const Factory = () => {
           <div>
             {" "}
             <h2
-              className={`${myFont.className} text-[25px] dark:text-third text-white uppercase flex items-center gap-1`}
+              className={`${myFont.className} text-[22px] dark:text-third text-white uppercase flex items-center gap-1`}
             >
               <TbRectangleVerticalFilled className="text-second" /> Green
               Passion

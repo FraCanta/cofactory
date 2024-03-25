@@ -6,9 +6,12 @@ import Marquee from "@/components/Marquee/Marquee";
 import LavoriSec from "@/components/LavoriSec";
 import LinkMarquee from "@/components/LinkMarquee";
 import Head from "next/head";
+import Chat from "@/components/ChatBubble/Chat";
+import Link from "next/link";
+import { PiArrowUpRightThin } from "react-icons/pi";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
-const myFont2 = localFont({ src: "../fonts/Sneak-Regular.ttf" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
 const Home = () => {
   return (
@@ -58,6 +61,26 @@ const Home = () => {
       </div>
       <div className="w-[90%] mx-auto mt-10">
         <Line />
+      </div>
+      <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white min-h-[90vh] gap-10 ">
+        <Chat />
+        <div className="flex flex-col gap-8">
+          <h2 className="text-4xl lg:text-7xl">
+            Testo accattivante da mettere qui
+          </h2>
+          <p className="text-xl lg:text-2xl">
+            un paragrafo che spieghi velocemente cosa avrebbero da guadagnarci e
+            invitandoli a contattarvi. Un testo che arrivi fino al max il terzo
+            rigo!
+          </p>
+          <Link
+            href="/contatti"
+            className="flex gap-1 items-center text-xl uppercase hover:text-second"
+            target="_blank"
+          >
+            contattaci <PiArrowUpRightThin />
+          </Link>
+        </div>
       </div>
     </>
   );

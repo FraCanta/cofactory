@@ -1,5 +1,5 @@
 import Link from "next/link";
-const myFont2 = localFont({ src: "../fonts/Sneak-Regular.ttf" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import localFont from "next/font/local";
 
 const LinkMarquee = () => {
