@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import localFont from "next/font/local";
+const myFont2 = localFont({ src: "../../fonts/Raleway-Regular.ttf" });
 
 function ChatBubble({ message, sender, color, index }) {
   const isEven = index % 2 === 0;
@@ -11,7 +13,7 @@ function ChatBubble({ message, sender, color, index }) {
 
   return (
     <motion.div
-      className={`bubble p-3 max-w-[80%] ${bubbleStyles}`}
+      className={`${myFont2.className} bubble p-3 max-w-[80%] ${bubbleStyles}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
