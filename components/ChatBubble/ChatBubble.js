@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function ChatBubble({ message, sender, color, index }) {
   const isEven = index % 2 === 0;
-  const bubbleStyles = `bg-${color} text-third font-semibold ${
+  const bubbleStyles = `${color} text-third font-semibold ${
     isEven
       ? "self-start rounded-bl-lg rounded-tr-lg "
       : "self-end rounded-br-lg rounded-tl-lg"

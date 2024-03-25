@@ -40,9 +40,9 @@ const Chat = () => {
   }, [inView, currentMessageIndex, messages]);
 
   const personColors = {
-    person1: "pink",
-    person2: "second",
-    person3: "white",
+    person1: "bg-pink",
+    person2: "bg-second",
+    person3: "bg-white",
     // Aggiungi altri colori per altre persone se necessario
   };
 
