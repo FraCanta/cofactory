@@ -77,7 +77,7 @@ const SingleCases = () => {
 
           <div className="h-full justify-between items-start flex flex-col gap-y-4">
             <ul
-              className={`${myFont2.className} flex  gap-2 dark:text-third text-white  text-[5vw] md:text-[3vw] lg:text-[1vw]`}
+              className={`${myFont2.className} flex flex-wrap  gap-2 dark:text-third text-white  text-[5vw] md:text-[3vw] lg:text-[1vw]`}
             >
               <li>box valigetta</li>
               <li>spot tv</li>
