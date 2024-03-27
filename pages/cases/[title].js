@@ -103,19 +103,27 @@ const SingleCases = ({ work }) => {
               className="aspect-square object-cover rounded-[15px]"
             />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <h2>In viaggio per un Natale tenerissimo.</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+            <h2
+              className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
+            >
+              In viaggio per un{" "}
+              <span className={`${myFont.className} text-[#d51d1f]`}>
+                Natale
+              </span>{" "}
+              tenerissimo.
+            </h2>
             <div className="bg-gradient-to-50 aspect-square rounded-[15px] relative overflow-hidden w-full">
               <Image
                 src={Mockup}
                 alt=""
-                className="w-[85%] absolute bottom-20 lg:bottom-36 left-8 lg:left-14 translate-y-1/2 z-10"
+                className="w-[80%] absolute bottom-20 lg:bottom-36 left-8 lg:left-20 translate-y-1/2 z-10"
               />
 
               <motion.div
-                className="w-[85%] absolute -bottom-[220px] lg:-bottom-[500px] left-8 lg:left-14 translate-y-1/2 overflow-hidden"
+                className="w-[75%] absolute -bottom-[220px] lg:-bottom-[430px] left-8 lg:left-[6rem] translate-y-1/2 overflow-hidden"
                 style={{ zIndex: 5 }}
-                animate={{ y: [0, -220, 0] }} // Scorrimento da 0 a -100 e poi di nuovo a 0
+                animate={{ y: [0, -300, 0] }} // Scorrimento da 0 a -100 e poi di nuovo a 0
                 transition={{
                   duration: 15,
                   repeat: Infinity,
