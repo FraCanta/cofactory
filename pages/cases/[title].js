@@ -109,13 +109,13 @@ const SingleCases = ({ work }) => {
               <Image
                 src={Mockup}
                 alt=""
-                className="w-[80%] absolute bottom-20 lg:bottom-36 left-8 lg:left-20 translate-y-1/2 z-10"
+                className="w-[85%] absolute bottom-20 lg:bottom-36 left-8 lg:left-14 translate-y-1/2 z-10"
               />
 
               <motion.div
-                className="w-[80%] absolute -bottom-[220px] lg:-bottom-[500px] left-8 lg:left-20 translate-y-1/2 overflow-hidden"
+                className="w-[85%] absolute -bottom-[220px] lg:-bottom-[500px] left-8 lg:left-14 translate-y-1/2 overflow-hidden"
                 style={{ zIndex: 5 }}
-                animate={{ y: [0, -100, 0] }} // Scorrimento da 0 a -100 e poi di nuovo a 0
+                animate={{ y: [0, -220, 0] }} // Scorrimento da 0 a -100 e poi di nuovo a 0
                 transition={{
                   duration: 15,
                   repeat: Infinity,
