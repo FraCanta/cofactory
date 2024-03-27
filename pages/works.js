@@ -80,7 +80,10 @@ const Works = ({ translation }) => {
             className={`grid grid-cols-1 lg:grid-cols-${rowWorks.length} gap-6  w-[90%] mx-auto `}
           >
             {rowWorks.map((work, colIndex) => (
-              <div key={colIndex} className="relative h-[65vh]">
+              <div
+                key={colIndex}
+                className="relative aspect-square lg:h-[65vh]"
+              >
                 <Link href={`/cases/${work.button}`}>
                   <Image
                     src={work.img}
