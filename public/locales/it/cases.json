@@ -1,0 +1,76 @@
+{
+  "works": {
+    "cards": [
+      {
+        "img": "/assets/cases/milka/cover_milka.png",
+        "button": "milkatoys"
+      },
+
+      {
+        "img": "/assets/works/2.jpg",
+        "button": "2"
+      },
+      {
+        "img": "/assets/cases/bobble/cover_bobble.jpg",
+        "button": "bobbled&d"
+      },
+      {
+        "img": "/assets/works/3.jpg",
+        "button": "4"
+      },
+      {
+        "img": "/assets/works/4.jpg",
+        "button": "5"
+      },
+      {
+        "img": "/assets/works/9.jpg",
+        "button": "6"
+      },
+      {
+        "img": "/assets/works/6.jpg",
+        "button": "7"
+      },
+      {
+        "img": "/assets/works/7.jpg",
+        "button": "8"
+      },
+      {
+        "img": "/assets/works/8.jpg",
+        "button": "9"
+      },
+      {
+        "img": "/assets/cases/milka/cover_milka.png",
+        "button": "milkatoys"
+      },
+
+      {
+        "img": "/assets/works/2.jpg",
+        "button": "2"
+      },
+      {
+        "img": "/assets/cases/bobble/cover_bobble.jpg",
+        "button": "bobbled&d"
+      }
+    ],
+    "singleCase": {
+      "milkatoys": {
+        "img": "/assets/cases/milka/cover_milka.png",
+        "brand1": "Milka",
+        "brand2": "Toys Center",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Natale 2023",
+        "items": "box valigetta "
+      },
+      "bobbled&d": {
+        "img": "/assets/cases/bobble/cover_bobble.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      }
+    }
+  }
+}

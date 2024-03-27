@@ -49,7 +49,7 @@ const Navbar = ({ lang }) => {
           delay: isVisible ? 0 : 0.8,
         }, // Aggiunto il delay
       }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300 backdrop-blur-sm"
+      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm"
     >
       <div className="w-[90%] m-auto flex justify-between items-center py-4 text-white">
         <Link href="/" className="z-[20]" onClick={() => setOpen(false)}>
