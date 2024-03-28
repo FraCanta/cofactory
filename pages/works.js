@@ -90,6 +90,7 @@ const Works = ({ translation }) => {
                     alt=""
                     fill
                     className="object-cover rounded-[15px] "
+                    priority
                   />
                 </Link>
               </div>

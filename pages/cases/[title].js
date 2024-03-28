@@ -30,6 +30,7 @@ const SingleCases = ({ work }) => {
           alt=""
           fill
           className="absolute top-0 left-0 object-cover !h-full z-10"
+          priority
         />
         <BlurryLights />
       </div>
