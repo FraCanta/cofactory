@@ -82,7 +82,7 @@ const Works = ({ translation }) => {
             {rowWorks.map((work, colIndex) => (
               <div
                 key={colIndex}
-                className="relative aspect-square lg:h-[65vh]"
+                className="relative aspect-square lg:w-full lg:h-[65vh]"
               >
                 <Link href={`/cases/${work.button}`}>
                   <Image
