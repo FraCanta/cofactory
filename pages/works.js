@@ -77,7 +77,7 @@ const Works = ({ translation }) => {
         {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => (
           <div
             key={rowIndex}
-            className={`grid grid-cols-1 lg:grid-cols-3 gap-6  w-[90%] mx-auto `}
+            className={`grid grid-cols-1 lg:grid-cols-${rowWorks.length} gap-6  w-[90%] mx-auto `}
           >
             {rowWorks.map((work, colIndex) => (
               <div
