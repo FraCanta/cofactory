@@ -53,62 +53,69 @@ const Works = ({ translation }) => {
   };
 
   return (
-    <main>
-      <Hero>
-        <h1
-          className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
-        >
-          Happy stories about happy clients.
-        </h1>
-      </Hero>
-      <div className="w-[90%] mx-auto">
-        <Line />
-      </div>
-      <div className="flex justify-between w-[90%] mx-auto">
-        <div></div>
-        <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex">
-          <div className="text-white text-xl font-normal font-['Poppins']">
-            Tutti
-          </div>
-          <IoChevronDownOutline className="dark:text-third text-white" />
-        </div>
-      </div>
-      <div className="flex flex-col gap-6 py-10">
-        {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => (
-          <div
-            key={rowIndex}
-            className={`grid grid-cols-1 lg:grid-cols-${rowWorks.length} gap-6  w-[90%] mx-auto `}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
+      <main>
+        <Hero>
+          <h1
+            className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
           >
-            {rowWorks.map((work, colIndex) => (
-              <div
-                key={colIndex}
-                className="relative aspect-square lg:w-full lg:h-[65vh]"
-              >
-                <Link href={`/cases/${work.button}`}>
-                  <Image
-                    src={work.img}
-                    alt=""
-                    fill
-                    className="object-cover rounded-[15px] "
-                    priority
-                  />
-                </Link>
-              </div>
-            ))}
-          </div>
-        ))}
-        <div className="w-[90%] mx-auto flex justify-center items-center">
-          {visibleWorks < layoutWorks.length && (
-            <motion.button
-              onClick={handleLoadMore}
-              className="max-w-max dark:text-third text-white flex justify-center py-6  font-bold  px-12 uppercase gap-2 items-center "
-            >
-              Load more <GoArrowDown />
-            </motion.button>
-          )}
+            Happy stories about happy clients.
+          </h1>
+        </Hero>
+        <div className="w-[90%] mx-auto">
+          <Line />
         </div>
-      </div>
-    </main>
+        <div className="flex justify-between w-[90%] mx-auto">
+          <div></div>
+          <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex">
+            <div className="text-white text-xl font-normal font-['Raleway']">
+              Tutti
+            </div>
+            <IoChevronDownOutline className="dark:text-third text-white" />
+          </div>
+        </div>
+        <div className="flex flex-col gap-6 py-10">
+          {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => (
+            <div
+              key={rowIndex}
+              className={`grid  lg:grid-cols-${rowWorks?.length} grid-cols-1 gap-6  w-[90%] mx-auto `}
+            >
+              {rowWorks.map((work, colIndex) => (
+                <div
+                  key={colIndex}
+                  className="relative aspect-square lg:w-full lg:h-[70vh]"
+                >
+                  <Link href={`/cases/${work.button}`}>
+                    <Image
+                      src={work.img}
+                      alt=""
+                      fill
+                      className="object-cover rounded-[15px] "
+                      priority
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          ))}
+          <div className="w-[90%] mx-auto flex justify-center items-center">
+            {visibleWorks < layoutWorks.length && (
+              <motion.button
+                onClick={handleLoadMore}
+                className="max-w-max dark:text-third text-white flex justify-center py-6  font-bold  px-12 uppercase gap-2 items-center "
+              >
+                Load more <GoArrowDown />
+              </motion.button>
+            )}
+          </div>
+        </div>
+      </main>
+    </motion.div>
   );
 };
 

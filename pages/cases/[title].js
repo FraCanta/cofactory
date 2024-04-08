@@ -23,7 +23,12 @@ import { LuDot } from "react-icons/lu";
 import { motion } from "framer-motion";
 const SingleCases = ({ work }) => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
       <div className="relative flex items-center h-[75vh] lg:h-screen">
         <Image
           src={work.img}
@@ -35,11 +40,11 @@ const SingleCases = ({ work }) => {
         <BlurryLights />
       </div>
 
-      <section className="my-[30px] lg:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-8 ">
+      <section className="my-[30px] lg:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-8 fxl:gap-12">
         <div className=" grid grid-cols-1  gap-10">
           <div className="justify-between  flex flex-col">
             <div
-              className={`${myFont.className} dark:text-third text-white text-[10vw] lg:text-[3.5vw] leading-[83.41px] flex items-center gap-4`}
+              className={`${myFont.className} dark:text-third text-white text-[2.1rem] md:text-6xl lg:text-4xl 2xl:text-6xl flex flex-wrap items-center gap-3 lg:gap-4 2xl:gap-8`}
             >
               {work.brand1}
               <Image
@@ -47,14 +52,14 @@ const SingleCases = ({ work }) => {
                 alt=""
                 height={40}
                 width={40}
-                className="w-[4vw] md:w-[2vw]"
+                className="w-[6vw] md:w-[5vw] lg:w-[3vw] 2xl:w-[2.2vw] "
               />
               {work.brand2}
             </div>
           </div>
           <div className="justify-between items-center flex ">
             <p
-              className={`${myFont2.className} dark:text-third text-white text-[5vw] md:text-[3vw] lg:text-[1.8vw] 2xl:text-[1.2vw] 2xl:leading-[2vw]  flex  gap-4 h-full`}
+              className={`${myFont2.className} dark:text-third text-white text-lg md:text-xl lg:text-lg  2xl:text-[1.2vw] 2xl:leading-[2vw]  flex  gap-4 h-full`}
             >
               E’ un Natale tenerissimo quello che Toys Center ha regalato a
               tutti i suoi bimbi, invitati a partire per un viaggio pieno di
@@ -66,7 +71,7 @@ const SingleCases = ({ work }) => {
           </div>
         </div>
         <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  gap-y-10 lg:gap-0">
-          <div className="h-full   flex flex-col gap-y-4">
+          <div className=" flex flex-col gap-y-4">
             <h2
               className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-[1.2vw] font-normal lowercase leading-[24.91px]`}
             >
@@ -201,7 +206,7 @@ const SingleCases = ({ work }) => {
       <div className="w-[90%] mx-auto md:py-10">
         <Line />
       </div>
-    </>
+    </motion.div>
   );
 };
 

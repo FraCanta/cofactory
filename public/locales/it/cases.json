@@ -8,7 +8,7 @@
 
       {
         "img": "/assets/works/2.jpg",
-        "button": "2"
+        "button": "brand2"
       },
       {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
@@ -16,40 +16,40 @@
       },
       {
         "img": "/assets/works/3.jpg",
-        "button": "4"
+        "button": "brand3"
       },
       {
         "img": "/assets/works/4.jpg",
-        "button": "5"
+        "button": "brand4"
       },
       {
         "img": "/assets/works/9.jpg",
-        "button": "6"
+        "button": "brand5"
       },
       {
         "img": "/assets/works/6.jpg",
-        "button": "7"
+        "button": "brand6"
       },
       {
         "img": "/assets/works/7.jpg",
-        "button": "8"
+        "button": "brand7"
       },
       {
         "img": "/assets/works/8.jpg",
-        "button": "9"
+        "button": "brand8"
       },
       {
         "img": "/assets/cases/milka/cover_milka.png",
-        "button": "milkatoys"
+        "button": "brand9"
       },
 
       {
         "img": "/assets/works/2.jpg",
-        "button": "2"
+        "button": "brand10"
       },
       {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
-        "button": "bobbled&d"
+        "button": "brand11"
       }
     ],
     "singleCase": {
@@ -62,7 +62,106 @@
         "year": "Natale 2023",
         "items": "box valigetta "
       },
+      "brand2": {
+        "img": "/assets/works/2.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
       "bobbled&d": {
+        "img": "/assets/cases/bobble/cover_bobble.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand3": {
+        "img": "/assets/works/3.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand4": {
+        "img": "/assets/works/4.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand5": {
+        "img": "/assets/works/5.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand6": {
+        "img": "/assets/works/6.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand7": {
+        "img": "/assets/works/7.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand8": {
+        "img": "/assets/works/8.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand9": {
+        "img": "/assets/works/9.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand10": {
+        "img": "/assets/works/10.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand11": {
+        "img": "/assets/cases/bobble/cover_bobble.jpg",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeouns & Dragons",
+        "descrizione": "",
+        "partner": "partner nel",
+        "year": "Marzo 2023",
+        "items": "box valigetta "
+      },
+      "brand12": {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "brand1": "Bobble Bobble",
         "brand2": "Dangeouns & Dragons",

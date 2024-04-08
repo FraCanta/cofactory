@@ -3,6 +3,7 @@ import Paragraph from "@/components/Paragraph";
 import Hero from "@/components/layout/Hero";
 import React from "react";
 import localFont from "next/font/local";
+import { motion } from "framer-motion";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
@@ -13,7 +14,12 @@ const paragraph =
 
 const Factory = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
       <Hero>
         {" "}
         <h1
@@ -77,7 +83,7 @@ const Factory = () => {
           <div className="w-[425px] h-[565px] bg-[#D9D9D9]" />
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 
