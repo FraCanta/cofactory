@@ -10,13 +10,13 @@ const SplashScreen = () => {
       // Inizia con l'animazione della rotazione
       await controls.start({
         rotate: 45,
-        transition: { duration: 0.2 },
+        transition: { duration: 0.4 },
       });
 
       // Dopo la rotazione, esegui l'animazione di ingrandimento
       await controls.start({
         scale: 600,
-        transition: { delay: 0.2, duration: 0.2, type: "easeInOut" },
+        transition: { delay: 0.5, duration: 2, type: "spring" },
       });
     };
 
