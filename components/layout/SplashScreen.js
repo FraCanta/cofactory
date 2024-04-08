@@ -10,13 +10,13 @@ const SplashScreen = () => {
       // Inizia con l'animazione della rotazione
       await controls.start({
         rotate: 45,
-        transition: { duration: 1 },
+        transition: { duration: 0.2 },
       });
 
       // Dopo la rotazione, esegui l'animazione di ingrandimento
       await controls.start({
         scale: 600,
-        transition: { delay: 0.5, duration: 0.5, type: "easyInOut" },
+        transition: { delay: 0.2, duration: 0.2, type: "easeInOut" },
       });
     };
 
@@ -35,7 +35,7 @@ const SplashScreen = () => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 3 }}
           style={{
             position: "fixed",
             top: 0,
@@ -50,9 +50,9 @@ const SplashScreen = () => {
         >
           {/* Logo e payoff */}
           <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.5, duration: 3, type: "spring" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 3, type: "easeInOut" }}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -68,16 +68,14 @@ const SplashScreen = () => {
 
             {/* Payoff */}
             <motion.p
-              style={{ fontSize: 30, color: "#fff" }}
+              style={{ color: "#fff" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 2 }}
+              className="text-3xl flex items-end"
             >
               Agenzia creativa di incontri{" "}
-              <motion.span
-                style={{ display: "inline-block" }}
-                animate={controls}
-              >
+              <motion.span animate={controls}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
