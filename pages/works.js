@@ -9,6 +9,7 @@ import Link from "next/link";
 import casesIT from "../public/locales/it/cases.json";
 import casesEN from "../public/locales/en/cases.json";
 import { GoArrowDown } from "react-icons/go";
+import { MaskText } from "@/components/MaskText";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 
 const Works = ({ translation }) => {
@@ -61,11 +62,13 @@ const Works = ({ translation }) => {
     >
       <main>
         <Hero>
-          <h1
-            className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
-          >
-            Happy stories about happy clients.
-          </h1>
+          <MaskText>
+            <h1
+              className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
+            >
+              Happy stories about happy clients.
+            </h1>
+          </MaskText>
         </Hero>
         <div className="w-[90%] mx-auto">
           <Line />

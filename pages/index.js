@@ -10,6 +10,7 @@ import Head from "next/head";
 import Chat from "@/components/ChatBubble/Chat";
 import Link from "next/link";
 import { PiArrowUpRightThin } from "react-icons/pi";
+import { MaskText } from "@/components/MaskText";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
@@ -27,18 +28,24 @@ const Home = () => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <Hero>
-          <h1
-            className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
-          >
-            Sì. Siamo un’agenzia di incontri.
-          </h1>
-          <div className="lg:w-[65%] mx-auto">
-            <p
-              className={`${myFont2.className} font-normal text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
+          <MaskText>
+            {" "}
+            <h1
+              className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
             >
-              A volte creiamo legami duraturi. Altre volte, invece, nascono dei
-              colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili.
-            </p>
+              Sì. Siamo un’agenzia di incontri.
+            </h1>
+          </MaskText>
+          <div className="lg:w-[65%] mx-auto">
+            <MaskText>
+              <p
+                className={`${myFont2.className} font-normal text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
+              >
+                A volte creiamo legami duraturi. Altre volte, invece, nascono
+                dei colpi di fulmine, brevi ma intensi, elettrizzanti e
+                memorabili.
+              </p>
+            </MaskText>
           </div>
         </Hero>
         <div className="w-[90vw] mx-auto">

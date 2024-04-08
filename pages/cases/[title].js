@@ -21,192 +21,205 @@ import casesIT from "../../public/locales/it/cases.json";
 import casesEN from "../../public/locales/en/cases.json";
 import { LuDot } from "react-icons/lu";
 import { motion } from "framer-motion";
+import Head from "next/head";
 const SingleCases = ({ work }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-    >
-      <div className="relative flex items-center h-[75vh] lg:h-screen">
-        <Image
-          src={work.img}
-          alt=""
-          fill
-          className="absolute top-0 left-0 object-cover !h-full z-10"
-          priority
-        />
-        <BlurryLights />
-      </div>
-
-      <section className="my-[30px] lg:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-8 fxl:gap-12">
-        <div className=" grid grid-cols-1  gap-10">
-          <div className="justify-between  flex flex-col">
-            <div
-              className={`${myFont.className} dark:text-third text-white text-[2.1rem] md:text-6xl lg:text-4xl 2xl:text-6xl flex flex-wrap items-center gap-3 lg:gap-4 2xl:gap-8`}
-            >
-              {work.brand1}
-              <Image
-                src={Icona}
-                alt=""
-                height={40}
-                width={40}
-                className="w-[6vw] md:w-[5vw] lg:w-[3vw] 2xl:w-[2.2vw] "
-              />
-              {work.brand2}
-            </div>
-          </div>
-          <div className="justify-between items-center flex ">
-            <p
-              className={`${myFont2.className} dark:text-third text-white text-lg md:text-xl lg:text-lg  2xl:text-[1.2vw] 2xl:leading-[2vw]  flex  gap-4 h-full`}
-            >
-              E’ un Natale tenerissimo quello che Toys Center ha regalato a
-              tutti i suoi bimbi, invitati a partire per un viaggio pieno di
-              sorprese! Il catalogo di Natale del più grande retail di
-              giocattoli italiano, è stato consegnato infatti in una confezione
-              davvero speciale: un box-valigetta con all’interno delle golosità
-              Milka.
-            </p>
-          </div>
+    <>
+      <Head>
+        <title>
+          {work?.brand1} + {work?.brand2}
+        </title>
+        <meta name="description" content={work.desc} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={work?.name} />
+        <meta property="og:description" content={work?.desc} />
+        <meta property="og:image" content={work?.img} />
+      </Head>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+      >
+        <div className="relative flex items-center h-[75vh] lg:h-screen">
+          <Image
+            src={work.img}
+            alt=""
+            fill
+            className="absolute top-0 left-0 object-cover !h-full z-10"
+            priority
+          />
+          <BlurryLights />
         </div>
-        <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  gap-y-10 lg:gap-0">
-          <div className=" flex flex-col gap-y-4">
-            <h2
-              className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-[1.2vw] font-normal lowercase leading-[24.91px]`}
-            >
-              {work.partner}
-            </h2>
-            <h3
-              className={`${myFont2.className} dark:text-third text-white text-[21.84px] font-normal uppercase leading-[24.91px]`}
-            >
-              {work.year}
-            </h3>
-          </div>
 
-          <div className="h-full justify-between items-start flex flex-col gap-y-6">
-            <div
-              className={`${myFont2.className}  flex flex-wrap  gap-2 dark:text-third text-white  text-[5vw] md:text-[3vw] lg:text-[0.8vw] uppercase`}
-            >
-              <p className="flex items-center">
-                box valigetta <LuDot />
+        <section className="my-[30px] lg:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-8 fxl:gap-12">
+          <div className=" grid grid-cols-1  gap-10">
+            <div className="justify-between  flex flex-col">
+              <div
+                className={`${myFont.className} dark:text-third text-white text-[2.1rem] md:text-6xl lg:text-4xl 2xl:text-6xl flex flex-wrap items-center gap-3 lg:gap-4 2xl:gap-8`}
+              >
+                {work.brand1}
+                <Image
+                  src={Icona}
+                  alt=""
+                  height={40}
+                  width={40}
+                  className="w-[6vw] md:w-[5vw] lg:w-[3vw] 2xl:w-[2.2vw] "
+                />
+                {work.brand2}
+              </div>
+            </div>
+            <div className="justify-between items-center flex ">
+              <p
+                className={`${myFont2.className} dark:text-third text-white text-lg md:text-xl lg:text-lg  2xl:text-[1.2vw] 2xl:leading-[2vw]  flex  gap-4 h-full`}
+              >
+                E’ un Natale tenerissimo quello che Toys Center ha regalato a
+                tutti i suoi bimbi, invitati a partire per un viaggio pieno di
+                sorprese! Il catalogo di Natale del più grande retail di
+                giocattoli italiano, è stato consegnato infatti in una
+                confezione davvero speciale: un box-valigetta con all’interno
+                delle golosità Milka.
               </p>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-screen flex flex-col  items-center py-[50px] ">
-        <div className="w-[90%] mx-auto flex flex-col gap-y-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <Image
-              src={Grid1}
-              alt=""
-              className="aspect-square object-cover rounded-[15px]"
-            />
-            <Image
-              src={Grid2}
-              alt=""
-              className="aspect-square object-cover rounded-[15px]"
-            />
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            <h2
-              className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
-            >
-              In viaggio per un{" "}
-              <span className={`${myFont.className} text-[#d51d1f]`}>
-                Natale
-              </span>{" "}
-              tenerissimo.
-            </h2>
-            <div className="bg-gradient-to-50 aspect-square rounded-[15px] relative overflow-hidden w-full">
-              <Image
-                src={Mockup}
-                alt=""
-                className="w-[80%] absolute bottom-20 lg:bottom-36 left-8 lg:left-20 translate-y-1/2 z-10"
-              />
-
-              <motion.div
-                className="w-[75%] absolute -bottom-[220px] lg:-bottom-[430px] left-8 lg:left-[6rem] translate-y-1/2 overflow-hidden"
-                style={{ zIndex: 5 }}
-                animate={{ y: [0, -300, 0] }} // Scorrimento da 0 a -100 e poi di nuovo a 0
-                transition={{
-                  duration: 15,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "linear",
-                }}
+          <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  gap-y-10 lg:gap-0">
+            <div className=" flex flex-col gap-y-4">
+              <h2
+                className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-[1.2vw] font-normal lowercase leading-[24.91px]`}
               >
-                <div>
-                  <Image src={Mockup2} alt="" className="w-full " />
-                </div>
-              </motion.div>
+                {work.partner}
+              </h2>
+              <h3
+                className={`${myFont2.className} dark:text-third text-white text-[21.84px] font-normal uppercase leading-[24.91px]`}
+              >
+                {work.year}
+              </h3>
+            </div>
+
+            <div className="h-full justify-between items-start flex flex-col gap-y-6">
+              <div
+                className={`${myFont2.className}  flex flex-wrap  gap-2 dark:text-third text-white  text-[5vw] md:text-[3vw] lg:text-[0.8vw] uppercase`}
+              >
+                <p className="flex items-center">
+                  box valigetta <LuDot />
+                </p>
+              </div>
             </div>
           </div>
-          <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
-            <Image
-              src={Tablet}
-              alt=""
-              className="h-full w-full object-cover object-bottom rounded-[15px]"
-            />
-          </div>
-          <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
-            <h3
-              className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-[2.5vw] `}
-            >
-              Quando i premi fanno gola a tutti!
-            </h3>
-            <p
-              className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
-            >
-              Un QR code presente in grafica ha dato a tutti i bambini la
-              possibilità di partecipare ad un concorso con in palio una
-              sorpresa ancora più tenera: una maxi box di snack e dolci dello
-              storico marchio italiano di cioccolata.
-            </p>
-          </div>
-          <VideoPlayer />
+        </section>
+        <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-screen flex flex-col  items-center py-[50px] ">
+          <div className="w-[90%] mx-auto flex flex-col gap-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Image
+                src={Grid1}
+                alt=""
+                className="aspect-square object-cover rounded-[15px]"
+              />
+              <Image
+                src={Grid2}
+                alt=""
+                className="aspect-square object-cover rounded-[15px]"
+              />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              <h2
+                className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
+              >
+                In viaggio per un{" "}
+                <span className={`${myFont.className} text-[#d51d1f]`}>
+                  Natale
+                </span>{" "}
+                tenerissimo.
+              </h2>
+              <div className="bg-gradient-to-50 aspect-square rounded-[15px] relative overflow-hidden w-full">
+                <Image
+                  src={Mockup}
+                  alt=""
+                  className="w-[80%] absolute bottom-20 lg:bottom-36 left-8 lg:left-20 translate-y-1/2 z-10"
+                />
 
-          <div className="h-[30vh] lg:h-[40vh] w-auto relative ">
-            <Image
-              src={Pacchetti}
-              alt=""
-              className="h-full w-full object-cover rounded-[15px]"
-            />
+                <motion.div
+                  className="w-[75%] absolute -bottom-[220px] lg:-bottom-[430px] left-8 lg:left-[6rem] translate-y-1/2 overflow-hidden"
+                  style={{ zIndex: 5 }}
+                  animate={{ y: [0, -300, 0] }} // Scorrimento da 0 a -100 e poi di nuovo a 0
+                  transition={{
+                    duration: 15,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "linear",
+                  }}
+                >
+                  <div>
+                    <Image src={Mockup2} alt="" className="w-full " />
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+            <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
+              <Image
+                src={Tablet}
+                alt=""
+                className="h-full w-full object-cover object-bottom rounded-[15px]"
+              />
+            </div>
+            <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+              <h3
+                className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-[2.5vw] `}
+              >
+                Quando i premi fanno gola a tutti!
+              </h3>
+              <p
+                className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
+              >
+                Un QR code presente in grafica ha dato a tutti i bambini la
+                possibilità di partecipare ad un concorso con in palio una
+                sorpresa ancora più tenera: una maxi box di snack e dolci dello
+                storico marchio italiano di cioccolata.
+              </p>
+            </div>
+            <VideoPlayer />
+
+            <div className="h-[30vh] lg:h-[40vh] w-auto relative ">
+              <Image
+                src={Pacchetti}
+                alt=""
+                className="h-full w-full object-cover rounded-[15px]"
+              />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Image
+                src={Grid5}
+                alt=""
+                className="aspect-square object-cover rounded-[15px]"
+              />
+              <Image
+                src={Grid6}
+                alt=""
+                className="aspect-square object-cover rounded-[15px]"
+              />
+            </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        </section>
+        <div className="w-[90%] mx-auto flex justify-center items-center py-8 md:py-20">
+          <div
+            className={`${myFont.className} dark:text-third text-white text-[9vw] lg:text-[4vw] leading-[83.41px] flex items-center gap-4`}
+          >
+            Citrus
             <Image
-              src={Grid5}
+              src={Icona}
               alt=""
-              className="aspect-square object-cover rounded-[15px]"
+              height={40}
+              width={40}
+              className="w-[3vw]"
             />
-            <Image
-              src={Grid6}
-              alt=""
-              className="aspect-square object-cover rounded-[15px]"
-            />
+            Fao Schwarz
           </div>
         </div>
-      </section>
-      <div className="w-[90%] mx-auto flex justify-center items-center py-8 md:py-20">
-        <div
-          className={`${myFont.className} dark:text-third text-white text-[9vw] lg:text-[4vw] leading-[83.41px] flex items-center gap-4`}
-        >
-          Citrus
-          <Image
-            src={Icona}
-            alt=""
-            height={40}
-            width={40}
-            className="w-[3vw]"
-          />
-          Fao Schwarz
+        <div className="w-[90%] mx-auto md:py-10">
+          <Line />
         </div>
-      </div>
-      <div className="w-[90%] mx-auto md:py-10">
-        <Line />
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 };
 
