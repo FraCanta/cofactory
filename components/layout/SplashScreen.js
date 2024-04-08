@@ -63,7 +63,7 @@ const SplashScreen = () => {
             <motion.img
               src="/assets/logo/logo.svg"
               alt="Logo"
-              style={{ width: 600 }}
+              className="w-[350px] lg:w-[600px]"
             />
 
             {/* Payoff */}
@@ -72,7 +72,7 @@ const SplashScreen = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 2 }}
-              className="text-xl lg:text-3xl flex items-end justify-center"
+              className="text-2xl lg:text-3xl flex items-center lg:items-end justify-center"
             >
               Agenzia creativa di incontri{" "}
               <motion.span animate={controls}>
