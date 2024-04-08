@@ -24,7 +24,7 @@
 }
 
 @layer base {
-  html {
+  body {
     @apply dark:bg-white;
   }
 }
