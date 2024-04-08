@@ -72,10 +72,10 @@ const SplashScreen = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 2 }}
-              className="text-xl lg:text-3xl flex items-center lg:items-end justify-center"
+              className="text-xl sm:text-2xl lg:text-3xl flex items-end justify-center"
             >
               Agenzia creativa di incontri{" "}
-              <motion.span animate={controls}>
+              <motion.span animate={controls} className="inline-block mx-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"

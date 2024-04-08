@@ -12,6 +12,7 @@ module.exports = {
         "gradient-to-50": "linear-gradient(50.61deg, #9c733c, #ecce80)",
       }),
       screens: {
+        xs: "360px",
         sm: "640px",
         // => @media (min-width: 640px) { ... }
 
