@@ -82,30 +82,33 @@ const Works = ({ translation }) => {
             <IoChevronDownOutline className="dark:text-third text-white" />
           </div>
         </div>
-        <div className="flex flex-col gap-6 py-10">
-          {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => (
-            <div
-              key={rowIndex}
-              className={`grid  lg:grid-cols-${rowWorks?.length} grid-cols-1 gap-6  w-[90%] mx-auto `}
-            >
-              {rowWorks.map((work, colIndex) => (
-                <div
-                  key={colIndex}
-                  className="relative aspect-square lg:w-full lg:h-[70vh]"
-                >
-                  <Link href={`/cases/${work.button}`}>
-                    <Image
-                      src={work.img}
-                      alt=""
-                      fill
-                      className="object-cover rounded-[15px] "
-                      priority
-                    />
+        <div className="flex flex-col gap-6 py-10 w-[90%] mx-auto">
+          {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => {
+            console.log("Row works length:", rowWorks.length);
+            return (
+              <div
+                key={rowIndex}
+                className={`grid grid-cols-1 lg:grid-cols-${rowWorks?.length}  gap-6 `}
+              >
+                {rowWorks.map((work, colIndex) => (
+                  <Link
+                    href={`/cases/${work.button}`}
+                    className="relative aspect-square w-full  lg:h-[70vh]"
+                  >
+                    <div key={colIndex}>
+                      <Image
+                        src={work.img}
+                        alt=""
+                        fill
+                        className="object-cover rounded-[15px] "
+                        priority
+                      />
+                    </div>
                   </Link>
-                </div>
-              ))}
-            </div>
-          ))}
+                ))}
+              </div>
+            );
+          })}
           <div className="w-[90%] mx-auto flex justify-center items-center">
             {visibleWorks < layoutWorks.length && (
               <motion.button

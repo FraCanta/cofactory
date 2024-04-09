@@ -11,11 +11,14 @@ import Chat from "@/components/ChatBubble/Chat";
 import Link from "next/link";
 import { PiArrowUpRightThin } from "react-icons/pi";
 import { MaskText } from "@/components/MaskText";
+import translationIT from "@/public/locales/it/home.json";
+import translationEN from "@/public/locales/en/home.json";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
-const Home = () => {
+const Home = ({ translation }) => {
+  console.log(translation);
   return (
     <>
       <Head>
@@ -66,7 +69,7 @@ const Home = () => {
         <div className="w-[90vw] mx-auto">
           <Line />
         </div>
-        <LavoriSec />
+        <LavoriSec cards={translation.cards} />
         <div className="w-[90%] mx-auto">
           <Line />
         </div>
@@ -102,3 +105,26 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps(locale, context) {
+  let obj;
+  switch (locale.locale) {
+    case "it":
+      obj = translationIT;
+      break;
+
+    case "en":
+      obj = translationEN;
+      break;
+    default:
+      obj = translationIT;
+      break;
+  }
+
+  return {
+    props: {
+      translation: obj?.home,
+    },
+    revalidate: 60,
+  };
+}

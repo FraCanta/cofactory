@@ -1,0 +1,19 @@
+{
+  "home": {
+    "cards": [
+      {
+        "img": "/assets/cases/milka/cover_milka.png",
+        "button": "/cases/milkatoys"
+      },
+
+      {
+        "img": "/assets/works/2.jpg",
+        "button": "/cases/brand2"
+      },
+      {
+        "img": "/assets/cases/bobble/cover_bobble.jpg",
+        "button": "/cases/bobbled&d"
+      }
+    ]
+  }
+}
