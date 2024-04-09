@@ -26,7 +26,7 @@ const Factory = () => {
           <h1
             className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
           >
-            Lorem ipsum dolor sit amet, consecter.
+            Titolo per pagina Factory
           </h1>
         </MaskText>
         <div className="lg:w-[65%] mx-auto">
@@ -34,8 +34,8 @@ const Factory = () => {
             <p
               className={`${myFont2.className} font-normal text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              malesuada felis et sem placerat consectetur at at nulla. 
+              Una frase breve che sia come quella della home, il massimo della
+              lunghezza è fino a qui, massimo due righe
             </p>
           </MaskText>
         </div>

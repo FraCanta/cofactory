@@ -24,6 +24,8 @@ const Works = ({ translation }) => {
     { rows: 1, cols: 1 },
     { rows: 1, cols: 2 },
     { rows: 1, cols: 1 },
+    { rows: 1, cols: 2 },
+    { rows: 1, cols: 1 },
   ];
 
   // Funzione per creare il layout dei lavori
