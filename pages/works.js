@@ -88,7 +88,7 @@ const Works = ({ translation }) => {
             return (
               <div
                 key={rowIndex}
-                className={`grid grid-cols-1 lg:grid-cols-${rowWorks?.length}  gap-6 `}
+                className={`grid lg:grid-cols-${rowWorks?.length}  gap-6 `}
               >
                 {rowWorks.map((work, colIndex) => (
                   <Link
