@@ -18,10 +18,10 @@ const Works = ({ translation }) => {
 
   // Layout delle righe e colonne delle immagini
   const layout = [
-    { rows: 1, cols: 3 },
     { rows: 1, cols: 2 },
     { rows: 1, cols: 1 },
-    { rows: 1, cols: 3 },
+    { rows: 1, cols: 2 },
+    { rows: 1, cols: 1 },
     { rows: 1, cols: 2 },
     { rows: 1, cols: 1 },
   ];
@@ -88,7 +88,7 @@ const Works = ({ translation }) => {
             return (
               <div
                 key={rowIndex}
-                className={`grid lg:grid-cols-${rowWorks?.length}  gap-6 `}
+                className={`grid grid-cols-1 lg:grid-cols-${rowWorks?.length}  gap-6 `}
               >
                 {rowWorks.map((work, colIndex) => (
                   <Link
