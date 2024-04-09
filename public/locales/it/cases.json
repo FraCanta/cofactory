@@ -55,6 +55,7 @@
     "singleCase": {
       "milkatoys": {
         "img": "/assets/cases/milka/cover_milka.png",
+        "ogimg": "/assets/cases/milka/milka_og.png",
         "brand1": "Milka",
         "brand2": "Toys Center",
         "descrizione": "",

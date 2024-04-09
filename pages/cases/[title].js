@@ -33,7 +33,7 @@ const SingleCases = ({ work }) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={work?.name} />
         <meta property="og:description" content={work?.desc} />
-        <meta property="og:image" content={work?.img} />
+        <meta property="og:image" content={work?.ogimg ? work?.ogimg : ""} />
       </Head>
       <motion.div
         initial={{ opacity: 0 }}
