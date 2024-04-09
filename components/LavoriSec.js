@@ -13,8 +13,8 @@ const LavoriSec = ({ cards }) => {
           <Link href={el.button} key={i}>
             <motion.div
               className="w-full aspect-square md:h-[70vh] relative"
-              onHoverStart={() => setHoveredIndex(i)}
-              onHoverEnd={() => setHoveredIndex(null)}
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
               <Image
                 src={el.img}
@@ -24,10 +24,13 @@ const LavoriSec = ({ cards }) => {
               />
 
               <motion.div
-                className="absolute inset-0 bg-third opacity-0 transition-opacity duration-300"
+                className={`absolute inset-0 bg-third opacity-0 transition-opacity duration-300 ${
+                  hoveredIndex === i ? "md:block" : "hidden"
+                } md:fixed md:top-0 md:left-0 md:w-full md:h-full`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: hoveredIndex === i ? 0.6 : 0 }}
               ></motion.div>
+
               <motion.div
                 className="absolute inset-0 w-full h-full flex items-center justify-center"
                 initial={{ opacity: 0, y: 0 }}
@@ -40,7 +43,6 @@ const LavoriSec = ({ cards }) => {
                     animate={{ rotate: 45 }}
                     transition={{
                       duration: 1,
-
                       type: "spring",
                     }}
                   >
