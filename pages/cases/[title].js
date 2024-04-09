@@ -29,11 +29,17 @@ const SingleCases = ({ work }) => {
         <title>
           {work?.brand1} + {work?.brand2}
         </title>
-        <meta name="description" content={work.desc} />
+        <meta
+          property="og:url"
+          content="https://cofactory-eight.vercel.app/cases/milkatoys"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={work?.name} />
-        <meta property="og:description" content={work?.desc} />
-        <meta property="og:image" content={work?.ogimg ? work?.ogimg : ""} />
+        <meta
+          property="og:title"
+          content={`${work?.brand1} + ${work?.brand2}`}
+        />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content={work.ogimg ? work.ogimg : ""} />
       </Head>
       <motion.div
         initial={{ opacity: 0 }}
