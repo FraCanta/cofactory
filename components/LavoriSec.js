@@ -2,6 +2,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
+import localFont from "next/font/local";
 
 const LavoriSec = ({ cards }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -50,9 +53,11 @@ const LavoriSec = ({ cards }) => {
                     fill
                     className="object-cover rounded-lg  relative"
                   />
-                  <div className="absolute inset-0 bg-third opacity-45"></div>
+                  <div className="absolute inset-0 bg-third opacity-50"></div>
                   <div className="absolute top-1/2 z-10 flex left-1/2 right-0 -translate-y-1/2 -translate-x-1/2 w-full">
-                    <h2 className="text-white  text-2xl font-bold w-full text-center flex flex-wrap  justify-center items-center gap-2">
+                    <h2
+                      className={`${myFont.className}  text-white  text-3xl font-bold w-full text-center flex flex-wrap  justify-center items-center gap-2`}
+                    >
                       <span>{el.brand1}</span>{" "}
                       <span>
                         {" "}
