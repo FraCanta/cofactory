@@ -23,9 +23,7 @@ const Works = ({ translation }) => {
     { rows: 1, cols: 2 },
     { rows: 1, cols: 1 },
     { rows: 1, cols: 2 },
-    { rows: 1, cols: 1 },
     { rows: 1, cols: 2 },
-    { rows: 1, cols: 1 },
   ];
 
   // Funzione per creare il layout dei lavori
@@ -77,11 +75,20 @@ const Works = ({ translation }) => {
         </div>
         <div className="flex justify-between w-[90%] mx-auto">
           <div></div>
-          <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex">
-            <div className="text-white text-xl font-normal font-['Raleway']">
+          <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex z-10">
+            {/* <div className="text-white text-xl font-normal font-['Raleway']">
               Tutti
             </div>
-            <IoChevronDownOutline className="dark:text-third text-white" />
+            <IoChevronDownOutline className="dark:text-third text-white" /> */}
+            <select className="select w-full max-w-xs !bg-transparent">
+              <option disabled selected>
+                tutti
+              </option>
+              <option>Strapi</option>
+              <option>Ghost</option>
+              <option>Netlify CMS</option>
+              <option>Sanity</option>
+            </select>
           </div>
         </div>
         <div className="flex flex-col gap-6 py-10 w-[90%] mx-auto">
@@ -111,6 +118,7 @@ const Works = ({ translation }) => {
               </div>
             );
           })}
+
           <div className="w-[90%] mx-auto flex justify-center items-center">
             {visibleWorks < layoutWorks.length && (
               <motion.button

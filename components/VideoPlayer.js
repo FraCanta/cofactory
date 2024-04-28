@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-const VideoPlayer = () => {
+const VideoPlayer = ({ video }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [isFirstPlay, setIsFirstPlay] = useState(true);
@@ -31,7 +31,7 @@ const VideoPlayer = () => {
         loop
         muted={isMuted}
       >
-        <source src="/assets/video/milka_video.mp4" type="video/mp4" />
+        <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       {!isPlaying && (

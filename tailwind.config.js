@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        "gradient-to-50": "linear-gradient(50.61deg, #9c733c, #ecce80)",
+        "gradient-to-50": "linear-gradient(-135deg, #9c733c, #ecce80)",
       }),
       screens: {
         xs: "360px",
@@ -44,6 +44,7 @@ module.exports = {
       third: "#1b1b1c",
       white: "#ffffff",
       yellow: "#daa444",
+      trabsparent: "transparent",
     },
   },
   plugins: [],

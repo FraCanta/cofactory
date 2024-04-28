@@ -15,7 +15,7 @@ const Contatti = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
-      <Hero>
+      {/* <Hero>
         <MaskText>
           <h1
             className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
@@ -23,11 +23,11 @@ const Contatti = () => {
             Titolo per pagina contatti
           </h1>
         </MaskText>
-      </Hero>
+      </Hero> */}
       <div className="w-[90%] mx-auto">
         <Line />
       </div>
-      <div className="w-[90%] mx-auto flex flex-col gap-6 py-20">
+      <div className="w-[90%] mx-auto flex flex-col gap-6 py-32">
         <h2 className={`${myFont.className} text-white text-5xl`}>
           👋🏽 Hey there!
         </h2>

@@ -2,174 +2,650 @@
   "works": {
     "cards": [
       {
-        "img": "/assets/cases/milka/cover_milka.png",
-        "button": "milkatoys"
+        "img": "/assets/cases/orociok/orociok.jpeg",
+        "button": "orocioktoys"
       },
-
       {
-        "img": "/assets/works/2.jpg",
-        "button": "brand2"
+        "img": "/assets/cases/yummers/yummers.jpeg",
+        "button": "yummersghostbusters"
+      },
+      {
+        "img": "/assets/cases/rossopomodoro/rossopomodoro_2.jpg",
+        "button": "rossopomodorotartarugheninja"
+      },
+      {
+        "img": "/assets/cases/treccani/treccani.jpg",
+        "button": "treccanifaoschwarz"
       },
       {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "button": "bobbled&d"
       },
       {
-        "img": "/assets/works/3.jpg",
-        "button": "brand3"
-      },
-      {
-        "img": "/assets/works/4.jpg",
-        "button": "brand4"
-      },
-      {
-        "img": "/assets/works/9.jpg",
-        "button": "brand5"
-      },
-      {
-        "img": "/assets/works/6.jpg",
-        "button": "brand6"
-      },
-      {
-        "img": "/assets/works/7.jpg",
-        "button": "brand7"
-      },
-      {
-        "img": "/assets/works/8.jpg",
-        "button": "brand8"
+        "img": "/assets/cases/nestle/nestle.jpg",
+        "button": "nestleaquaman"
       },
       {
         "img": "/assets/cases/milka/cover_milka.png",
-        "button": "brand9"
+        "button": "milkatoys"
       },
 
       {
-        "img": "/assets/works/2.jpg",
-        "button": "brand10"
+        "img": "/assets/cases/citrus/citrus.jpeg",
+        "button": "citrustartarugheninja"
       },
       {
-        "img": "/assets/cases/bobble/cover_bobble.jpg",
-        "button": "brand11"
+        "img": "/assets/cases/american/sonic.jpg",
+        "button": "americanunclesonic2"
+      },
+      {
+        "img": "/assets/cases/rossopomodoro/rossopomodoro_3.jpg",
+        "button": "rossopomodoroghostbusters"
       }
     ],
     "singleCase": {
-      "milkatoys": {
-        "img": "/assets/cases/milka/cover_milka.png",
-        "ogimg": "/assets/milka_og.png",
-        "brand1": "Milka",
+      "orocioktoys": {
+        "img": "/assets/cases/orociok/orociok.jpeg",
+        "brand1": "Oro Ciok",
         "brand2": "Toys Center",
-        "descrizione": "",
+        "name": "Oro Ciok Toys Center",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
+        "partner": "partner nel",
+        "year": "Primavera 2024",
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
+      },
+      "yummersghostbusters": {
+        "img": "/assets/cases/yummers/yummers.jpeg",
+        "brand1": "Yummer's",
+        "brand2": "Ghostbusters: Minaccia Glaciale",
+        "name": "Yummer's Ghostbusters: Minaccia Glaciale",
+
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
+        "partner": "partner nel",
+        "year": "Aprile 2024",
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
+      },
+      "rossopomodorotartarugheninja": {
+        "img": "/assets/cases/rossopomodoro/rossopomodoro_2.jpg",
+        "brand1": "Rossopomodoro",
+        "brand2": "Tartarughe Ninja: Caos Mutante",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
+        "partner": "partner nel",
+        "year": "Agosto 2023",
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
+      },
+      "treccanifaoschwarz": {
+        "img": "/assets/cases/treccani/treccani.jpg",
+        "brand1": "Treccani",
+        "brand2": "Fao Schwarz",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Natale 2023",
-        "items": "box valigetta "
-      },
-      "brand2": {
-        "img": "/assets/works/2.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
-        "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
       },
       "bobbled&d": {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "brand1": "Bobble Bobble",
         "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
+        "descrizione": "Bobble Bobble, il primo produttore di bubble tea in Europa - e l'unico in Italia - incontra un film epico: Dangeons&Dragons - L'onore dei ladri. Nato dal famoso gioco di ruolo Hasbro e distribuito nelle sale nel Marzo 2023 da Eagle Pictures. Nadce così un bubble tea in Limited Edition ispirato al film, che ha conquistato il pubblico teen di Bobble Bobble.",
         "partner": "partner nel",
         "year": "Marzo 2023",
-        "items": "box valigetta "
+        "list": [
+          { "name": "packaging" },
+          { "name": "campagna digital" },
+          { "name": "materiali pop" },
+          { "name": "gadget takeover p.v." }
+        ],
+        "row1": {
+          "img1": "/assets/cases/bobble/bobble1.jpg",
+          "video2": "/assets/cases/bobble/bobble2.mp4"
+        },
+        "row1bis": {
+          "paragrafo": "Durante il periodo promozionale, inoltre, i negozi delle città di Lucca e Benevento sono stati trasformati nella suggestiva locada del film, trasportando in un avvincente avventura gli appassionati del 'tè a palline' più famoso d'Italia."
+        },
+        "row2": {
+          "video3": "/assets/cases/bobble/bobble3.mp4",
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/bobble/bobble5.jpg"
+        },
+
+        "row5": {
+          "video": "/assets/cases/bobble/bobble6.mp4"
+        }
       },
-      "brand3": {
-        "img": "/assets/works/3.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
+      "nestleaquaman": {
+        "img": "/assets/cases/nestle/nestle.jpg",
+        "brand1": "Nestlè",
+        "brand2": "Aquaman e il Regno Perduto",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
+        "year": "Dicembre 2023",
+        "list": [
+          { "name": "packaging" },
+          { "name": "campagna digital" },
+          { "name": "materiali pop" },
+          { "name": "gadget takeover p.v." }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
       },
-      "brand4": {
-        "img": "/assets/works/4.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
+      "milkatoys": {
+        "img": "/assets/cases/milka/cover_milka.png",
+        "ogimg": "/assets/milka_og.png",
+        "brand1": "Milka",
+        "brand2": "Toys Center",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
+        "year": "Natale 2023",
+        "items": "box valigetta ",
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
       },
-      "brand5": {
-        "img": "/assets/works/5.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
+
+      "citrustartarugheninja": {
+        "img": "/assets/cases/citrus/citrus.jpeg",
+        "brand1": "Citrus",
+        "brand2": "Tartarughe Ninja: Caos Mutante",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
+        "year": "Agosto 2023",
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
       },
-      "brand6": {
-        "img": "/assets/works/6.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
+      "americanunclesonic2": {
+        "img": "/assets/cases/american/sonic.jpg",
+        "brand1": "American Uncle",
+        "brand2": "Sonic 2",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Marzo 2023",
-        "items": "box valigetta "
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
       },
-      "brand7": {
-        "img": "/assets/works/7.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
+      "rossopomodoroghostbusters": {
+        "img": "/assets/cases/rossopomodoro/rossopomodoro_3.jpg",
+        "brand1": "Rossopomodoro",
+        "brand2": "Ghostbusters: Minaccia Glaciale",
+        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
-      },
-      "brand8": {
-        "img": "/assets/works/8.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
-        "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
-      },
-      "brand9": {
-        "img": "/assets/works/9.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
-        "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
-      },
-      "brand10": {
-        "img": "/assets/works/10.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
-        "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
-      },
-      "brand11": {
-        "img": "/assets/cases/bobble/cover_bobble.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
-        "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
-      },
-      "brand12": {
-        "img": "/assets/cases/bobble/cover_bobble.jpg",
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "",
-        "partner": "partner nel",
-        "year": "Marzo 2023",
-        "items": "box valigetta "
+        "year": "Aprile 2024",
+        "list": [
+          { "name": "box valigetta" },
+          { "name": "spot tv" },
+          { "name": "concorso a premi" },
+          { "name": "landing page" },
+          { "name": "campagna digital" },
+          { "name": "vestizione apecar per il toys christmas tour" }
+        ],
+        "row1": {
+          "img1": "/assets/cases/milka/milka1.jpg",
+          "img2": "/assets/cases/milka/milka2.png"
+        },
+        "row2": {
+          "title": {
+            "primo": "In viaggio per un ",
+            "span": "Natale",
+            "secondo": "tenerissimo."
+          },
+          "img3": "/assets/cases/milka/milkavideo.mp4"
+        },
+        "row3": {
+          "img4": "/assets/cases/milka1.jpg"
+        },
+        "row4": {
+          "title": " Quando i premi fanno gola a tutti!",
+          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
+        },
+        "row5": {
+          "video": "/assets/video/milka_video.mp4"
+        },
+        "row6": {
+          "pacchetti": "/assets/cases/prova_valigette.png"
+        },
+        "row7": {
+          "carousel": [
+            {
+              "img": "/assets/cases/milka4.jpg"
+            },
+            {
+              "img": "/assets/cases/milka5.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_1.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_2.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/tour_3.jpg"
+            },
+            {
+              "img": "/assets/cases/milka/milka4.jpg"
+            }
+          ]
+        }
       }
     }
   }
