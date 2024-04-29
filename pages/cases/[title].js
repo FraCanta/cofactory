@@ -16,12 +16,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation, Pagination } from "swiper/modules";
-import { useSwiper } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
+  console.log(work.row5.video);
   return (
     <>
       <Head>
@@ -198,8 +198,8 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </p>
               </div>
             ) : null}
+            {work.row5.video ? <VideoPlayer video={work.row5.video} /> : null}
 
-            <VideoPlayer video={work.row5.video} />
             {work.row6 ? (
               <div className="h-[30vh] lg:h-[40vh] w-auto relative ">
                 <Image
@@ -287,19 +287,50 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
           </div>
         </section>
-        <div className="w-[90%] mx-auto flex  justify-center items-center py-8 md:py-20">
-          <div
-            className={`${myFont.className} dark:text-third text-white text-[9vw] lg:text-[4vw] leading-[83.41px] flex flex-wrap items-center gap-4`}
-          >
-            <Link href={`/cases/${previousWork}`} className="z-10">
-              {" "}
-              {previousWork}
+        <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-20 gap-6">
+          {previousWork.titlePrev && (
+            <Link href={`/cases/${previousWork.titlePrev}`} className="z-10">
+              <div className=" h-full w-full  z-10 relative aspect-video">
+                <Image
+                  src={previousWork.imgPrev}
+                  fill
+                  alt=""
+                  className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
+                />{" "}
+                <div className="absolute inset-0 h-full w-full flex justify-center items-center gap-2">
+                  <p> PREV</p>
+                  <Image
+                    src="/assets/logo/per2.svg"
+                    alt=""
+                    width={10}
+                    height={10}
+                  />
+                </div>
+              </div>
             </Link>
+          )}
 
-            <Link href={`/cases/${nextWork}`} className="z-10">
-              {nextWork}
+          {nextWork.titleNext && (
+            <Link href={`/cases/${nextWork.titleNext}`} className="z-10">
+              <div className="h-full w-full  z-10 relative aspect-video">
+                <Image
+                  src={nextWork.imgNext}
+                  fill
+                  alt=""
+                  className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
+                />
+                <div className="absolute inset-0 h-full w-full flex justify-center items-center gap-2">
+                  <Image
+                    src="/assets/logo/per1.svg"
+                    alt=""
+                    width={10}
+                    height={10}
+                  />
+                  <p> NEXT</p>
+                </div>
+              </div>
             </Link>
-          </div>
+          )}
         </div>
         <div className="w-[90%] mx-auto md:py-10">
           <Line />
@@ -330,11 +361,29 @@ export async function getStaticProps(context) {
   }
   let targetObj = obj?.works?.singleCase?.[params?.title];
 
-  const arr = Object.keys(obj?.works?.singleCase);
-  const currentIndex = arr.findIndex((el) => el === params.title);
-  const previousWork = currentIndex > 0 ? arr[currentIndex - 1] : null;
+  const arr = Object.keys(obj?.works?.singleCase).map((el) => {
+    return {
+      title: el,
+      img: obj?.works?.singleCase?.[el]?.img,
+    };
+  });
 
-  const nextWork = currentIndex < arr.length - 1 ? arr[currentIndex + 1] : null;
+  const currentIndex = arr.findIndex((el) => el.title === params.title);
+  const previousWork = {
+    titlePrev: currentIndex > 0 ? arr[currentIndex - 1].title : null,
+    imgPrev: currentIndex > 0 ? arr[currentIndex - 1].img : null,
+  };
+  const nextWork = {
+    titleNext:
+      currentIndex >= 0 && currentIndex < arr.length - 1
+        ? arr[currentIndex + 1].title
+        : null,
+    imgNext:
+      currentIndex >= 0 && currentIndex < arr.length - 1
+        ? arr[currentIndex + 1].img
+        : null,
+  };
+
   return {
     props: {
       work: targetObj,

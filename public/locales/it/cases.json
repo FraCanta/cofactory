@@ -2,19 +2,19 @@
   "works": {
     "cards": [
       {
-        "img": "/assets/cases/orociok/orociok.jpeg",
+        "img": "/assets/cases/orociok/cover_orociok.jpg",
         "button": "orocioktoys"
       },
       {
-        "img": "/assets/cases/yummers/yummers.jpeg",
+        "img": "/assets/cases/yummers/cover_yummers.jpg",
         "button": "yummersghostbusters"
       },
       {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_2.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro2.jpg",
         "button": "rossopomodorotartarugheninja"
       },
       {
-        "img": "/assets/cases/treccani/treccani.jpg",
+        "img": "/assets/cases/treccani/cover_treccani.jpg",
         "button": "treccanifaoschwarz"
       },
       {
@@ -26,7 +26,7 @@
         "button": "nestleaquaman"
       },
       {
-        "img": "/assets/cases/milka/cover_milka.png",
+        "img": "/assets/cases/milka/cover_milka.jpg",
         "button": "milkatoys"
       },
 
@@ -39,13 +39,13 @@
         "button": "americanunclesonic2"
       },
       {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_3.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "button": "rossopomodoroghostbusters"
       }
     ],
     "singleCase": {
       "orocioktoys": {
-        "img": "/assets/cases/orociok/orociok.jpeg",
+        "img": "/assets/cases/orociok/cover_orociok.jpg",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
         "name": "Oro Ciok Toys Center",
@@ -109,7 +109,7 @@
         }
       },
       "yummersghostbusters": {
-        "img": "/assets/cases/yummers/yummers.jpeg",
+        "img": "/assets/cases/yummers/cover_yummers.jpg",
         "brand1": "Yummer's",
         "brand2": "Ghostbusters: Minaccia Glaciale",
         "name": "Yummer's Ghostbusters: Minaccia Glaciale",
@@ -174,10 +174,10 @@
         }
       },
       "rossopomodorotartarugheninja": {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_2.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro2.jpg",
         "brand1": "Rossopomodoro",
         "brand2": "Tartarughe Ninja: Caos Mutante",
-        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
+        "descrizione": "Durante l'estate 2023, al grido del mitico 'Cowabungaaaaa', le Tartarughe Ninja: Caos Mutante invadono i ristoranti Rossopomodoro con il nuovo Menu Bimbi Mutans Edition! Ad attendere i bimbi a tavola, tovagliette tutte da giocare, maschere da indossare e gadget da portare a casa.",
         "partner": "partner nel",
         "year": "Agosto 2023",
         "list": [
@@ -237,7 +237,7 @@
         }
       },
       "treccanifaoschwarz": {
-        "img": "/assets/cases/treccani/treccani.jpg",
+        "img": "/assets/cases/treccani/cover_treccani.jpg",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
@@ -393,7 +393,7 @@
         }
       },
       "milkatoys": {
-        "img": "/assets/cases/milka/cover_milka.png",
+        "img": "/assets/cases/milka/cover_milka.jpg",
         "ogimg": "/assets/milka_og.png",
         "brand1": "Milka",
         "brand2": "Toys Center",
@@ -585,7 +585,7 @@
         }
       },
       "rossopomodoroghostbusters": {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_3.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "brand1": "Rossopomodoro",
         "brand2": "Ghostbusters: Minaccia Glaciale",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",

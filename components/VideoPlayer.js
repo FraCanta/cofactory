@@ -6,23 +6,23 @@ const VideoPlayer = ({ video }) => {
   const [isFirstPlay, setIsFirstPlay] = useState(true);
 
   const togglePlay = () => {
-    const video = document.getElementById("videoPlayer");
+    const videoEl = document.getElementById("videoPlayer");
     if (!isPlaying && isFirstPlay) {
-      video.currentTime = 0; // Riavvolge il video all'inizio solo al primo play
+      videoEl.currentTime = 0; // Riavvolge il video all'inizio solo al primo play
       setIsFirstPlay(false);
     }
-    if (video.paused) {
-      video.play();
+    if (videoEl.paused) {
+      videoEl.play();
       setIsPlaying(true);
       setIsMuted(false);
     } else {
-      video.pause();
+      videoEl.pause();
       setIsPlaying(false);
     }
   };
 
   return (
-    <div className="relative h-[50vh] lg:h-screen fxl:h-[90vh] w-full">
+    <div className="relative aspect-square lg:h-[84vh]  w-full">
       <video
         id="videoPlayer"
         className="h-full w-full object-cover rounded-[15px]"

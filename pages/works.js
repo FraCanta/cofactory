@@ -61,7 +61,7 @@ const Works = ({ translation }) => {
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <main>
-        <Hero>
+        {/* <Hero>
           <MaskText>
             <h1
               className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
@@ -69,11 +69,11 @@ const Works = ({ translation }) => {
               Happy stories about happy clients.
             </h1>
           </MaskText>
-        </Hero>
-        <div className="w-[90%] mx-auto">
+        </Hero> */}
+        {/* <div className="w-[90%] mx-auto ">
           <Line />
-        </div>
-        <div className="flex justify-between w-[90%] mx-auto">
+        </div> */}
+        <div className="flex justify-between w-[90%] mx-auto py-20">
           <div></div>
           <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex z-10">
             {/* <div className="text-white text-xl font-normal font-['Raleway']">
