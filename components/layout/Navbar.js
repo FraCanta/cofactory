@@ -93,20 +93,20 @@ const Navbar = ({ lang }) => {
               <li onClick={() => setOpen(false)}>
                 <Link
                   href="/factory"
-                  className="text-[15vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
+                  className="text-[20vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
                 >
                   Factory
                 </Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-[15vw] lg:text-[8vw] cursor-pointer transition hover:text-pink  max-w-max"
+                className="text-[20vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
               >
                 <Link href="/works"> Works</Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-[15vw] lg:text-[8vw] cursor-pointer transition hover:text-second  max-w-max"
+                className="text-[20vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
               >
                 <Link href="/contatti"> Contact</Link>
               </li>
