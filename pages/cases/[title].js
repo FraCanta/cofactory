@@ -80,7 +80,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             </div>
           </div>
           <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  gap-y-10 lg:gap-0">
-            <div className=" flex flex-col gap-y-4">
+            <div className=" flex flex-col gap-y-1">
               <h2
                 className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-[1.2vw] font-normal lowercase leading-[24.91px]`}
               >
