@@ -287,9 +287,9 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
           </div>
         </section>
-        <div className="w-[90%] mx-auto flex justify-center items-center py-8 md:py-20">
+        <div className="w-[90%] mx-auto flex  justify-center items-center py-8 md:py-20">
           <div
-            className={`${myFont.className} dark:text-third text-white text-[9vw] lg:text-[4vw] leading-[83.41px] flex items-center gap-4`}
+            className={`${myFont.className} dark:text-third text-white text-[9vw] lg:text-[4vw] leading-[83.41px] flex flex-wrap items-center gap-4`}
           >
             <Link href={`/cases/${previousWork}`} className="z-10">
               {" "}
