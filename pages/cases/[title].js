@@ -114,28 +114,32 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         </section>
         <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-screen flex flex-col  items-center py-[50px] ">
           <div className="w-[90%] mx-auto flex flex-col gap-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="relative aspect-square">
-                <Image
-                  src={work.row1.img1}
-                  alt=""
-                  fill
-                  className=" object-cover rounded-[15px]"
-                />
-              </div>
-              {work.row1.img2 ? (
-                <div className="relative h-full aspect-square">
+            {work.row0 ? <VideoPlayer video={work.row0.video0} /> : null}
+            {work.row1 && work.row2 ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="relative aspect-square">
                   <Image
-                    src={work.row1.img2}
+                    src={work.row1.img1}
                     alt=""
                     fill
-                    className="aspect-square object-cover rounded-[15px]"
+                    className=" object-cover rounded-[15px]"
                   />
                 </div>
-              ) : (
-                <VideoPlayer video={work.row1.video2} />
-              )}
-            </div>
+                {work.row1.img2 ? (
+                  <div className="relative h-full aspect-square">
+                    <Image
+                      src={work.row1.img2}
+                      alt=""
+                      fill
+                      className="aspect-square object-cover rounded-[15px]"
+                    />
+                  </div>
+                ) : (
+                  <VideoPlayer video={work.row1.video2} />
+                )}
+              </div>
+            ) : null}
+
             {work.row1bis ? (
               <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                 <p
@@ -146,44 +150,69 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </div>
             ) : null}
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-              {work.row2.title ? (
-                <h2
-                  className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
-                >
-                  {work.row2.title.primo}
-                  <span className={`${myFont.className} text-[#d51d1f]`}>
-                    {work.row2.title.span}
-                  </span>{" "}
-                  {work.row2.title.secondo}
-                </h2>
-              ) : (
-                <div className="aspect-square">
-                  <VideoPlayer video={work.row2.video3} />
+            {work.row2bis ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="aspect-square relative">
+                  <Image
+                    src={work.row2bis.img1}
+                    alt=""
+                    fill
+                    className="h-full w-full object-cover  rounded-[15px]"
+                  />
                 </div>
-              )}
-
-              <div className="bg-gradient-to-50 aspect-square rounded-[15px] relative overflow-hidden w-full">
-                <video
-                  id="videoPlayer"
-                  className="h-full w-full "
-                  autoPlay
-                  loop
-                  muted
-                >
-                  <source src={work.row2.img3} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <div className="aspect-square relative">
+                  <Image
+                    src={work.row2bis.img2}
+                    alt=""
+                    fill
+                    className="h-full w-full object-cover  rounded-[15px]"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
-              <Image
-                src={work.row3.img4}
-                alt=""
-                fill
-                className="h-full w-full object-cover  rounded-[15px]"
-              />
-            </div>
+            ) : null}
+            {work.row2 ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                {work.row2.title ? (
+                  <h2
+                    className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
+                  >
+                    {work.row2.title.primo}
+                    <span className={`${myFont.className} text-[#d51d1f]`}>
+                      {work.row2.title.span}
+                    </span>{" "}
+                    {work.row2.title.secondo}
+                  </h2>
+                ) : (
+                  <div className="aspect-square">
+                    <VideoPlayer video={work.row2.video3} />
+                  </div>
+                )}
+
+                <div className="bg-gradient-to-50 aspect-square rounded-[15px] relative overflow-hidden w-full">
+                  <video
+                    id="videoPlayer"
+                    className="h-full w-full "
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src={work.row2.img3} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            ) : null}
+            {work.row3 ? (
+              <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
+                <Image
+                  src={work.row3.img4}
+                  alt=""
+                  fill
+                  className="h-full w-full object-cover  rounded-[15px]"
+                />
+              </div>
+            ) : null}
+
             {work.row4 ? (
               <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                 <h3
@@ -198,7 +227,22 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </p>
               </div>
             ) : null}
-            {work.row5.video ? <VideoPlayer video={work.row5.video} /> : null}
+            {work.row5.video ? (
+              <VideoPlayer video={work.row5.video} />
+            ) : (
+              <div className=" w-full h-full">
+                <video
+                  id="videoPlayer"
+                  className="rounded-[15px] aspect-square object-cover lg:aspect-video"
+                  autoPlay
+                  loop
+                  muted
+                >
+                  <source src={work.row5.video2} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            )}
 
             {work.row6 ? (
               <div className="h-[30vh] lg:h-[40vh] w-auto relative ">
@@ -209,6 +253,44 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   className="h-full w-full object-cover rounded-[15px]"
                 />
               </div>
+            ) : null}
+            {work.row6bis ? (
+              <div className="aspect-square lg:h-screen w-auto relative ">
+                <Image
+                  src={work.row6bis.img3}
+                  alt=""
+                  fill
+                  className="h-full w-full object-cover rounded-[15px]"
+                />
+              </div>
+            ) : null}
+            {work.row8 ? (
+              <>
+                <div className=" w-full h-full">
+                  <video
+                    id="videoPlayer"
+                    className="rounded-[15px]  w-full object-cover lg:object-contain lg:aspect-video lg:w-[50%] mx-auto"
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src={work.row8.video3} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+                  <h3
+                    className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-[2.5vw] `}
+                  >
+                    {work.row8.title}
+                  </h3>
+                  <p
+                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
+                  >
+                    {work.row8.descrizione}
+                  </p>
+                </div>
+              </>
             ) : null}
             {work.row7 ? (
               <div className="w-full">

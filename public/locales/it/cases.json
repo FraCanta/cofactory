@@ -176,64 +176,85 @@
       "rossopomodorotartarugheninja": {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro2.jpg",
         "brand1": "Rossopomodoro",
-        "brand2": "Tartarughe Ninja: Caos Mutante",
+        "brand2": "Tartarughe Ninja",
         "descrizione": "Durante l'estate 2023, al grido del mitico 'Cowabungaaaaa', le Tartarughe Ninja: Caos Mutante invadono i ristoranti Rossopomodoro con il nuovo Menu Bimbi Mutans Edition! Ad attendere i bimbi a tavola, tovagliette tutte da giocare, maschere da indossare e gadget da portare a casa.",
         "partner": "partner nel",
         "year": "Agosto 2023",
         "list": [
-          { "name": "box valigetta" },
-          { "name": "spot tv" },
-          { "name": "concorso a premi" },
-          { "name": "landing page" },
+          { "name": "packaging" },
           { "name": "campagna digital" },
-          { "name": "vestizione apecar per il toys christmas tour" }
+          { "name": "spot digital" },
+          { "name": "materiali pop" },
+          { "name": "gadget in cartotecnica" }
         ],
-        "row1": {
-          "img1": "/assets/cases/milka/milka1.jpg",
-          "img2": "/assets/cases/milka/milka2.png"
+        "row0": {
+          "video0": "/assets/cases/rossopomodoro/tartarughenija/spot.mp4"
         },
-        "row2": {
-          "title": {
-            "primo": "In viaggio per un ",
-            "span": "Natale",
-            "secondo": "tenerissimo."
-          },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+        "row1bis": {
+          "paragrafo": "Per chi invece ha preferito gustare la pizza a casa, un box pizza per il delivery interamente personalizzato con la release cinematografica. L'intera partnership è stata promossa anche grazie ad una massiccia campagna digital con uno spot realizzato ad hoc, on air su YouTube e le principali piattaforme social."
         },
-        "row3": {
-          "img4": "/assets/cases/milka1.jpg"
+        "row2bis": {
+          "img1": "/assets/cases/rossopomodoro/tartarughenija/img1.jpg",
+          "img2": "/assets/cases/rossopomodoro/tartarughenija/img2.jpg"
         },
-        "row4": {
-          "title": " Quando i premi fanno gola a tutti!",
-          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
-        },
+
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video2": "/assets/cases/rossopomodoro/tartarughenija/iphone_nija.mp4"
         },
-        "row6": {
-          "pacchetti": "/assets/cases/prova_valigette.png"
+        "row6bis": {
+          "img3": "/assets/cases/rossopomodoro/tartarughenija/img3.jpg"
         },
         "row7": {
           "carousel": [
             {
-              "img": "/assets/cases/milka4.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_01.jpg"
             },
             {
-              "img": "/assets/cases/milka5.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_02.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_1.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_03.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_2.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_04.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_3.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_05.jpg"
             },
             {
-              "img": "/assets/cases/milka/milka4.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_06.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_07.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_09.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_10.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_11.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_12.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_13.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_14.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_15.jpg"
             }
           ]
+        },
+
+        "row8": {
+          "video3": "/assets/cases/rossopomodoro/tartarughenija/spot2.mp4",
+          "title": "Per chi va pazzo per la pizza.",
+          "descrizione": "Non solo nei ristoranti, anche al Giffoni Film Festival hanno spopolato le maschere di Tartarughe Ninja: Caos Mutante! Al festival cinematografico per bambini e ragazzi, provenienti da ogni parte d'Italia e del mondo, le Tartarughe Nija hanno accolto giudici con i gadget realizzati da Rossopomodoro in occasione della partnership con la release."
         }
       },
       "treccanifaoschwarz": {
@@ -419,7 +440,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
