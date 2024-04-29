@@ -22,7 +22,6 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
-  console.log(nextWork);
   return (
     <>
       <Head>

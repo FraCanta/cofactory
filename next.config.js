@@ -12,7 +12,7 @@ module.exports = withPlugins([
     i18n: {
       locales: ["it", "en"],
       defaultLocale: "it",
-      localeDetection: true,
+      localeDetection: false,
     },
   },
   // {
