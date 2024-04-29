@@ -84,10 +84,12 @@ const Navbar = ({ lang }) => {
           initial={{ opacity: 0, y: "-100%" }}
           animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? "0%" : "-100%" }}
           transition={{ ease: "easeOut", duration: 0.4 }}
-          className="absolute top-0 left-0 right-0 bottom-0 flex items-center w-full h-screen bg-third dark:bg-white text-white dark:text-third"
+          className="absolute top-0 left-0 right-0 bottom-0 flex lg:items-end w-full h-screen bg-third dark:bg-white text-white dark:text-third"
         >
-          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 mt-[50px] md:mt-[100px] gap-y-10">
-            <ul className={`${myFont.className} h-full flex flex-col`}>
+          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  gap-y-10 ">
+            <ul
+              className={`${myFont.className} h-full flex flex-col py-20 lg:py-0`}
+            >
               <li onClick={() => setOpen(false)}>
                 <Link
                   href="/factory"
@@ -110,16 +112,7 @@ const Navbar = ({ lang }) => {
               </li>
             </ul>
             {/* <div></div> */}
-            <div className="h-full flex flex-col justify-between gap-y-10">
-              <MaskText>
-                <p
-                  className={`${myFont2.className} font-normal text-[20px] md:text-[2.2vw]  text-white dark:text-third `}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  eget erat ac est tristique mollis. Etiam ultrices augue vel
-                  lacus molestie scelerisque ut at massa.{" "}
-                </p>
-              </MaskText>
+            <div className="h-full flex flex-col lg:justify-end lg:items-end gap-y-10">
               <SocialBar />
             </div>
           </div>
