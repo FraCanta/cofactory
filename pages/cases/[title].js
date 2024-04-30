@@ -188,7 +188,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </div>
                 )}
 
-                <div className="bg-gradient-to-50 aspect-square rounded-[15px] relative overflow-hidden w-full">
+                <div className=" aspect-square rounded-[15px] w-full">
                   <video
                     id="videoPlayer"
                     className="h-full w-full "
