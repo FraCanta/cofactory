@@ -181,7 +181,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 <div className="w-full aspect-square">
                   <video
                     id="videoPlayer"
-                    className="h-full w-full  rounded-[15px]"
+                    className="h-full w-full aspect-square rounded-[15px]"
                     autoPlay
                     loop
                     muted
