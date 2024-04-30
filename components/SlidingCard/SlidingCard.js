@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 
-const SlidingCard = () => {
+const SlidingCard = ({ slide1, slide2 }) => {
   const containerRef = useRef(null);
   const [position, setPosition] = useState(50); // Imposta il valore iniziale a 50
 
@@ -9,17 +9,15 @@ const SlidingCard = () => {
       setPosition(e.target.value);
     };
 
+    const slider = document.querySelector(".slider");
+    slider.addEventListener("input", sliderInputHandler);
+
     const containerStyle = containerRef.current.style;
     containerStyle.setProperty("--position", `${position}%`);
 
-    document
-      .querySelector(".slider")
-      .addEventListener("input", sliderInputHandler);
-
+    // Funzione di cleanup
     return () => {
-      document
-        .querySelector(".slider")
-        .removeEventListener("input", sliderInputHandler);
+      slider.removeEventListener("input", sliderInputHandler);
     };
   }, [position]);
 
@@ -28,13 +26,13 @@ const SlidingCard = () => {
       <div className="container_slide" ref={containerRef}>
         <div className="image-container">
           <img
-            className="image-before slider-image"
-            src="/assets/cases/bobble/sliding/sliding2.jpg"
+            className="image-before slider-image "
+            src={slide1}
             alt="color photo"
           />
           <img
             className="image-after slider-image"
-            src="/assets/cases/bobble/sliding/sliding1.jpg"
+            src={slide2}
             alt="black and white"
           />
         </div>

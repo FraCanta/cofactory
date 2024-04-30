@@ -15,7 +15,7 @@
 
 .image-container {
   max-width: 800px;
-  max-height: 80vh;
+  max-height: 75%;
   aspect-ratio: 1/1;
   display: grid;
   place-items: center;
@@ -89,20 +89,8 @@
   }
 }
 
-@media screen and (min-width: 431px) and (max-width: 768px) {
+@media screen and (min-width: 431px) and (max-width: 1280px) {
   .image-container {
-    max-height: 75vh;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 834px) {
-  .image-container {
-    max-height: 65vh;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1281px) {
-  .image-container {
-    max-height: 70vh;
+    max-height: 100vh;
   }
 }

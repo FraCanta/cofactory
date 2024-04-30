@@ -118,7 +118,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row0 ? <VideoPlayer video={work.row0.video0} /> : null}
             {work.row1 && work.row2 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="relative">
+                <div className="relative aspect-square">
                   <Image
                     src={work.row1.img1}
                     alt=""
@@ -127,7 +127,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   />
                 </div>
                 {work.row1.img2 ? (
-                  <div className="relative h-full">
+                  <div className="relative h-full aspect-square">
                     <Image
                       src={work.row1.img2}
                       alt=""
@@ -151,23 +151,27 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </div>
             ) : null}
 
-            {work.row2bis ? (
+            {work.row1tris ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="relative">
+                <div className="relative aspect-square">
                   <Image
-                    src={work.row2bis.img1}
+                    src={work.row1tris.img1}
                     alt=""
                     fill
                     className="h-full w-full object-cover  rounded-[15px]"
                   />
                 </div>
-                <div className="relative">
-                  <Image
-                    src={work.row2bis.img2}
-                    alt=""
-                    fill
+                <div className="w-full aspect-square">
+                  <video
+                    id="videoPlayer"
                     className="h-full w-full object-cover  rounded-[15px]"
-                  />
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src={work.row1tris.video2} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             ) : null}
@@ -183,27 +187,44 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     </span>{" "}
                     {work.row2.title.secondo}
                   </h2>
-                ) : (
-                  <div className="h-full">
-                    <VideoPlayer video={work.row2.video3} />
-                  </div>
-                )}
-                {work.row2.img3 ? (
-                  <div className="w-full">
-                    <video
-                      id="videoPlayer"
-                      className="h-full w-full  rounded-[15px]"
-                      autoPlay
-                      loop
-                      muted
-                    >
-                      <source src={work.row2.img3} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                ) : (
-                  <SlidingCard />
-                )}
+                ) : null}
+                <div className="w-full">
+                  <video
+                    id="videoPlayer"
+                    className="h-full w-full  rounded-[15px]"
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src={work.row2.img3} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            ) : null}
+            {work.row2bis ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center">
+                <div>
+                  {/* <video
+                    id="videoPlayer"
+                    className="h-full w-full object-cover  rounded-[15px]"
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src={work.row2bis.video3} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video> */}
+                  <h2
+                    className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
+                  >
+                    Titolo per questa sezione
+                  </h2>
+                </div>{" "}
+                <SlidingCard
+                  slide1={work.row2bis.slide1}
+                  slide2={work.row2bis.slide2}
+                />
               </div>
             ) : null}
             {work.row3 ? (
@@ -216,7 +237,30 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 />
               </div>
             ) : null}
-
+            {work.row3bis ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="relative aspect-square">
+                  <Image
+                    src={work.row3bis.img1}
+                    alt=""
+                    fill
+                    className=" object-cover rounded-[15px]"
+                  />
+                </div>
+                {work.row3bis.img2 ? (
+                  <div className="relative h-full aspect-square">
+                    <Image
+                      src={work.row3bis.img2}
+                      alt=""
+                      fill
+                      className="aspect-square object-cover rounded-[15px]"
+                    />
+                  </div>
+                ) : (
+                  <VideoPlayer video={work.row1.video2} />
+                )}
+              </div>
+            ) : null}
             {work.row4 ? (
               <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                 <h3

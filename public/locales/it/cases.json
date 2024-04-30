@@ -193,7 +193,7 @@
         "row1bis": {
           "paragrafo": "Per chi invece ha preferito gustare la pizza a casa, un box pizza per il delivery interamente personalizzato con la release cinematografica. L'intera partnership è stata promossa anche grazie ad una massiccia campagna digital con uno spot realizzato ad hoc, on air su YouTube e le principali piattaforme social."
         },
-        "row2bis": {
+        "row3bis": {
           "img1": "/assets/cases/rossopomodoro/tartarughenija/img1.jpg",
           "img2": "/assets/cases/rossopomodoro/tartarughenija/img2.jpg"
         },
@@ -252,7 +252,7 @@
         },
 
         "row8": {
-          "video3": "/assets/cases/rossopomodoro/tartarughenija/spot2.mp4",
+          "video3": "/assets/cases/rossopomodoro/tartarughenija/tartarughe_spot.mp4",
           "title": "Per chi va pazzo per la pizza.",
           "descrizione": "Non solo nei ristoranti, anche al Giffoni Film Festival hanno spopolato le maschere di Tartarughe Ninja: Caos Mutante! Al festival cinematografico per bambini e ragazzi, provenienti da ogni parte d'Italia e del mondo, le Tartarughe Nija hanno accolto giudici con i gadget realizzati da Rossopomodoro in occasione della partnership con la release."
         }
@@ -340,8 +340,16 @@
         "row1bis": {
           "paragrafo": "Durante il periodo promozionale, inoltre, i negozi delle città di Lucca e Benevento sono stati trasformati nella suggestiva locada del film, trasportando in un avvincente avventura gli appassionati del 'tè a palline' più famoso d'Italia."
         },
-        "row2": {
-          "video3": "/assets/cases/bobble/bobble3.mp4"
+
+        "row1tris": {
+          "img1": "/assets/cases/bobble/bobble1.jpg",
+          "video2": "/assets/cases/bobble/bobble2.MP4"
+        },
+
+        "row2bis": {
+          "video3": "/assets/cases/bobble/bobble3.mp4",
+          "slide1": "/assets/cases/bobble/sliding/sliding2.jpg",
+          "slide2": "/assets/cases/bobble/sliding/sliding1.jpg"
         },
         "row3": {
           "img4": "/assets/cases/bobble/bobble5.jpg"
