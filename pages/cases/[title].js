@@ -178,7 +178,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row2.title.secondo}
                   </h2>
                 ) : null}
-                <div className="w-full aspect-square">
+                <div className="w-full h-full aspect-square">
                   <video
                     id="videoPlayer"
                     className="h-full w-full aspect-square rounded-[15px]"
