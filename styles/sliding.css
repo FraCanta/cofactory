@@ -76,3 +76,33 @@
   /* z-index: 100; */
   box-shadow: 1px 1px 1px hsl(0, 50%, 2%, 0.5);
 }
+
+@media screen and (max-width: 360px) {
+  .image-container {
+    max-height: 40vh;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 430px) {
+  .image-container {
+    max-height: 45vh;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 768px) {
+  .image-container {
+    max-height: 75vh;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 834px) {
+  .image-container {
+    max-height: 65vh;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1281px) {
+  .image-container {
+    max-height: 70vh;
+  }
+}
