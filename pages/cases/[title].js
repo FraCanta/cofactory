@@ -188,15 +188,15 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </div>
                 )}
 
-                <div className=" aspect-square rounded-[15px] w-full">
+                <div className=" aspect-square w-full">
                   <video
                     id="videoPlayer"
-                    className="h-full w-full "
+                    className="h-full w-full  rounded-[15px]"
                     autoPlay
                     loop
                     muted
                   >
-                    <source src={work.row2.img3} type="video/mp4" />
+                    <source src={work.row2.video3} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
