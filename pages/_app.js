@@ -5,6 +5,8 @@ import "@/styles/line.css";
 import "@/styles/linkMarquee.css";
 import "@/styles/paragraph.css";
 import "@/styles/cases.css";
+import "@/styles/sliding.css";
+
 import { useState, useEffect } from "react";
 
 import { ThemeProvider } from "next-themes";

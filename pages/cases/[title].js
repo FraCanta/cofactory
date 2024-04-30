@@ -19,6 +19,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import SlidingCard from "@/components/SlidingCard/SlidingCard";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
   console.log(work.row5.video);
@@ -117,7 +118,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row0 ? <VideoPlayer video={work.row0.video0} /> : null}
             {work.row1 && work.row2 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="relative aspect-square">
+                <div className="relative">
                   <Image
                     src={work.row1.img1}
                     alt=""
@@ -126,7 +127,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   />
                 </div>
                 {work.row1.img2 ? (
-                  <div className="relative h-full aspect-square">
+                  <div className="relative h-full">
                     <Image
                       src={work.row1.img2}
                       alt=""
@@ -152,7 +153,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
 
             {work.row2bis ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="aspect-square relative">
+                <div className="relative">
                   <Image
                     src={work.row2bis.img1}
                     alt=""
@@ -160,7 +161,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     className="h-full w-full object-cover  rounded-[15px]"
                   />
                 </div>
-                <div className="aspect-square relative">
+                <div className="relative">
                   <Image
                     src={work.row2bis.img2}
                     alt=""
@@ -183,23 +184,26 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row2.title.secondo}
                   </h2>
                 ) : (
-                  <div className="aspect-square">
+                  <div className="h-full">
                     <VideoPlayer video={work.row2.video3} />
                   </div>
                 )}
-
-                <div className=" aspect-square w-full">
-                  <video
-                    id="videoPlayer"
-                    className="h-full w-full  rounded-[15px]"
-                    autoPlay
-                    loop
-                    muted
-                  >
-                    <source src={work.row2.video3} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
+                {work.row2.img3 ? (
+                  <div className="w-full">
+                    <video
+                      id="videoPlayer"
+                      className="h-full w-full  rounded-[15px]"
+                      autoPlay
+                      loop
+                      muted
+                    >
+                      <source src={work.row2.img3} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                ) : (
+                  <SlidingCard />
+                )}
               </div>
             ) : null}
             {work.row3 ? (
