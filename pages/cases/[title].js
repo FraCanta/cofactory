@@ -23,41 +23,36 @@ import SlidingCard from "@/components/SlidingCard/SlidingCard";
 import VideoPlayer2 from "@/components/VideoPlayer2";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
+  console.log(work.descrizione);
   return (
     <>
       <Head>
-        <title>{`Cofactory - ${work?.name}`}</title>
-        <meta name="description" content={work?.descrizione} />
-        {/* <meta name="keywords" content={work?.keywords} /> */}
-        <meta name="author" content="Cofactory" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        ></meta>
+        <title>{`Cofactory - ${work.name}`}</title>
+        <meta name="description" content={`${work.descrizione}`} />
+
         <meta
           property="og:url"
-          content="https://www.cofactory-eight.vercel.app.it/"
+          content={`https://cofactory-eight.vercel.app`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`Cofactory - ${work?.name}`} />
+        <meta property="og:title" content={`Cofactory - ${work.name}`} />
+        <meta property="og:description" content={`${work.descrizione}`} />
         <meta
           property="og:image"
-          content={`https://www.cofactory-eight.vercel.app.it${work?.img}`}
+          content={`https://cofactory-eight.vercel.app${work.img}`}
         />
-        <meta property="og:description" content={work?.descrizione} />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="cofactory-eight.vercel.app.it"
-        />
+        <meta property="twitter:domain" content="cofactory-eight.vercel.app" />
         <meta
           property="twitter:url"
-          content="https://www.cofactory-eight.vercel.app.it/"
+          content="https://cofactory-eight.vercel.app/"
         />
-        <meta name="twitter:title" content={`Cofactory - ${work?.name}`} />
+        <meta name="twitter:title" content={`Cofactory - ${work.name}`} />
+        <meta name="twitter:description" content={`${work.descrizione}`} />
         <meta
           name="twitter:image"
-          content={`https://www.cofactory-eight.vercel.app.it${work?.img}`}
+          content={`https://cofactory-eight.vercel.app${work.img}`}
         />
       </Head>
       <motion.div
