@@ -23,17 +23,12 @@ import SlidingCard from "@/components/SlidingCard/SlidingCard";
 import VideoPlayer2 from "@/components/VideoPlayer2";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
-  console.log(work.descrizione);
   return (
     <>
       <Head>
         <title>{`Cofactory - ${work.name}`}</title>
         <meta name="description" content={`${work.descrizione}`} />
 
-        <meta
-          property="og:url"
-          content={`https://cofactory-eight.vercel.app`}
-        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`Cofactory - ${work.name}`} />
         <meta property="og:description" content={`${work.descrizione}`} />
@@ -42,12 +37,6 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           content={`https://cofactory-eight.vercel.app${work.img}`}
         />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="cofactory-eight.vercel.app" />
-        <meta
-          property="twitter:url"
-          content="https://cofactory-eight.vercel.app/"
-        />
         <meta name="twitter:title" content={`Cofactory - ${work.name}`} />
         <meta name="twitter:description" content={`${work.descrizione}`} />
         <meta
