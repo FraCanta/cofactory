@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-const VideoPlayer = ({ video }) => {
+const VideoPlayer = ({ video, poster }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [isFirstPlay, setIsFirstPlay] = useState(true);
@@ -22,14 +22,13 @@ const VideoPlayer = ({ video }) => {
   };
 
   return (
-    <div className="relative h-screen  w-full">
+    <div className="relative aspect-video  w-full">
       <video
         id="videoPlayer"
         className="h-full w-full object-cover rounded-[15px]"
         onClick={togglePlay}
-        autoPlay
-        loop
         muted={isMuted}
+        poster={poster}
       >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.

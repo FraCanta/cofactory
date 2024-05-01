@@ -26,7 +26,7 @@
         "button": "nestleaquaman"
       },
       {
-        "img": "/assets/cases/milka/cover_milka.jpg",
+        "img": "/assets/cases/milka/cover_milka2.jpg",
         "button": "milkatoys"
       },
 
@@ -35,7 +35,7 @@
         "button": "citrustartarugheninja"
       },
       {
-        "img": "/assets/cases/american/sonic.jpg",
+        "img": "/assets/cases/american/sonic2.jpg",
         "button": "americanunclesonic2"
       },
       {
@@ -80,7 +80,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -145,7 +146,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -188,18 +190,18 @@
           { "name": "gadget in cartotecnica" }
         ],
         "row0": {
-          "video0": "/assets/cases/rossopomodoro/tartarughenija/spot.mp4"
-        },
-        "row1bis": {
+          "video0": "/assets/cases/rossopomodoro/tartarughenija/spot.mp4",
+          "poster": "/assets/cases/rossopomodoro/tartarughenija/spot-3.jpg",
           "paragrafo": "Per chi invece ha preferito gustare la pizza a casa, un box pizza per il delivery interamente personalizzato con la release cinematografica. L'intera partnership è stata promossa anche grazie ad una massiccia campagna digital con uno spot realizzato ad hoc, on air su YouTube e le principali piattaforme social."
         },
-        "row3bis": {
+
+        "row1": {
           "img1": "/assets/cases/rossopomodoro/tartarughenija/img1.jpg",
           "img2": "/assets/cases/rossopomodoro/tartarughenija/img2.jpg"
         },
 
-        "row5": {
-          "video2": "/assets/cases/rossopomodoro/tartarughenija/iphone_nija.mp4"
+        "row5bis": {
+          "video": "/assets/cases/rossopomodoro/tartarughenija/iphone_nija.mp4"
         },
         "row6bis": {
           "img3": "/assets/cases/rossopomodoro/tartarughenija/img3.jpg"
@@ -292,7 +294,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -335,18 +338,12 @@
         ],
         "row1": {
           "img1": "/assets/cases/bobble/bobble1.jpg",
-          "video2": "/assets/cases/bobble/bobble2.MP4"
+          "video": "/assets/cases/bobble/bobble2.MP4"
         },
+
         "row1bis": {
-          "paragrafo": "Durante il periodo promozionale, inoltre, i negozi delle città di Lucca e Benevento sono stati trasformati nella suggestiva locada del film, trasportando in un avvincente avventura gli appassionati del 'tè a palline' più famoso d'Italia."
-        },
+          "paragrafo": "Durante il periodo promozionale, inoltre, i negozi delle città di Lucca e Benevento sono stati trasformati nella suggestiva locada del film, trasportando in un avvincente avventura gli appassionati del 'tè a palline' più famoso d'Italia.",
 
-        "row1tris": {
-          "img1": "/assets/cases/bobble/bobble1.jpg",
-          "video2": "/assets/cases/bobble/bobble2.MP4"
-        },
-
-        "row2bis": {
           "video3": "/assets/cases/bobble/bobble3.mp4",
           "slide1": "/assets/cases/bobble/sliding/sliding2.jpg",
           "slide2": "/assets/cases/bobble/sliding/sliding1.jpg"
@@ -392,7 +389,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -421,7 +419,7 @@
         }
       },
       "milkatoys": {
-        "img": "/assets/cases/milka/cover_milka.jpg",
+        "img": "/assets/cases/milka/cover_milka2.jpg",
         "ogimg": "/assets/milka_og.png",
         "brand1": "Milka",
         "brand2": "Toys Center",
@@ -438,8 +436,8 @@
           { "name": "vestizione apecar per il toys christmas tour" }
         ],
         "row1": {
-          "img1": "/assets/cases/milka/milka1.jpg",
-          "img2": "/assets/cases/milka/milka2.png"
+          "img1": "/assets/cases/milka/milka12.jpg",
+          "img2": "/assets/cases/milka/milka22.jpg"
         },
         "row2": {
           "title": {
@@ -450,37 +448,38 @@
           "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
-          "img4": "/assets/cases/milka1.jpg"
+          "img4": "/assets/cases/milka/milka32.jpg"
         },
         "row4": {
           "title": " Quando i premi fanno gola a tutti!",
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka2.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
-          "pacchetti": "/assets/cases/prova_valigette.png"
+          "pacchetti": "/assets/cases/milka/valigette2.jpg"
         },
         "row7": {
           "carousel": [
             {
-              "img": "/assets/cases/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/milka1.jpg"
             },
             {
-              "img": "/assets/cases/milka5.jpg"
+              "img": "/assets/cases/milka/galleria/milka2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_1.jpg"
+              "img": "/assets/cases/milka/galleria/milka4.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_2.jpg"
+              "img": "/assets/cases/milka/galleria/tour_2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_3.jpg"
+              "img": "/assets/cases/milka/galleria/tour_3.jpg"
             },
             {
-              "img": "/assets/cases/milka/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/tour_1.jpg"
             }
           ]
         }
@@ -521,7 +520,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -550,7 +550,7 @@
         }
       },
       "americanunclesonic2": {
-        "img": "/assets/cases/american/sonic.jpg",
+        "img": "/assets/cases/american/sonic2.jpg",
         "brand1": "American Uncle",
         "brand2": "Sonic 2",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
@@ -584,7 +584,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -647,7 +648,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"

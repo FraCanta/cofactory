@@ -20,9 +20,9 @@ import { Navigation } from "swiper/modules";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import SlidingCard from "@/components/SlidingCard/SlidingCard";
+import VideoPlayer2 from "@/components/VideoPlayer2";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
-  console.log(work.row5.video);
   return (
     <>
       <Head>
@@ -83,12 +83,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  gap-y-10 lg:gap-0">
             <div className=" flex flex-col gap-y-1">
               <h2
-                className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-[1.2vw] font-normal lowercase leading-[24.91px]`}
+                className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-lg font-normal lowercase `}
               >
                 {work.partner}
               </h2>
               <h3
-                className={`${myFont2.className} dark:text-third text-white text-[21.84px] font-normal uppercase leading-[24.91px]`}
+                className={`${myFont2.className} dark:text-third text-white text-lg font-normal uppercase `}
               >
                 {work.year}
               </h3>
@@ -96,7 +96,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
 
             <div className="h-full justify-between items-start flex flex-col ">
               <div
-                className={`${myFont2.className}  flex flex-wrap  gap-2 dark:text-third text-white  text-base md:text-lg lg:text-base uppercase`}
+                className={`${myFont2.className}  flex flex-wrap  gap-2 dark:text-third text-white  text-sm md:text-base lg:text-sm uppercase`}
               >
                 <ul className="flex flex-wrap items-center">
                   {work.list.map((el, i) => {
@@ -115,8 +115,22 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         </section>
         <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-screen flex flex-col  items-center py-[50px] ">
           <div className="w-[90%] mx-auto flex flex-col gap-y-6">
-            {work.row0 ? <VideoPlayer video={work.row0.video0} /> : null}
-            {work.row1 && work.row2 ? (
+            {work.row0 ? (
+              <>
+                <VideoPlayer
+                  video={work.row0.video0}
+                  poster={work.row0.poster}
+                />
+                <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+                  <p
+                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-xl lg:w-[75%] mx-auto flex leading-normal  gap-4 h-full`}
+                  >
+                    {work.row0.paragrafo}
+                  </p>
+                </div>
+              </>
+            ) : null}
+            {work.row1 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="relative aspect-square">
                   <Image
@@ -136,12 +150,52 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     />
                   </div>
                 ) : (
-                  <VideoPlayer video={work.row1.video2} />
+                  <div className="w-full aspect-square">
+                    <video
+                      id="videoPlayer"
+                      className="h-full w-full object-cover  rounded-[15px]"
+                      autoPlay
+                      loop
+                      muted
+                    >
+                      <source src={work.row1.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
                 )}
               </div>
             ) : null}
+            {work.row1bis ? (
+              <>
+                <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+                  <p
+                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[75%] mx-auto flex leading-normal  gap-4 h-full`}
+                  >
+                    {work.row1bis.paragrafo}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center">
+                  <div className="h-screen">
+                    <video
+                      id="videoPlayer"
+                      className="h-full w-full object-cover  rounded-[15px]"
+                      autoPlay
+                      loop
+                      muted
+                    >
+                      <source src={work.row1bis.video3} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>{" "}
+                  <SlidingCard
+                    slide1={work.row1bis.slide1}
+                    slide2={work.row1bis.slide2}
+                  />
+                </div>
+              </>
+            ) : null}
 
-            {work.row1tris ? (
+            {/* {work.row1tris ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="relative aspect-square">
                   <Image
@@ -164,20 +218,18 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </video>
                 </div>
               </div>
-            ) : null}
+            ) : null} */}
             {work.row2 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                {work.row2.title ? (
-                  <h2
-                    className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
-                  >
-                    {work.row2.title.primo}
-                    <span className={`${myFont.className} text-[#d51d1f]`}>
-                      {work.row2.title.span}
-                    </span>{" "}
-                    {work.row2.title.secondo}
-                  </h2>
-                ) : null}
+                <h2
+                  className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
+                >
+                  {work.row2.title.primo}
+                  <span className={`${myFont.className} text-[#d51d1f]`}>
+                    {work.row2.title.span}
+                  </span>{" "}
+                  {work.row2.title.secondo}
+                </h2>
                 <div className="w-full h-full aspect-square">
                   <video
                     id="videoPlayer"
@@ -192,35 +244,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </div>
               </div>
             ) : null}
-            {work.row1bis ? (
-              <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
-                <p
-                  className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[75%] mx-auto flex leading-normal  gap-4 h-full`}
-                >
-                  {work.row1bis.paragrafo}
-                </p>
-              </div>
-            ) : null}
-            {work.row2bis ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center">
-                <div className="h-screen">
-                  <video
-                    id="videoPlayer"
-                    className="h-full w-full object-cover  rounded-[15px]"
-                    autoPlay
-                    loop
-                    muted
-                  >
-                    <source src={work.row2bis.video3} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>{" "}
-                <SlidingCard
-                  slide1={work.row2bis.slide1}
-                  slide2={work.row2bis.slide2}
-                />
-              </div>
-            ) : null}
+
             {work.row3 ? (
               <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
                 <Image
@@ -258,31 +282,21 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row4 ? (
               <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                 <h3
-                  className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-[2.5vw] `}
+                  className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-3xl `}
                 >
                   {work.row4.title}
                 </h3>
                 <p
-                  className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
+                  className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-xl lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
                 >
                   {work.row4.descrizione}
                 </p>
               </div>
             ) : null}
-            {work.row5.video ? (
-              <div className=" w-full h-full">
-                <video
-                  id="videoPlayer"
-                  className="rounded-[15px] object-cover aspect-video"
-                  autoPlay
-                  loop
-                  muted
-                >
-                  <source src={work.row5.video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            ) : (
+            {work.row5 ? (
+              <VideoPlayer2 video={work.row5.video} poster={work.row5.poster} />
+            ) : null}
+            {work.row5bis ? (
               <div className=" w-full h-full">
                 <video
                   id="videoPlayer"
@@ -291,11 +305,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   loop
                   muted
                 >
-                  <source src={work.row5.video2} type="video/mp4" />
+                  <source src={work.row5bis.video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
-            )}
+            ) : null}
 
             {work.row6 ? (
               <div className="h-[30vh] lg:h-[40vh] w-auto relative ">
@@ -333,12 +347,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </div>
                 <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                   <h3
-                    className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-[2.5vw] `}
+                    className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-4xl `}
                   >
                     {work.row8.title}
                   </h3>
                   <p
-                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
+                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-xl lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
                   >
                     {work.row8.descrizione}
                   </p>
