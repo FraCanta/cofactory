@@ -62,10 +62,10 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           <div className=" grid grid-cols-1  gap-10">
             <div className="justify-between  flex flex-col">
               <h1
-                className={`${myFont.className} dark:text-third text-white text-4xl md:text-6xl lg:text-4xl 2xl:text-[3.3rem] flex flex-wrap items-center gap-4 lg:gap-4 2xl:gap-4`}
+                className={`${myFont.className} dark:text-third text-white text-4xl md:text-6xl lg:text-4xl 2xl:text-[3.3rem] flex flex-wrap items-center gap-2 lg:gap-4 2xl:gap-4`}
               >
                 {work.brand1}
-                <span className="relative w-6 h-6 md:w-10 md:h-10 lg:w-[35px] lg:h-[35px]">
+                <span className="relative w-5 h-5 md:w-10 md:h-10 lg:w-[35px] lg:h-[35px]">
                   <Image src={Icona} alt="" fill className="h-auto w-auto" />
                 </span>
 
@@ -74,7 +74,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             </div>
             <div className="justify-between items-center flex ">
               <p
-                className={`${myFont2.className} dark:text-third text-white text-lg md:text-xl lg:text-lg  2xl:text-xl  flex  gap-4 h-full`}
+                className={`${myFont2.className} dark:text-third text-white text-base md:text-xl lg:text-lg  2xl:text-xl  flex  gap-4 h-full`}
               >
                 {work.descrizione}
               </p>
@@ -83,12 +83,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  gap-y-10 lg:gap-0">
             <div className=" flex flex-col gap-y-1">
               <h2
-                className={`${myFont2.className} text-second text-[5vw] md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-lg font-normal lowercase `}
+                className={`${myFont2.className} text-second text-base md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-lg font-normal lowercase `}
               >
                 {work.partner}
               </h2>
               <h3
-                className={`${myFont2.className} dark:text-third text-white text-lg font-normal uppercase `}
+                className={`${myFont2.className} dark:text-third text-white text-base font-normal uppercase `}
               >
                 {work.year}
               </h3>
@@ -123,7 +123,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 />
                 <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                   <p
-                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-xl lg:w-[75%] mx-auto flex leading-normal  gap-4 h-full`}
+                    className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-[3vw] lg:text-xl lg:w-[75%] mx-auto flex leading-normal  gap-4 h-full`}
                   >
                     {work.row0.paragrafo}
                   </p>
@@ -347,12 +347,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </div>
                 <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                   <h3
-                    className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-4xl `}
+                    className={`${myFont.className} dark:text-third text-white text-2xl md:text-[6vw] lg:text-4xl `}
                   >
                     {work.row8.title}
                   </h3>
                   <p
-                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-xl lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
+                    className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[60%] mx-auto flex  gap-4 h-full`}
                   >
                     {work.row8.descrizione}
                   </p>
