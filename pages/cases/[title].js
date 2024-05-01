@@ -30,7 +30,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         <meta name="description" content={`${work.descrizione}`} />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`Cofactory - ${work.name}`} />
+        <meta property="og:title" content="Cofactory " />
         <meta property="og:description" content={`${work.descrizione}`} />
         <meta
           property="og:image"
