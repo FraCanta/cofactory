@@ -46,9 +46,10 @@
     "singleCase": {
       "orocioktoys": {
         "img": "/assets/cases/orociok/cover_orociok.jpg",
+        "name": "Oro Ciok + Toys Center",
+
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
-        "name": "Oro Ciok Toys Center",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Primavera 2024",
@@ -112,9 +113,8 @@
       "yummersghostbusters": {
         "img": "/assets/cases/yummers/cover_yummers.jpg",
         "brand1": "Yummer's",
-        "brand2": "Ghostbusters: Minaccia Glaciale",
-        "name": "Yummer's Ghostbusters: Minaccia Glaciale",
-
+        "brand2": "Ghostbusters",
+        "name": "Yummer's + Ghostbusters: Minaccia Glaciale",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Aprile 2024",
@@ -177,6 +177,7 @@
       },
       "rossopomodorotartarugheninja": {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
+        "name": "Rossopomodoro + Tartarughe Ninja",
         "brand1": "Rossopomodoro",
         "brand2": "Tartarughe Ninja",
         "descrizione": "Durante l'estate 2023, al grido del mitico 'Cowabungaaaaa', le Tartarughe Ninja: Caos Mutante invadono i ristoranti Rossopomodoro con il nuovo Menu Bimbi Mutans Edition! Ad attendere i bimbi a tavola, tovagliette tutte da giocare, maschere da indossare e gadget da portare a casa.",
@@ -263,6 +264,7 @@
         "img": "/assets/cases/treccani/cover_treccani.jpg",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
+        "name": "Treccani + Fao Schwarz",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Natale 2023",
@@ -327,6 +329,7 @@
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "brand1": "Bobble Bobble",
         "brand2": "Dangeouns & Dragons",
+        "name": "Bobble Bobble + Dangeouns & Dragons",
         "descrizione": "Bobble Bobble, il primo produttore di bubble tea in Europa - e l'unico in Italia - incontra un film epico: Dangeons&Dragons - L'onore dei ladri. Nato dal famoso gioco di ruolo Hasbro e distribuito nelle sale nel Marzo 2023 da Eagle Pictures. Nadce così un bubble tea in Limited Edition ispirato al film, che ha conquistato il pubblico teen di Bobble Bobble.",
         "partner": "partner nel",
         "year": "Marzo 2023",
@@ -360,6 +363,7 @@
         "img": "/assets/cases/nestle/nestle.jpg",
         "brand1": "Nestlè",
         "brand2": "Aquaman e il Regno Perduto",
+        "name": "Nestlè + Aquaman e il Regno Perduto",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Dicembre 2023",
@@ -423,6 +427,7 @@
         "ogimg": "/assets/milka_og.png",
         "brand1": "Milka",
         "brand2": "Toys Center",
+        "name": "Milka + Toys Center",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Natale 2023",
@@ -488,7 +493,8 @@
       "citrustartarugheninja": {
         "img": "/assets/cases/citrus/citrus.jpeg",
         "brand1": "Citrus",
-        "brand2": "Tartarughe Ninja: Caos Mutante",
+        "brand2": "Tartarughe Ninja",
+        "name": "Citrus + Tartarughe Ninja: Caos Mutante",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Agosto 2023",
@@ -553,6 +559,7 @@
         "img": "/assets/cases/american/sonic2.jpg",
         "brand1": "American Uncle",
         "brand2": "Sonic 2",
+        "name": "American Uncle + Sonic 2",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Marzo 2023",
@@ -616,7 +623,8 @@
       "rossopomodoroghostbusters": {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "brand1": "Rossopomodoro",
-        "brand2": "Ghostbusters: Minaccia Glaciale",
+        "brand2": "Ghostbusters",
+        "name": "Rossopomodoro + Ghostbusters: Minaccia Glaciale",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Aprile 2024",

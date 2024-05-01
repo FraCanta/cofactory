@@ -26,19 +26,38 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
   return (
     <>
       <Head>
-        <title>
-          {work?.brand1} + {work?.brand2}
-        </title>
-        <meta property="og:url" content="https://cofactory-eight.vercel.app/" />
-        <meta property="og:type" content="website" />
+        <title>{`Cofactory - ${work?.name}`}</title>
+        <meta name="description" content={work?.descrizione} />
+        {/* <meta name="keywords" content={work?.keywords} /> */}
+        <meta name="author" content="Cofactory" />
         <meta
-          property="og:title"
-          content={`${work?.brand1} + ${work?.brand2}`}
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        <meta
+          property="og:url"
+          content="https://www.cofactory-eight.vercel.app.it/"
         />
-        <meta property="og:description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Cofactory - ${work?.name}`} />
         <meta
           property="og:image"
-          content={`https://cofactory-eight.vercel.app${work.img}`}
+          content={`https://www.cofactory-eight.vercel.app.it${work?.img}`}
+        />
+        <meta property="og:description" content={work?.descrizione} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:domain"
+          content="cofactory-eight.vercel.app.it"
+        />
+        <meta
+          property="twitter:url"
+          content="https://www.cofactory-eight.vercel.app.it/"
+        />
+        <meta name="twitter:title" content={`Cofactory - ${work?.name}`} />
+        <meta
+          name="twitter:image"
+          content={`https://www.cofactory-eight.vercel.app.it${work?.img}`}
         />
       </Head>
       <motion.div
