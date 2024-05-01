@@ -38,7 +38,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         <meta property="og:description" content="" />
         <meta
           property="og:image"
-          content={`${work.ogimg} ? https://cofactory-eight.vercel.app${work.ogimg} : ""`}
+          content={`${work.ogimg} ? https://cofactory-eight.vercel.app${work.img} : ""`}
         />
       </Head>
       <motion.div
