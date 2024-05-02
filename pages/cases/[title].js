@@ -237,6 +237,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     autoPlay
                     loop
                     muted
+                    playsinline
                   >
                     <source src={work.row2.img3} type="video/mp4" />
                     Your browser does not support the video tag.
@@ -341,7 +342,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     loop
                     muted
                   >
-                    <source src={work.row8.video3} type="video/mp4" />
+                    <source src={work.row8.video3} type="video/webm" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
