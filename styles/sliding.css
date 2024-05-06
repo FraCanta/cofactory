@@ -94,3 +94,21 @@
     max-height: 100vh;
   }
 }
+
+@media screen and (min-width: 4000px) {
+  .image-container {
+    max-width: 4500px;
+    max-height: 80vh;
+  }
+  .slider-image {
+    height: 2750px;
+  }
+
+  .slider-line {
+    width: 1.2rem;
+  }
+
+  .slider-button {
+    padding: 2.5rem;
+  }
+}

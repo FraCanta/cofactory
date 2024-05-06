@@ -52,6 +52,7 @@ const SlidingCard = ({ slide1, slide2 }) => {
             height="30"
             fill="currentColor"
             viewBox="0 0 256 256"
+            className="w-[30px] h-[30px] 4xl:w-[50px] 4xl:h-[50px]"
           >
             <rect width="256" height="256" fill="none"></rect>
             <line
