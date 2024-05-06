@@ -21,6 +21,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import SlidingCard from "@/components/SlidingCard/SlidingCard";
 import VideoPlayer2 from "@/components/VideoPlayer2";
+import VideoPlayer3 from "@/components/VideoPlayer3";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
   return (
@@ -150,18 +151,22 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     />
                   </div>
                 ) : (
-                  <div className="w-full aspect-square">
-                    <video
-                      id="videoPlayer"
-                      className="h-full w-full object-cover  rounded-[15px]"
-                      autoPlay
-                      loop
-                      muted
-                    >
-                      <source src={work.row1.video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
+                  // <div className="w-full aspect-square">
+                  //   <video
+                  //     id="videoPlayer"
+                  //     className="h-full w-full object-cover  rounded-[15px]"
+                  //     autoPlay
+                  //     loop
+                  //     muted
+                  //   >
+                  //     <source src={work.row1.video} type="video/mp4" />
+                  //     Your browser does not support the video tag.
+                  //   </video>
+                  // </div>
+                  <VideoPlayer3
+                    video={work.row1.video}
+                    className="h-full w-full object-cover  rounded-[15px]"
+                  />
                 )}
               </div>
             ) : null}
