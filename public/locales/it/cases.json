@@ -349,22 +349,27 @@
         ],
         "row1": {
           "img1": "/assets/cases/bobble/bobble1.jpg",
-          "video": "/assets/cases/bobble/bobble2.MP4"
+          "video": "/assets/cases/bobble/bobble2.mp4"
         },
 
         "row1bis": {
           "paragrafo": "Durante il periodo promozionale, inoltre, i negozi delle città di Lucca e Benevento sono stati trasformati nella suggestiva locada del film, trasportando in un avvincente avventura gli appassionati del 'tè a palline' più famoso d'Italia.",
 
-          "video3": "/assets/cases/bobble/bobble3.mp4",
+          "bobble3": "/assets/cases/bobble/img3_rett.jpg",
           "slide1": "/assets/cases/bobble/sliding/sliding2.jpg",
           "slide2": "/assets/cases/bobble/sliding/sliding1.jpg"
         },
         "row3": {
+          "titolo": {
+            "primo": "Una Limited Edition dal",
+            "due": " gusto epico"
+          },
+
           "img4": "/assets/cases/bobble/bobble5.jpg"
         },
 
-        "row5": {
-          "video": "/assets/cases/bobble/bobble6.mp4"
+        "row5bis": {
+          "video": "/assets/cases/bobble/bobble5.mp4"
         }
       },
       "nestleaquaman": {

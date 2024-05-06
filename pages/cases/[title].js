@@ -174,23 +174,19 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row1bis.paragrafo}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center">
-                  <div className="h-screen">
-                    <video
-                      id="videoPlayer"
-                      className="h-full w-full object-cover  rounded-[15px]"
-                      autoPlay
-                      loop
-                      muted
-                    >
-                      <source src={work.row1bis.video3} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>{" "}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center relative">
                   <SlidingCard
                     slide1={work.row1bis.slide1}
                     slide2={work.row1bis.slide2}
                   />
+                  <div className="h-[60vh] lg:h-full relative">
+                    <Image
+                      src={work.row1bis.bobble3}
+                      alt=""
+                      fill
+                      className="object-cover rounded-[15px] h-full aspect-auto"
+                    />
+                  </div>{" "}
                 </div>
               </>
             ) : null}
@@ -247,14 +243,29 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
 
             {work.row3 ? (
-              <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
-                <Image
-                  src={work.row3.img4}
-                  alt=""
-                  fill
-                  className="h-full w-full object-cover  rounded-[15px]"
-                />
-              </div>
+              <>
+                {work.row3.titolo && (
+                  <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+                    <h2
+                      className={`${myFont.className} dark:text-third text-white text-4xl lg:text-6xl py-10 lg:py-0`}
+                    >
+                      {work.row3.titolo.primo}
+                      <span className={`${myFont.className} text-[#d51d1f]`}>
+                        {work.row3.titolo.due}
+                      </span>{" "}
+                    </h2>
+                  </div>
+                )}
+
+                <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
+                  <Image
+                    src={work.row3.img4}
+                    alt=""
+                    fill
+                    className="h-full w-full object-cover  rounded-[15px]"
+                  />
+                </div>
+              </>
             ) : null}
             {work.row3bis ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -301,7 +312,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               <div className=" w-full h-full">
                 <video
                   id="videoPlayer"
-                  className="rounded-[15px] aspect-square object-cover lg:aspect-video"
+                  className="rounded-[15px] h-[40vh] lg:h-[80vh] w-full object-cover"
                   autoPlay
                   loop
                   muted
