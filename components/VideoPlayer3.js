@@ -25,7 +25,7 @@ const VideoPlayer3 = ({ video, poster }) => {
     <div className="relative aspect-square  w-full">
       <video
         id="videoPlayer"
-        className="h-full w-full object-cover rounded-[15px]"
+        className="h-full w-full object-cover rounded-lg"
         onClick={togglePlay}
         muted={isMuted}
         autoPlay

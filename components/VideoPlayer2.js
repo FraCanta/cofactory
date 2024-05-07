@@ -25,7 +25,7 @@ const VideoPlayer2 = ({ video, poster }) => {
     <div className="relative aspect-video  w-full">
       <video
         id="videoPlayer2"
-        className="h-full w-full object-cover rounded-[15px]"
+        className="h-full w-full object-cover rounded-lg"
         onClick={togglePlay}
         muted={isMuted}
         poster={poster}

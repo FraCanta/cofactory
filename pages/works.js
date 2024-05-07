@@ -109,7 +109,7 @@ const Works = ({ translation }) => {
                         src={work.img}
                         alt=""
                         fill
-                        className="object-cover rounded-[15px] "
+                        className="object-cover rounded-lg "
                         priority
                       />
                     </div>
