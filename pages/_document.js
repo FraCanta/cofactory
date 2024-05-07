@@ -24,6 +24,7 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="viewport" content="initial-scale=1.0" />
       </Head>
       <body>
         <Main />
