@@ -339,7 +339,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row8.title}
                   </h3>
                   <p
-                    className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[60%] mx-auto flex  gap-4 h-full`}
+                    className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[75%] mx-auto `}
                   >
                     {work.row8.descrizione}
                   </p>
