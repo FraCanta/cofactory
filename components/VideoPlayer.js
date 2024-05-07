@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-const VideoPlayer = ({ video, poster }) => {
+const VideoPlayer = ({ video, poster, id }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [isFirstPlay, setIsFirstPlay] = useState(true);
 
   const togglePlay = () => {
-    const videoEl = document.getElementById("videoPlayer");
+    const videoEl = document.getElementById(id);
     if (!isPlaying && isFirstPlay) {
       videoEl.currentTime = 0; // Riavvolge il video all'inizio solo al primo play
       setIsFirstPlay(false);
@@ -24,7 +24,7 @@ const VideoPlayer = ({ video, poster }) => {
   return (
     <div className="relative aspect-square lg:aspect-video  w-full">
       <video
-        id="videoPlayer"
+        id={id}
         className="h-full w-full object-cover rounded-[15px]"
         onClick={togglePlay}
         muted={isMuted}

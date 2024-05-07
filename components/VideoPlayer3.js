@@ -28,7 +28,7 @@ const VideoPlayer3 = ({ video, poster }) => {
         className="h-full w-full object-cover rounded-[15px]"
         onClick={togglePlay}
         muted={isMuted}
-        poster={poster}
+        autoPlay
       >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.

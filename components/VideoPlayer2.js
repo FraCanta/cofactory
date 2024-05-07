@@ -6,7 +6,7 @@ const VideoPlayer2 = ({ video, poster }) => {
   const [isFirstPlay, setIsFirstPlay] = useState(true);
 
   const togglePlay = () => {
-    const videoEl = document.getElementById("videoPlayer");
+    const videoEl = document.getElementById("videoPlayer2");
     if (!isPlaying && isFirstPlay) {
       videoEl.currentTime = 0; // Riavvolge il video all'inizio solo al primo play
       setIsFirstPlay(false);
@@ -24,7 +24,7 @@ const VideoPlayer2 = ({ video, poster }) => {
   return (
     <div className="relative aspect-video  w-full">
       <video
-        id="videoPlayer"
+        id="videoPlayer2"
         className="h-full w-full object-cover rounded-[15px]"
         onClick={togglePlay}
         muted={isMuted}

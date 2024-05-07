@@ -334,18 +334,19 @@
       "bobbled&d": {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
+        "brand2": "Dangeons&Dragons",
         "title": "bobbled&d",
 
         "name": "Bobble Bobble + Dangeouns & Dragons",
-        "descrizione": "Bobble Bobble, il primo produttore di bubble tea in Europa - e l'unico in Italia - incontra un film epico: Dangeons&Dragons - L'onore dei ladri. Nato dal famoso gioco di ruolo Hasbro e distribuito nelle sale nel Marzo 2023 da Eagle Pictures. Nadce così un bubble tea in Limited Edition ispirato al film, che ha conquistato il pubblico teen di Bobble Bobble.",
+        "descrizione": "Bobble Bobble, il primo produttore di bubble tea in Europa - e l'unico in Italia - incontra un film epico: Dangeons&Dragons - L'onore dei ladri. Nato dal famoso gioco di ruolo Hasbro e distribuito nelle sale nel Marzo 2023 da Eagle Pictures. Nasce così un bubble tea in Limited Edition ispirato al film, che ha conquistato il pubblico teen di Bobble Bobble.",
         "partner": "partner nel",
         "year": "Marzo 2023",
         "list": [
           { "name": "packaging" },
           { "name": "campagna digital" },
           { "name": "materiali pop" },
-          { "name": "gadget takeover p.v." }
+          { "name": "gadget" },
+          { "name": "takeover p.v." }
         ],
         "row1": {
           "img1": "/assets/cases/bobble/bobble1.jpg",
@@ -477,7 +478,7 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/cases/milka/spot_milka2.mp4",
+          "video": "/assets/cases/milka/spot_milka.mp4",
           "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {

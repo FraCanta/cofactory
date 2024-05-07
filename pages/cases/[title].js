@@ -151,18 +151,6 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     />
                   </div>
                 ) : (
-                  // <div className="w-full aspect-square">
-                  //   <video
-                  //     id="videoPlayer"
-                  //     className="h-full w-full object-cover  rounded-[15px]"
-                  //     autoPlay
-                  //     loop
-                  //     muted
-                  //   >
-                  //     <source src={work.row1.video} type="video/mp4" />
-                  //     Your browser does not support the video tag.
-                  //   </video>
-                  // </div>
                   <VideoPlayer3
                     video={work.row1.video}
                     className="h-full w-full object-cover  rounded-[15px]"
@@ -174,7 +162,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               <>
                 <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                   <p
-                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-[1.5vw] lg:w-[75%] mx-auto flex leading-normal  gap-4 h-full`}
+                    className={`${myFont2.className} dark:text-third text-white text-base md:text-xl lg:text-lg  2xl:text-xl lg:w-[75%] lg:mx-auto  flex  gap-4 h-full`}
                   >
                     {work.row1bis.paragrafo}
                   </p>
@@ -238,7 +226,6 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     autoPlay
                     loop
                     muted
-                    playsinline
                   >
                     <source src={work.row2.img3} type="video/mp4" />
                     Your browser does not support the video tag.
@@ -311,7 +298,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </div>
             ) : null}
             {work.row5 ? (
-              <VideoPlayer2 video={work.row5.video} poster={work.row5.poster} />
+              <VideoPlayer
+                video={work.row5.video}
+                poster={work.row5.poster}
+                id="#videoplayer"
+              />
             ) : null}
             {work.row5bis ? (
               <div className=" w-full h-full">
