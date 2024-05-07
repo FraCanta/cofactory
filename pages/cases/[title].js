@@ -454,7 +454,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   alt=""
                   className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
                 />{" "}
-                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2 flex justify-center items-center gap-2">
+                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2 flex justify-center items-center gap-2 text-white dark:text-third">
                   <p> PREV</p>
                   <Image
                     src="/assets/logo/per2.svg"
@@ -476,7 +476,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   alt=""
                   className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
                 />
-                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2  w-full flex justify-center items-center gap-2">
+                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2  w-full flex justify-center items-center gap-2 text-white dark:text-third">
                   <Image
                     src="/assets/logo/per1.svg"
                     alt=""
