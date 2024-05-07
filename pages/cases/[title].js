@@ -26,7 +26,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
   return (
     <>
       <Head>
-        <title>{`Cofactory - ${work.name}`}</title>
+        <title>{`${work.name}`}</title>
         <meta name="description" content={`${work.descrizione}`} />
 
         <meta
@@ -34,7 +34,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           content={`https://cofactory-eight.vercel.app/cases/${work.title}`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`Cofactory - ${work.name}`} />
+        <meta property="og:title" content={`${work.name}`} />
         <meta property="og:description" content={`${work.descrizione}`} />
         <meta
           property="og:image"
