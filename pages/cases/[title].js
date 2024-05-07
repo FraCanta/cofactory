@@ -80,7 +80,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </p>
             </div>
           </div>
-          <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  ">
+          <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  space-y-10">
             <div className=" flex flex-col space-y-1">
               <h2
                 className={`${myFont2.className} text-second text-base md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-lg font-normal lowercase `}
@@ -98,7 +98,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               <div
                 className={`${myFont2.className}  flex flex-wrap  gap-2 dark:text-third text-white  text-sm md:text-base lg:text-sm uppercase`}
               >
-                <ul className="flex flex-wrap items-center">
+                <ul className="flex flex-wrap items-center ">
                   {work.list.map((el, i) => {
                     return (
                       <div key={i}>
@@ -455,7 +455,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   alt=""
                   className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
                 />{" "}
-                <div className="absolute inset-0 h-full w-full flex justify-center items-center gap-2">
+                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2 flex justify-center items-center gap-2">
                   <p> PREV</p>
                   <Image
                     src="/assets/logo/per2.svg"
@@ -477,7 +477,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   alt=""
                   className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
                 />
-                <div className="absolute inset-0 h-full w-full flex justify-center items-center gap-2">
+                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2  w-full flex justify-center items-center gap-2">
                   <Image
                     src="/assets/logo/per1.svg"
                     alt=""
