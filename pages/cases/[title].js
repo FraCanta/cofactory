@@ -121,6 +121,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 <VideoPlayer
                   video={work.row0.video0}
                   poster={work.row0.poster}
+                  id="videoplayer2"
                 />
                 <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
                   <p
