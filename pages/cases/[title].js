@@ -138,7 +138,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={work.row1.img1}
                     alt=""
                     fill
-                    className=" object-cover rounded-[15px]"
+                    className=" object-cover rounded-lg"
                   />
                 </div>
                 {work.row1.img2 ? (
@@ -147,13 +147,13 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row1.img2}
                       alt=""
                       fill
-                      className="aspect-square object-cover rounded-[15px]"
+                      className="aspect-square object-cover rounded-lg"
                     />
                   </div>
                 ) : (
                   <VideoPlayer3
                     video={work.row1.video}
-                    className="h-full w-full object-cover  rounded-[15px]"
+                    className="h-full w-full object-cover  rounded-lg"
                   />
                 )}
               </div>
@@ -177,7 +177,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row1bis.bobble3}
                       alt=""
                       fill
-                      className="object-cover rounded-[15px] h-full aspect-auto"
+                      className="object-cover rounded-lg h-full aspect-auto"
                     />
                   </div>{" "}
                 </div>
@@ -195,15 +195,14 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </span>{" "}
                   {work.row2.title.secondo}
                 </h2>
-                <div className="w-full h-full aspect-square">
+                <div className="w-full h-full">
                   <video
-                    id="videoPlayer"
-                    className="h-full w-full aspect-square rounded-[15px]"
+                    className="h-full w-full aspect-square rounded-lg"
                     autoPlay
                     loop
                     muted
                   >
-                    <source src={work.row2.img3} type="video/mp4" />
+                    <source src={work.row2.video} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -230,7 +229,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={work.row3.img4}
                     alt=""
                     fill
-                    className="h-full w-full object-cover  rounded-[15px]"
+                    className="h-full w-full object-cover  rounded-lg"
                   />
                 </div>
               </>
@@ -242,7 +241,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={work.row3bis.img1}
                     alt=""
                     fill
-                    className=" object-cover rounded-[15px]"
+                    className=" object-cover rounded-lg"
                   />
                 </div>
                 {work.row3bis.img2 ? (
@@ -251,7 +250,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row3bis.img2}
                       alt=""
                       fill
-                      className="aspect-square object-cover rounded-[15px]"
+                      className="aspect-square object-cover rounded-lg"
                     />
                   </div>
                 ) : (
@@ -284,7 +283,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               <div className=" w-full h-full">
                 <video
                   id="videoPlayer"
-                  className="rounded-[15px] h-[40vh] lg:h-[80vh] w-full object-cover"
+                  className="rounded-lg h-[40vh] lg:h-[80vh] w-full object-cover"
                   autoPlay
                   loop
                   muted
@@ -314,7 +313,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   src={work.row6bis.img3}
                   alt=""
                   fill
-                  className="h-full w-full object-cover rounded-[15px]"
+                  className="h-full w-full object-cover rounded-lg"
                 />
               </div>
             ) : null}
@@ -323,7 +322,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 <div className=" w-full h-full">
                   <video
                     id="videoPlayer"
-                    className="rounded-[15px]  w-full object-cover lg:object-contain lg:aspect-video lg:w-[50%] mx-auto"
+                    className="rounded-lg  w-full object-cover lg:object-contain lg:aspect-video lg:w-[50%] mx-auto"
                     autoPlay
                     loop
                     muted
@@ -350,13 +349,13 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row8.img}
                       alt=""
                       fill
-                      className=" object-cover rounded-[15px]"
+                      className=" object-cover rounded-lg"
                     />
                   </div>
                   <div className=" w-full h-full">
                     <video
                       id="videoPlayer"
-                      className="rounded-[15px]  w-full object-cover  aspect-square"
+                      className="rounded-lg  w-full object-cover  aspect-square"
                       autoPlay
                       loop
                       muted

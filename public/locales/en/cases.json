@@ -259,9 +259,9 @@
         },
 
         "row8": {
-          "video3": "/assets/cases/rossopomodoro/tartarughenija/spot2_def.mp4",
+          "video3": "/assets/cases/rossopomodoro/tartarughenija/spot3_def.mp4",
           "title": "Per chi va pazzo per la pizza.",
-          "descrizione": "Non solo nei ristoranti, anche al Giffoni Film Festival hanno spopolato le maschere di Tartarughe Ninja: Caos Mutante! Al festival cinematografico per bambini e ragazzi, provenienti da ogni parte d'Italia e del mondo, le Tartarughe Ninja hanno accolto giudici con i gadget realizzati da Rossopomodoro in occasione della partnership con la release.",
+          "descrizione": "Non solo nei ristoranti, anche al Giffoni Film Festival hanno spopolato le maschere di Tartarughe Ninja: Caos Mutante! Al festival cinematografico per bambini e ragazzi, provenienti da ogni parte d'Italia e del mondo, le Tartarughe Ninja hanno accolto i piccoli giudici con i gadget realizzati da Rossopomodoro in occasione della partnership con la release.",
           "img": "/assets/cases/rossopomodoro/tartarughenija/giffoni.jpg",
           "video": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.mp4"
         }
@@ -470,7 +470,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo2.mp4"
+          "video": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka/milka32.jpg"
