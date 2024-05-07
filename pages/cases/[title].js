@@ -80,7 +80,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </p>
             </div>
           </div>
-          <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  gap-y-10 lg:gap-0">
+          <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  space-y-10 lg:space-0">
             <div className=" flex flex-col gap-y-1">
               <h2
                 className={`${myFont2.className} text-second text-base md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-lg font-normal lowercase `}
@@ -296,9 +296,9 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
 
             {work.row6 ? (
-              <div className=" w-full h-[25vh] lg:h-[50vh]">
+              <div className=" w-full h-[20vh] lg:h-[60vh]">
                 <video
-                  className="w-full h-full  object-cover"
+                  className="w-full h-full rounded-lg  object-cover"
                   autoPlay
                   loop
                   muted
