@@ -344,6 +344,28 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row8.descrizione}
                   </p>
                 </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div className="relative aspect-square">
+                    <Image
+                      src={work.row8.img}
+                      alt=""
+                      fill
+                      className=" object-cover rounded-[15px]"
+                    />
+                  </div>
+                  <div className=" w-full h-full">
+                    <video
+                      id="videoPlayer"
+                      className="rounded-[15px]  w-full object-cover  aspect-square"
+                      autoPlay
+                      loop
+                      muted
+                    >
+                      <source src={work.row8.video} type="video/webm" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
               </>
             ) : null}
             {work.row7 ? (

@@ -2,19 +2,19 @@
   "works": {
     "cards": [
       {
-        "img": "/assets/cases/orociok/orociok.jpeg",
+        "img": "/assets/cases/orociok/cover_orociok.jpg",
         "button": "orocioktoys"
       },
       {
-        "img": "/assets/cases/yummers/yummers.jpeg",
+        "img": "/assets/cases/yummers/cover_yummers.jpg",
         "button": "yummersghostbusters"
       },
       {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_2.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
         "button": "rossopomodorotartarugheninja"
       },
       {
-        "img": "/assets/cases/treccani/treccani.jpg",
+        "img": "/assets/cases/treccani/cover_treccani.jpg",
         "button": "treccanifaoschwarz"
       },
       {
@@ -26,7 +26,7 @@
         "button": "nestleaquaman"
       },
       {
-        "img": "/assets/cases/milka/cover_milka.png",
+        "img": "/assets/cases/milka/cover_milka2.jpg",
         "button": "milkatoys"
       },
 
@@ -35,20 +35,21 @@
         "button": "citrustartarugheninja"
       },
       {
-        "img": "/assets/cases/american/sonic.jpg",
+        "img": "/assets/cases/american/sonic2.jpg",
         "button": "americanunclesonic2"
       },
       {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_3.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "button": "rossopomodoroghostbusters"
       }
     ],
     "singleCase": {
       "orocioktoys": {
-        "img": "/assets/cases/orociok/orociok.jpeg",
+        "img": "/assets/cases/orociok/cover_orociok.jpg",
+        "name": "Oro Ciok + Toys Center",
+        "title": "orocioktoys",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
-        "name": "Oro Ciok Toys Center",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Primavera 2024",
@@ -70,7 +71,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
@@ -80,7 +81,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -109,11 +111,12 @@
         }
       },
       "yummersghostbusters": {
-        "img": "/assets/cases/yummers/yummers.jpeg",
+        "img": "/assets/cases/yummers/cover_yummers.jpg",
         "brand1": "Yummer's",
-        "brand2": "Ghostbusters: Minaccia Glaciale",
-        "name": "Yummer's Ghostbusters: Minaccia Glaciale",
+        "brand2": "Ghostbusters",
+        "title": "yummersghostbusters",
 
+        "name": "Yummer's + Ghostbusters: Minaccia Glaciale",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Aprile 2024",
@@ -135,7 +138,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
@@ -145,7 +148,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -174,72 +178,101 @@
         }
       },
       "rossopomodorotartarugheninja": {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_2.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
+        "name": "Rossopomodoro + Tartarughe Ninja",
         "brand1": "Rossopomodoro",
-        "brand2": "Tartarughe Ninja: Caos Mutante",
-        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
+        "brand2": "Tartarughe Ninja",
+        "title": "rossopomodorotartarugheninja",
+
+        "descrizione": "Durante l'estate 2023, al grido del mitico 'Cowabungaaaaa', le Tartarughe Ninja: Caos Mutante invadono i ristoranti Rossopomodoro con il nuovo Menu Bimbi Mutans Edition! Ad attendere i bimbi a tavola, tovagliette tutte da giocare, maschere da indossare e gadget da portare a casa.",
         "partner": "partner nel",
         "year": "Agosto 2023",
         "list": [
-          { "name": "box valigetta" },
-          { "name": "spot tv" },
-          { "name": "concorso a premi" },
-          { "name": "landing page" },
+          { "name": "packaging" },
           { "name": "campagna digital" },
-          { "name": "vestizione apecar per il toys christmas tour" }
+          { "name": "spot digital" },
+          { "name": "materiali pop" },
+          { "name": "gadget in cartotecnica" }
         ],
+        "row0": {
+          "video0": "/assets/cases/rossopomodoro/tartarughenija/spot.mp4",
+          "poster": "/assets/cases/rossopomodoro/tartarughenija/spot-3.jpg",
+          "paragrafo": "Per chi invece ha preferito gustare la pizza a casa, un box pizza per il delivery interamente personalizzato con la release cinematografica. L'intera partnership è stata promossa anche grazie ad una massiccia campagna digital con uno spot realizzato ad hoc, on air su YouTube e le principali piattaforme social."
+        },
+
         "row1": {
-          "img1": "/assets/cases/milka/milka1.jpg",
-          "img2": "/assets/cases/milka/milka2.png"
+          "img1": "/assets/cases/rossopomodoro/tartarughenija/img1.jpg",
+          "img2": "/assets/cases/rossopomodoro/tartarughenija/img2.jpg"
         },
-        "row2": {
-          "title": {
-            "primo": "In viaggio per un ",
-            "span": "Natale",
-            "secondo": "tenerissimo."
-          },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+
+        "row5bis": {
+          "video": "/assets/cases/rossopomodoro/tartarughenija/iphone_nija.mp4"
         },
-        "row3": {
-          "img4": "/assets/cases/milka1.jpg"
-        },
-        "row4": {
-          "title": " Quando i premi fanno gola a tutti!",
-          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
-        },
-        "row5": {
-          "video": "/assets/video/milka_video.mp4"
-        },
-        "row6": {
-          "pacchetti": "/assets/cases/prova_valigette.png"
+        "row6bis": {
+          "img3": "/assets/cases/rossopomodoro/tartarughenija/img3.jpg"
         },
         "row7": {
           "carousel": [
             {
-              "img": "/assets/cases/milka4.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_01.JPG"
             },
             {
-              "img": "/assets/cases/milka5.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_02.JPG"
             },
             {
-              "img": "/assets/cases/milka/tour_1.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_03.JPG"
             },
             {
-              "img": "/assets/cases/milka/tour_2.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_04.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_3.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_05.jpg"
             },
             {
-              "img": "/assets/cases/milka/milka4.jpg"
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_06.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_07.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_09.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_10.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_11.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_12.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_13.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_14.jpg"
+            },
+            {
+              "img": "/assets/cases/rossopomodoro/tartarughenija/galleria_15.jpg"
             }
           ]
+        },
+
+        "row8": {
+          "video3": "/assets/cases/rossopomodoro/tartarughenija/spot2_def.mp4",
+          "title": "Per chi va pazzo per la pizza.",
+          "descrizione": "Non solo nei ristoranti, anche al Giffoni Film Festival hanno spopolato le maschere di Tartarughe Ninja: Caos Mutante! Al festival cinematografico per bambini e ragazzi, provenienti da ogni parte d'Italia e del mondo, le Tartarughe Nija hanno accolto giudici con i gadget realizzati da Rossopomodoro in occasione della partnership con la release.",
+          "img": "/assets/cases/rossopomodoro/tartarughenija/giffoni.jpg",
+          "video": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.mp4"
         }
       },
       "treccanifaoschwarz": {
-        "img": "/assets/cases/treccani/treccani.jpg",
+        "img": "/assets/cases/treccani/cover_treccani.jpg",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
+        "name": "Treccani + Fao Schwarz",
+        "title": "treccanifaoschwarz",
+
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Natale 2023",
@@ -261,7 +294,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
@@ -271,7 +304,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -302,39 +336,52 @@
       "bobbled&d": {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "brand1": "Bobble Bobble",
-        "brand2": "Dangeouns & Dragons",
-        "descrizione": "Bobble Bobble, il primo produttore di bubble tea in Europa - e l'unico in Italia - incontra un film epico: Dangeons&Dragons - L'onore dei ladri. Nato dal famoso gioco di ruolo Hasbro e distribuito nelle sale nel Marzo 2023 da Eagle Pictures. Nadce così un bubble tea in Limited Edition ispirato al film, che ha conquistato il pubblico teen di Bobble Bobble.",
+        "brand2": "Dangeons&Dragons",
+        "title": "bobbled&d",
+
+        "name": "Bobble Bobble + Dangeouns & Dragons",
+        "descrizione": "Bobble Bobble, il primo produttore di bubble tea in Europa - e l'unico in Italia - incontra un film epico: Dangeons&Dragons - L'onore dei ladri. Nato dal famoso gioco di ruolo Hasbro e distribuito nelle sale nel Marzo 2023 da Eagle Pictures. Nasce così un bubble tea in Limited Edition ispirato al film, che ha conquistato il pubblico teen di Bobble Bobble.",
         "partner": "partner nel",
         "year": "Marzo 2023",
         "list": [
           { "name": "packaging" },
           { "name": "campagna digital" },
           { "name": "materiali pop" },
-          { "name": "gadget takeover p.v." }
+          { "name": "gadget" },
+          { "name": "takeover p.v." }
         ],
         "row1": {
           "img1": "/assets/cases/bobble/bobble1.jpg",
-          "video2": "/assets/cases/bobble/bobble2.mp4"
-        },
-        "row1bis": {
-          "paragrafo": "Durante il periodo promozionale, inoltre, i negozi delle città di Lucca e Benevento sono stati trasformati nella suggestiva locada del film, trasportando in un avvincente avventura gli appassionati del 'tè a palline' più famoso d'Italia."
-        },
-        "row2": {
-          "video3": "/assets/cases/bobble/bobble3.mp4",
-          "img3": "/assets/cases/milka/milkavideo.mp4"
-        },
-        "row3": {
-          "img4": "/assets/cases/bobble/bobble5.jpg"
+          "video": "/assets/cases/bobble/bobble2_video.mp4"
         },
 
-        "row5": {
-          "video": "/assets/cases/bobble/bobble6.mp4"
+        "row1bis": {
+          "paragrafo": "Durante il periodo promozionale, inoltre, i negozi delle città di Lucca e Benevento sono stati trasformati nella suggestiva locada del film, trasportando in un avvincente avventura gli appassionati del 'tè a palline' più famoso d'Italia.",
+
+          "bobble3": "/assets/cases/bobble/img3_rett.jpg",
+          "slide1": "/assets/cases/bobble/sliding/sliding2.jpg",
+          "slide2": "/assets/cases/bobble/sliding/sliding1.jpg"
+        },
+        "row3": {
+          "titolo": {
+            "primo": "Una Limited Edition dal",
+            "due": " gusto epico"
+          },
+
+          "img4": "/assets/cases/bobble/bobble_mockup.jpg"
+        },
+
+        "row5bis": {
+          "video": "/assets/cases/bobble/bobble5.mp4"
         }
       },
       "nestleaquaman": {
         "img": "/assets/cases/nestle/nestle.jpg",
         "brand1": "Nestlè",
         "brand2": "Aquaman e il Regno Perduto",
+        "name": "Nestlè + Aquaman e il Regno Perduto",
+        "title": "nestleaquaman",
+
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Dicembre 2023",
@@ -354,7 +401,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
@@ -364,7 +411,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -393,10 +441,13 @@
         }
       },
       "milkatoys": {
-        "img": "/assets/cases/milka/cover_milka.png",
+        "img": "/assets/cases/milka/cover_milka2.jpg",
         "ogimg": "/assets/milka_og.png",
         "brand1": "Milka",
         "brand2": "Toys Center",
+        "name": "Milka + Toys Center",
+        "title": "milkatoys",
+
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Natale 2023",
@@ -410,8 +461,8 @@
           { "name": "vestizione apecar per il toys christmas tour" }
         ],
         "row1": {
-          "img1": "/assets/cases/milka/milka1.jpg",
-          "img2": "/assets/cases/milka/milka2.png"
+          "img1": "/assets/cases/milka/milka12.jpg",
+          "img2": "/assets/cases/milka/milka22.jpg"
         },
         "row2": {
           "title": {
@@ -419,40 +470,41 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
-          "img4": "/assets/cases/milka1.jpg"
+          "img4": "/assets/cases/milka/milka32.jpg"
         },
         "row4": {
           "title": " Quando i premi fanno gola a tutti!",
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
-          "pacchetti": "/assets/cases/prova_valigette.png"
+          "video": "/assets/cases/milka/valigette_video2.mp4"
         },
         "row7": {
           "carousel": [
             {
-              "img": "/assets/cases/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/milka1.jpg"
             },
             {
-              "img": "/assets/cases/milka5.jpg"
+              "img": "/assets/cases/milka/galleria/milka2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_1.jpg"
+              "img": "/assets/cases/milka/galleria/milka4.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_2.jpg"
+              "img": "/assets/cases/milka/galleria/tour_2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_3.jpg"
+              "img": "/assets/cases/milka/galleria/tour_3.jpg"
             },
             {
-              "img": "/assets/cases/milka/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/tour_1.jpg"
             }
           ]
         }
@@ -461,7 +513,10 @@
       "citrustartarugheninja": {
         "img": "/assets/cases/citrus/citrus.jpeg",
         "brand1": "Citrus",
-        "brand2": "Tartarughe Ninja: Caos Mutante",
+        "brand2": "Tartarughe Ninja",
+        "name": "Citrus + Tartarughe Ninja: Caos Mutante",
+        "title": "citrustartarugheninja",
+
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Agosto 2023",
@@ -483,7 +538,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
@@ -493,7 +548,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -522,9 +578,12 @@
         }
       },
       "americanunclesonic2": {
-        "img": "/assets/cases/american/sonic.jpg",
+        "img": "/assets/cases/american/sonic2.jpg",
         "brand1": "American Uncle",
         "brand2": "Sonic 2",
+        "name": "American Uncle + Sonic 2",
+        "title": "americanunclesonic2",
+
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Marzo 2023",
@@ -546,7 +605,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
@@ -556,7 +615,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
@@ -585,9 +645,12 @@
         }
       },
       "rossopomodoroghostbusters": {
-        "img": "/assets/cases/rossopomodoro/rossopomodoro_3.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "brand1": "Rossopomodoro",
-        "brand2": "Ghostbusters: Minaccia Glaciale",
+        "brand2": "Ghostbusters",
+        "title": "rossopomodoroghostbusters",
+
+        "name": "Rossopomodoro + Ghostbusters: Minaccia Glaciale",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
         "year": "Aprile 2024",
@@ -609,7 +672,7 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo.mp4"
+          "img3": "/assets/cases/milka/milkavideo2.mp4"
         },
         "row3": {
           "img4": "/assets/cases/milka1.jpg"
@@ -619,7 +682,8 @@
           "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
         },
         "row5": {
-          "video": "/assets/video/milka_video.mp4"
+          "video": "/assets/cases/milka/spot_milka.mp4",
+          "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
           "pacchetti": "/assets/cases/prova_valigette.png"
