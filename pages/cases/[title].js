@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import BlurryLights from "@/components/layout/BlurryLights";
 import Icona from "@/public/assets/logo/per.svg";
 import Line from "@/components/Line";
@@ -185,30 +184,6 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </>
             ) : null}
 
-            {/* {work.row1tris ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="relative aspect-square">
-                  <Image
-                    src={work.row1tris.img1}
-                    alt=""
-                    fill
-                    className="h-full w-full object-cover  rounded-[15px]"
-                  />
-                </div>
-                <div className="w-full aspect-square">
-                  <video
-                    id="videoPlayer"
-                    className="h-full w-full object-cover  rounded-[15px]"
-                    autoPlay
-                    loop
-                    muted
-                  >
-                    <source src={work.row1tris.video2} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            ) : null} */}
             {work.row2 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
                 <h2
@@ -321,13 +296,16 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
 
             {work.row6 ? (
-              <div className="h-[30vh] lg:h-[40vh] w-auto relative ">
-                <Image
-                  src={work.row6.pacchetti}
-                  alt=""
-                  fill
-                  className="h-full w-full object-cover rounded-[15px]"
-                />
+              <div className=" w-full h-[25vh] lg:h-[50vh]">
+                <video
+                  className="w-full h-full  object-cover"
+                  autoPlay
+                  loop
+                  muted
+                >
+                  <source src={work.row6.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             ) : null}
             {work.row6bis ? (
