@@ -84,12 +84,10 @@ const Navbar = ({ lang }) => {
           initial={{ opacity: 0, y: "-100%" }}
           animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? "0%" : "-100%" }}
           transition={{ ease: "easeOut", duration: 0.4 }}
-          className="absolute top-0 left-0 right-0 bottom-0 flex lg:items-end w-full h-screen bg-third dark:bg-white text-white dark:text-third"
+          className="absolute top-0 lg:top-[95px] left-0 right-0 bottom-0 flex  w-full h-screen lg:h-[calc(100vh_-_95px)] bg-third dark:bg-white text-white dark:text-third"
         >
           <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  gap-y-10 ">
-            <ul
-              className={`${myFont.className} h-full flex flex-col py-20 lg:py-0`}
-            >
+            <ul className={`${myFont.className}  flex flex-col py-20 lg:py-0`}>
               <li onClick={() => setOpen(false)}>
                 <Link
                   href="/factory"
@@ -112,7 +110,7 @@ const Navbar = ({ lang }) => {
               </li>
             </ul>
             {/* <div></div> */}
-            <div className="h-full flex flex-col lg:justify-end lg:items-end gap-y-10">
+            <div className="h-full flex flex-col lg:items-end gap-y-10 lg:py-14">
               <SocialBar />
             </div>
           </div>

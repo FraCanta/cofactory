@@ -10,6 +10,7 @@ import casesIT from "../public/locales/it/cases.json";
 import casesEN from "../public/locales/en/cases.json";
 import { GoArrowDown } from "react-icons/go";
 import { MaskText } from "@/components/MaskText";
+import Head from "next/head";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 
 const Works = ({ translation }) => {
@@ -54,84 +55,76 @@ const Works = ({ translation }) => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-    >
-      <main>
-        {/* <Hero>
-          <MaskText>
-            <h1
-              className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
-            >
-              Happy stories about happy clients.
-            </h1>
-          </MaskText>
-        </Hero> */}
-        {/* <div className="w-[90%] mx-auto ">
-          <Line />
-        </div> */}
-        <div className="flex justify-between w-[90%] mx-auto py-20">
-          <div></div>
-          <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex z-10">
-            {/* <div className="text-white text-xl font-normal font-['Raleway']">
+    <>
+      <Head>
+        <title>Cofactory - Works</title>
+      </Head>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+      >
+        <main>
+          <div className="flex justify-between w-[90%] mx-auto mt-40">
+            <div></div>
+            <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex z-10">
+              {/* <div className="text-white text-xl font-normal font-['Raleway']">
               Tutti
             </div>
             <IoChevronDownOutline className="dark:text-third text-white" /> */}
-            <select className="select w-full max-w-xs !bg-transparent">
-              <option disabled selected>
-                tutti
-              </option>
-              <option>Strapi</option>
-              <option>Ghost</option>
-              <option>Netlify CMS</option>
-              <option>Sanity</option>
-            </select>
+              <select className="select w-full max-w-xs !bg-transparent">
+                <option value="tutti" defaultValue>
+                  Tutti
+                </option>
+                <option value="brand">Brand</option>
+                <option value="box">Box</option>
+                <option value="movie">Movie</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col gap-6 py-10 w-[90%] mx-auto">
-          {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => {
-            console.log("Row works length:", rowWorks.length);
-            return (
-              <div
-                key={rowIndex}
-                className={`grid grid-cols-1 lg:grid-cols-${rowWorks?.length}  gap-6 `}
-              >
-                {rowWorks.map((work, colIndex) => (
-                  <Link
-                    href={`/cases/${work.button}`}
-                    className="relative aspect-square w-full  lg:h-[70vh]"
-                  >
-                    <div key={colIndex}>
-                      <Image
-                        src={work.img}
-                        alt=""
-                        fill
-                        className="object-cover rounded-lg "
-                        priority
-                      />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            );
-          })}
+          <div className="flex flex-col gap-6 py-10 w-[90%] mx-auto">
+            {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => {
+              console.log("Row works length:", rowWorks.length);
+              return (
+                <div
+                  key={rowIndex}
+                  className={`grid grid-cols-1 lg:grid-cols-${rowWorks?.length}  gap-6 `}
+                >
+                  {rowWorks.map((work, colIndex) => (
+                    <Link
+                      href={`/cases/${work.button}`}
+                      className="relative aspect-square w-full  lg:h-[70vh]"
+                    >
+                      <div key={colIndex}>
+                        <Image
+                          src={work.img}
+                          alt=""
+                          fill
+                          className="object-cover rounded-lg "
+                          priority
+                        />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              );
+            })}
 
-          <div className="w-[90%] mx-auto flex justify-center items-center">
-            {visibleWorks < layoutWorks.length && (
-              <motion.button
-                onClick={handleLoadMore}
-                className="max-w-max dark:text-third text-white flex justify-center py-6  font-bold  px-12 uppercase gap-2 items-center "
-              >
-                Load more <GoArrowDown />
-              </motion.button>
-            )}
+            <div className="w-[90%] mx-auto flex justify-center items-center">
+              {visibleWorks < layoutWorks.length && (
+                <motion.button
+                  onClick={handleLoadMore}
+                  className="max-w-max dark:text-third text-white flex justify-center py-6  font-bold  px-12 uppercase gap-2 items-center "
+                >
+                  Load more <GoArrowDown />
+                </motion.button>
+              )}
+            </div>
           </div>
-        </div>
-      </main>
-    </motion.div>
+        </main>
+      </motion.div>
+    </>
   );
 };
 
