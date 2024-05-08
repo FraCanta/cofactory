@@ -84,9 +84,9 @@ const Navbar = ({ lang }) => {
           initial={{ opacity: 0, y: "-100%" }}
           animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? "0%" : "-100%" }}
           transition={{ ease: "easeOut", duration: 0.4 }}
-          className="absolute top-0 lg:top-[95px] left-0 right-0 bottom-0 flex  w-full h-screen lg:h-[calc(100vh_-_95px)] bg-third dark:bg-white text-white dark:text-third"
+          className="absolute top-0 lg:top-0 left-0 right-0 bottom-0 flex  w-full h-screen  bg-third dark:bg-white text-white dark:text-third"
         >
-          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  gap-y-10 ">
+          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  gap-y-10 lg:mt-[95px]">
             <ul className={`${myFont.className}  flex flex-col py-20 lg:py-0`}>
               <li onClick={() => setOpen(false)}>
                 <Link
