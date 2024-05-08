@@ -19,7 +19,7 @@ const VideoPlayer3 = ({ video, poster }) => {
         Your browser does not support the video tag.
       </video>
       <div
-        className="absolute bottom-0 right-2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FAB02C] rounded-full p-6 lg:p-2"
+        className="absolute bottom-0 right-2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FAB02C] rounded-full p-3 lg:p-2"
         onClick={toggleMute}
       >
         {isMuted ? (
