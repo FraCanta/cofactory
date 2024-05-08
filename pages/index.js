@@ -69,9 +69,7 @@ const Home = ({ translation }) => {
         <div className="w-[90vw] mx-auto">
           <Line />
         </div>
-        <div data-aos="fade-up" data-aos-delay="100">
-          <LavoriSec cards={translation.cards} />
-        </div>
+        <LavoriSec cards={translation.cards} />
 
         <div className="w-[90%] mx-auto">
           <Line />

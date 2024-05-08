@@ -58,7 +58,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           <BlurryLights />
         </div>
 
-        <section className="my-[30px] md:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12">
+        <section
+          className="my-[30px] md:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className=" grid grid-cols-1  gap-10">
             <div className="justify-between  flex flex-col">
               <h1
@@ -116,23 +120,31 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-screen flex flex-col  items-center py-[50px] ">
           <div className="w-[90%] mx-auto flex flex-col gap-y-6">
             {work.row0 ? (
-              <>
+              <div data-aos="fade-up" data-aos-delay="100">
                 <VideoPlayer
                   video={work.row0.video0}
                   poster={work.row0.poster}
                   id="#videoplayer2"
                 />
-                <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+                <div
+                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <p
                     className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-[3vw] lg:text-xl lg:w-[75%] mx-auto flex leading-normal  gap-4 h-full`}
                   >
                     {work.row0.paragrafo}
                   </p>
                 </div>
-              </>
+              </div>
             ) : null}
             {work.row1 ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <div className="relative aspect-square">
                   <Image
                     src={work.row1.img1}
@@ -142,7 +154,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   />
                 </div>
                 {work.row1.img2 ? (
-                  <div className="relative h-full aspect-square">
+                  <div
+                    className="relative h-full aspect-square"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
                     <Image
                       src={work.row1.img2}
                       alt=""
@@ -159,15 +175,23 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </div>
             ) : null}
             {work.row1bis ? (
-              <>
-                <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+              <div data-aos="fade-up" data-aos-delay="100">
+                <div
+                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <p
                     className={`${myFont2.className} dark:text-third text-white text-base md:text-xl lg:text-lg  2xl:text-xl lg:w-[75%] lg:mx-auto  flex  gap-4 h-full`}
                   >
                     {work.row1bis.paragrafo}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center relative">
+                <div
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center relative"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <SlidingCard
                     slide1={work.row1bis.slide1}
                     slide2={work.row1bis.slide2}
@@ -181,11 +205,14 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     />
                   </div>{" "}
                 </div>
-              </>
+              </div>
             ) : null}
-
             {work.row2 ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              <div
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <h2
                   className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
                 >
@@ -208,23 +235,29 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </div>
               </div>
             ) : null}
-
+            {work.limited ? (
+              <div
+                className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h2
+                  className={`${myFont.className} dark:text-third text-white text-4xl lg:text-6xl py-10 lg:py-0`}
+                >
+                  {work.limited.primo}
+                  <span className={`${myFont.className} text-[#d51d1f]`}>
+                    {work.limited.due}
+                  </span>{" "}
+                </h2>
+              </div>
+            ) : null}
             {work.row3 ? (
               <>
-                {work.row3.titolo && (
-                  <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
-                    <h2
-                      className={`${myFont.className} dark:text-third text-white text-4xl lg:text-6xl py-10 lg:py-0`}
-                    >
-                      {work.row3.titolo.primo}
-                      <span className={`${myFont.className} text-[#d51d1f]`}>
-                        {work.row3.titolo.due}
-                      </span>{" "}
-                    </h2>
-                  </div>
-                )}
-
-                <div className="aspect-square lg:h-screen fxl:h-[90vh] w-auto relative">
+                <div
+                  className="aspect-square lg:h-screen fxl:h-[90vh] w-full relative"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <Image
                     src={work.row3.img4}
                     alt=""
@@ -235,7 +268,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </>
             ) : null}
             {work.row3bis ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <div className="relative aspect-square">
                   <Image
                     src={work.row3bis.img1}
@@ -259,28 +296,40 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </div>
             ) : null}
             {work.row4 ? (
-              <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
-                <h3
-                  className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-3xl `}
+              <>
+                <div
+                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
                 >
-                  {work.row4.title}
-                </h3>
-                <p
-                  className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-xl lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
-                >
-                  {work.row4.descrizione}
-                </p>
-              </div>
+                  <h3
+                    className={`${myFont.className} dark:text-third text-white text-[8.5vw] md:text-[6vw] lg:text-3xl `}
+                  >
+                    {work.row4.title}
+                  </h3>
+                  <p
+                    className={`${myFont2.className} dark:text-third text-white/80 text-[5vw] md:text-[3vw] lg:text-xl lg:w-[60%] mx-auto flex leading-normal  gap-4 h-full`}
+                  >
+                    {work.row4.descrizione}
+                  </p>
+                </div>
+              </>
             ) : null}
             {work.row5 ? (
-              <VideoPlayer
-                video={work.row5.video}
-                poster={work.row5.poster}
-                id="#videoplayer"
-              />
+              <div data-aos="fade-up" data-aos-delay="100">
+                <VideoPlayer
+                  video={work.row5.video}
+                  poster={work.row5.poster}
+                  id="#videoplayer"
+                />
+              </div>
             ) : null}
             {work.row5bis ? (
-              <div className=" w-full h-full">
+              <div
+                className=" w-full h-full"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <video
                   id="videoPlayer"
                   className="rounded-lg h-[40vh] lg:h-[80vh] w-full object-cover"
@@ -293,9 +342,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </video>
               </div>
             ) : null}
-
             {work.row6 ? (
-              <div className=" w-full h-[20vh] lg:h-[60vh]">
+              <div
+                className=" w-full h-[20vh] lg:h-[60vh]"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <video
                   className="w-full h-full rounded-lg  object-cover"
                   autoPlay
@@ -308,7 +360,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </div>
             ) : null}
             {work.row6bis ? (
-              <div className="aspect-square lg:h-screen w-auto relative ">
+              <div
+                className="aspect-square lg:h-screen w-auto relative "
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <Image
                   src={work.row6bis.img3}
                   alt=""
@@ -317,8 +373,9 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 />
               </div>
             ) : null}
+
             {work.row8 ? (
-              <>
+              <div data-aos="fade-up" data-aos-delay="100">
                 <div className=" w-full h-full">
                   <video
                     id="videoPlayer"
@@ -331,7 +388,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <div className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6">
+                <div
+                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <h3
                     className={`${myFont.className} dark:text-third text-white text-2xl md:text-[6vw] lg:text-4xl `}
                   >
@@ -344,7 +405,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="relative aspect-square">
+                  <div
+                    className="relative aspect-square"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
                     <Image
                       src={work.row8.img}
                       alt=""
@@ -352,7 +417,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       className=" object-cover rounded-lg"
                     />
                   </div>
-                  <div className=" w-full h-full">
+                  <div
+                    className=" w-full h-full"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
                     <video
                       id="videoPlayer"
                       className="rounded-lg  w-full object-cover  aspect-square"
@@ -365,10 +434,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     </video>
                   </div>
                 </div>
-              </>
+              </div>
             ) : null}
+
             {work.row7 ? (
-              <div className="w-full">
+              <div className="w-full" data-aos="fade-up" data-aos-delay="100">
                 <Swiper
                   slidesPerView={3}
                   spaceBetween={0}

@@ -372,12 +372,11 @@
           "slide1": "/assets/cases/bobble/sliding/sliding2.jpg",
           "slide2": "/assets/cases/bobble/sliding/sliding1.jpg"
         },
+        "limited": {
+          "primo": "Una Limited Edition dal",
+          "due": " gusto epico"
+        },
         "row3": {
-          "titolo": {
-            "primo": "Una Limited Edition dal",
-            "due": " gusto epico"
-          },
-
           "img4": "/assets/cases/bobble/bobble_mockup.jpg"
         },
 

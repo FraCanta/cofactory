@@ -69,10 +69,6 @@ const Works = ({ translation }) => {
           <div className="flex justify-between w-[90%] mx-auto mt-40">
             <div></div>
             <div className="w-[298px] h-[50px] px-[18px] py-2.5 rounded-[30px] border border-white justify-between items-center inline-flex z-10">
-              {/* <div className="text-white text-xl font-normal font-['Raleway']">
-              Tutti
-            </div>
-            <IoChevronDownOutline className="dark:text-third text-white" /> */}
               <select className="select w-full max-w-xs !bg-transparent">
                 <option value="tutti" defaultValue>
                   Tutti
@@ -85,11 +81,12 @@ const Works = ({ translation }) => {
           </div>
           <div className="flex flex-col gap-6 py-10 w-[90%] mx-auto">
             {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => {
-              console.log("Row works length:", rowWorks.length);
               return (
                 <div
                   key={rowIndex}
                   className={`grid grid-cols-1 lg:grid-cols-${rowWorks?.length}  gap-6 `}
+                  data-aos="fade-up"
+                  data-aos-delay="100"
                 >
                   {rowWorks.map((work, colIndex) => (
                     <Link
@@ -101,7 +98,7 @@ const Works = ({ translation }) => {
                           src={work.img}
                           alt=""
                           fill
-                          className="object-cover rounded-lg "
+                          className="object-cover rounded-lg hover:lg:rounded-full hover:transition-all hover:duration-700 hover:grayscale"
                           priority
                         />
                       </div>
