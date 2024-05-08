@@ -4,52 +4,72 @@
       {
         "img": "/assets/cases/orociok/cover_orociok.jpg",
         "button": "orocioktoys",
+        "brand1": "Oro Ciok",
+        "brand2": "Toys Center",
         "categories": [{ "name": "brand" }, { "name": "box" }]
       },
       {
         "img": "/assets/cases/yummers/cover_yummers.jpg",
         "button": "yummersghostbusters",
+        "brand1": "Yummer's",
+        "brand2": "Ghostbusters",
         "categories": [{ "name": "movie" }]
       },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
         "button": "rossopomodorotartarugheninja",
+        "brand1": "Rossopomodoro",
+        "brand2": "Tartarughe Ninja",
         "categories": [{ "name": "movie" }]
       },
       {
         "img": "/assets/cases/treccani/cover_treccani.jpg",
         "button": "treccanifaoschwarz",
+        "brand1": "Treccani",
+        "brand2": "Fao Schwarz",
         "categories": [{ "name": "brand" }, { "name": "box" }]
       },
       {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "button": "bobbled&d",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeons&Dragons",
         "categories": [{ "name": "movie" }]
       },
       {
         "img": "/assets/cases/nestle/nestle.jpg",
         "button": "nestleaquaman",
+        "brand1": "Nestlè",
+        "brand2": "Aquaman e il Regno Perduto",
         "categories": [{ "name": "movie" }]
       },
       {
         "img": "/assets/cases/milka/cover_milka2.jpg",
         "button": "milkatoys",
+        "brand1": "Milka",
+        "brand2": "Toys Center",
         "categories": [{ "name": "brand" }, { "name": "box" }]
       },
 
       {
         "img": "/assets/cases/citrus/citrus.jpeg",
         "button": "citrustartarugheninja",
+        "brand1": "Citrus",
+        "brand2": "Tartarughe Ninja",
         "categories": [{ "name": "movie" }]
       },
       {
         "img": "/assets/cases/american/sonic2.jpg",
         "button": "americanunclesonic2",
+        "brand1": "American Uncle",
+        "brand2": "Sonic 2",
         "categories": [{ "name": "movie" }, { "name": "box" }]
       },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "button": "rossopomodoroghostbusters",
+        "brand1": "Rossopomodoro",
+        "brand2": "Ghostbusters",
         "categories": [{ "name": "movie" }]
       }
     ],

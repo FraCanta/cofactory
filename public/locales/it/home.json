@@ -5,18 +5,24 @@
         "img": "/assets/cases/orociok/cover_orociok.jpg",
         "button": "orocioktoys",
         "name": "Oro Ciok e Toys Center",
-        "categories": [{ "name": "brand" }, { "name": "box" }]
+        "categories": [{ "name": "brand" }, { "name": "box" }],
+        "brand1": "Oro Ciok",
+        "brand2": "Toys Center"
       },
       {
         "img": "/assets/cases/yummers/cover_yummers.jpg",
         "button": "yummersghostbusters",
         "name": "Yummers e Ghostbusters",
+        "brand1": "Yummer's",
+        "brand2": "Ghostbusters",
         "categories": [{ "name": "movie" }]
       },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
         "button": "rossopomodorotartarugheninja",
         "name": "Rosso Pomodoro e Tartarughe Ninja",
+        "brand1": "Rossopomodoro",
+        "brand2": "Tartarughe Ninja",
         "categories": [{ "name": "movie" }]
       }
     ]
