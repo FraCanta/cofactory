@@ -11,15 +11,29 @@ import { useState, useEffect } from "react";
 
 import { ThemeProvider } from "next-themes";
 import SplashScreen from "@/components/layout/SplashScreen";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useRouter } from "next/router";
 
-export default function App({ Component, pageProps, finishLoading }) {
+export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     // Simulazione del caricamento dell'applicazione
     setTimeout(() => {
       setIsLoading(false);
     }, 5000); // Cambia 3000 con il tempo di caricamento effettivo della tua app
+  }, []);
+
+  useEffect(() => {
+    // here you can add your aos options
+    AOS.init({
+      offset: 200,
+      duration: 500,
+      easing: "ease-in-out",
+      once: false,
+    });
   }, []);
 
   return (
@@ -29,7 +43,7 @@ export default function App({ Component, pageProps, finishLoading }) {
       ) : (
         <ThemeProvider attribute="class">
           <Layout>
-            <Component {...pageProps} />
+            <Component {...pageProps} key={router.asPath} />
           </Layout>
         </ThemeProvider>
       )}
