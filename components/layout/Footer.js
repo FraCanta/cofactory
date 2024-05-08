@@ -7,70 +7,56 @@ const myFont2 = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 
 function Footer() {
   return (
-    <div className="w-full bg-[#161617] text-white h-auto py-10">
-      <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-y-[40px] lg:gap-y-[150px] ">
-        <div className="text-[1.625rem]">
-          <span
-            className={`${myFont.className} text-[3.625rem] text-[#368B90] `}
-            id="logo1"
-          >
-            CO
-          </span>
-          <span
-            className={`${myFont.className} text-[3.625rem] text-[#bb5471] `}
-            id="logo2"
-          >
-            FACTORY
-          </span>
+    <div className="w-full bg-[#161617] dark:bg-[#D9D9D9] text-white/90 dark:text-third h-auto py-10">
+      <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="text-lg">
+          <p>© 2024 Cofactory srl</p>
+          <p>All rights reserved</p>
+          <p>P.I. 10233611218</p>
         </div>
-        <div className="text-[1.625rem]"></div>
-        <div className="text-[1.25rem] 2xl:text-[1.625rem] grid grid-cols-1 gap-6">
-          Ideiamo, progettiamo e realizziamo campagne di comunicazione congiunta
-          tra i brand, sulle box ma non solo.
-          <div className="flex gap-4">
-            <div>
-              Pronto per un match?
-              <div className="flex">
-                <button>info@cofactory.it</button>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-6">
+          <div className="lg:text-center w-full flex flex-col gap-2">
+            <p className="text-2xl">CERCHI UN PARTNER?</p>
+            <Link
+              href="/contatti"
+              className="flex items-end w-full lg:justify-center"
+            >
+              <span
+                className={`${myFont.className} text-4xl text-second leading-7`}
+                id="logo1"
+              >
+                CO
+              </span>
+              <span
+                className={`${myFont2.className} text-4xl text-pink leading-8`}
+                id="logo2"
+              >
+                ntattaci
+              </span>
+            </Link>
           </div>
         </div>
-        <div className="text-[1.625rem]"></div>
-        <div className="text-[1.625rem]">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="/factory">Factory</Link>
-            </li>{" "}
-            <li>
-              <Link href="/works">Works</Link>
-            </li>{" "}
-            <li>
-              <Link href="/contatti">Contatti</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="order-last lg:order-none flex items-end">© 2024</div>
-        <div></div>
-        <div className="flex items-end">Privacy Policy</div>
-        <div></div>
-        <div
-          className={`${myFont2.className} flex gap-8 text-[6vw] lg:text-[1.5vw]  items-end`}
-        >
-          <Link
-            href="https://www.google.com/"
-            className="flex gap-1 items-center"
-            target="_blank"
+        <div className="flex lg:items-end flex-col gap-1">
+          <div
+            className={`${myFont2.className} flex gap-4 text-lg justify  lg:justify-end`}
           >
-            Linkedin <PiArrowUpRightThin />
-          </Link>
-          <Link
-            href="https://www.google.com/"
-            className="flex gap-1 items-center"
-            target="_blank"
-          >
-            Instagram <PiArrowUpRightThin />
-          </Link>
+            <Link
+              href="https://www.google.com/"
+              className="flex gap-1 items-center"
+              target="_blank"
+            >
+              Linkedin <PiArrowUpRightThin />
+            </Link>
+            <Link
+              href="https://www.google.com/"
+              className="flex gap-1 items-center"
+              target="_blank"
+            >
+              Instagram <PiArrowUpRightThin />
+            </Link>
+          </div>
+          <div>Privacy Policy</div>
+          <div>Cookie Policy</div>
         </div>
       </div>
     </div>

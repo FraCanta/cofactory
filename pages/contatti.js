@@ -27,7 +27,7 @@ const Contatti = () => {
       <div className="w-[90%] mx-auto">
         <Line />
       </div>
-      <div className="w-[90%] mx-auto flex flex-col gap-6 py-32">
+      <div className="w-[90%] mx-auto flex flex-col gap-6 py-32 h-screen">
         <h2 className={`${myFont.className} text-white text-5xl`}>
           👋🏽 Hey there!
         </h2>
