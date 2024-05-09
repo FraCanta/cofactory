@@ -336,6 +336,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   autoPlay
                   loop
                   muted
+                  playsInline
                 >
                   <source src={work.row5bis.video} type="video/mp4" />
                   Your browser does not support the video tag.
@@ -353,6 +354,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   autoPlay
                   loop
                   muted
+                  playsInline
                 >
                   <source src={work.row6.video} type="video/mp4" />
                   Your browser does not support the video tag.
@@ -383,6 +385,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     autoPlay
                     loop
                     muted
+                    playsInline
                   >
                     <source src={work.row8.video3} type="video/webm" />
                     Your browser does not support the video tag.
@@ -428,6 +431,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       autoPlay
                       loop
                       muted
+                      playsInline
                     >
                       <source src={work.row8.video} type="video/webm" />
                       Your browser does not support the video tag.

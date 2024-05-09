@@ -14,6 +14,7 @@ const VideoPlayer3 = ({ video, poster }) => {
         className="h-full w-full object-cover rounded-lg"
         autoPlay
         muted={isMuted}
+        playsInline
       >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.

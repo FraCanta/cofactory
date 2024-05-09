@@ -37,6 +37,7 @@ const VideoPlayer = ({ video, poster, id }) => {
         onClick={togglePlay}
         muted={isMuted}
         poster={poster}
+        playsInline
       >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
