@@ -60,12 +60,8 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           <BlurryLights />
         </div>
 
-        <section
-          className="my-[30px] md:my-[50px]  text-white flex flex-wrap lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12 min-h-[40vh]"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div className=" grid grid-cols-1  gap-10">
+        <section className="my-[30px] md:my-[50px]  text-white grid grid-cols-1 lg:grid-cols-3 lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12 min-h-[40vh] lg:min-h-full">
+          <div className="flex flex-col gap-10 col-span-2">
             <div className="justify-between  flex flex-col">
               <h1
                 className={`${myFont.className} dark:text-third text-white text-4xl md:text-6xl lg:text-4xl 2xl:text-[3.3rem] flex flex-wrap items-center gap-2 lg:gap-4 2xl:gap-4`}
@@ -86,7 +82,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </p>
             </div>
           </div>
-          <div className="z-10 w-full lg:w-[90%] mx-auto grid grid-cols-1  space-y-10">
+          <div className="z-10  grid grid-cols-1 gap-6">
             <div className=" flex flex-col space-y-1">
               <h2
                 className={`${myFont2.className} text-second text-base md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-lg font-normal lowercase `}
@@ -232,6 +228,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     muted
                   >
                     <source src={work.row2.video} type="video/mp4" />
+                    <source src={work.row2.video2} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
