@@ -387,7 +387,8 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     muted
                     playsInline
                   >
-                    <source src={work.row8.video3} type="video/webm" />
+                    <source src={work.row8.video3} type="video/mp4" />
+                    <source src={work.row8.video4} type="video/mv4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
