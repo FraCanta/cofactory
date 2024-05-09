@@ -17,43 +17,7 @@ const Works = ({ translation }) => {
   // Estrai i casi dal tuo oggetto di traduzione
   const cases = translation.cards;
 
-  // Layout delle righe e colonne delle immagini
-  const layout = [
-    { rows: 1, cols: 2 },
-    { rows: 1, cols: 1 },
-    { rows: 1, cols: 2 },
-    { rows: 1, cols: 1 },
-    { rows: 1, cols: 2 },
-    { rows: 1, cols: 2 },
-  ];
-
-  // Funzione per creare il layout dei lavori
-  function createLayout(cases, layout) {
-    let layoutIndex = 0;
-    const layoutWorks = [];
-
-    layout.forEach(({ rows, cols }) => {
-      const rowWorks = Object.values(cases).slice(
-        layoutIndex,
-        layoutIndex + rows * cols
-      );
-      layoutIndex += rows * cols;
-
-      layoutWorks.push(rowWorks);
-    });
-
-    return layoutWorks;
-  }
-
-  // Ottieni il layout dei lavori
-  const layoutWorks = createLayout(cases, layout);
-
-  const [visibleWorks, setVisibleWorks] = useState(3);
-
-  const handleLoadMore = () => {
-    setVisibleWorks(visibleWorks + 3);
-  };
-
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <>
       <Head>
@@ -79,54 +43,92 @@ const Works = ({ translation }) => {
               </select>
             </div>
           </div>
-          <div className="flex flex-col gap-6 py-10 w-[90%] mx-auto">
-            {layoutWorks.slice(0, visibleWorks).map((rowWorks, rowIndex) => {
-              return (
-                <div
-                  key={rowIndex}
-                  className={`grid grid-cols-1 lg:grid-cols-${rowWorks?.length}  gap-6 `}
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  {rowWorks.map((work, colIndex) => (
-                    <Link
-                      href={`/cases/${work.button}`}
-                      className="relative aspect-square w-full  lg:h-[70vh]"
-                    >
-                      <div key={colIndex}>
+          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-4 py-8">
+            {cases.map((el, i) => {
+              const isHovered = hoveredIndex === i;
+              if (i === 2 || i === 5) {
+                return (
+                  <div
+                    key={i}
+                    className="w-full lg:col-span-2"
+                    onMouseEnter={() => setHoveredIndex(i)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <Link href={`/cases/${el.button}`}>
+                      <div
+                        className="w-full aspect-square h-[60vh] relative"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                      >
                         <Image
-                          src={work.img}
-                          alt=""
+                          src={el.img}
+                          alt={el.name}
                           fill
                           className="object-cover rounded-lg lg:opacity-100 hover:lg:opacity-50 hover:lg:rounded-[250px] hover:transition-all hover:duration-700 opacity-50  hover:lg:grayscale"
-                          priority
                         />
-                        <div className="absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col lg:flex-row items-center justify-center  transition-all duration-500  text-white text-3xl lg:text-4xl font-bold  w-full">
-                          <span className={`${myFont.className}`}>
-                            {work.brand1}
-                          </span>{" "}
-                          <span>+</span>{" "}
-                          <span className={`${myFont.className}`}>
-                            {work.brand2}
-                          </span>
-                        </div>
+                        {isHovered && (
+                          <div className="absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col lg:flex-row items-center justify-center  transition-all duration-1000 ease-in  text-white text-3xl lg:text-4xl font-bold  w-full">
+                            <span className={`${myFont.className}`}>
+                              {el.brand1}
+                            </span>{" "}
+                            <span className="relative h-8 w-8 mx-6">
+                              <Image
+                                src="/assets/logo/per.svg"
+                                fill
+                                className="h-full w-full object-cover"
+                              />
+                            </span>{" "}
+                            <span className={`${myFont.className}`}>
+                              {el.brand2}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </Link>
-                  ))}
-                </div>
-              );
+                  </div>
+                );
+              } else {
+                return (
+                  <div
+                    key={i}
+                    onMouseEnter={() => setHoveredIndex(i)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <Link href={`/cases/${el.button}`}>
+                      <div
+                        className="w-full aspect-square h-[40vh] sm:h-[50vh] lg:h-[60vh] relative"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                      >
+                        <Image
+                          src={el.img}
+                          alt={el.name}
+                          fill
+                          className="object-cover rounded-lg lg:opacity-100 hover:lg:opacity-50 hover:lg:rounded-[250px] hover:transition-all hover:duration-700 opacity-50  hover:lg:grayscale"
+                        />
+                        {isHovered && (
+                          <div className="absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col lg:flex-row items-center justify-center  transition-all duration-1000 ease-in  text-white text-3xl lg:text-4xl font-bold  w-full">
+                            <span className={`${myFont.className}`}>
+                              {el.brand1}
+                            </span>{" "}
+                            <span className="relative h-8 w-8 mx-6">
+                              <Image
+                                src="/assets/logo/per.svg"
+                                fill
+                                className="h-full w-full object-cover"
+                              />
+                            </span>{" "}
+                            <span className={`${myFont.className}`}>
+                              {el.brand2}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </Link>
+                  </div>
+                );
+              }
             })}
-
-            <div className="w-[90%] mx-auto flex justify-center items-center">
-              {visibleWorks < layoutWorks.length && (
-                <motion.button
-                  onClick={handleLoadMore}
-                  className="max-w-max dark:text-third text-white flex justify-center py-6  font-bold  px-12 uppercase gap-2 items-center "
-                >
-                  Load more <GoArrowDown />
-                </motion.button>
-              )}
-            </div>
           </div>
         </main>
       </motion.div>

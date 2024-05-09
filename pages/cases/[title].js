@@ -19,10 +19,12 @@ import { Navigation } from "swiper/modules";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import SlidingCard from "@/components/SlidingCard/SlidingCard";
-import VideoPlayer2 from "@/components/VideoPlayer2";
 import VideoPlayer3 from "@/components/VideoPlayer3";
+import { useState } from "react";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <>
       <Head>
@@ -59,7 +61,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         </div>
 
         <section
-          className="my-[30px] md:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12"
+          className="my-[30px] md:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12 min-h-[40vh]"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -514,10 +516,16 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
           </div>
         </section>
-        <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-20 gap-6">
+        <div className="w-[90%] mx-auto md:mt-20 mb-10 text-center text-white dark:text-third z-[9999999]">
+          <Link href="/works" className={`${myFont.className} text-4xl `}>
+            {" "}
+            Tutte le storie
+          </Link>
+        </div>
+        <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-8 gap-6 ">
           {previousWork.titlePrev && (
             <Link href={`/cases/${previousWork.titlePrev}`} className="z-10">
-              <div className=" h-full w-full  z-10 relative aspect-video">
+              <div className=" h-[40vh] w-full  z-10 relative ">
                 <Image
                   src={previousWork.imgPrev}
                   fill
@@ -539,13 +547,14 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
 
           {nextWork.titleNext && (
             <Link href={`/cases/${nextWork.titleNext}`} className="z-10">
-              <div className="h-full w-full  z-10 relative aspect-video">
+              <div className=" h-[40vh] w-full  z-10 relative ">
                 <Image
                   src={nextWork.imgNext}
                   fill
                   alt=""
-                  className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
+                  className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100 "
                 />
+
                 <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2  w-full flex justify-center items-center gap-2 text-white dark:text-third">
                   <Image
                     src="/assets/logo/per1.svg"
@@ -559,7 +568,8 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             </Link>
           )}
         </div>
-        <div className="w-[90%] mx-auto md:py-10">
+
+        <div className="w-[90%] mx-auto md:py-20">
           <Line />
         </div>
       </motion.div>
@@ -596,19 +606,30 @@ export async function getStaticProps(context) {
   });
 
   const currentIndex = arr.findIndex((el) => el.title === params.title);
+  const totalCases = arr.length;
+
+  // Logica per determinare il caso precedente
+  let prevIndex = currentIndex - 1;
+  if (prevIndex < 0) {
+    // Se siamo nel primo caso, torniamo all'ultimo
+    prevIndex = totalCases - 1;
+  }
+
+  // Logica per determinare il caso successivo
+  let nextIndex = currentIndex + 1;
+  if (nextIndex >= totalCases) {
+    // Se siamo nell'ultimo caso, torniamo al primo
+    nextIndex = 0;
+  }
+
   const previousWork = {
-    titlePrev: currentIndex > 0 ? arr[currentIndex - 1].title : null,
-    imgPrev: currentIndex > 0 ? arr[currentIndex - 1].img : null,
+    titlePrev: arr[prevIndex].title,
+    imgPrev: arr[prevIndex].img,
   };
+
   const nextWork = {
-    titleNext:
-      currentIndex >= 0 && currentIndex < arr.length - 1
-        ? arr[currentIndex + 1].title
-        : null,
-    imgNext:
-      currentIndex >= 0 && currentIndex < arr.length - 1
-        ? arr[currentIndex + 1].img
-        : null,
+    titleNext: arr[nextIndex].title,
+    imgNext: arr[nextIndex].img,
   };
 
   return {
