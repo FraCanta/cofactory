@@ -226,6 +226,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     autoPlay
                     loop
                     muted
+                    playsInline
                   >
                     <source src={work.row2.video} type="video/mp4" />
                     <source src={work.row2.video2} type="video/mp4" />
