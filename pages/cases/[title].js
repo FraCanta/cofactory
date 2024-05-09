@@ -61,7 +61,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         </div>
 
         <section
-          className="my-[30px] md:my-[50px]  text-white flex flex-col lg:flex-row lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12 min-h-[40vh]"
+          className="my-[30px] md:my-[50px]  text-white flex flex-wrap lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12 min-h-[40vh]"
           data-aos="fade-up"
           data-aos-delay="100"
         >
