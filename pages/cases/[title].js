@@ -60,7 +60,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           <BlurryLights />
         </div>
 
-        <section className="my-[30px] md:my-[50px]  text-white grid grid-cols-1 lg:grid-cols-3 lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12 min-h-[40vh] lg:min-h-full">
+        <section
+          className="my-[30px] md:my-[50px]  text-white grid grid-cols-1 lg:grid-cols-3 lg:justify-center  w-[90%] mx-auto gap-10 fxl:gap-12 min-h-[40vh] lg:min-h-full"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className="flex flex-col gap-10 col-span-2">
             <div className="justify-between  flex flex-col">
               <h1
@@ -116,7 +120,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           </div>
         </section>
         <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-screen flex flex-col  items-center py-[50px] ">
-          <div className="w-[90%] mx-auto flex flex-col gap-y-6">
+          <div className="w-[90%] mx-auto flex flex-col gap-6">
             {work.row0 ? (
               <div data-aos="fade-up" data-aos-delay="100">
                 <VideoPlayer
@@ -135,6 +139,20 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row0.paragrafo}
                   </p>
                 </div>
+              </div>
+            ) : null}
+            {work.row0bis ? (
+              <div
+                className="relative w-full aspect-video lg:h-[80vh]"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <Image
+                  src={work.row0bis.img}
+                  alt=""
+                  fill
+                  className=" object-cover rounded-lg"
+                />
               </div>
             ) : null}
             {work.row1 ? (
@@ -357,6 +375,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   playsInline
                 >
                   <source src={work.row6.video} type="video/mp4" />
+                  <source src={work.row6.video2} type="video/m4v" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -444,8 +463,18 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
 
             {work.row7 ? (
               <div className="w-full" data-aos="fade-up" data-aos-delay="100">
+                {work.row7.paragrafo && (
+                  <div className="text-center font-medium leading-10 py-8 lg:py-20 flex flex-col gap-6">
+                    <p
+                      className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[75%] mx-auto `}
+                    >
+                      {work.row7.paragrafo}
+                    </p>
+                  </div>
+                )}
+
                 <Swiper
-                  slidesPerView={3}
+                  slidesPerView={2.5}
                   spaceBetween={0}
                   modules={[Navigation]}
                   navigation={{
@@ -477,8 +506,8 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       slidesPerGroup: 3,
                     },
                     1200: {
-                      slidesPerView: 3,
-                      spaceBetween: 30,
+                      slidesPerView: 2.5,
+                      spaceBetween: 20,
                       slidesPerGroup: 3,
                     },
                   }}
@@ -486,9 +515,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   {work.row7.carousel.map((c, i) => {
                     return (
                       <SwiperSlide key={i}>
-                        <div // Usa motion.div anziché div
-                          className="aspect-square relative"
-                        >
+                        <div className="aspect-square relative">
                           <Image
                             src={c.img}
                             fill
@@ -517,6 +544,118 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 </div>
               </div>
             ) : null}
+            {work.row7bis ? (
+              <div
+                className=" w-full h-full"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                {work.row7bis.paragrafo && (
+                  <div
+                    className="text-center font-medium leading-10 mb-4 lg:my-20 flex flex-col "
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <p
+                      className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[75%] mx-auto `}
+                    >
+                      {work.row7bis.paragrafo}
+                    </p>
+                  </div>
+                )}
+
+                <video
+                  id="videoPlayer"
+                  className="rounded-lg h-[40vh] lg:h-[80vh] w-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src={work.row7bis.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ) : null}
+            {work.row8bis ? (
+              <div data-aos="fade-up" data-aos-delay="100">
+                <div className=" w-full h-full">
+                  <video
+                    id="videoPlayer"
+                    className="rounded-lg  w-full object-cover  lg:aspect-video  mx-auto"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={work.row8bis.video3} type="video/mp4" />
+                    <source src={work.row8bis.video4} type="video/mv4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div
+                  className="text-center font-medium leading-10 py-8 lg:py-20 flex flex-col gap-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <h2
+                    className={`${myFont.className} dark:text-third text-white text-4xl lg:text-5xl py-10 lg:py-0`}
+                  >
+                    {work.row8bis.title.uno}
+                    <span className={`${myFont.className} text-[#96be25]`}>
+                      {work.row8bis.title.due}
+                    </span>{" "}
+                    <span className={`${myFont.className} text-white`}>
+                      {work.row8bis.title.tre}
+                    </span>{" "}
+                  </h2>
+                  <div className="flex flex-col gap-4">
+                    <p
+                      className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[65%] mx-auto `}
+                    >
+                      {work.row8bis.descrizione}
+                    </p>
+                    <p
+                      className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[65%] mx-auto `}
+                    >
+                      {work.row8bis.descrizione2}
+                    </p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div
+                    className="relative aspect-square"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <Image
+                      src={work.row8bis.img}
+                      alt=""
+                      fill
+                      className=" object-cover rounded-lg"
+                    />
+                  </div>
+                  <div
+                    className=" w-full h-full"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <video
+                      id="videoPlayer"
+                      className="rounded-lg  w-full object-cover  aspect-square"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      poster={work.row8bis.video}
+                    >
+                      <source src={work.row8bis.video} type="video/webm" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            ) : null}
           </div>
         </section>
         <div className="w-[90%] mx-auto md:mt-20 mb-10 text-center text-white dark:text-third z-[9999999]">
@@ -528,7 +667,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-8 gap-6 ">
           {previousWork.titlePrev && (
             <Link href={`/cases/${previousWork.titlePrev}`} className="z-10">
-              <div className=" h-[40vh] w-full  z-10 relative ">
+              <div className="h-[20vh] lg:h-[40vh] w-full  z-10 relative ">
                 <Image
                   src={previousWork.imgPrev}
                   fill
@@ -550,7 +689,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
 
           {nextWork.titleNext && (
             <Link href={`/cases/${nextWork.titleNext}`} className="z-10">
-              <div className=" h-[40vh] w-full  z-10 relative ">
+              <div className="h-[20vh] lg:h-[40vh] w-full  z-10 relative ">
                 <Image
                   src={nextWork.imgNext}
                   fill
