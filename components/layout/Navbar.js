@@ -116,7 +116,7 @@ const Navbar = ({ lang }) => {
               <SocialBar />
             </div>
           </div>
-          <div className="absolute bottom-0 right-0 md:right-10  h-2/3 w-1/2 object-cover ">
+          <div className="absolute bottom-0 right-0 md:right-10  h-2/3 w-full lg:w-1/2 object-cover ">
             <Image
               src="/assets/logo/iconabg.png"
               alt="Icona di sfondo"
