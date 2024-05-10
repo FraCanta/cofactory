@@ -92,9 +92,8 @@ const Works = ({ translation }) => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeInOut" }} // Aggiungi la transizione qui
-                    className="absolute top-0 right-0 left-0 bg-white min-w-[350px] md:min-w-[300px] text-2xl lg:text-[25px] z-10 transition-colors duration-300 flex flex-col gap-8"
+                    className="absolute top-0 lg:right-0  bg-white min-w-[350px] md:min-w-[300px] rounded-[30px] text-2xl lg:text-[25px] z-10 transition-colors duration-300 flex flex-col gap-8"
                     style={{
-                      clipPath: "inset(0% round 30px)",
                       padding: "59px 0 28px",
                     }}
                   >
@@ -230,7 +229,7 @@ const Works = ({ translation }) => {
                             </Link>
                           </div>
                         </div>
-                        <div className="w-full h-[0.2px] bg-white my-4"></div>
+                        <div className="w-full h-[0.2px] bg-white my-4 block lg:hidden"></div>
                       </Link>
                     </div>
                   );
@@ -315,7 +314,7 @@ const Works = ({ translation }) => {
                             </Link>
                           </div>
                         </div>
-                        <div className="w-full h-[0.2px] bg-white my-4"></div>
+                        <div className="w-full h-[0.2px] bg-white my-4 block lg:hidden"></div>
                       </Link>
                     </div>
                   );
