@@ -454,6 +454,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       playsInline
                     >
                       <source src={work.row8.video} type="video/webm" />
+                      <source src={work.row8.video2} type="video/m4v" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
