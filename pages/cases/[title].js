@@ -475,7 +475,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 )}
 
                 <Swiper
-                  slidesPerView={2.5}
+                  slidesPerView={3}
                   spaceBetween={0}
                   modules={[Navigation]}
                   navigation={{
@@ -507,7 +507,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       slidesPerGroup: 3,
                     },
                     1200: {
-                      slidesPerView: 2.5,
+                      slidesPerView: 3,
                       spaceBetween: 20,
                       slidesPerGroup: 3,
                     },

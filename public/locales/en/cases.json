@@ -147,64 +147,65 @@
         "title": "yummersghostbusters",
 
         "name": "Yummer's + Ghostbusters: Minaccia Glaciale",
-        "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
+        "descrizione": "Una vera coppia da urlo! In occasione dell'uscita al cinema dell'attesissimo Ghostbusters: Minaccia Glaciale, Yummer's lancia i nuovi cereali a cuscinetto a due gusti di zucchero filato ispirati al film.",
         "partner": "partner nel",
         "year": "Aprile 2024",
         "list": [
-          { "name": "box valigetta" },
-          { "name": "spot tv" },
-          { "name": "concorso a premi" },
-          { "name": "landing page" },
+          { "name": "packaging" },
+          { "name": "pop" },
+          { "name": "dooh" },
+          { "name": "spot digital" },
           { "name": "campagna digital" },
-          { "name": "vestizione apecar per il toys christmas tour" }
+          { "name": "campagna influencer" },
+          { "name": "launch event" }
         ],
+        "row0bis": { "img": "/assets/cases/yummers/img1.jpg" },
         "row1": {
-          "img1": "/assets/cases/milka/milka1.jpg",
-          "img2": "/assets/cases/milka/milka2.png"
+          "img1": "/assets/cases/yummers/img2.jpg",
+          "img2": "/assets/cases/yummers/img3.jpg"
         },
-        "row2": {
-          "title": {
-            "primo": "In viaggio per un ",
-            "span": "Natale",
-            "secondo": "tenerissimo."
-          },
-          "img3": "/assets/cases/milka/milkavideo2.mp4"
-        },
-        "row3": {
-          "img4": "/assets/cases/milka1.jpg"
-        },
-        "row4": {
-          "title": " Quando i premi fanno gola a tutti!",
-          "descrizione": "Un QR code presente in grafica ha dato a tutti i bambini la possibilità di partecipare ad un concorso con in palio una sorpresa ancora più tenera: una maxi box di snack e dolci dello storico marchio italiano di cioccolata."
-        },
-        "row5": {
-          "video": "/assets/cases/milka/spot_milka.mp4",
-          "poster": "/assets/cases/milka/spot_milka-2.jpg"
-        },
-        "row6": {
-          "pacchetti": "/assets/cases/prova_valigette.png"
-        },
+
         "row7": {
+          "paragrafo": "I cereali Yummer's al pistacchio, con Slimer, e ai marshmallow, con i soffici Mini-Puffs, insieme allo zucchero filato alla mela verde e al gusto classico, hanno letteralmente invaso i supermercati MD conquistando i fan della saga e non solo.",
           "carousel": [
             {
-              "img": "/assets/cases/milka4.jpg"
+              "img": "/assets/cases/yummers/gallery/gallery1.jpg"
             },
             {
-              "img": "/assets/cases/milka5.jpg"
+              "img": "/assets/cases/yummers/gallery/gallery2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_1.jpg"
+              "img": "/assets/cases/yummers/gallery/gallery3.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_2.jpg"
+              "img": "/assets/cases/yummers/gallery/gallery4.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_3.jpg"
+              "img": "/assets/cases/yummers/gallery/gallery5.jpg"
             },
             {
-              "img": "/assets/cases/milka/milka4.jpg"
+              "img": "/assets/cases/yummers/gallery/gallery6.jpg"
             }
           ]
+        },
+        "row7bis": {
+          "paragrafo": "Un brand che sa come raggiungere il proprio target e lo fa con una campagna sul Dooh Urban Vision, eventi mirati e influencer che sanno bene come coinvolgere la community dei primi cereali in Italia rivolti alla GenZ.",
+
+          "video": "/assets/cases/yummers/urban_vision.mp4",
+          "video2": "/assets/cases/yummers/urban_vision.m4v"
+        },
+        "row8bis": {
+          "video3": "/assets/cases/yummers/urban_vision_2.mp4",
+          "video4": "/assets/cases/yummers/urban_vision_2.m4v",
+          "title": {
+            "uno": "Un ",
+            "due": "unveiling event ",
+            "tre": "da vertigini"
+          },
+          "descrizione": "Una scalata adrenalitica, nella palestra di arrampicata Rockspot a Milano, è stata il campo di sfida per 9 influencers del mondo sport e lifestyle e per gli Acchiappafantasmi di Ghostbusters Italia. I protagonisti dell'evento di lancio hanno affrontato una parete altissima, infestata dai fantasmi del film, con l'obiettivo di raggiungere la vetta e 'acchiappare' la limited edition dei nuovi cereali Yummer's. ",
+          "descrizione2": "L'evento ha generato un'impressionante redemption grazie a stories, post e reel dei creator che hanno realizzato contenuti ad altissima viralità.",
+          "img": "/assets/cases/yummers/arrampicata.jpg",
+          "video": "/assets/cases/yummers/reel.jpg"
         }
       },
       "rossopomodorotartarugheninja": {
@@ -290,10 +291,12 @@
 
         "row8": {
           "video3": "/assets/cases/rossopomodoro/tartarughenija/spot3_def.mp4",
+          "video4": "/assets/cases/rossopomodoro/tartarughenija/spot3_def.m4v",
           "title": "Per chi va pazzo per la pizza.",
           "descrizione": "Non solo nei ristoranti, anche al Giffoni Film Festival hanno spopolato le maschere di Tartarughe Ninja: Caos Mutante! Al festival cinematografico per bambini e ragazzi, provenienti da ogni parte d'Italia e del mondo, le Tartarughe Ninja hanno accolto i piccoli giudici con i gadget realizzati da Rossopomodoro in occasione della partnership con la release.",
           "img": "/assets/cases/rossopomodoro/tartarughenija/giffoni.jpg",
-          "video": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.mp4"
+          "video": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.mp4",
+          "video2": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.m4v"
         }
       },
       "treccanifaoschwarz": {
