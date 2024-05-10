@@ -49,7 +49,7 @@ const Works = ({ translation }) => {
           <BlurryLights />
         </div>
         <main>
-          <div className="flex justify-between w-[90%] mx-auto mt-32 lg:mt-40 ">
+          <div className="flex justify-between w-[90%] mx-auto mt-[150px] lg:mt-40 ">
             <div className="relative w-full " onClick={toggleList}>
               <div className="flex items-center gap-6 justify-between lg:justify-end">
                 <label
