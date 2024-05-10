@@ -47,12 +47,11 @@ const Works = ({ translation }) => {
           <BlurryLights />
         </div>
         <main>
-          <div className="flex justify-between w-[90%] mx-auto mt-40 ">
-            <div></div>
-            <div className="relative" onClick={toggleList}>
-              <div className="flex items-center gap-6">
+          <div className="flex justify-between w-[90%] mx-auto mt-32 lg:mt-40 ">
+            <div className="relative w-full " onClick={toggleList}>
+              <div className="flex items-center gap-6 justify-between lg:justify-end">
                 <label
-                  className={`${myFont.className} text-white dark:text-third font-regular lg:text-2xl`}
+                  className={`${myFont.className} text-white dark:text-third font-regular text-xl lg:text-2xl`}
                 >
                   Ordina per:
                 </label>
