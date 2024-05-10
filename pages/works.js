@@ -185,11 +185,8 @@ const Works = ({ translation }) => {
                             </div>
                           )}
                         </div>
-                        <div
-                          className="py-6 text-white text-lg flex flex-wrap lg:hidden items-center font-bold"
-                          data-aos="fade-up"
-                          data-aos-delay="100"
-                        >
+
+                        <div className="py-6 text-white text-lg flex flex-wrap lg:hidden items-center font-bold">
                           <span className={`${myFont2.className}`}>
                             {el.brand1}
                           </span>{" "}
@@ -204,11 +201,7 @@ const Works = ({ translation }) => {
                             {el.brand2}
                           </span>
                         </div>
-                        <div
-                          className="text-white text-sm uppercase flex justify-between w-full lg:hidden"
-                          data-aos="fade-up"
-                          data-aos-delay="100"
-                        >
+                        <div className="text-white text-sm uppercase flex justify-between w-full lg:hidden">
                           <div>
                             {el.categories.map((cat, index) => (
                               <span
@@ -270,11 +263,7 @@ const Works = ({ translation }) => {
                             </div>
                           )}
                         </div>
-                        <div
-                          className="py-6 text-white text-lg font-bold flex flex-wrap items-center lg:hidden"
-                          data-aos="fade-up"
-                          data-aos-delay="100"
-                        >
+                        <div className="py-6 text-white text-lg font-bold flex flex-wrap items-center lg:hidden">
                           <span className={`${myFont2.className}`}>
                             {el.brand1}
                           </span>{" "}
@@ -289,11 +278,7 @@ const Works = ({ translation }) => {
                             {el.brand2}
                           </span>
                         </div>
-                        <div
-                          className="text-white text-sm uppercase flex justify-between w-full lg:hidden"
-                          data-aos="fade-up"
-                          data-aos-delay="100"
-                        >
+                        <div className="text-white text-sm uppercase flex justify-between w-full lg:hidden">
                           <div>
                             {el.categories.map((cat, index) => (
                               <span
