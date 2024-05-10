@@ -87,24 +87,26 @@ const Navbar = ({ lang }) => {
           className="absolute top-0 lg:top-0 left-0 right-0 bottom-0 flex  w-full h-screen  bg-third dark:bg-white text-white dark:text-third"
         >
           <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  gap-y-10 lg:mt-[95px]">
-            <ul className={`${myFont.className}  flex flex-col py-20 lg:py-0`}>
+            <ul
+              className={`${myFont.className}  flex flex-col py-24 lg:py-10 gap-8 lg:gap-10`}
+            >
               <li onClick={() => setOpen(false)}>
                 <Link
                   href="/factory"
-                  className="text-[20vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
+                  className="text-7xl lg:text-9xl 2xl:text-[9rem] cursor-pointer transition hover:text-second max-w-max "
                 >
                   Factory
                 </Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-[20vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
+                className="text-7xl lg:text-9xl cursor-pointer transition hover:text-second max-w-max "
               >
                 <Link href="/works"> Works</Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-[20vw] lg:text-[8vw] cursor-pointer transition hover:text-second max-w-max "
+                className="text-7xl lg:text-9xl cursor-pointer transition hover:text-second max-w-max "
               >
                 <Link href="/contatti"> Contact</Link>
               </li>
@@ -114,14 +116,14 @@ const Navbar = ({ lang }) => {
               <SocialBar />
             </div>
           </div>
-          {/* <div className="absolute bottom-0 right-0 md:right-10  h-2/3 w-full md:w-1/2 object-cover md:object-contain">
+          <div className="absolute bottom-0 right-0 md:right-10  h-2/3 w-1/2 object-cover ">
             <Image
               src="/assets/logo/iconabg.png"
               alt="Icona di sfondo"
               layout="fill"
               quality={75}
             />
-          </div> */}
+          </div>
         </motion.div>
       </div>
       <div className="w-[90vw] mx-auto">

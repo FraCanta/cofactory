@@ -230,7 +230,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 data-aos-delay="100"
               >
                 <h2
-                  className={`${myFont.className} dark:text-third text-white text-6xl lg:text-9xl py-10 lg:py-0`}
+                  className={`${myFont.className} dark:text-third text-white text-6xl lg:text-8xl 2xl:text-9xl py-10 lg:py-0`}
                 >
                   {work.row2.title.primo}
                   <span className={`${myFont.className} text-[#d51d1f]`}>
