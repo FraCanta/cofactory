@@ -49,7 +49,7 @@ const Navbar = ({ lang }) => {
           delay: isVisible ? 0 : 0.8,
         }, // Aggiunto il delay
       }}
-      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm h-[70px] lg:h-[95px]"
+      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm h-[70px] md:h-[95px]"
     >
       <div className="w-[90%] m-auto flex justify-between items-center py-4 text-white">
         <Link href="/" className="z-[20]" onClick={() => setOpen(false)}>
@@ -58,7 +58,7 @@ const Navbar = ({ lang }) => {
             alt="logo"
             width={200}
             height={200}
-            className="w-[130px] lg:w-[200px] "
+            className="w-[130px] md:w-[200px] "
           />
         </Link>
         <div className="flex gap-8 items-center">
@@ -93,20 +93,20 @@ const Navbar = ({ lang }) => {
               <li onClick={() => setOpen(false)}>
                 <Link
                   href="/factory"
-                  className="text-7xl lg:text-9xl 2xl:text-[9rem] cursor-pointer transition hover:text-second max-w-max "
+                  className="text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition hover:text-second max-w-max "
                 >
                   Factory
                 </Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-7xl lg:text-9xl cursor-pointer transition hover:text-pink max-w-max "
+                className="text-7xl md:text-9xl cursor-pointer transition hover:text-pink max-w-max "
               >
                 <Link href="/works"> Works</Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-7xl lg:text-9xl cursor-pointer transition hover:text-second max-w-max "
+                className="text-7xl md:text-9xl cursor-pointer transition hover:text-second max-w-max "
               >
                 <Link href="/contatti"> Contact</Link>
               </li>
@@ -116,7 +116,7 @@ const Navbar = ({ lang }) => {
               <SocialBar />
             </div>
           </div>
-          <div className="absolute bottom-0 right-0 md:right-6 md:top-24 h-[50%]  lg:h-[85%] w-full lg:w-1/2 overflow-y-hidden ">
+          <div className="absolute bottom-0 right-0 lg:right-6 lg::top-24 h-[50%]  md:h-[85%] w-full lg:w-1/2 overflow-y-hidden ">
             <Image
               src="/assets/logo/iconabg.png"
               alt="Icona di sfondo"

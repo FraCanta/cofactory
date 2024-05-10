@@ -68,10 +68,10 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           <div className="flex flex-col gap-10 col-span-2">
             <div className="justify-between  flex flex-col">
               <h1
-                className={`${myFont.className} dark:text-third text-white text-4xl md:text-6xl lg:text-4xl 2xl:text-[3.3rem] flex flex-wrap items-center gap-2 lg:gap-4 2xl:gap-4`}
+                className={`${myFont.className} dark:text-third text-white text-4xl md:text-6xl lg:text-4xl 2xl:text-[3.3rem] flex flex-wrap items-center gap-2 md:gap-4 2xl:gap-4`}
               >
                 {work.brand1}
-                <span className="relative w-5 h-5 md:w-10 md:h-10 lg:w-[35px] lg:h-[35px]">
+                <span className="relative w-5 h-5 md:w-10 md:h-8 lg:w-[35px] lg:h-[35px]">
                   <Image src={Icona} alt="" fill className="h-auto w-auto" />
                 </span>
 
@@ -230,7 +230,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 data-aos-delay="100"
               >
                 <h2
-                  className={`${myFont.className} dark:text-third text-white text-6xl lg:text-8xl 2xl:text-9xl py-10 lg:py-0`}
+                  className={`${myFont.className} dark:text-third text-white text-6xl md:text-7xl  lg:text-8xl 2xl:text-9xl py-10 lg:py-0`}
                 >
                   {work.row2.title.primo}
                   <span className={`${myFont.className} text-[#d51d1f]`}>
@@ -412,12 +412,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </video>
                 </div>
                 <div
-                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  className="text-center font-medium leading-10 py-8 md:py-14 flex flex-col gap-6"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
                   <h3
-                    className={`${myFont.className} dark:text-third text-white text-2xl md:text-[6vw] lg:text-4xl `}
+                    className={`${myFont.className} dark:text-third text-white text-2xl md:text-5xl lg:text-4xl `}
                   >
                     {work.row8.title}
                   </h3>
@@ -465,7 +465,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row7 ? (
               <div className="w-full" data-aos="fade-up" data-aos-delay="100">
                 {work.row7.paragrafo && (
-                  <div className="text-center font-medium leading-10 py-8 lg:py-20 flex flex-col gap-6">
+                  <div className="text-center font-medium leading-10 py-8 md:py-20 flex flex-col gap-6">
                     <p
                       className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[75%] mx-auto `}
                     >
@@ -553,7 +553,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               >
                 {work.row7bis.paragrafo && (
                   <div
-                    className="text-center font-medium leading-10 mb-4 lg:my-20 flex flex-col "
+                    className="text-center font-medium leading-10 mb-4 md:my-20 flex flex-col "
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -600,7 +600,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   data-aos-delay="100"
                 >
                   <h2
-                    className={`${myFont.className} dark:text-third text-white text-4xl lg:text-5xl py-10 lg:py-0`}
+                    className={`${myFont.className} dark:text-third text-white text-4xl lg:text-5xl py-10 md:py-6 lg:py-0`}
                   >
                     {work.row8bis.title.uno}
                     <span className={`${myFont.className} text-[#96be25]`}>
