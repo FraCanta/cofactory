@@ -659,7 +659,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
           </div>
         </section>
-        <div className="w-[90%] mx-auto md:mt-20 mb-10 text-center text-white dark:text-third z-[9999999]">
+        <div className="w-[90%] mx-auto my-10 text-center text-white dark:text-third z-[9999999]">
           <Link href="/works" className={`${myFont.className} text-4xl `}>
             {" "}
             Tutte le storie
