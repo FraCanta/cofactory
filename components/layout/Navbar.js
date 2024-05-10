@@ -100,7 +100,7 @@ const Navbar = ({ lang }) => {
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-7xl lg:text-9xl cursor-pointer transition hover:text-second max-w-max "
+                className="text-7xl lg:text-9xl cursor-pointer transition hover:text-pink max-w-max "
               >
                 <Link href="/works"> Works</Link>
               </li>
@@ -112,16 +112,17 @@ const Navbar = ({ lang }) => {
               </li>
             </ul>
             {/* <div></div> */}
-            <div className="h-full flex flex-col lg:items-end gap-y-10 lg:py-14">
+            <div className="h-full flex flex-col lg:items-end gap-y-10 lg:py-14 z-10">
               <SocialBar />
             </div>
           </div>
-          <div className="absolute bottom-0 right-0 md:right-10  h-2/3 w-full lg:w-1/2 object-cover ">
+          <div className="absolute bottom-0 right-0 md:right-6 md:top-24 h-[50%]  lg:h-[85%] w-full lg:w-1/2 overflow-y-hidden ">
             <Image
               src="/assets/logo/iconabg.png"
               alt="Icona di sfondo"
-              layout="fill"
+              fill
               quality={75}
+              className="object-contain w-full lg:p-8 mix-blend-difference"
             />
           </div>
         </motion.div>
