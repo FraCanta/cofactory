@@ -60,8 +60,8 @@ const Works = ({ translation }) => {
                 <div
                   className={
                     showList
-                      ? "min-w-[350px] md:min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border text-third bg-white border-white justify-between items-center inline-flex z-[99] font-regular transition-colors duration-300"
-                      : "text-white min-w-[350px] md:min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border   border-white justify-between items-center inline-flex transition-colors duration-300"
+                      ? "min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border text-third bg-white border-white justify-between items-center inline-flex z-[99] font-regular transition-colors duration-300"
+                      : "text-white min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border   border-white justify-between items-center inline-flex transition-colors duration-300"
                   }
                 >
                   <button className="  w-full max-w-xs flex items-center justify-between text-2xl ">
@@ -92,7 +92,7 @@ const Works = ({ translation }) => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeInOut" }} // Aggiungi la transizione qui
-                    className="absolute top-0 lg:right-0  bg-white min-w-[350px] md:min-w-[300px] rounded-[30px] text-2xl lg:text-[25px] z-10 transition-colors duration-300 flex flex-col gap-8"
+                    className="absolute top-0 lg:right-0  bg-white min-w-[300px] rounded-[30px] text-2xl lg:text-[25px] z-10 transition-colors duration-300 flex flex-col gap-8"
                     style={{
                       padding: "59px 0 28px",
                     }}
@@ -271,7 +271,7 @@ const Works = ({ translation }) => {
                           )}
                         </div>
                         <div
-                          className="py-6 text-white text-lg font-bold flex items-center lg:hidden"
+                          className="py-6 text-white text-lg font-bold flex flex-wrap items-center lg:hidden"
                           data-aos="fade-up"
                           data-aos-delay="100"
                         >
