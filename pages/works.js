@@ -12,7 +12,9 @@ import { GoArrowDown } from "react-icons/go";
 import { MaskText } from "@/components/MaskText";
 import Head from "next/head";
 import BlurryLights from "@/components/layout/BlurryLights";
+import { PiArrowUpRightThin } from "react-icons/pi";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
 const Works = ({ translation }) => {
   // Estrai i casi dal tuo oggetto di traduzione
@@ -51,18 +53,18 @@ const Works = ({ translation }) => {
             <div className="relative w-full " onClick={toggleList}>
               <div className="flex items-center gap-6 justify-between lg:justify-end">
                 <label
-                  className={`${myFont.className} text-white dark:text-third font-regular text-xl lg:text-2xl`}
+                  className={`${myFont.className} text-white dark:text-third font-regular text-xl lg:text-2xl hidden lg:flex`}
                 >
                   Ordina per:
                 </label>
                 <div
                   className={
                     showList
-                      ? "min-w-[250px] md:min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border text-third bg-white border-white justify-between items-center inline-flex z-[99] font-regular transition-colors duration-300"
-                      : "text-white min-w-[250px] md:min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border   border-white justify-between items-center inline-flex transition-colors duration-300"
+                      ? "min-w-[350px] md:min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border text-third bg-white border-white justify-between items-center inline-flex z-[99] font-regular transition-colors duration-300"
+                      : "text-white min-w-[350px] md:min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border   border-white justify-between items-center inline-flex transition-colors duration-300"
                   }
                 >
-                  <button className="  w-full max-w-xs flex items-center justify-between lg:text-2xl ">
+                  <button className="  w-full max-w-xs flex items-center justify-between text-2xl ">
                     {selectedCategory === "All" ? "All" : selectedCategory}
                     {/* Testo "Tutti" */}
                     <svg
@@ -90,7 +92,7 @@ const Works = ({ translation }) => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeInOut" }} // Aggiungi la transizione qui
-                    className="absolute top-0 right-0 bg-white min-w-[250px] md:min-w-[300px] lg:text-[25px] z-10 transition-colors duration-300"
+                    className="absolute top-0 right-0 left-0 bg-white min-w-[350px] md:min-w-[300px] text-2xl lg:text-[25px] z-10 transition-colors duration-300 flex flex-col gap-8"
                     style={{
                       clipPath: "inset(0% round 30px)",
                       padding: "59px 0 28px",
@@ -164,10 +166,10 @@ const Works = ({ translation }) => {
                             src={el.img}
                             alt={el.name}
                             fill
-                            className="object-cover rounded-lg lg:opacity-100 hover:lg:opacity-50 hover:lg:rounded-[250px] hover:transition-all hover:duration-700 opacity-50  hover:lg:grayscale"
+                            className="object-cover rounded-lg lg:opacity-100 hover:lg:opacity-50 hover:lg:rounded-[250px] hover:transition-all hover:duration-700  hover:lg:grayscale"
                           />
                           {isHovered && (
-                            <div className="absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col lg:flex-row items-center justify-center  transition-all duration-1000 ease-in  text-white dark:text-third text-3xl lg:text-4xl font-bold  w-full">
+                            <div className="hidden absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 lg:flex flex-col lg:flex-row items-center justify-center  transition-all duration-1000 ease-in  text-white dark:text-third text-3xl lg:text-4xl font-bold  w-full">
                               <span className={`${myFont.className}`}>
                                 {el.brand1}
                               </span>{" "}
@@ -184,6 +186,51 @@ const Works = ({ translation }) => {
                             </div>
                           )}
                         </div>
+                        <div
+                          className="py-6 text-white text-lg flex flex-wrap lg:hidden items-center font-bold"
+                          data-aos="fade-up"
+                          data-aos-delay="100"
+                        >
+                          <span className={`${myFont2.className}`}>
+                            {el.brand1}
+                          </span>{" "}
+                          <span className="relative h-5 w-5 mx-4">
+                            <Image
+                              src="/assets/logo/per.svg"
+                              fill
+                              className="h-full w-full object-cover"
+                            />
+                          </span>{" "}
+                          <span className={`${myFont2.className}`}>
+                            {el.brand2}
+                          </span>
+                        </div>
+                        <div
+                          className="text-white text-sm uppercase flex justify-between w-full lg:hidden"
+                          data-aos="fade-up"
+                          data-aos-delay="100"
+                        >
+                          <div>
+                            {el.categories.map((cat, index) => (
+                              <span
+                                key={index}
+                                className={`${myFont2.className} ${
+                                  index > 0 ? "ml-1" : ""
+                                }`}
+                              >
+                                {cat.name}
+                                {index !== el.categories.length - 1 && " , "}
+                              </span>
+                            ))}
+                          </div>
+                          <div>
+                            <Link href={`/cases/${el.button}`}>
+                              {" "}
+                              <PiArrowUpRightThin className="w-6 h-6" />
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="w-full h-[0.2px] bg-white my-4"></div>
                       </Link>
                     </div>
                   );
@@ -204,10 +251,10 @@ const Works = ({ translation }) => {
                             src={el.img}
                             alt={el.name}
                             fill
-                            className="object-cover rounded-lg lg:opacity-100 hover:lg:opacity-50 hover:lg:rounded-[250px] hover:transition-all hover:duration-700 opacity-50  hover:lg:grayscale"
+                            className="object-cover rounded-lg lg:opacity-100 hover:lg:opacity-50 hover:lg:rounded-[250px] hover:transition-all hover:duration-700 hover:lg:grayscale"
                           />
                           {isHovered && (
-                            <div className="absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col lg:flex-row items-center justify-center  transition-all duration-1000 ease-in  text-white dark:text-third text-3xl lg:text-4xl font-bold  w-full">
+                            <div className="absolute hidden top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 lg:flex flex-col lg:flex-row items-center justify-center  transition-all duration-1000 ease-in  text-white dark:text-third text-3xl lg:text-4xl font-bold  w-full">
                               <span className={`${myFont.className}`}>
                                 {el.brand1}
                               </span>{" "}
@@ -224,6 +271,51 @@ const Works = ({ translation }) => {
                             </div>
                           )}
                         </div>
+                        <div
+                          className="py-6 text-white text-lg font-bold flex items-center lg:hidden"
+                          data-aos="fade-up"
+                          data-aos-delay="100"
+                        >
+                          <span className={`${myFont2.className}`}>
+                            {el.brand1}
+                          </span>{" "}
+                          <span className="relative h-5 w-5 mx-4">
+                            <Image
+                              src="/assets/logo/per.svg"
+                              fill
+                              className="h-full w-full object-cover"
+                            />
+                          </span>{" "}
+                          <span className={`${myFont2.className}`}>
+                            {el.brand2}
+                          </span>
+                        </div>
+                        <div
+                          className="text-white text-sm uppercase flex justify-between w-full lg:hidden"
+                          data-aos="fade-up"
+                          data-aos-delay="100"
+                        >
+                          <div>
+                            {el.categories.map((cat, index) => (
+                              <span
+                                key={index}
+                                className={`${myFont2.className} ${
+                                  index > 0 ? "ml-1" : ""
+                                }`}
+                              >
+                                {cat.name}
+                                {index !== el.categories.length - 1 && " , "}
+                              </span>
+                            ))}
+                          </div>
+                          <div>
+                            <Link href={`/cases/${el.button}`}>
+                              {" "}
+                              <PiArrowUpRightThin className="w-6 h-6" />
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="w-full h-[0.2px] bg-white my-4"></div>
                       </Link>
                     </div>
                   );
