@@ -229,28 +229,44 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <h2
-                  className={`${myFont.className} dark:text-third text-white text-6xl md:text-7xl  lg:text-8xl 2xl:text-9xl py-10 lg:py-0`}
-                >
-                  {work.row2.title.primo}
-                  <span className={`${myFont.className} text-[#d51d1f]`}>
-                    {work.row2.title.span}
-                  </span>{" "}
-                  {work.row2.title.secondo}
-                </h2>
-                <div className="w-full h-full">
-                  <video
-                    className="h-full w-full aspect-square rounded-lg"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                {work.row2.title ? (
+                  <h2
+                    className={`${myFont.className} dark:text-third text-white text-6xl md:text-7xl  lg:text-8xl 2xl:text-9xl py-10 lg:py-0`}
                   >
-                    <source src={work.row2.video} type="video/mp4" />
-                    <source src={work.row2.video2} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
+                    {work.row2.title.primo}
+                    <span className={`${myFont.className} text-[#d51d1f]`}>
+                      {work.row2.title.span}
+                    </span>{" "}
+                    {work.row2.title.secondo}
+                  </h2>
+                ) : (
+                  <div className="aspect-square w-full relative">
+                    <Image
+                      src={work.row2.img3}
+                      alt=""
+                      fill
+                      className="h-full w-full object-cover  rounded-lg"
+                    />
+                  </div>
+                )}
+
+                {work.row2.video && work.row2.video2 ? (
+                  <div className="w-full h-full">
+                    <video
+                      className="h-full w-full aspect-square rounded-lg"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src={work.row2.video} type="video/mp4" />
+                      <source src={work.row2.video2} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                ) : (
+                  <VideoPlayer3 video={work.row2.video} />
+                )}
               </div>
             ) : null}
             {work.limited ? (
@@ -466,85 +482,93 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               <div className="w-full" data-aos="fade-up" data-aos-delay="100">
                 {work.row7.paragrafo && (
                   <div className="text-center font-medium leading-10 py-8 md:py-20 flex flex-col gap-6">
-                    <p
-                      className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[75%] mx-auto `}
-                    >
-                      {work.row7.paragrafo}
-                    </p>
+                    {work.row7.paragrafo.map((el, i) => {
+                      return (
+                        <p
+                          key={i}
+                          dangerouslySetInnerHTML={{ __html: el.p }}
+                          className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[75%] mx-auto `}
+                        ></p>
+                      );
+                    })}
                   </div>
                 )}
-
-                <Swiper
-                  slidesPerView={3}
-                  spaceBetween={0}
-                  modules={[Navigation]}
-                  navigation={{
-                    prevEl: ".prev",
-                    nextEl: ".next",
-                  }}
-                  loop={true}
-                  loopfillgroupwithblank={{
-                    enabled: true,
-                    loopedSlides: 1,
-                  }}
-                  breakpoints={{
-                    // when window width is >= 1px
-                    1: {
-                      slidesPerView: 1,
-                      spaceBetween: 30,
-                      slidesPerGroup: 1,
-                    },
-                    // when window width is >= 768px
-                    768: {
-                      slidesPerView: 2,
-                      spaceBetween: 30,
-                      slidesPerGroup: 2,
-                    },
-                    // when window width is >= 990px
-                    990: {
-                      slidesPerView: 3,
-                      spaceBetween: 30,
-                      slidesPerGroup: 3,
-                    },
-                    1200: {
-                      slidesPerView: 3,
-                      spaceBetween: 20,
-                      slidesPerGroup: 3,
-                    },
-                  }}
-                >
-                  {work.row7.carousel.map((c, i) => {
-                    return (
-                      <SwiperSlide key={i}>
-                        <div className="aspect-square relative">
-                          <Image
-                            src={c.img}
-                            fill
-                            className="w-full h-full object-cover "
-                          />
-                        </div>
-                      </SwiperSlide>
-                    );
-                  })}
-                </Swiper>
-                <div className="arrow">
-                  <div className="prev">
-                    <Icon
-                      icon="bi:arrow-left-circle-fill"
-                      color="white"
-                      width="40"
-                    />
-                  </div>
-                  <div className="next">
-                    <Icon
-                      icon="bi:arrow-right-circle-fill"
-                      color="white"
-                      width="40"
-                    />
-                  </div>
-                </div>
+                {work.row7.carousel ? (
+                  <>
+                    <Swiper
+                      slidesPerView={3}
+                      spaceBetween={0}
+                      modules={[Navigation]}
+                      navigation={{
+                        prevEl: ".prev",
+                        nextEl: ".next",
+                      }}
+                      loop={true}
+                      loopfillgroupwithblank={{
+                        enabled: true,
+                        loopedSlides: 1,
+                      }}
+                      breakpoints={{
+                        // when window width is >= 1px
+                        1: {
+                          slidesPerView: 1,
+                          spaceBetween: 30,
+                          slidesPerGroup: 1,
+                        },
+                        // when window width is >= 768px
+                        768: {
+                          slidesPerView: 2,
+                          spaceBetween: 30,
+                          slidesPerGroup: 2,
+                        },
+                        // when window width is >= 990px
+                        990: {
+                          slidesPerView: 3,
+                          spaceBetween: 30,
+                          slidesPerGroup: 3,
+                        },
+                        1200: {
+                          slidesPerView: 3,
+                          spaceBetween: 20,
+                          slidesPerGroup: 3,
+                        },
+                      }}
+                    >
+                      {work.row7.carousel.map((c, i) => {
+                        return (
+                          <SwiperSlide key={i}>
+                            <div className="aspect-square relative">
+                              <Image
+                                src={c.img}
+                                fill
+                                className="w-full h-full object-cover "
+                              />
+                            </div>
+                          </SwiperSlide>
+                        );
+                      })}
+                    </Swiper>
+                    <div className="arrow">
+                      <div className="prev">
+                        <Icon
+                          icon="bi:arrow-left-circle-fill"
+                          color="white"
+                          width="40"
+                        />
+                      </div>
+                      <div className="next">
+                        <Icon
+                          icon="bi:arrow-right-circle-fill"
+                          color="white"
+                          width="40"
+                        />
+                      </div>
+                    </div>
+                  </>
+                ) : null}
               </div>
             ) : null}
+
             {work.row7bis ? (
               <div
                 className=" w-full h-full"
@@ -656,6 +680,66 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </div>
                 </div>
               </div>
+            ) : null}
+            {work.row9 ? (
+              <>
+                <div
+                  className="relative w-full aspect-video lg:h-screen"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <Image
+                    src={work.row9.img}
+                    alt=""
+                    fill
+                    className=" object-cover rounded-lg"
+                  />
+                </div>
+                <div
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div className="aspect-square">
+                    <VideoPlayer3 video={work.row9.video} />
+                  </div>
+                  <div className="relative aspect-square">
+                    <Image
+                      src={work.row9.img1}
+                      alt=""
+                      fill
+                      className=" object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="text-center font-medium leading-10 mb-4 md:my-20 flex flex-col "
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <p
+                    className={`${myFont2.className} dark:text-third text-white/80 text-base md:text-xl lg:text-xl lg:w-[75%] mx-auto `}
+                  >
+                    {work.row9.descrizione}
+                  </p>
+                </div>
+                {work.row9.gallery.map((el, i) => {
+                  return (
+                    <div
+                      className="relative w-full aspect-video lg:h-screen"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    >
+                      <Image
+                        src={el.img}
+                        alt=""
+                        fill
+                        className=" object-cover rounded-lg"
+                      />
+                    </div>
+                  );
+                })}
+              </>
             ) : null}
           </div>
         </section>
