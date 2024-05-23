@@ -58,7 +58,7 @@ const Navbar = ({ lang }) => {
             alt="logo"
             width={200}
             height={200}
-            className="w-[130px] md:w-[200px] "
+            className="w-[130px]"
           />
         </Link>
         <div className="flex gap-8 items-center">
@@ -116,7 +116,7 @@ const Navbar = ({ lang }) => {
               <SocialBar />
             </div>
           </div>
-          <div className="absolute bottom-0 right-0 lg:right-6 lg::top-24 h-[50%]  md:h-[85%] w-full lg:w-1/2 overflow-y-hidden ">
+          {/* <div className="absolute bottom-0 right-0 lg:right-6 lg::top-24 h-[50%]  md:h-[85%] w-full lg:w-1/2 overflow-y-hidden ">
             <Image
               src="/assets/logo/iconabg.png"
               alt="Icona di sfondo"
@@ -124,7 +124,7 @@ const Navbar = ({ lang }) => {
               quality={75}
               className="object-contain w-full lg:p-8 mix-blend-difference"
             />
-          </div>
+          </div> */}
         </motion.div>
       </div>
       <div className="w-[90vw] mx-auto">
