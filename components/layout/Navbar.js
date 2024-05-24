@@ -73,8 +73,8 @@ const Navbar = ({ lang }) => {
               strokeWidth="3"
               className="stroke-white dark:stroke-third toggle"
               transition={{ ease: "easeOut", duration: 0.2 }}
-              width="40"
-              height="20"
+              width="30"
+              height="15"
             />
           </div>
         </div>
@@ -112,9 +112,9 @@ const Navbar = ({ lang }) => {
               </li>
             </ul>
             {/* <div></div> */}
-            <div className="h-full flex flex-col lg:items-end gap-y-10 lg:py-14 z-10">
+            {/* <div className="h-full flex flex-col lg:items-end gap-y-10 lg:py-14 z-10">
               <SocialBar />
-            </div>
+            </div> */}
           </div>
           {/* <div className="absolute bottom-0 right-0 lg:right-6 lg::top-24 h-[50%]  md:h-[85%] w-full lg:w-1/2 overflow-y-hidden ">
             <Image

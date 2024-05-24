@@ -13,9 +13,10 @@ import { PiArrowUpRightThin } from "react-icons/pi";
 import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
+import Image from "next/image";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
-const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 
 const Home = ({ translation }) => {
   console.log(translation);
@@ -42,7 +43,7 @@ const Home = ({ translation }) => {
           <div className="lg:w-[65%] mx-auto">
             <MaskText>
               <p
-                className={`${myFont2.className} font-normal text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
+                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
               >
                 A volte creiamo legami duraturi. Altre volte, invece, nascono
                 dei colpi di fulmine, brevi ma intensi, elettrizzanti e
@@ -51,10 +52,20 @@ const Home = ({ translation }) => {
             </MaskText>
           </div>
         </Hero>
+        <div className="w-[90vw] mx-auto flex justify-end pb-6">
+          <div className="relative w-28 aspect-square animate-spin ">
+            <Image
+              src="/assets/bollino_lovers.png"
+              alt=""
+              fill
+              className=" object-cover rounded-lg !text-white"
+            />
+          </div>
+        </div>
         <div className="w-[90vw] mx-auto">
           <Line />
         </div>
-        <div className="w-[90%] mx-auto flex justify-center items-center mt-10">
+        {/* <div className="w-[90%] mx-auto flex justify-center items-center mt-10">
           <h2 className="text-[32px]">
             <span
               className={`${myFont.className} mr-2 text-white dark:text-third`}
@@ -63,12 +74,13 @@ const Home = ({ translation }) => {
             </span>
             <span className={`${myFont2.className} text-pink`}>lovers</span>{" "}
           </h2>
-        </div>
+        </div> */}
 
-        <Marquee />
-        <div className="w-[90vw] mx-auto">
+        {/* <Marquee /> */}
+
+        {/* <div className="w-[90vw] mx-auto">
           <Line />
-        </div>
+        </div> */}
         <LavoriSec cards={translation.cards} />
 
         <div className="w-[90%] mx-auto">

@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import Link from "next/link";
 import localFont from "next/font/local"; // Import localFont prima dell'uso
 
-const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
 const LavoriSec = ({ cards }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-4 py-8">
-      {cards.map((el, i) => {
+    <div className="w-full grid grid-cols-1 py-8">
+      {/* {cards.map((el, i) => {
         const isHovered = hoveredIndex === i;
         if (i === 2 || i === 5) {
           return (
@@ -22,7 +22,7 @@ const LavoriSec = ({ cards }) => {
             >
               <Link href={`/cases/${el.button}`}>
                 <div
-                  className="w-full aspect-square h-[60vh] relative"
+                  className="w-full aspect-square h-screen relative"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -86,6 +86,52 @@ const LavoriSec = ({ cards }) => {
             </div>
           );
         }
+      })} */}
+      {cards.map((el, i) => {
+        return (
+          <div key={i} className="w-full ">
+            <Link href={`/cases/${el.button}`}>
+              <div
+                className="w-full aspect-square h-screen relative"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <Image
+                  src={el.img}
+                  alt={el.name}
+                  fill
+                  className="object-cover rounded-lg  "
+                />
+                <div className="inset-0 absolute h-full w-full bg-third/40"></div>
+                <div className="absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col lg:flex-row uppercase  items-center justify-center  transition-all duration-1000 ease-in  text-white text-3xl lg:text-4xl font-bold  w-full gap-6">
+                  <span
+                    data-aos="fade-right"
+                    data-aos-offset="100"
+                    data-aos-easing="ease-in-sine"
+                    className={`${myFont2.className}`}
+                  >
+                    {el.brand1}
+                  </span>{" "}
+                  <span className="relative h-8 w-8 mx-6" data-aos="zoom-in">
+                    <Image
+                      src="/assets/logo/per.svg"
+                      fill
+                      className="h-full w-full object-cover"
+                    />
+                  </span>{" "}
+                  <span
+                    className={`${myFont2.className}`}
+                    data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-easing="ease-in-sine"
+                  >
+                    {el.brand2}
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        );
       })}
     </div>
   );
