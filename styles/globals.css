@@ -19,6 +19,18 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+.tippy {
+  width: max-content !important;
+}
+
+.tippy-arrow {
+  color: #bb5471 !important;
+}
+
+.tippy-box {
+  width: max-content !important;
+}
+
 @layer utilities {
   .bg-pattern {
     background-image: url("../public/assets/pattern.jpg");

@@ -9,7 +9,8 @@ const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import { TbRectangleVerticalFilled } from "react-icons/tb";
 import { MaskText } from "@/components/MaskText";
-
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 const paragraph =
   "Aenean pulvinar fringilla elementum. Pellentesque mollis ipsum id libero posuere feugiat. Donec eget arcu sit amet nulla luctus venenatis a sit amet lectus. Maecenas justo massa, venenatis eu aliquam vel, molestie sit amet nulla.";
 
@@ -24,9 +25,28 @@ const Factory = () => {
       <Hero>
         <MaskText>
           <h1
-            className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
+            className={`${myFont.className} text-5xl  md:text-[90px]  text-white dark:text-third md:text-center   2xl:text-8xl  `}
           >
-            Titolo per pagina Factory
+            Siamo la prima agenzia
+            {/* <Tippy content="*Potrebbero esserci altre agenzie come la nostra ma da accurate ricerche sul web non ci risulta">
+              <button>* </button>
+            </Tippy>{" "} */}
+            <Tippy
+              className="!bg-pink"
+              content={
+                <span className="w-full text-lg !max-w-8xl">
+                  *Potrebbero esserci altre agenzie come la nostra ma da
+                  accurate ricerche sul web non ci risulta
+                </span>
+              }
+            >
+              <button className="text-pink">*</button>
+            </Tippy>{" "}
+            di{" "}
+            <span className="text-white/60 dark:text-third/60 ">
+              matchmaking
+            </span>{" "}
+            per brand.
           </h1>
         </MaskText>
         <div className="lg:w-[65%] mx-auto">
@@ -34,8 +54,7 @@ const Factory = () => {
             <p
               className={`${myFont2.className} font-normal text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
             >
-              Una frase breve che sia come quella della home, il massimo della
-              lunghezza è fino a qui, massimo due righe
+              Ideiamo e realizziamo campagne di comunicazione congiunta.
             </p>
           </MaskText>
         </div>

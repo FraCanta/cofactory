@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@iconify/react": "^4.1.1",
+    "@tippyjs/react": "^4.2.6",
     "animejs": "^3.2.2",
     "aos": "^2.3.4",
     "daisyui": "^4.10.2",

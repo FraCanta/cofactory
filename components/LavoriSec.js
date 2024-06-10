@@ -100,7 +100,7 @@ const LavoriSec = ({ cards }) => {
                   src={el.img}
                   alt={el.name}
                   fill
-                  className="object-cover rounded-lg  "
+                  className="object-cover "
                 />
                 <div className="inset-0 absolute h-full w-full bg-third/40"></div>
                 <div className="absolute top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col lg:flex-row uppercase  items-center justify-center  transition-all duration-1000 ease-in  text-white text-3xl lg:text-4xl font-bold  w-full gap-6">
@@ -112,12 +112,18 @@ const LavoriSec = ({ cards }) => {
                   >
                     {el.brand1}
                   </span>{" "}
-                  <span className="relative h-8 w-8 mx-6" data-aos="zoom-in">
-                    <Image
+                  <span
+                    className={`${myFont2.className} relative text-4xl mx-6 uppercase`}
+                    data-aos="zoom-in"
+                    data-aos-offset="400"
+                    data-aos-easing="ease-in-sine"
+                  >
+                    {/* <Image
                       src="/assets/logo/per.svg"
                       fill
                       className="h-full w-full object-cover"
-                    />
+                    /> */}
+                    x
                   </span>{" "}
                   <span
                     className={`${myFont2.className}`}

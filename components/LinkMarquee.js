@@ -7,12 +7,12 @@ const LinkMarquee = () => {
     <Link href="/works">
       <div className="marquee2">
         <div className={`content2 ${myFont2.className}`}>
-          <span className="text-second">tutte le storie</span>
-          <span className="text-pink">tutte le storie</span>
-          <span className="text-white dark:text-third">tutte le storie</span>
-          <span className="text-second">tutte le storie</span>
-          <span className="text-pink">tutte le storie</span>
-          <span className="text-white dark:text-third">tutte le storie</span>
+          <span className="text-stroke">tutte le storie</span>
+          <span className="text-stroke">tutte le storie</span>
+          <span className="text-stroke">tutte le storie</span>
+          <span className="text-stroke">tutte le storie</span>
+          <span className="text-stroke">tutte le storie</span>
+          <span className="text-stroke">tutte le storie</span>
         </div>
       </div>
     </Link>
