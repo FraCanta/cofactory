@@ -23,12 +23,59 @@ html::-webkit-scrollbar {
   width: max-content !important;
 }
 
+.tippy-box {
+  position: relative;
+}
+
+.tippy-content {
+  white-space: nowrap;
+  background-color: #bb5471; /* Assicurati che questo colore sia coerente con il resto del design */
+  padding: 8px; /* Aggiungi un po' di padding per migliorare la leggibilità */
+  display: inline-block;
+  text-align: center; /* Centra il contenuto */
+  border-radius: 2px !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .tippy-arrow {
   color: #bb5471 !important;
 }
 
-.tippy-box {
-  width: max-content !important;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAndBounce {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(90deg) translateY(-10px);
+  }
+  50% {
+    transform: rotate(180deg) translateY(0);
+  }
+  75% {
+    transform: rotate(270deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0);
+  }
+}
+
+.button-spin-bounce {
+  animation: spinAndBounce 2s linear infinite;
+  transform-origin: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @layer utilities {
@@ -67,7 +114,7 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 840px) {
   .bg-blur {
     -webkit-filter: blur(180px); /* Ridotto il valore del blur */
     filter: blur(180px); /* Ridotto il valore del blur */
@@ -80,6 +127,10 @@ a {
   .bg-blur .bg-circle._4 {
     margin-top: 30%;
     margin-right: 10%;
+  }
+
+  .tippy-content {
+    white-space: wrap;
   }
 }
 
