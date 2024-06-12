@@ -1,12 +1,11 @@
 import Line from "@/components/Line";
-import Paragraph from "@/components/Paragraph";
 import Hero from "@/components/layout/Hero";
 import React from "react";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
-const myFont2 = localFont({ src: "../fonts/Raleway-light.ttf" });
+const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 import { MaskText } from "@/components/MaskText";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
