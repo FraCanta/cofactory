@@ -59,29 +59,7 @@ const Home = ({ translation }) => {
             </MaskText>
           </div>
         </Hero>
-        {/* <div className="w-[90vw] mx-auto flex justify-end pb-6">
-          <div className="relative w-28 aspect-square animate-spin ">
-            <Image
-              src="/assets/bollino_lovers.png"
-              alt=""
-              fill
-              className=" object-cover rounded-lg !text-white"
-            />
-          </div>
-        </div> */}
-        {/* <div className="w-11/12 mx-auto">
-          <Line />
-        </div> */}
-        {/* <div className="w-11/12 mx-auto flex justify-center items-center mt-10">
-          <h2 className="text-[32px]">
-            <span
-              className={`${myFont.className} mr-2 text-white dark:text-third`}
-            >
-              Cofactory
-            </span>
-            <span className={`${myFont2.className} text-pink`}>lovers</span>{" "}
-          </h2>
-        </div> */}
+        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 2xl:mt-24 2xla:mt-20"></div>
 
         <Marquee />
 
@@ -105,7 +83,7 @@ const Home = ({ translation }) => {
           })}
         </div>
 
-        <div className="w-[90%] mx-auto lg:mt-20 h-[0.05rem] bg-white/60 2xl:mt-24 2xla:mt-20"></div>
+        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 2xl:mt-24 2xla:mt-20"></div>
         <div className="w-[90%] mx-auto overflow-hidden my-10">
           <LinkMarquee />
         </div>
