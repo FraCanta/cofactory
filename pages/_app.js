@@ -6,6 +6,7 @@ import "@/styles/linkMarquee.css";
 import "@/styles/paragraph.css";
 import "@/styles/cases.css";
 import "@/styles/sliding.css";
+import "@/styles/card.css";
 
 import { useState, useEffect } from "react";
 

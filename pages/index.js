@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 import Hero from "@/components/layout/Hero";
 import localFont from "next/font/local";
 import Line from "@/components/Line";
@@ -14,12 +14,18 @@ import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
 import Image from "next/image";
-
+import Card from "@/components/Card/Card";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 
 const Home = ({ translation }) => {
   console.log(translation);
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
   return (
     <>
       <Head>
@@ -35,9 +41,10 @@ const Home = ({ translation }) => {
           <MaskText>
             {" "}
             <h1
-              className={`${myFont.className} text-[60px] leading-[75px] md:text-[90px] md:leading-[100px] md:w-[100%]  text-white dark:text-third md:text-center lg:w-[70%] mx-auto  2xl:text-[100px] 2xl:leading-[120px] 2xla:text-[120px] 2xla:leading-[130px]`}
+              className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xl:text-8xl max-w-4xl`}
             >
-              Sì. Siamo un’agenzia di incontri.
+              <span className="text-white/60 dark:text-third/60"> Sì.</span>
+              Siamo un’agenzia di incontri.
             </h1>
           </MaskText>
           <div className="lg:w-[65%] mx-auto">
@@ -52,7 +59,7 @@ const Home = ({ translation }) => {
             </MaskText>
           </div>
         </Hero>
-        <div className="w-[90vw] mx-auto flex justify-end pb-6">
+        {/* <div className="w-[90vw] mx-auto flex justify-end pb-6">
           <div className="relative w-28 aspect-square animate-spin ">
             <Image
               src="/assets/bollino_lovers.png"
@@ -61,11 +68,11 @@ const Home = ({ translation }) => {
               className=" object-cover rounded-lg !text-white"
             />
           </div>
-        </div>
-        <div className="w-[90vw] mx-auto">
+        </div> */}
+        {/* <div className="w-11/12 mx-auto">
           <Line />
-        </div>
-        {/* <div className="w-[90%] mx-auto flex justify-center items-center mt-10">
+        </div> */}
+        {/* <div className="w-11/12 mx-auto flex justify-center items-center mt-10">
           <h2 className="text-[32px]">
             <span
               className={`${myFont.className} mr-2 text-white dark:text-third`}
@@ -76,22 +83,34 @@ const Home = ({ translation }) => {
           </h2>
         </div> */}
 
-        {/* <Marquee /> */}
+        <Marquee />
 
         {/* <div className="w-[90vw] mx-auto">
           <Line />
         </div> */}
-        <LavoriSec cards={translation.cards} />
-
-        <div className="w-[90%] mx-auto">
-          <Line />
+        {/* <LavoriSec cards={translation.cards} /> */}
+        <div className="w-11/12 mx-auto relative min-h-screen" ref={container}>
+          {translation.cards.map((card, index) => {
+            const targetScale = 1 - (translation.cards.length - index) * 0.05;
+            return (
+              <Card
+                key={index}
+                {...card}
+                i={index}
+                range={[index * 0.25, 1]}
+                targetScale={targetScale}
+                progress={scrollYProgress}
+              />
+            );
+          })}
         </div>
-        <div className="w-[90%] mx-auto overflow-hidden">
+
+        <div className="w-[90%] mx-auto lg:mt-20 h-[0.05rem] bg-white/60 2xl:mt-24 2xla:mt-20"></div>
+        <div className="w-[90%] mx-auto overflow-hidden my-10">
           <LinkMarquee />
         </div>
-        <div className="w-[90%] mx-auto mt-10">
-          <Line />
-        </div>
+        <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60"></div>
+
         <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white dark:text-third min-h-screen gap-8 md:gap-10 ">
           <Chat />
           <div className="flex flex-col gap-8 py-6 p-0 md:p-8">

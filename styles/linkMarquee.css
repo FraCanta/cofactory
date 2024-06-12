@@ -22,7 +22,7 @@
 /* span with text */
 .marquee2 span {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 /* keyframe */
 @keyframes marquee {

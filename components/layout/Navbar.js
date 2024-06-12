@@ -127,9 +127,7 @@ const Navbar = ({ lang }) => {
           </div> */}
         </motion.div>
       </div>
-      <div className="w-[90vw] mx-auto">
-        <Line />
-      </div>
+      <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 "></div>
     </motion.div>
   );
 };
