@@ -23,7 +23,7 @@
   top: 40%;
   color: white;
   font-size: 46px;
-  z-index: 99999999;
+  z-index: 9999999999999;
   transform: translateX(-50%);
   text-align: center;
 }

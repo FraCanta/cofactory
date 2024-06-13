@@ -10,7 +10,7 @@ import Link from "next/link";
 import Curve from "@/components/layout/Curve/Curve";
 const Contatti = () => {
   return (
-    <Curve backgroundColor="#368b90">
+    <Curve backgroundColor="rgb(54 139 144 / 0.2)">
       {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -47,11 +47,35 @@
   top: 0;
 }
 
+/* Loghi Marquee */
+
+.sliderItems2 {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.sliderItems2 img {
+  width: 100px;
+  height: 100px;
+}
+
+.sliderItems img:nth-of-type(n + 1) {
+  position: absolute;
+  left: calc(100% + (n - 3) * 100%);
+  top: 0;
+}
+
 @media screen and (max-width: 768px) {
   .sliderContainer {
     height: 15vh;
   }
   .sliderItems p {
     font-size: 60px;
+  }
+
+  .sliderItems2 img {
+    width: 60px;
+    height: 60px;
   }
 }

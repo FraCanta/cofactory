@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
-import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const myFont2 = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });

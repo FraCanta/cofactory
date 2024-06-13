@@ -1,79 +1,113 @@
 "use client";
 
-import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import gsap from "gsap";
 
 const imagePaths = [
-  "/assets/logos/logo.png",
-  "/assets/logos/logo2.png",
-  "/assets/logos/logo3.png",
-  "/assets/logos/logo4.png",
-  "/assets/logos/logo5.png",
-  "/assets/logos/logo6.png",
-  "/assets/logos/logo7.png",
-  "/assets/logos/logo8.png",
-  "/assets/logos/logo9.png",
-  "/assets/logos/logo10.png",
-  "/assets/logos/logo11.png",
-  "/assets/logos/logo12.png",
-  "/assets/logos/logo13.png",
-  "/assets/logos/logo14.png",
-  "/assets/logos/logo15.png",
-  "/assets/logos/logo16.png",
-  "/assets/logos/logo17.png",
-  "/assets/logos/logo18.png",
-  "/assets/logos/logo19.png",
-  "/assets/logos/logo20.png",
-  "/assets/logos/logo21.png",
-  "/assets/logos/logo22.png",
+  "/assets/logos/AMERICANUNCLE_lovers_grey.png",
+  "/assets/logos/BOBBLEBOBBLE_lovers_grey.png",
+  "/assets/logos/CARPISA_lovers_grey.png",
+  "/assets/logos/CASAVO_lovers_grey.png",
+  "/assets/logos/CITRUS_lovers_grey.png",
+  "/assets/logos/COMIECO_lovers_grey.png",
+  "/assets/logos/EAGLE_lovers_grey.png",
+  "/assets/logos/EATHAPPY_lovers_grey.png",
+  "/assets/logos/FAOSCHWARZ_lovers_grey.png",
+  "/assets/logos/GARDALAND_lovers_grey.png",
+  "/assets/logos/HEALTHYCOLORS_lovers_grey.png",
+  "/assets/logos/ILOVERICCIO_lovers_grey.png",
+  "/assets/logos/KOCHMEDIA_lovers_grey.png",
+  "/assets/logos/LAYOGURTERIA_lovers_grey.png",
+  "/assets/logos/MELANZI_lovers_grey.png",
+  "/assets/logos/MELINDA_lovers_grey.png",
+  "/assets/logos/MILKA_lovers_grey.png",
+  "/assets/logos/OROCIOK_lovers_grey.png",
+  "/assets/logos/PARAMOUNT_lovers_grey.png",
+  "/assets/logos/R5LIVING_lovers_grey.png",
+  "/assets/logos/ROCCOGIOCATTOLI_lovers_grey.png",
+  "/assets/logos/ROSSOPOMODORO_lovers_grey.png",
+  "/assets/logos/SEVI_lovers_grey.png",
+  "/assets/logos/SOLOAFFITTI_lovers_grey.png",
+  "/assets/logos/SONY_lovers_grey.png",
+  "/assets/logos/SOPHIALOREN_lovers_grey.png",
+  "/assets/logos/TOCTOC_lovers_greyok.png",
+  "/assets/logos/TOYS_lovers_grey.png",
+  "/assets/logos/TRECCANI_lovers_grey.png",
+  "/assets/logos/WAKAME_lovers_grey.png",
+  "/assets/logos/WARNER_lovers_grey.png",
+  "/assets/logos/YAMAMAY_lovers_grey.png",
+  "/assets/logos/YUMMERS_lovers_grey.png",
+  "/assets/logos/AMERICANUNCLE_lovers_grey.png",
+  "/assets/logos/BOBBLEBOBBLE_lovers_grey.png",
+  "/assets/logos/CARPISA_lovers_grey.png",
+  "/assets/logos/CASAVO_lovers_grey.png",
+  "/assets/logos/CITRUS_lovers_grey.png",
+  "/assets/logos/COMIECO_lovers_grey.png",
+  "/assets/logos/EAGLE_lovers_grey.png",
+  "/assets/logos/EATHAPPY_lovers_grey.png",
+  "/assets/logos/FAOSCHWARZ_lovers_grey.png",
+  "/assets/logos/GARDALAND_lovers_grey.png",
+  "/assets/logos/HEALTHYCOLORS_lovers_grey.png",
+  "/assets/logos/ILOVERICCIO_lovers_grey.png",
+  "/assets/logos/KOCHMEDIA_lovers_grey.png",
+  "/assets/logos/LAYOGURTERIA_lovers_grey.png",
+  "/assets/logos/MELANZI_lovers_grey.png",
+  "/assets/logos/MELINDA_lovers_grey.png",
+  "/assets/logos/MILKA_lovers_grey.png",
+  "/assets/logos/OROCIOK_lovers_grey.png",
+  "/assets/logos/PARAMOUNT_lovers_grey.png",
+  "/assets/logos/R5LIVING_lovers_grey.png",
+  "/assets/logos/ROCCOGIOCATTOLI_lovers_grey.png",
+  "/assets/logos/ROSSOPOMODORO_lovers_grey.png",
+  "/assets/logos/SEVI_lovers_grey.png",
+  "/assets/logos/SOLOAFFITTI_lovers_grey.png",
+  "/assets/logos/SONY_lovers_grey.png",
+  "/assets/logos/SOPHIALOREN_lovers_grey.png",
+  "/assets/logos/TOCTOC_lovers_greyok.png",
+  "/assets/logos/TOYS_lovers_grey.png",
+  "/assets/logos/TRECCANI_lovers_grey.png",
+  "/assets/logos/WAKAME_lovers_grey.png",
+  "/assets/logos/WARNER_lovers_grey.png",
+  "/assets/logos/YAMAMAY_lovers_grey.png",
+  "/assets/logos/YUMMERS_lovers_grey.png",
 ];
 
 const MarqueeItem = () => {
-  const [hovered, setHovered] = useState(false);
-  const controls = useAnimation();
+  const logosRef = useRef(null);
+  const sliderLogo = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
 
   useEffect(() => {
-    if (hovered) {
-      controls.stop();
-    } else {
-      controls.start({
-        x: [0, -1036],
-        transition: {
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 10,
-            ease: "linear",
-          },
-        },
-      });
+    requestAnimationFrame(animation);
+  }, []);
+
+  const animation = () => {
+    if (xPercent < -100) {
+      xPercent = 0;
+    } else if (xPercent > 0) {
+      xPercent = -100;
     }
-  }, [hovered]);
+    gsap.set(logosRef.current, {
+      xPercent: xPercent,
+    });
+    xPercent += 0.025 * direction;
+    requestAnimationFrame(animation);
+  };
+
   return (
-    <motion.div
-      style={{
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        position: "relative",
-        zIndex: "6",
-      }}
-      className="w-[90%] mx-auto py-10"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {imagePaths.map((imagePath, index) => (
-        <motion.img
-          key={index}
-          src={imagePath}
-          alt={`Image ${index + 1}`}
-          className="inline-block mr-[64px] w-[150px] h-[100px] object-contain "
-          animate={controls}
-          custom={index} // Aggiungi un valore custom per distinguere le immagini
-          transition={{ duration: 30, ease: "easeOut" }} // Transizione fluida durante la pausa
-        />
-      ))}
-    </motion.div>
+    <div className="sliderContainer" ref={sliderLogo}>
+      <div ref={logosRef} className="sliderItems2">
+        {imagePaths.map((imagePath, index) => (
+          <img
+            key={index}
+            src={imagePath}
+            alt={`Image ${index + 1}`}
+            className="inline-block mr-[50px] lg:mr-[100px]  object-contain"
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

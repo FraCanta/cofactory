@@ -27,7 +27,7 @@
 .cardContainer .card .body {
   display: flex;
   height: 100%;
-  margin-top: 50px;
+  margin-top: 150px;
   gap: 50px;
 }
 

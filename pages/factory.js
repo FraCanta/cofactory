@@ -14,15 +14,14 @@ import Curve from "@/components/layout/Curve/Curve";
 
 const Factory = () => {
   return (
-    <Curve>
-      {" "}
-      <Hero>
+    <Curve backgroundColor="rgb(54 139 144 / 0.2)">
+      <div className="h-screen flex items-center flex-col justify-center w-full mx-auto  relative ">
         <MaskText>
           <h1
-            className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xl:text-8xl`}
+            className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xl:text-8xl w-[90%] mx-auto z-0`}
           >
             Siamo la prima{" "}
-            <span className="relative mr-4">
+            <span className=" mr-4">
               <span>agenzia</span>
               <Tippy
                 className="!bg-pink "
@@ -54,9 +53,10 @@ const Factory = () => {
             </p>
           </MaskText>
         </div>
-      </Hero>
-      <div className="flex justify-center items-center w-[90%] mx-auto py-2">
-        <div className="w-8 h-8 rounded-full bg-pink"></div>
+
+        <div className="flex justify-center items-center w-[90%] mx-auto py-2 absolute bottom-6">
+          <div className="w-8 h-8 rounded-full bg-pink"></div>
+        </div>
       </div>
       <div className="w-full bg-[#161617] dark:bg-[#D9D9D9] text-white h-auto py-10 flex flex-col gap-y-40">
         {/* <div className="w-[90%] mx-auto">

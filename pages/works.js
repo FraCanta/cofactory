@@ -13,6 +13,7 @@ import { MaskText } from "@/components/MaskText";
 import Head from "next/head";
 import BlurryLights from "@/components/layout/BlurryLights";
 import { PiArrowUpRightThin } from "react-icons/pi";
+import Curve from "@/components/layout/Curve/Curve";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
@@ -39,18 +40,19 @@ const Works = ({ translation }) => {
       <Head>
         <title>Cofactory - Works</title>
       </Head>
+      {/* <Curve backgroundColor="rgb(187 84 113 / 0.15)"> */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
-        <div className="absolute top-0 left-0 flex items-center w-full">
-          <BlurryLights />
-        </div>
+        {/* <div className="absolute top-0 left-0 flex items-center w-full ">
+            <BlurryLights />
+          </div> */}
         <main>
-          <div className="flex justify-between w-[90%] mx-auto mt-[150px] lg:mt-40 ">
-            <div className="relative w-full " onClick={toggleList}>
+          <div className="flex justify-between w-[90%] mx-auto ">
+            <div className="relative w-full mt-40" onClick={toggleList}>
               <div className="flex items-center gap-6 justify-between lg:justify-end">
                 <label
                   className={`${myFont.className} text-white dark:text-third font-regular text-xl lg:text-2xl hidden lg:flex`}
@@ -60,11 +62,11 @@ const Works = ({ translation }) => {
                 <div
                   className={
                     showList
-                      ? "min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border text-third bg-white border-white justify-between items-center inline-flex z-[99] font-regular transition-colors duration-300"
-                      : "text-white min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border   border-white justify-between items-center inline-flex transition-colors duration-300"
+                      ? "relative min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border text-third bg-white border-white justify-between items-center inline-flex font-regular transition-colors duration-300"
+                      : " relative text-white min-w-[300px] h-[50px] px-[18px] py-2.5 rounded-[30px] border   border-white justify-between items-center inline-flex transition-colors duration-300"
                   }
                 >
-                  <button className="  w-full max-w-xs flex items-center justify-between text-2xl ">
+                  <button className="  w-full max-w-xs flex items-center justify-between text-2xl relative">
                     {selectedCategory === "All" ? "All" : selectedCategory}
                     {/* Testo "Tutti" */}
                     <svg
@@ -74,8 +76,8 @@ const Works = ({ translation }) => {
                       viewBox="0 0 28 28"
                       className={
                         isArrowRotated
-                          ? "origin-[50% 55%] rotate-180 transition-all duration-300"
-                          : "transition-all duration-300"
+                          ? "origin-[50% 55%] rotate-180 transition-all duration-300 absolute right-0"
+                          : "transition-all duration-300 absolute right-0"
                       } // Applica la classe per la rotazione
                     >
                       <path
@@ -308,6 +310,7 @@ const Works = ({ translation }) => {
           </div>
         </main>
       </motion.div>
+      {/* </Curve> */}
     </>
   );
 };
