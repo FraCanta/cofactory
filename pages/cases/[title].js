@@ -21,6 +21,7 @@ import Link from "next/link";
 import SlidingCard from "@/components/SlidingCard/SlidingCard";
 import VideoPlayer3 from "@/components/VideoPlayer3";
 import { useState } from "react";
+import LinkMarquee2 from "@/components/LinkMarquee2";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -54,7 +55,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             src={work.img}
             alt=""
             fill
-            className="absolute top-0 left-0 object-cover !h-full z-10"
+            className="absolute top-0 left-0 object-cover !h-full z-20"
             priority
           />
           <BlurryLights />
@@ -744,10 +745,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           </div>
         </section>
         <div className="w-[90%] mx-auto my-10 text-center text-white dark:text-third z-[9999999]">
-          <Link href="/works" className={`${myFont.className} text-4xl `}>
+          {/* <Link href="/works" className={`${myFont.className} text-4xl `}>
             {" "}
             Tutte le storie
-          </Link>
+          </Link> */}
+          <LinkMarquee2 />
         </div>
         <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-8 gap-6 ">
           {previousWork.titlePrev && (

@@ -8,9 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: (theme) => ({
-        "gradient-to-50": "linear-gradient(-135deg, #9c733c, #ecce80)",
-      }),
+      // backgroundImage: (theme) => ({
+      //   "gradient-to-50": "linear-gradient(-135deg, #9c733c, #ecce80)",
+      // }),
       screens: {
         xs: "360px",
         sm: "390px",

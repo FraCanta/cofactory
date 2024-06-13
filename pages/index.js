@@ -2,10 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import Hero from "@/components/layout/Hero";
 import localFont from "next/font/local";
-import Line from "@/components/Line";
-import Marquee from "@/components/Marquee/Marquee";
-import LavoriSec from "@/components/LavoriSec";
-import LinkMarquee from "@/components/LinkMarquee";
 import Head from "next/head";
 import Chat from "@/components/ChatBubble/Chat";
 import Link from "next/link";
@@ -15,16 +11,46 @@ import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
 import Image from "next/image";
 import Card from "@/components/Card/Card";
+import LinkMarquee2 from "@/components/LinkMarquee2";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 
 const Home = ({ translation }) => {
-  console.log(translation);
+  const paragraphRefs = useRef([]);
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
+
+  useEffect(() => {
+    paragraphRefs.current.forEach((paragraph, index) => {
+      gsap.fromTo(
+        paragraph,
+        { opacity: 0, y: 150 },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: paragraph,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+          delay: index * 0.6, // delay between paragraphs
+        }
+      );
+    });
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !paragraphRefs.current.includes(el)) {
+      paragraphRefs.current.push(el);
+    }
+  };
 
   return (
     <>
@@ -39,29 +65,64 @@ const Home = ({ translation }) => {
       >
         <Hero>
           <MaskText>
-            {" "}
             <h1
               className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xl:text-8xl max-w-4xl`}
             >
-              <span className="text-white/60 dark:text-third/60"> Sì.</span>
-              Siamo un’agenzia di incontri.
+              Sì. Siamo un’
+              <span className="text-white/60 dark:text-third/60">
+                agenzia
+              </span>{" "}
+              di incontri.
             </h1>
           </MaskText>
-          <div className="lg:w-[65%] mx-auto">
+          <div className="lg:w-[65%] mx-auto flex flex-col gap-8">
             <MaskText>
               <p
-                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px]  text-white dark:text-third md:text-center  2xl:text-[30px]`}
+                ref={addToRefs}
+                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] text-white dark:text-third md:text-center 2xl:text-[30px]`}
               >
-                A volte creiamo legami duraturi. Altre volte, invece, nascono
-                dei colpi di fulmine, brevi ma intensi, elettrizzanti e
-                memorabili.
+                Questa è la prima riga di testo che appare in seguito.
+              </p>
+              <p
+                ref={addToRefs}
+                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] text-white dark:text-third md:text-center 2xl:text-[30px]`}
+              >
+                Questa è la seconda riga di testo che appare in seguito.
+              </p>
+              <p
+                ref={addToRefs}
+                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] text-white dark:text-third md:text-center 2xl:text-[30px]`}
+              >
+                Questa è la terza riga di testo che appare in seguito.
               </p>
             </MaskText>
           </div>
         </Hero>
-        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 2xl:mt-24 2xla:mt-20"></div>
+        <div className="w-11/12 mx-auto flex justify-end absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="relative w-24 lg:w-36 aspect-square animate-spin ">
+            <Image
+              src="/assets/bollino_lovers.png"
+              alt=""
+              fill
+              className=" object-cover rounded-lg "
+            />
+          </div>
+        </div>
+        {/* <div className="w-11/12 mx-auto">
+          <Line />
+        </div> */}
+        {/* <div className="w-11/12 mx-auto flex justify-center items-center mt-10">
+          <h2 className="text-[32px]">
+            <span
+              className={`${myFont.className} mr-2 text-white dark:text-third`}
+            >
+              Cofactory
+            </span>
+            <span className={`${myFont2.className} text-pink`}>lovers</span>{" "}
+          </h2>
+        </div> */}
 
-        <Marquee />
+        {/* <Marquee /> */}
 
         {/* <div className="w-[90vw] mx-auto">
           <Line />
@@ -83,11 +144,11 @@ const Home = ({ translation }) => {
           })}
         </div>
 
-        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 2xl:mt-24 2xla:mt-20"></div>
-        <div className="w-[90%] mx-auto overflow-hidden my-10">
-          <LinkMarquee />
+        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-24 2xla:mt-20"></div>
+        <div className="w-[90%] mx-auto ">
+          <LinkMarquee2 />
         </div>
-        <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60"></div>
+        <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
 
         <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white dark:text-third min-h-screen gap-8 md:gap-10 ">
           <Chat />

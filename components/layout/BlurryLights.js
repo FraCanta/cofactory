@@ -1,10 +1,7 @@
 import React from "react";
 const BlurryLights = () => {
   return (
-    <div
-      className="blur-container xs:h-[calc(90vh_-_60px)] sm:h-[calc(90vh_-_60px)] lg:h-[calc(90vh_-_60px)]"
-      style={{ "--blur": "12vw" }}
-    >
+    <div className="blur-container h-screen z-10" style={{ "--blur": "12vw" }}>
       <div
         className="shape"
         style={{

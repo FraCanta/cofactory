@@ -72,7 +72,7 @@ const SplashScreen = () => {
               Agenzia creativa di incontri{" "}
               <motion.span animate={controls} className="inline-flex mx-3">
                 <Image
-                  src="/assets/logo/logo_intero.svg"
+                  src="/assets/logo/new_logo_grey.png"
                   width={20}
                   height={10}
                   className="w-6 h-6"

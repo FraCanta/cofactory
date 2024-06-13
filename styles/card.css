@@ -10,7 +10,7 @@
 .cardContainer .card {
   display: flex;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
   top: -10%;
   height: 100vh;
   width: 100%;
@@ -27,7 +27,7 @@
 .cardContainer .card .body {
   display: flex;
   height: 100%;
-  margin-top: 250px;
+  margin-top: 50px;
   gap: 50px;
 }
 
@@ -57,7 +57,7 @@
   }
 
   .cardContainer .card .body {
-    margin-top: 100px;
+    margin-top: 20px;
   }
   .cardContainer .card .body .imageContainer {
     height: 60vh;

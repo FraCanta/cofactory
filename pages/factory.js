@@ -10,15 +10,12 @@ import { MaskText } from "@/components/MaskText";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import Image from "next/image";
+import Curve from "@/components/layout/Curve/Curve";
 
 const Factory = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-    >
+    <Curve>
+      {" "}
       <Hero>
         <MaskText>
           <h1
@@ -62,9 +59,9 @@ const Factory = () => {
         <div className="w-8 h-8 rounded-full bg-pink"></div>
       </div>
       <div className="w-full bg-[#161617] dark:bg-[#D9D9D9] text-white h-auto py-10 flex flex-col gap-y-40">
-        <div className="w-[90%] mx-auto">
+        {/* <div className="w-[90%] mx-auto">
           <Line />
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-[60vh]">
           <div className="flex flex-col justify-center gap-6 text-2xl col-span-2">
@@ -200,7 +197,7 @@ const Factory = () => {
           <div className="w-[425px] h-[565px] bg-[#D9D9D9]" />
         </div>
       </div> */}
-    </motion.div>
+    </Curve>
   );
 };
 

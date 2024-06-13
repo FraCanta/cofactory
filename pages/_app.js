@@ -3,10 +3,13 @@ import "@/styles/globals.css";
 import "@/styles/blurryLights.css";
 import "@/styles/line.css";
 import "@/styles/linkMarquee.css";
+import "@/styles/linkMarquee2.css";
+
 import "@/styles/paragraph.css";
 import "@/styles/cases.css";
 import "@/styles/sliding.css";
 import "@/styles/card.css";
+import "@/styles/curve.css";
 
 import { useState, useEffect } from "react";
 
@@ -15,6 +18,7 @@ import SplashScreen from "@/components/layout/SplashScreen";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
+import Curve from "@/components/layout/Curve/Curve";
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +44,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {isLoading ? (
-        <SplashScreen />
+        <>
+          <SplashScreen />
+        </>
       ) : (
         <ThemeProvider attribute="class">
           <Layout>

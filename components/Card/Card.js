@@ -15,7 +15,7 @@ const Card = ({ i, img, button, name, progress, range, targetScale }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <Link href={`/cases/${button}`}>
+    <Link href={`/cases/${button}`} className="relative">
       <div className="cardContainer" ref={container}>
         <motion.div
           className="card"

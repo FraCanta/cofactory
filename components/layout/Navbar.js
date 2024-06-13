@@ -49,9 +49,9 @@ const Navbar = ({ lang }) => {
           delay: isVisible ? 0 : 0.8,
         }, // Aggiunto il delay
       }}
-      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm h-[70px] md:h-[95px]"
+      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm "
     >
-      <div className="w-[90%] m-auto flex justify-between items-center py-4 text-white">
+      <div className="w-[90%] m-auto flex justify-between items-center  text-white h-[70px] md:h-[100px]">
         <Link href="/" className="z-[20]" onClick={() => setOpen(false)}>
           <Image
             src={Logo}
@@ -61,7 +61,7 @@ const Navbar = ({ lang }) => {
             className="w-[130px]"
           />
         </Link>
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-8 items-center relative">
           <DarkModeToggle />
           <div
             onClick={() => setOpen(!isOpen)}
@@ -127,7 +127,7 @@ const Navbar = ({ lang }) => {
           </div> */}
         </motion.div>
       </div>
-      <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 "></div>
+      {/* <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 "></div> */}
     </motion.div>
   );
 };

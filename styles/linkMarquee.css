@@ -1,5 +1,5 @@
 .marquee2 {
-  font-size: 5vw;
+  font-size: 10vw;
   height: 7vw;
   overflow: hidden;
   position: relative;
@@ -7,8 +7,8 @@
 }
 
 .text-stroke {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.486);
   color: transparent;
 }
 /* nested div inside the container */
@@ -25,14 +25,14 @@
   width: 20%;
 }
 /* keyframe */
-@keyframes marquee {
+/* @keyframes marquee {
   0% {
     left: 0;
   }
   100% {
     left: -100%;
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   .marquee2 {

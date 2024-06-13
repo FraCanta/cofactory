@@ -3,12 +3,12 @@ import BlurryLights from "./BlurryLights";
 
 const Hero = ({ children }) => {
   return (
-    <>
-      <div className="absolute xs:top-1/2 lg:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[6] h-[calc(60vh_-_110px)] lg:h-[calc(100vh_-_110px)] flex  w-11/12 flex-col mx-auto items-center justify-center gap-6">
+    <div>
+      <div className="absolute w-11/12 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-6 justify-center items-center z-10">
         {children}
       </div>
       <BlurryLights />
-    </>
+    </div>
   );
 };
 

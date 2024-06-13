@@ -7,14 +7,16 @@ import Line from "@/components/Line";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import Link from "next/link";
+import Curve from "@/components/layout/Curve/Curve";
 const Contatti = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-    >
+    <Curve backgroundColor="#368b90">
+      {/* <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+      > */}
       {/* <Hero>
         <MaskText>
           <h1
@@ -24,9 +26,9 @@ const Contatti = () => {
           </h1>
         </MaskText>
       </Hero> */}
-      <div className="w-[90%] mx-auto">
-        <Line />
-      </div>
+      {/* <div className="w-[90%] mx-auto">
+          <Line />
+        </div> */}
       <div className="w-[90%] mx-auto flex flex-col gap-6 py-32 h-screen">
         <h2 className={`${myFont.className} text-white text-5xl`}>
           👋🏽 Hey there!
@@ -52,7 +54,8 @@ const Contatti = () => {
           </li>
         </ul>
       </div>
-    </motion.div>
+      {/* </motion.div> */}
+    </Curve>
   );
 };
 
