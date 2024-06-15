@@ -103,7 +103,7 @@ const MarqueeItem = () => {
             key={index}
             src={imagePath}
             alt={`Image ${index + 1}`}
-            className="inline-block mr-[50px] lg:mr-[100px]  object-contain"
+            className="inline-block mr-[50px] lg:mr-[100px]  object-contain brightness-110 opacity-75"
           />
         ))}
       </div>
