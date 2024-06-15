@@ -2,11 +2,12 @@ import React, { useState, useRef } from "react";
 import Marquee from "../Marquee/Marquee";
 import Image from "next/image";
 import gsap from "gsap";
+import CofactoryButton from "../layout/CofactoryButton/CofactoryButton";
 
 function TimbroMarquee() {
   const [marqueeVisible, setMarqueeVisible] = useState(false);
   const marqueeRef = useRef(null);
-
+  const [isPlaying, setIsPlaying] = useState(false);
   const handleToggleMarquee = () => {
     setMarqueeVisible(!marqueeVisible);
 
@@ -27,6 +28,10 @@ function TimbroMarquee() {
     }
   };
 
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="relative flex items-center">
       <div
@@ -38,15 +43,19 @@ function TimbroMarquee() {
       </div>
       <div
         className="relative w-24 lg:w-28 2xla:w-32 aspect-square z-20 cursor-pointer animate-spin"
-        onClick={handleToggleMarquee}
+        onClick={() => {
+          handleToggleMarquee();
+          togglePlayPause(); // Cambia lo stato di play/pause
+        }}
         style={{ marginLeft: "auto" }}
       >
-        <Image
+        {/* <Image
           src="/assets/bollino_lovers.png"
           alt=""
           fill
           className="object-cover rounded-lg"
-        />
+        /> */}
+        <CofactoryButton isPlaying={isPlaying} />
       </div>
     </div>
   );

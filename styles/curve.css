@@ -1,5 +1,6 @@
 .curve {
   position: relative;
+  z-index: 99;
 }
 
 .curve svg,

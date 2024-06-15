@@ -10,6 +10,7 @@ import "@/styles/cases.css";
 import "@/styles/sliding.css";
 import "@/styles/card.css";
 import "@/styles/curve.css";
+import "@/styles/cofactorybutton.css";
 
 import { useState, useEffect } from "react";
 
