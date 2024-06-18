@@ -20,15 +20,13 @@ import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
-  const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    // Simulazione del caricamento dell'applicazione
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000); // Cambia 3000 con il tempo di caricamento effettivo della tua app
-  }, []);
+  const [loading, setLoading] = useState(true);
+
+  const finishLoading = () => {
+    setLoading(false);
+  };
 
   useEffect(() => {
     // here you can add your aos options
@@ -42,10 +40,8 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {isLoading ? (
-        <>
-          <SplashScreen />
-        </>
+      {loading ? (
+        <SplashScreen finishLoading={finishLoading} />
       ) : (
         <ThemeProvider attribute="class">
           <Layout>

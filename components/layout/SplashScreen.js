@@ -1,121 +1,115 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import React, { useEffect } from "react";
+import anime from "animejs";
 import Image from "next/image";
-import { gsap } from "gsap";
-const SplashScreen = () => {
-  const [loading, setLoading] = useState(true);
-  const controls = useAnimation();
+import localFont from "next/font/local";
+const myFont2 = localFont({ src: "../../fonts/Raleway-Light.ttf" });
+const SplashScreen = ({ finishLoading }) => {
   useEffect(() => {
-    const tl = gsap.timeline();
-
-    // Animazione del testo e dell'immagine secondaria
-    tl.fromTo(
-      ".text-container",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 2, ease: "power2.out" }
-    );
-
-    // Animazione dell'immagine secondaria (new_logo_intro.svg)
-    tl.fromTo(
-      ".secondary-image",
-      { opacity: 0 },
-      { opacity: 1, duration: 1, ease: "power2.out" },
-      "-=1.5" // Inizia 1.5 secondi prima della fine dell'animazione del testo
-    );
-
-    // Inizia con l'animazione del logo (ultimo)
-    tl.to(".logo", {
-      rotate: 45,
-      scale: 6,
-      duration: 1.5,
-      ease: "elastic.out(1, 0.5)",
-      delay: 0.5,
+    const loader = anime.timeline({
+      complete: () => finishLoading(),
     });
 
-    return () => {
-      tl.kill();
-    };
-  }, []);
+    loader
+      .add({
+        targets: "#agencyText",
+        opacity: [0, 1],
+        duration: 1000,
+        easing: "easeInOutQuad",
+      })
+      .add({
+        targets: "#creativeText",
+        opacity: [0, 1],
+        duration: 1000,
+        easing: "easeInOutQuad",
+      })
+      .add({
+        targets: "#brandText",
+        opacity: [0, 1],
+        duration: 1000,
+        easing: "easeInOutQuad",
+      })
+      .add({
+        targets: "#logo",
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+      })
 
-  useEffect(() => {
-    const sequenceAnimation = async () => {
-      // Inizia con l'animazione della rotazione
-      await controls.start({
-        rotate: 45,
-        transition: { duration: 0.4 },
-      });
+      .add({
+        targets: "#newLogoIntro",
+        rotate: "45deg",
+        easing: "easeInOutQuad",
+      })
 
-      // Dopo la rotazione, esegui l'animazione di ingrandimento
-      await controls.start({
-        scale: 600,
-        transition: { delay: 0.5, duration: 1.5, type: "spring" },
-      });
-    };
-
-    // Avvia la sequenza di animazioni dopo il caricamento
-    setTimeout(() => {
-      sequenceAnimation();
-      setLoading(false);
-    }, 3000); // Tempo di caricamento simulato in millisecondi (3 secondi)
-  }, [controls]);
+      .add({
+        targets: "#newLogoIntro",
+        scale: 500,
+        opacity: 0.2,
+        easing: "easeInOutQuad",
+      })
+      .add(
+        {
+          targets: "#bgIntro",
+          opacity: 0,
+          easing: "easeInOutQuad",
+        },
+        "-=20"
+      );
+  }, [finishLoading]);
 
   return (
-    <AnimatePresence>
-      {loading && (
-        <motion.div
-          key="splash"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{
-            delay: 0.5,
-            duration: 3,
-            type: "easeInOut",
-            staggerChildren: 0.5,
-          }}
-          className="dark:bg-white bg-third fixed flex inset-0 justify-center items-center"
-        >
-          {/* Logo e payoff */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 3, type: "easeInOut" }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            {/* Logo */}
-            <motion.img
-              src="/assets/logo/logo.svg"
-              alt="Logo"
-              className="w-[350px] md:w-[700px] lg:w-[600px]"
-            />
+    <div
+      className="flex h-screen items-center justify-center text-white fixed inset-0 bg-third"
+      id="bgIntro"
+    >
+      <div>
+        {/* Logo e payoff */}
+        <div>
+          {/* Logo */}
+          <img
+            id="logo"
+            src="/assets/logo/logo.svg"
+            alt="Logo"
+            className="w-full md:w-[700px] lg:w-[600px] opacity-0"
+          />
 
-            {/* Payoff */}
-            <motion.p
-              style={{ color: "#fff" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 2 }}
-              className="text-xl md:text-4xl lg:text-4xl flex items-center justify-center"
+          {/* Payoff */}
+          <div
+            style={{ color: "#fff" }}
+            className="text-xl md:text-4xl lg:text-4xl flex items-center justify-center gap-4"
+          >
+            <span id="agencyText" className={`${myFont2.className} opacity-0`}>
+              Agenzia
+            </span>
+            <span
+              id="creativeText"
+              className={`${myFont2.className} opacity-0`}
             >
-              Agenzia creativa di incontri{" "}
-              <motion.span animate={controls} className="inline-flex mx-3">
-                <Image
-                  src="/assets/logo/new_logo_intro.svg"
-                  width={20}
-                  height={10}
-                  className="w-6 h-6"
-                />
-              </motion.span>{" "}
+              creativa
+            </span>
+            <span id="agencyText" className={`${myFont2.className} opacity-0`}>
+              di incontri
+            </span>
+            <span
+              className="inline-flex opacity-0 w-5 h-5 relative"
+              id="creativeText"
+            >
+              <Image
+                id="newLogoIntro"
+                src="/assets/logo/new_logo_intro.svg"
+                fill
+                className="object-cover"
+              />
+            </span>
+            <span
+              id="creativeText"
+              className={`${myFont2.className} opacity-0`}
+            >
               brand
-            </motion.p>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

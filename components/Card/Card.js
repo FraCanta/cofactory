@@ -51,33 +51,25 @@ const Card = ({
                 />
               </motion.div>
               <div
-                className={`absolute top-0 h-full w-full flex flex-col items-center justify-center text-3xl lg:text-6xl  text-white transition-opacity duration-300 gap-4 lg:gap-8 ${
+                className={`absolute top-0 h-full w-full flex flex-col items-center justify-center text-3xl lg:text-6xl  text-white transition-opacity duration-300 gap-4 lg:gap-6 ${
                   hovered
                     ? "bg-third/80 opacity-100 h-full w-full"
                     : "opacity-0"
                 }`}
               >
                 <MaskText>
-                  <span
-                    className={`${myFont.className} font-bold tracking-widest`}
-                  >
-                    {brand1}
-                  </span>
+                  <span className={`${myFont.className} `}>{brand1}</span>
                 </MaskText>
 
-                <span className="relative h-6 w-6 lg:h-12 lg:w-12 mx-6">
+                <span className="relative h-6 w-6 lg:h-8 lg:w-8 mx-6">
                   <Image
                     src="/assets/logo/new_logo_intro.svg"
                     fill
-                    className="object-cover contrast-125"
+                    className="object-cover contrast-125 rotate-90"
                   />
                 </span>
                 <MaskText>
-                  <span
-                    className={`${myFont.className} font-bold tracking-widest`}
-                  >
-                    {brand2}
-                  </span>
+                  <span className={`${myFont.className}`}>{brand2}</span>
                 </MaskText>
               </div>
             </div>

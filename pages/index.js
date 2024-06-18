@@ -41,7 +41,7 @@ const Home = ({ translation }) => {
               start: "top 100%",
               toggleActions: "play none none none",
             },
-            delay: 0.6 * index,
+            delay: 3 * index,
           }
         );
       }
@@ -100,7 +100,7 @@ const Home = ({ translation }) => {
       </div>
 
       <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
-      <div className="w-full mx-auto ">
+      <div className="w-full mx-auto overflow-hidden">
         <ParallaxText />
       </div>
       <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
