@@ -5,6 +5,7 @@
   justify-content: center;
   position: sticky;
   top: 0px;
+  margin-top: 150px;
 }
 
 .cardContainer .card {
@@ -27,7 +28,6 @@
 .cardContainer .card .body {
   display: flex;
   height: 100%;
-  margin-top: 150px;
   gap: 50px;
 }
 
@@ -51,6 +51,7 @@
 @media screen and (max-width: 768px) {
   .cardContainer {
     height: 60vh;
+    margin-top: 50px;
   }
   .cardContainer .card {
     height: 50vh;

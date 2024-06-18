@@ -9,13 +9,11 @@ import { PiArrowUpRightThin } from "react-icons/pi";
 import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
-import Image from "next/image";
-import Card from "@/components/Card/Card";
-import LinkMarquee2 from "@/components/LinkMarquee2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Marquee from "@/components/Marquee/Marquee";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
+import ParallaxText from "@/components/ParallaxText";
+import Card from "@/components/Card/Card";
 
 gsap.registerPlugin(ScrollTrigger);
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
@@ -30,102 +28,84 @@ const Home = ({ translation }) => {
   });
 
   useEffect(() => {
-    paragraphRefs.current.forEach((paragraph, index) => {
-      gsap.fromTo(
-        paragraph,
-        { opacity: 0, y: 150 },
-        {
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            trigger: paragraph,
-            start: "top 100%",
-            toggleActions: "play none none none",
-          },
-          delay: index * 0.6, // delay between paragraphs
-        }
-      );
+    paragraphRefs.current.forEach((ref, index) => {
+      if (ref) {
+        gsap.fromTo(
+          ref,
+          { opacity: 0, y: 150 },
+          {
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+              trigger: ref,
+              start: "top 100%",
+              toggleActions: "play none none none",
+            },
+            delay: 0.6 * index,
+          }
+        );
+      }
     });
   }, []);
-
-  const addToRefs = (el) => {
-    if (el && !paragraphRefs.current.includes(el)) {
-      paragraphRefs.current.push(el);
-    }
-  };
 
   return (
     <>
       <Head>
         <title>Cofactory - Home</title>
       </Head>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-      >
-        <Hero>
+      <Hero>
+        <MaskText>
+          <h1
+            className={`${myFont.className} text-5xl py-1 md:text-[6rem] lg:text-[5rem] xl:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
+          >
+            Sì. Siamo un’
+            <span className="text-white/60 dark:text-third/60">agenzia</span> di
+            incontri.
+          </h1>
+        </MaskText>
+        <div className="lg:w-[65%] mx-auto flex flex-col gap-8">
           <MaskText>
-            <h1
-              className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
+            <p
+              ref={(el) => (paragraphRefs.current[0] = el)}
+              className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
             >
-              Sì. Siamo un’
-              <span className="text-white/60 dark:text-third/60">
-                agenzia
-              </span>{" "}
-              di incontri.
-            </h1>
+              A volte creiamo legami duraturi. Altre volte, invece, nascono dei
+              colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili
+            </p>
           </MaskText>
-          <div className="lg:w-[65%] mx-auto flex flex-col gap-8 ">
-            <MaskText>
-              <p
-                ref={addToRefs}
-                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
-              >
-                Questa è la prima riga di testo che appare in seguito.
-              </p>
-              <p
-                ref={addToRefs}
-                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
-              >
-                Questa è la seconda riga di testo che appare in seguito.
-              </p>
-              <p
-                ref={addToRefs}
-                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
-              >
-                Questa è la terza riga di testo che appare in seguito.
-              </p>
-            </MaskText>
-          </div>
-        </Hero>
+        </div>
+      </Hero>
+      <div className="relative w-full">
         <div className="w-11/12 mx-auto flex justify-end absolute -bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <TimbroMarquee />
         </div>
+      </div>
 
-        <div className="w-11/12 mx-auto relative min-h-screen" ref={container}>
-          {translation.cards.map((card, index) => {
-            const targetScale = 1 - (translation.cards.length - index) * 0.05;
-            return (
-              <Card
-                key={index}
-                {...card}
-                i={index}
-                range={[index * 0.25, 1]}
-                targetScale={targetScale}
-                progress={scrollYProgress}
-              />
-            );
-          })}
-        </div>
+      <div className="w-11/12 mx-auto relative min-h-screen">
+        {translation.cards.map((card, index) => {
+          const targetScale = 1 - (translation.cards.length - index) * 0.05;
+          return (
+            <Card
+              key={index}
+              {...card}
+              i={index}
+              range={[index * 0.25, 1]}
+              targetScale={targetScale}
+              progress={scrollYProgress}
+              brand1={card.brand1}
+              brand2={card.brand2}
+            />
+          );
+        })}
+      </div>
 
-        <div className="w-[90%] mx-auto mt-24 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-32 "></div>
-        <div className="w-[90%] mx-auto ">
-          <LinkMarquee2 />
-        </div>
-        <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
+      <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
+      <div className="w-full mx-auto ">
+        <ParallaxText />
+      </div>
+      <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
 
+      {/* 
         <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white dark:text-third min-h-screen gap-8 md:gap-10 ">
           <Chat />
           <div className="flex flex-col gap-8 py-6 p-0 md:p-8">
@@ -133,9 +113,9 @@ const Home = ({ translation }) => {
               Testo accattivante da mettere qui
             </h2>
             <p className={`${myFont2.className} text-xl`}>
-              un paragrafo che spieghi velocemente cosa avrebbero da guadagnarci
-              e invitandoli a contattarvi. Un testo che arrivi fino al max il
-              terzo rigo!
+              un paragrafo che spieghi velocemente cosa avrebbero da
+              guadagnarci e invitandoli a contattarvi. Un testo che arrivi
+              fino al max il terzo rigo!
             </p>
             <Link
               href="/contatti"
@@ -146,7 +126,7 @@ const Home = ({ translation }) => {
             </Link>
           </div>
         </div>
-      </motion.div>
+        */}
     </>
   );
 };

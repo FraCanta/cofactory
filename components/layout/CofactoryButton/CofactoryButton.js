@@ -8,7 +8,7 @@ import localFont from "next/font/local";
 function CofactoryButton({ isPlaying }) {
   return (
     <main className="main">
-      <button className="roundButton bg-third/70 dark:bg-white/70 border border-white dark:border-third w-[100px] h-[100px] lg:w-[130px] lg:h-[130px]">
+      <button className="roundButton bg-third/80 dark:bg-white/80 border border-white dark:border-third w-[90px] h-[90px] lg:w-[100px] lg:h-[100px] 2xla:w-[130px] 2xla:h-[130px]">
         <svg viewBox="0 0 200 200" className="svg ">
           <defs>
             <path
@@ -26,16 +26,7 @@ function CofactoryButton({ isPlaying }) {
                  a 55,55 0 1,1 -110,0"
             />
           </defs>
-          {/* <text fontSize="30" fill="current">
-            <textPath
-              xlinkHref="#innerCirclePath"
-              textAnchor="middle"
-              startOffset="52%"
-              className="fill-white dark:fill-third font-bold"
-            >
-              COFACTORY - LOVERS -
-            </textPath>
-          </text> */}
+
           <text fontSize="38" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
@@ -66,14 +57,14 @@ function CofactoryButton({ isPlaying }) {
           <text fontSize="30" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
-              startOffset="1,2%"
+              startOffset="1%"
               className={`${myFont2.className} fill-second `}
             >
               <tspan>&bull;</tspan>
             </textPath>
           </text>
         </svg>
-        <div className="innerCircle w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] flex items-center justify-center border border-white dark:border-third hover:bg-second dark:hover:bg-second">
+        <div className="innerCircle w-[40px] h-[40px] 2xla:w-[50px] 2xla:h-[50px] flex items-center justify-center border border-white dark:border-third hover:bg-second dark:hover:bg-second">
           <Icon
             icon={isPlaying ? "mingcute:stop-fill" : "mingcute:play-fill"}
             width="22"

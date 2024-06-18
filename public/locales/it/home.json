@@ -18,12 +18,26 @@
         "categories": [{ "name": "movie" }]
       },
       {
-        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
         "button": "rossopomodorotartarugheninja",
         "name": "Rosso Pomodoro e Tartarughe Ninja",
         "brand1": "Rossopomodoro",
         "brand2": "Tartarughe Ninja",
         "categories": [{ "name": "movie" }]
+      },
+      {
+        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
+        "button": "treccanifaoschwarz",
+        "brand1": "Treccani",
+        "brand2": "Fao Schwarz",
+        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+      },
+      {
+        "img": "/assets/cases/bobble/cover_bobble_new.jpg",
+        "button": "bobbled&d",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeons&Dragons",
+        "categories": [{ "name": "Movie" }]
       }
     ]
   }

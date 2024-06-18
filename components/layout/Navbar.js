@@ -86,9 +86,9 @@ const Navbar = ({ lang }) => {
           transition={{ ease: "easeOut", duration: 0.4 }}
           className="absolute top-0 lg:top-0 left-0 right-0 bottom-0 flex  w-full h-screen  bg-third dark:bg-white text-white dark:text-third"
         >
-          <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  gap-y-10 lg:mt-[95px]">
+          <div className="w-[90%] mx-auto lg:mt-[95px] flex items-center justify-center">
             <ul
-              className={`${myFont.className}  flex flex-col py-24 lg:py-10 gap-8 lg:gap-10`}
+              className={`${myFont.className}  flex flex-wrap gap-y-10 items-center w-full justify-between`}
             >
               <li onClick={() => setOpen(false)}>
                 <Link
@@ -102,32 +102,18 @@ const Navbar = ({ lang }) => {
                 onClick={() => setOpen(false)}
                 className="text-7xl md:text-9xl cursor-pointer transition hover:text-pink max-w-max "
               >
-                <Link href="/works"> Works</Link>
+                <Link href="/stories">Stories</Link>
               </li>
               <li
                 onClick={() => setOpen(false)}
                 className="text-7xl md:text-9xl cursor-pointer transition hover:text-second max-w-max "
               >
-                <Link href="/contatti"> Contact</Link>
+                <Link href="/affinity">Affinity</Link>
               </li>
             </ul>
-            {/* <div></div> */}
-            {/* <div className="h-full flex flex-col lg:items-end gap-y-10 lg:py-14 z-10">
-              <SocialBar />
-            </div> */}
           </div>
-          {/* <div className="absolute bottom-0 right-0 lg:right-6 lg::top-24 h-[50%]  md:h-[85%] w-full lg:w-1/2 overflow-y-hidden ">
-            <Image
-              src="/assets/logo/iconabg.png"
-              alt="Icona di sfondo"
-              fill
-              quality={75}
-              className="object-contain w-full lg:p-8 mix-blend-difference"
-            />
-          </div> */}
         </motion.div>
       </div>
-      {/* <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 "></div> */}
     </motion.div>
   );
 };

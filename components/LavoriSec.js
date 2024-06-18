@@ -90,7 +90,7 @@ const LavoriSec = ({ cards }) => {
       {cards.map((el, i) => {
         return (
           <div key={i} className="w-full ">
-            <Link href={`/cases/${el.button}`}>
+            <Link href={`/stories/${el.button}`}>
               <div
                 className="w-full aspect-square h-screen relative"
                 data-aos="fade-up"

@@ -1,9 +1,41 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import Image from "next/image";
+import { gsap } from "gsap";
 const SplashScreen = () => {
   const [loading, setLoading] = useState(true);
   const controls = useAnimation();
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    // Animazione del testo e dell'immagine secondaria
+    tl.fromTo(
+      ".text-container",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 2, ease: "power2.out" }
+    );
+
+    // Animazione dell'immagine secondaria (new_logo_intro.svg)
+    tl.fromTo(
+      ".secondary-image",
+      { opacity: 0 },
+      { opacity: 1, duration: 1, ease: "power2.out" },
+      "-=1.5" // Inizia 1.5 secondi prima della fine dell'animazione del testo
+    );
+
+    // Inizia con l'animazione del logo (ultimo)
+    tl.to(".logo", {
+      rotate: 45,
+      scale: 6,
+      duration: 1.5,
+      ease: "elastic.out(1, 0.5)",
+      delay: 0.5,
+    });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
 
   useEffect(() => {
     const sequenceAnimation = async () => {
@@ -67,12 +99,12 @@ const SplashScreen = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 2 }}
-              className="text-xl md:text-4xl lg:text-3xl flex items-center justify-center"
+              className="text-xl md:text-4xl lg:text-4xl flex items-center justify-center"
             >
               Agenzia creativa di incontri{" "}
               <motion.span animate={controls} className="inline-flex mx-3">
                 <Image
-                  src="/assets/logo/new_logo_grey.png"
+                  src="/assets/logo/new_logo_intro.svg"
                   width={20}
                   height={10}
                   className="w-6 h-6"
