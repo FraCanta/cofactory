@@ -13,7 +13,13 @@ import Image from "next/image";
 const Factory = () => {
   return (
     <>
-      <div className="h-screen flex items-center flex-col justify-center w-full mx-auto   gap-6 bg-second/20 dark:bg-second/30">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="h-screen flex items-center flex-col justify-center w-full mx-auto   gap-6 bg-second/20 dark:bg-second/30"
+      >
         <MaskText>
           <h1
             className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xl:text-8xl w-[90%] mx-auto z-0`}
@@ -55,7 +61,7 @@ const Factory = () => {
         <div className="flex justify-center items-center w-[90%] mx-auto py-2 absolute bottom-6">
           <div className="w-8 h-8 rounded-full bg-pink"></div>
         </div>
-      </div>
+      </motion.div>
       <div className="w-full bg-[#161617] dark:bg-[#D9D9D9] text-white h-auto py-10 flex flex-col gap-y-40">
         <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-[60vh]">
           <div

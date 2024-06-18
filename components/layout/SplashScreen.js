@@ -22,12 +22,7 @@ const SplashScreen = ({ finishLoading }) => {
         duration: 1000,
         easing: "easeInOutQuad",
       })
-      .add({
-        targets: "#brandText",
-        opacity: [0, 1],
-        duration: 1000,
-        easing: "easeInOutQuad",
-      })
+
       .add({
         targets: "#logo",
         opacity: [0, 1],
@@ -43,17 +38,22 @@ const SplashScreen = ({ finishLoading }) => {
       .add({
         targets: "#newLogoIntro",
         scale: 500,
-        opacity: 0.2,
+        opacity: 0.8,
         easing: "easeInOutQuad",
       })
       .add(
         {
-          targets: "#bgIntro",
-          opacity: 0,
+          targets: ["#logo", "#creativeText", "#agencyText"],
+          opacity: [1, 0],
           easing: "easeInOutQuad",
         },
         "-=20"
-      );
+      )
+      .add({
+        targets: "#bgIntro",
+        opacity: [1, 0],
+        easing: "easeInOutQuad",
+      });
   }, [finishLoading]);
 
   return (
