@@ -13,6 +13,7 @@
   margin: 0;
   scroll-behavior: smooth;
   height: auto;
+  overflow: hidden;
 }
 
 html::-webkit-scrollbar {
