@@ -75,7 +75,7 @@ const SplashScreen = ({ finishLoading }) => {
           {/* Payoff */}
           <div
             style={{ color: "#fff" }}
-            className="text-xl md:text-4xl lg:text-4xl flex items-center justify-center gap-4"
+            className="text-lg md:text-4xl lg:text-4xl flex items-center justify-center gap-4"
           >
             <span id="agencyText" className={`${myFont2.className} opacity-0`}>
               Agenzia
