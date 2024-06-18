@@ -37,18 +37,15 @@ const SplashScreen = ({ finishLoading }) => {
 
       .add({
         targets: "#newLogoIntro",
-        scale: 500,
+        scale: 1500,
         opacity: 0.8,
         easing: "easeInOutQuad",
       })
-      .add(
-        {
-          targets: ["#logo", "#creativeText", "#agencyText"],
-          opacity: [1, 0],
-          easing: "easeInOutQuad",
-        },
-        "-=20"
-      )
+      .add({
+        targets: ["#logo", "#creativeText", "#agencyText"],
+        opacity: [1, 0],
+        easing: "easeInOutQuad",
+      })
       .add({
         targets: "#bgIntro",
         opacity: [1, 0],

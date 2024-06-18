@@ -90,25 +90,59 @@ const Navbar = ({ lang }) => {
             <ul
               className={`${myFont.className}  flex flex-wrap gap-y-10 items-center w-full justify-between`}
             >
-              <li onClick={() => setOpen(false)}>
+              <li
+                className="flex flex-col gap-2 items-center"
+                onClick={() => setOpen(false)}
+              >
                 <Link
                   href="/factory"
                   className="text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition hover:text-second max-w-max "
                 >
                   Factory
                 </Link>
+                <span className="relative h-20 w-20 -rotate-90 ">
+                  <Image
+                    src="/assets/logo/per1.svg"
+                    fill
+                    className="w-full h-full object-contain"
+                  />
+                </span>
               </li>
               <li
                 onClick={() => setOpen(false)}
-                className="text-7xl md:text-9xl cursor-pointer transition hover:text-pink max-w-max "
+                className="flex flex-col gap-2 items-center"
               >
-                <Link href="/stories">Stories</Link>
+                <Link
+                  href="/stories"
+                  className="text-7xl md:text-9xl cursor-pointer transition hover:text-pink max-w-max "
+                >
+                  Stories
+                </Link>
+                <span className="relative h-20 w-20 -rotate-90 ">
+                  <Image
+                    src="/assets/logo/per1.svg"
+                    fill
+                    className="w-full h-full object-contain"
+                  />
+                </span>
               </li>
               <li
+                className="flex flex-col gap-2 items-center"
                 onClick={() => setOpen(false)}
-                className="text-7xl md:text-9xl cursor-pointer transition hover:text-second max-w-max "
               >
-                <Link href="/affinity">Affinity</Link>
+                <Link
+                  className="text-7xl md:text-9xl cursor-pointer transition hover:text-second max-w-max "
+                  href="/affinity"
+                >
+                  Affinity
+                </Link>
+                <span className="relative h-20 w-20 -rotate-90 ">
+                  <Image
+                    src="/assets/logo/per1.svg"
+                    fill
+                    className="w-full h-full object-contain"
+                  />
+                </span>
               </li>
             </ul>
           </div>

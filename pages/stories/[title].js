@@ -48,13 +48,20 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <div className="relative flex items-center h-[75vh] lg:h-screen">
-          <Image
-            src={work.img}
-            alt=""
-            fill
-            className="absolute top-0 left-0 object-cover !h-full z-20"
-            priority
-          />
+          <motion.div
+            initial={{ scale: 0.95 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="absolute top-0 left-0 w-full h-full z-20"
+          >
+            <Image
+              src={work.img}
+              alt=""
+              fill
+              className="absolute top-0 left-0 object-cover !h-full z-20"
+              priority
+            />
+          </motion.div>
           <BlurryLights />
         </div>
 
