@@ -1,7 +1,6 @@
 import Image from "next/image";
 import BlurryLights from "@/components/layout/BlurryLights";
 import Icona from "@/public/assets/logo/per.svg";
-import Line from "@/components/Line";
 import VideoPlayer from "@/components/VideoPlayer";
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
@@ -748,11 +747,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
           </div>
         </section>
-        <div className="w-full mx-auto my-10 text-center text-white dark:text-third z-[9999999] overflow-x-hidden">
-          {/* <Link href="/works" className={`${myFont.className} text-4xl `}>
-            {" "}
-            Tutte le storie
-          </Link> */}
+        <div className="w-full mx-auto overflow-hidden">
           <ParallaxText />
         </div>
         <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-8 gap-6 ">
@@ -802,9 +797,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           )}
         </div>
 
-        <div className="w-[90%] mx-auto md:py-20">
-          <Line />
-        </div>
+        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
       </motion.div>
     </>
   );

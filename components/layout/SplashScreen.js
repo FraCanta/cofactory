@@ -13,15 +13,21 @@ const SplashScreen = ({ finishLoading }) => {
       .add({
         targets: "#agencyText",
         opacity: [0, 1],
-        duration: 1000,
         easing: "easeInOutQuad",
       })
       .add({
         targets: "#creativeText",
         opacity: [0, 1],
-        duration: 1000,
         easing: "easeInOutQuad",
       })
+      .add(
+        {
+          targets: "#newLogoIntro",
+          opacity: [0, 1],
+          easing: "easeInOutQuad",
+        },
+        "-=1000"
+      )
 
       .add({
         targets: "#logo",
@@ -32,25 +38,32 @@ const SplashScreen = ({ finishLoading }) => {
       .add({
         targets: "#newLogoIntro",
         rotate: "45deg",
+        duration: 600,
         easing: "easeInOutQuad",
       })
 
       .add({
         targets: "#newLogoIntro",
         scale: 1500,
-        opacity: 0.8,
+        opacity: 0.5,
         easing: "easeInOutQuad",
       })
-      .add({
-        targets: ["#logo", "#creativeText", "#agencyText"],
-        opacity: [1, 0],
-        easing: "easeInOutQuad",
-      })
-      .add({
-        targets: "#bgIntro",
-        opacity: [1, 0],
-        easing: "easeInOutQuad",
-      });
+      .add(
+        {
+          targets: ["#logo", "#creativeText", "#agencyText"],
+          opacity: 0,
+          easing: "easeInOutQuad",
+        },
+        "-=1000"
+      )
+      .add(
+        {
+          targets: "#bgIntro",
+          opacity: [1, 0],
+          easing: "easeInOutQuad",
+        },
+        "-=1100"
+      );
   }, [finishLoading]);
 
   return (
@@ -72,7 +85,7 @@ const SplashScreen = ({ finishLoading }) => {
           {/* Payoff */}
           <div
             style={{ color: "#fff" }}
-            className="text-lg md:text-4xl lg:text-4xl flex items-center justify-center gap-2 lg:gap-4"
+            className="text-lg md:text-4xl  flex items-center justify-center gap-2 lg:gap-3 !leading-none"
           >
             <span id="agencyText" className={`${myFont2.className} opacity-0`}>
               Agenzia
@@ -87,14 +100,13 @@ const SplashScreen = ({ finishLoading }) => {
               di incontri
             </span>
             <span
-              className="inline-flex opacity-0 w-5 h-5 relative"
-              id="creativeText"
+              className="flex opacity-0 w-3 h-3 lg:w-5 lg:h-5 relative"
+              id="newLogoIntro"
             >
               <Image
-                id="newLogoIntro"
                 src="/assets/logo/new_logo_intro.svg"
                 fill
-                className="object-cover"
+                className="object-contain h-full w-full"
               />
             </span>
             <span
