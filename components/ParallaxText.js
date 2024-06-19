@@ -1,9 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
+import localFont from "next/font/local";
+const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 function ParallaxText() {
@@ -133,7 +135,7 @@ const Phrase = ({
 }) => {
   return (
     <Link href="/stories">
-      <div ref={sliderItems} className="sliderItems">
+      <div ref={sliderItems} className={`${myFont.className} sliderItems`}>
         <p
           ref={firstText}
           className="text-stroke text-transparent dark:text-stroke-dark"
