@@ -1,6 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
-import { motion } from "framer-motion";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
@@ -10,7 +10,25 @@ import { MaskText } from "@/components/MaskText";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import Image from "next/image";
+
 const Factory = () => {
+  const { scrollYProgress } = useViewportScroll();
+  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -360]);
+  const rotate3 = useTransform(scrollYProgress, [0, 1], [0, 180]);
+  const rotate4 = useTransform(scrollYProgress, [0, 1], [0, -180]);
+
+  const ballY = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.5, 0.75, 1],
+    [0, 100, 200, 300, 400]
+  );
+  const ballOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [1, 1, 0, 0]
+  );
+
   return (
     <>
       <motion.div
@@ -18,7 +36,7 @@ const Factory = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="h-screen flex items-center flex-col justify-center w-full mx-auto   gap-6 bg-second/20 dark:bg-second/30"
+        className="h-screen flex items-center flex-col justify-center w-full mx-auto gap-6 bg-second/20 dark:bg-second/30"
       >
         <MaskText>
           <h1
@@ -36,7 +54,7 @@ const Factory = () => {
                   </span>
                 }
               >
-                <button className="text-pink text-md lg:text-6xl !font-light absolute top-1 lg:top-4   animate-bounce ">
+                <button className="text-pink text-md lg:text-6xl !font-light absolute top-1 lg:top-4 animate-bounce ">
                   <span className="a">*</span>
                 </button>
               </Tippy>{" "}
@@ -51,20 +69,20 @@ const Factory = () => {
         <div className="w-[90%] lg:w-[65%] mx-auto">
           <MaskText>
             <p
-              className={`${myFont2.className}  text-[20px] md:text-[25px]  text-white dark:text-third lg:text-center `}
+              className={`${myFont2.className} text-[20px] md:text-[25px] text-white dark:text-third lg:text-center `}
             >
               Ideiamo e realizziamo campagne di comunicazione congiunta.
             </p>
           </MaskText>
         </div>
-
-        <div className="flex justify-center items-center w-[90%] mx-auto py-2 absolute bottom-6">
-          <div className="w-8 h-8 rounded-full bg-pink"></div>
-        </div>
       </motion.div>
       <div className="w-full bg-[#161617] dark:bg-[#D9D9D9] text-white h-auto py-10 flex flex-col gap-y-40">
-        <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-[60vh]">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-screen">
           <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
             className={`${myFont2.className} flex flex-col dark:text-third text-white justify-center gap-6 text-xl col-span-2`}
           >
             <p>
@@ -79,17 +97,30 @@ const Factory = () => {
               diritti e dei propri doveri.
             </p>
           </div>
-          <div className="flex  justify-center items-center relative ">
+          <motion.div
+            className="flex justify-center items-center relative"
+            style={{ rotate: rotate1 }}
+          >
             <Image
               src="/assets/logo/new_logo_grey.png"
               alt=""
               width={200}
               height={200}
-              className=" object-contain rounded-lg  -rotate-[152deg] dark:contrast-50"
+              className="object-contain rounded-lg dark:contrast-50"
             />
-            <div className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-30"></div>
-          </div>
-          <div className="flex flex-col items-center justify-center lg:text-center gap-6 text-2xl col-span-2">
+            <motion.div
+              data-aos="fade-down"
+              className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-0"
+              // style={{ y: ballY, opacity: ballOpacity }}
+            ></motion.div>
+          </motion.div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
+            className="flex flex-col items-center justify-center lg:text-center gap-6 text-2xl col-span-2"
+          >
             <h2 className="text-5xl lg:text-6xl dark:text-third text-white">
               <span
                 className={`${myFont.className} text-white/60 dark:text-third/60`}
@@ -102,8 +133,14 @@ const Factory = () => {
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-[60vh]">
-          <div className="flex flex-col items-center justify-center lg:text-center gap-6 text-2xl col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-screen">
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
+            className="flex flex-col items-center justify-center lg:text-center gap-6 text-2xl col-span-2"
+          >
             <h2 className="text-5xl lg:text-6xl">
               <span
                 className={`${myFont.className} text-white/60 dark:text-third/60`}
@@ -117,17 +154,27 @@ const Factory = () => {
               </span>
             </h2>
           </div>
-          <div className="flex  justify-center items-center relative ">
+          <motion.div
+            className="flex justify-center items-center relative"
+            style={{ rotate: rotate2 }}
+          >
             <Image
               src="/assets/logo/new_logo_grey.png"
               alt=""
               width={200}
               height={200}
-              className=" object-contain rounded-lg dark:contrast-50 rotate-[170deg]"
+              className="object-contain rounded-lg dark:contrast-50"
             />
-            <div className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-40"></div>
-          </div>
+            <motion.div
+              className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-0"
+              data-aos="fade-down"
+            ></motion.div>
+          </motion.div>
           <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
             className={`${myFont2.className} flex flex-col dark:text-third text-white justify-center gap-6 text-xl col-span-2`}
           >
             <p>
@@ -145,6 +192,10 @@ const Factory = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-[60vh]">
           <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
             className={`${myFont2.className} flex flex-col dark:text-third text-white justify-center gap-6 text-xl col-span-2`}
           >
             <p>
@@ -156,17 +207,29 @@ const Factory = () => {
               soluzioni che ci piace proporre.
             </p>
           </div>
-          <div className="flex  justify-center items-center relative ">
+          <motion.div
+            className="flex justify-center items-center relative"
+            style={{ rotate: rotate3 }}
+          >
             <Image
               src="/assets/logo/new_logo_grey.png"
               alt=""
               width={200}
               height={200}
-              className=" object-contain rounded-lg dark:contrast-50 rotate-[95deg]"
+              className="object-contain rounded-lg dark:contrast-50"
             />
-            <div className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-20"></div>
-          </div>{" "}
-          <div className="flex flex-col items-center justify-center lg:text-center gap-6 text-2xl col-span-2">
+            <motion.div
+              className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-40"
+              data-aos="fade-down"
+            ></motion.div>
+          </motion.div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
+            className="flex flex-col items-center justify-center lg:text-center gap-6 text-2xl col-span-2"
+          >
             <h2 className="text-5xl lg:text-6xl">
               <span
                 className={`${myFont3.className} font-bold text-white dark:text-third`}
@@ -182,7 +245,13 @@ const Factory = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 w-[90%] mx-auto gap-y-24 lg:gap-6 min-h-[60vh]">
-          <div className="flex flex-col items-center justify-center lg:text-center gap-6  col-span-2">
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
+            className="flex flex-col items-center justify-center lg:text-center gap-6 col-span-2"
+          >
             <h2 className="text-5xl lg:text-6xl">
               <span
                 className={`${myFont3.className} font-bold text-white dark:text-third`}
@@ -206,17 +275,27 @@ const Factory = () => {
               </span>
             </h2>
           </div>
-          <div className="flex  justify-center items-center relative ">
+          <motion.div
+            className="flex justify-center items-center relative"
+            style={{ rotate: rotate4 }}
+          >
             <Image
               src="/assets/logo/new_logo_grey.png"
               alt=""
               width={200}
               height={200}
-              className=" object-contain rounded-lg dark:contrast-50 -rotate-[85deg]"
+              className="object-contain rounded-lg dark:contrast-50"
             />
-            <div className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-20"></div>
-          </div>{" "}
+            <motion.div
+              className="w-8 h-8 rounded-full bg-pink absolute top-0 lg:top-40 lg:left-40"
+              data-aos="fade-down"
+            ></motion.div>
+          </motion.div>
           <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
             className={`${myFont2.className} flex flex-col dark:text-third text-white justify-center gap-6 text-xl col-span-2`}
           >
             <h3>
@@ -266,7 +345,7 @@ const Factory = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

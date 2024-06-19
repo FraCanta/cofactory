@@ -38,7 +38,7 @@ const SplashScreen = ({ finishLoading }) => {
       .add({
         targets: "#newLogoIntro",
         rotate: "45deg",
-        duration: 600,
+        duration: 500,
         easing: "easeInOutQuad",
       })
 
@@ -46,6 +46,7 @@ const SplashScreen = ({ finishLoading }) => {
         targets: "#newLogoIntro",
         scale: 1500,
         opacity: 0.5,
+        duration: 500,
         easing: "easeInOutQuad",
       })
       .add(
@@ -54,7 +55,7 @@ const SplashScreen = ({ finishLoading }) => {
           opacity: 0,
           easing: "easeInOutQuad",
         },
-        "-=1000"
+        "-=700"
       )
       .add(
         {
@@ -85,42 +86,42 @@ const SplashScreen = ({ finishLoading }) => {
           {/* Payoff */}
           <div
             style={{ color: "#fff" }}
-            className="text-lg md:text-4xl  flex items-center justify-center gap-2 lg:gap-3 "
+            className="flex items-center justify-center gap-2 lg:gap-3 "
           >
-            <span
+            <div
               id="agencyText"
-              className={`${myFont2.className} opacity-0 leading-snug`}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
             >
               Agenzia
-            </span>
-            <span
+            </div>
+            <div
               id="creativeText"
-              className={`${myFont2.className} opacity-0 leading-snug`}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
             >
               creativa
-            </span>
-            <span
+            </div>
+            <div
               id="agencyText"
-              className={`${myFont2.className} opacity-0 leading-snug`}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
             >
               di incontri
-            </span>
-            <span
-              className="flex opacity-0 w-3 h-3 lg:w-5 lg:h-5 relative"
+            </div>
+            <div
+              className="flex opacity-0 w-3 h-3 lg:w-5 lg:h-5 relative mt-2 "
               id="newLogoIntro"
             >
               <Image
                 src="/assets/logo/new_logo_intro.svg"
                 fill
-                className="object-contain h-full w-full"
+                className="object-contain h-full w-full "
               />
-            </span>
-            <span
+            </div>
+            <div
               id="creativeText"
-              className={`${myFont2.className} opacity-0 leading-snug`}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
             >
               brand
-            </span>
+            </div>
           </div>
         </div>
       </div>

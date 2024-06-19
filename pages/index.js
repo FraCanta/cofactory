@@ -14,6 +14,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
 import ParallaxText from "@/components/ParallaxText";
 import Card from "@/components/Card/Card";
+import BlurryLights from "@/components/layout/BlurryLights";
 
 gsap.registerPlugin(ScrollTrigger);
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
@@ -60,6 +61,8 @@ const Home = ({ translation }) => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <Hero>
+          {/* <div className="h-screen relative">
+          <div className="flex flex-col justify-center items-center absolute inset-0 z-50"> */}
           <MaskText>
             <h1
               className={`${myFont.className} text-5xl py-1 md:text-[6rem] lg:text-[5rem] xl:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
@@ -83,7 +86,10 @@ const Home = ({ translation }) => {
               </p>
             </MaskText>
           </div>
+          {/* </div> */}
         </Hero>
+        {/* <BlurryLights />
+        </div> */}
         <div className="relative w-full">
           <div className="w-11/12 mx-auto flex justify-end absolute -bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <TimbroMarquee />

@@ -3,8 +3,9 @@ import BlurryLights from "./BlurryLights";
 
 const Hero = forwardRef(({ children }, ref) => {
   return (
-    <div ref={ref} className="relative overflow-hidden">
-      <div className="absolute w-11/12 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-6 justify-center items-center z-10 py-20">
+    <div className="h-screen relative">
+      <div className="flex flex-col justify-center items-center absolute inset-0 z-50 w-[90%] mx-auto gap-4">
+        {" "}
         {children}
       </div>
       <BlurryLights />
