@@ -46,12 +46,23 @@ function ParallaxText() {
     } else if (xPercent > 0) {
       xPercent = -100;
     }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    gsap.set(thirdText.current, { xPercent: xPercent });
-    gsap.set(fourthText.current, { xPercent: xPercent });
-    gsap.set(fifthText.current, { xPercent: xPercent });
-    gsap.set(sixthText.current, { xPercent: xPercent });
+
+    if (
+      firstText.current &&
+      secondText.current &&
+      thirdText.current &&
+      fourthText.current &&
+      fifthText.current &&
+      sixthText.current
+    ) {
+      gsap.set(firstText.current, { xPercent: xPercent });
+      gsap.set(secondText.current, { xPercent: xPercent });
+      gsap.set(thirdText.current, { xPercent: xPercent });
+      gsap.set(fourthText.current, { xPercent: xPercent });
+      gsap.set(fifthText.current, { xPercent: xPercent });
+      gsap.set(sixthText.current, { xPercent: xPercent });
+    }
+
     xPercent += 0.1 * direction;
     requestAnimationFrame(animation);
   };

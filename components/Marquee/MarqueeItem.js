@@ -30,9 +30,10 @@ const imagePaths = [
   "/assets/logos/SOLOAFFITTI_lovers_grey2.png",
   "/assets/logos/SONY_lovers_grey2.png",
   "/assets/logos/SOPHIALOREN_lovers_grey2.png",
-  "/assets/logos/TOCTOC_lovers_grey2ok.png",
+  "/assets/logos/TOCTOC_lovers_grey2.png",
   "/assets/logos/TOYS_lovers_grey2.png",
   "/assets/logos/TRECCANI_lovers_grey2.png",
+  "/assets/logos/TRIPPO_lovers_grey.png",
   "/assets/logos/WAKAME_lovers_grey2.png",
   "/assets/logos/WARNER_lovers_grey2.png",
   "/assets/logos/YAMAMAY_lovers_grey2.png",
@@ -63,7 +64,7 @@ const imagePaths = [
   "/assets/logos/SOLOAFFITTI_lovers_grey2.png",
   "/assets/logos/SONY_lovers_grey2.png",
   "/assets/logos/SOPHIALOREN_lovers_grey2.png",
-  "/assets/logos/TOCTOC_lovers_greyok.png",
+  "/assets/logos/TOCTOC_lovers_grey2.png",
   "/assets/logos/TOYS_lovers_grey2.png",
   "/assets/logos/TRECCANI_lovers_grey2.png",
   "/assets/logos/TRIPPO_lovers_grey.png",
@@ -108,7 +109,7 @@ const MarqueeItem = ({ marqueeVisible }) => {
             key={index}
             src={imagePath}
             alt={`Image ${index + 1}`}
-            className="inline-block mr-[50px] lg:mr-[100px]  object-cover  dark:contrast-50"
+            className="inline-block mr-[50px] lg:mr-[100px]  object-contain  dark:contrast-50"
           />
         ))}
       </div>

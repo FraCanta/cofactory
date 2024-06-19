@@ -19,7 +19,7 @@ function Footer() {
             <p className={`${myFont2.className} text-lg`}>CERCHI UN PARTNER?</p>
             <Link
               href="/contatti"
-              className="flex items-end w-full lg:justify-center"
+              className="flex items-center w-full lg:justify-center"
             >
               <span
                 className={`${myFont.className} text-4xl text-second leading-7`}
