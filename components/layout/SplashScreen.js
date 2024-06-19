@@ -107,7 +107,7 @@ const SplashScreen = ({ finishLoading }) => {
               di incontri
             </div>
             <div
-              className="flex opacity-0 w-3 h-3 lg:w-5 lg:h-5 relative mt-2 "
+              className="flex opacity-0 w-3 h-3 lg:w-5 lg:h-5 relative mt-0 xl:mt-2 "
               id="newLogoIntro"
             >
               <Image
