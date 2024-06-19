@@ -85,18 +85,24 @@ const SplashScreen = ({ finishLoading }) => {
           {/* Payoff */}
           <div
             style={{ color: "#fff" }}
-            className="text-lg md:text-4xl  flex items-center justify-center gap-2 lg:gap-3 !leading-none"
+            className="text-lg md:text-4xl  flex items-center justify-center gap-2 lg:gap-3 "
           >
-            <span id="agencyText" className={`${myFont2.className} opacity-0`}>
+            <span
+              id="agencyText"
+              className={`${myFont2.className} opacity-0 leading-snug`}
+            >
               Agenzia
             </span>
             <span
               id="creativeText"
-              className={`${myFont2.className} opacity-0`}
+              className={`${myFont2.className} opacity-0 leading-snug`}
             >
               creativa
             </span>
-            <span id="agencyText" className={`${myFont2.className} opacity-0`}>
+            <span
+              id="agencyText"
+              className={`${myFont2.className} opacity-0 leading-snug`}
+            >
               di incontri
             </span>
             <span
@@ -111,7 +117,7 @@ const SplashScreen = ({ finishLoading }) => {
             </span>
             <span
               id="creativeText"
-              className={`${myFont2.className} opacity-0`}
+              className={`${myFont2.className} opacity-0 leading-snug`}
             >
               brand
             </span>

@@ -58,7 +58,9 @@ const Card = ({
                 }`}
               >
                 <MaskText>
-                  <span className={`${myFont.className} `}>{brand1}</span>
+                  <span className={`${myFont.className} leading-snug`}>
+                    {brand1}
+                  </span>
                 </MaskText>
 
                 <span className="relative h-6 w-6 lg:h-8 lg:w-8 mx-6">
@@ -69,7 +71,9 @@ const Card = ({
                   />
                 </span>
                 <MaskText>
-                  <span className={`${myFont.className}`}>{brand2}</span>
+                  <span className={`${myFont.className} leading-snug`}>
+                    {brand2}
+                  </span>
                 </MaskText>
               </div>
             </div>
