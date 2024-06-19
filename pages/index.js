@@ -41,7 +41,7 @@ const Home = ({ translation }) => {
         <Hero>
           <MaskText>
             <h1
-              className={`${myFont.className} text-5xl py-1 md:text-[6rem] lg:text-[5rem] xl:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
+              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
             >
               Sì. Siamo un’
               <span className="text-white/60 dark:text-third/60">
@@ -51,16 +51,19 @@ const Home = ({ translation }) => {
             </h1>
           </MaskText>
           <div className="lg:w-[65%] mx-auto flex flex-col gap-8">
-            <p
-              className={`${myFont2.className}   font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
-            >
-              A volte creiamo legami duraturi. Altre volte, invece, nascono dei
-              colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili
-            </p>
+            <MaskText>
+              <p
+                className={`${myFont2.className}   font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
+              >
+                A volte creiamo legami duraturi. Altre volte, invece, nascono
+                dei colpi di fulmine, brevi ma intensi, elettrizzanti e
+                memorabili
+              </p>
+            </MaskText>
           </div>
         </Hero>
         <div className="relative w-full">
-          <div className="w-11/12 mx-auto flex justify-end absolute -bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="w-11/12 mx-auto flex justify-end absolute -bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <TimbroMarquee />
           </div>
         </div>
