@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "@/public/assets/logo/logo.svg";
 import Image from "next/image";
 import DarkModeToggle from "../DarkModeToggle";
 import { MenuButton } from "./MenuButton";
 import Line from "../Line";
-const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 import localFont from "next/font/local";
 import SocialBar from "./SocialBar";
 import { MaskText } from "../MaskText";
+import { useRouter } from "next/router";
 
+const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../../fonts/Sneak-Regular.ttf" });
+
 const Navbar = ({ lang }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isOpen, setOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +43,12 @@ const Navbar = ({ lang }) => {
     };
   }, [lastScrollTop]);
 
+  const menuItems = [
+    { href: "/factory", label: "factory", color: "#368b90" },
+    { href: "/stories", label: "stories", color: "#bb5471" },
+    { href: "/affinity", label: "affinity", color: "#368b90" },
+  ];
+
   return (
     <motion.div
       style={{
@@ -47,11 +57,11 @@ const Navbar = ({ lang }) => {
           duration: 0.8,
           ease: "linear",
           delay: isVisible ? 0 : 0.8,
-        }, // Aggiunto il delay
+        },
       }}
-      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm "
+      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm"
     >
-      <div className="w-[90%] m-auto flex justify-between items-center  text-white h-[70px] md:h-[100px]">
+      <div className="w-[90%] m-auto flex justify-between items-center text-white h-[70px] md:h-[100px]">
         <Link href="/" className="z-[20]" onClick={() => setOpen(false)}>
           <Image
             src={Logo}
@@ -84,65 +94,150 @@ const Navbar = ({ lang }) => {
           initial={{ opacity: 0, y: "-100%" }}
           animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? "0%" : "-100%" }}
           transition={{ ease: "easeOut", duration: 0.4 }}
-          className="absolute top-0 lg:top-0 left-0 right-0 bottom-0 flex  w-full h-screen  bg-third dark:bg-white text-white dark:text-third"
+          className="absolute top-0 lg:top-0 left-0 right-0 bottom-0 flex w-full h-screen bg-third dark:bg-white text-white dark:text-third"
         >
           <div className="w-[90%] mx-auto lg:mt-[95px] flex items-center justify-center">
             <ul
-              className={`${myFont.className}  flex flex-wrap gap-y-10 items-center w-full justify-between`}
+              className={`${myFont.className} grid grid-cols-1 lg:grid-cols-3 items-center w-full gap-8`}
             >
               <li
-                className="flex flex-col gap-2 items-center"
+                className="flex flex-row lg:flex-col gap-2 items-center"
                 onClick={() => setOpen(false)}
+                onMouseEnter={() => setHoveredItem("/factory")}
+                onMouseLeave={() => setHoveredItem(null)}
               >
                 <Link
                   href="/factory"
-                  className="text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition hover:text-second max-w-max "
+                  className={`relative text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition max-w-max px-4 py-1 lg:px-6 lg:py-2 overflow-hidden ${
+                    router.pathname === "/factory" || hoveredItem === "/factory"
+                      ? "text-third"
+                      : "text-white"
+                  }`}
                 >
-                  Factory
+                  factory
+                  <motion.div
+                    className={`absolute left-0 bottom-0 w-full h-full bg-second/40 z-[-1]`}
+                    initial={{ width: "0%" }}
+                    animate={{
+                      width:
+                        router.pathname === "/factory" ||
+                        hoveredItem === "/factory"
+                          ? "100%"
+                          : "0%",
+                    }}
+                    transition={{ duration: 0.3 }}
+                  />
                 </Link>
-                <span className="relative h-20 w-20 -rotate-90 ">
+                <motion.span
+                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity:
+                      router.pathname === "/factory" ||
+                      hoveredItem === "/factory"
+                        ? 1
+                        : 0,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
                   <Image
                     src="/assets/logo/per1.svg"
                     fill
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain -rotate-90"
                   />
-                </span>
+                </motion.span>
               </li>
               <li
+                className="flex flex-row lg:flex-col gap-2 items-center"
                 onClick={() => setOpen(false)}
-                className="flex flex-col gap-2 items-center"
+                onMouseEnter={() => setHoveredItem("/stories")}
+                onMouseLeave={() => setHoveredItem(null)}
               >
                 <Link
                   href="/stories"
-                  className="text-7xl md:text-9xl cursor-pointer transition hover:text-pink max-w-max "
+                  className={`relative text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition max-w-max px-4 py-1 lg:px-6 lg:py-2 overflow-hidden ${
+                    router.pathname === "/stories" || hoveredItem === "/stories"
+                      ? "text-second"
+                      : "text-white"
+                  }`}
                 >
-                  Stories
+                  stories
+                  <motion.div
+                    className={`absolute left-0 bottom-0 w-full h-full bg-pink/40 z-[-1]`}
+                    initial={{ width: "0%" }}
+                    animate={{
+                      width:
+                        router.pathname === "/stories" ||
+                        hoveredItem === "/stories"
+                          ? "100%"
+                          : "0%",
+                    }}
+                    transition={{ duration: 0.3 }}
+                  />
                 </Link>
-                <span className="relative h-20 w-20 -rotate-90 ">
+                <motion.span
+                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity:
+                      router.pathname === "/stories" ||
+                      hoveredItem === "/stories"
+                        ? 1
+                        : 0,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
                   <Image
                     src="/assets/logo/per1.svg"
                     fill
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain -rotate-90"
                   />
-                </span>
+                </motion.span>
               </li>
               <li
-                className="flex flex-col gap-2 items-center"
+                className="flex flex-row lg:flex-col gap-2 items-center"
                 onClick={() => setOpen(false)}
+                onMouseEnter={() => setHoveredItem("/affinity")}
+                onMouseLeave={() => setHoveredItem(null)}
               >
                 <Link
-                  className="text-7xl md:text-9xl cursor-pointer transition hover:text-second max-w-max "
                   href="/affinity"
+                  className={`relative text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition max-w-max px-4 py-1 lg:px-6 lg:py-2 overflow-hidden ${
+                    router.pathname === "/affinity" ? "text-white" : ""
+                  }`}
                 >
-                  Affinity
+                  affinity
+                  <motion.div
+                    className={`absolute left-0 bottom-0 w-full h-full bg-second/20 z-[-1]`}
+                    initial={{ width: "0%" }}
+                    animate={{
+                      width:
+                        router.pathname === "/affinity" ||
+                        hoveredItem === "/affinity"
+                          ? "100%"
+                          : "0%",
+                    }}
+                    transition={{ duration: 0.3 }}
+                  />
                 </Link>
-                <span className="relative h-20 w-20 -rotate-90 ">
+                <motion.span
+                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity:
+                      router.pathname === "/affinity" ||
+                      hoveredItem === "/affinity"
+                        ? 1
+                        : 0,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
                   <Image
                     src="/assets/logo/per1.svg"
                     fill
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain -rotate-90"
                   />
-                </span>
+                </motion.span>
               </li>
             </ul>
           </div>
