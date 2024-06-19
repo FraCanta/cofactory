@@ -9,45 +9,23 @@ import { PiArrowUpRightThin } from "react-icons/pi";
 import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
 import ParallaxText from "@/components/ParallaxText";
 import Card from "@/components/Card/Card";
-import BlurryLights from "@/components/layout/BlurryLights";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 
 const Home = ({ translation }) => {
-  const paragraphRefs = useRef([]);
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
-
-  useEffect(() => {
-    paragraphRefs.current.forEach((ref, index) => {
-      if (ref) {
-        gsap.fromTo(
-          ref,
-          { opacity: 0, y: 150 },
-          {
-            opacity: 1,
-            y: 0,
-            scrollTrigger: {
-              trigger: ref,
-              start: "top 100%",
-              toggleActions: "play none none none",
-            },
-            delay: 3 * index,
-          }
-        );
-      }
-    });
-  }, []);
 
   return (
     <>
@@ -61,8 +39,6 @@ const Home = ({ translation }) => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <Hero>
-          {/* <div className="h-screen relative">
-          <div className="flex flex-col justify-center items-center absolute inset-0 z-50"> */}
           <MaskText>
             <h1
               className={`${myFont.className} text-5xl py-1 md:text-[6rem] lg:text-[5rem] xl:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
@@ -75,21 +51,14 @@ const Home = ({ translation }) => {
             </h1>
           </MaskText>
           <div className="lg:w-[65%] mx-auto flex flex-col gap-8">
-            <MaskText>
-              <p
-                ref={(el) => (paragraphRefs.current[0] = el)}
-                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
-              >
-                A volte creiamo legami duraturi. Altre volte, invece, nascono
-                dei colpi di fulmine, brevi ma intensi, elettrizzanti e
-                memorabili
-              </p>
-            </MaskText>
+            <p
+              className={`${myFont2.className}   font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
+            >
+              A volte creiamo legami duraturi. Altre volte, invece, nascono dei
+              colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili
+            </p>
           </div>
-          {/* </div> */}
         </Hero>
-        {/* <BlurryLights />
-        </div> */}
         <div className="relative w-full">
           <div className="w-11/12 mx-auto flex justify-end absolute -bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <TimbroMarquee />

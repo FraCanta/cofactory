@@ -38,8 +38,8 @@ const SplashScreen = ({ finishLoading }) => {
       .add({
         targets: "#newLogoIntro",
         rotate: "45deg",
-        duration: 500,
-        easing: "easeInOutQuad",
+        duration: 2000,
+        easing: "easeInOutExpo",
       })
 
       .add({

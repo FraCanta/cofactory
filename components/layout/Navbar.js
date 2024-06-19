@@ -141,9 +141,9 @@ const Navbar = ({ lang }) => {
                   transition={{ duration: 0.5 }}
                 >
                   <Image
-                    src="/assets/logo/per1.svg"
+                    src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain -rotate-90"
+                    className="w-full h-full object-contain "
                   />
                 </motion.span>
               </li>
@@ -188,9 +188,9 @@ const Navbar = ({ lang }) => {
                   transition={{ duration: 0.5 }}
                 >
                   <Image
-                    src="/assets/logo/per1.svg"
+                    src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain -rotate-90"
+                    className="w-full h-full object-contain "
                   />
                 </motion.span>
               </li>
@@ -203,7 +203,10 @@ const Navbar = ({ lang }) => {
                 <Link
                   href="/affinity"
                   className={`relative text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition max-w-max px-4 py-1 lg:px-6 lg:py-2 overflow-hidden ${
-                    router.pathname === "/affinity" ? "text-white" : ""
+                    router.pathname === "/affinity" ||
+                    hoveredItem === "/affinity"
+                      ? "text-pink/80"
+                      : "text-white"
                   }`}
                 >
                   affinity
@@ -233,9 +236,9 @@ const Navbar = ({ lang }) => {
                   transition={{ duration: 0.5 }}
                 >
                   <Image
-                    src="/assets/logo/per1.svg"
+                    src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain -rotate-90"
+                    className="w-full h-full object-contain "
                   />
                 </motion.span>
               </li>
