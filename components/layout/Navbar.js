@@ -111,7 +111,7 @@ const Navbar = ({ lang }) => {
                   className={`relative text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition max-w-max px-4 py-1 lg:px-6 lg:py-2 overflow-hidden ${
                     router.pathname === "/factory" || hoveredItem === "/factory"
                       ? "text-third"
-                      : "text-white"
+                      : "text-white dark:text-third"
                   }`}
                 >
                   factory
@@ -143,7 +143,7 @@ const Navbar = ({ lang }) => {
                   <Image
                     src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain "
+                    className="w-full h-full object-contain contrast-50"
                   />
                 </motion.span>
               </li>
@@ -158,7 +158,7 @@ const Navbar = ({ lang }) => {
                   className={`relative text-7xl md:text-9xl 2xl:text-[9rem] cursor-pointer transition max-w-max px-4 py-1 lg:px-6 lg:py-2 overflow-hidden ${
                     router.pathname === "/stories" || hoveredItem === "/stories"
                       ? "text-second"
-                      : "text-white"
+                      : "text-white dark:text-third"
                   }`}
                 >
                   stories
@@ -190,7 +190,7 @@ const Navbar = ({ lang }) => {
                   <Image
                     src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain "
+                    className="w-full h-full object-contain contrast-50"
                   />
                 </motion.span>
               </li>
@@ -206,7 +206,7 @@ const Navbar = ({ lang }) => {
                     router.pathname === "/affinity" ||
                     hoveredItem === "/affinity"
                       ? "text-pink/80"
-                      : "text-white"
+                      : "text-white dark:text-third"
                   }`}
                 >
                   affinity
@@ -224,7 +224,7 @@ const Navbar = ({ lang }) => {
                   />
                 </Link>
                 <motion.span
-                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0"
+                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0 "
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity:
@@ -238,7 +238,7 @@ const Navbar = ({ lang }) => {
                   <Image
                     src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain "
+                    className="w-full h-full object-contain contrast-50"
                   />
                 </motion.span>
               </li>

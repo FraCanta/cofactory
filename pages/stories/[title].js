@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BlurryLights from "@/components/layout/BlurryLights";
-import Icona from "@/public/assets/logo/per.svg";
+import Icona from "@/public/assets/logo/new_logo_grey.png";
 import VideoPlayer from "@/components/VideoPlayer";
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
@@ -76,7 +76,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               >
                 {work.brand1}
                 <span className="relative w-5 h-5 md:w-10 md:h-8 lg:w-[35px] lg:h-[35px]">
-                  <Image src={Icona} alt="" fill className="h-auto w-auto" />
+                  <Image
+                    src={Icona}
+                    alt=""
+                    fill
+                    className="h-auto w-auto dark:contrast-0"
+                  />
                 </span>
 
                 {work.brand2}
