@@ -6,49 +6,65 @@
         "button": "orocioktoys",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "categories": [{ "name": "Brand" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:copyright-line", "color": "second" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
       {
         "img": "/assets/cases/yummers/cover_yummers.jpg",
         "button": "yummersghostbusters",
         "brand1": "Yummer's",
         "brand2": "Ghostbusters",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
         "button": "rossopomodorotartarugheninja",
         "brand1": "Rossopomodoro",
         "brand2": "Tartarughe Ninja",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/treccani/cover_treccani.jpg",
         "button": "treccanifaoschwarz",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "categories": [{ "name": "Brand" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:copyright-line", "color": "second" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
       {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "button": "bobbled&d",
         "brand1": "Bobble Bobble",
         "brand2": "Dangeons&Dragons",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/nestle/nestle.jpg",
         "button": "nestleaquaman",
         "brand1": "Nestlè",
         "brand2": "Aquaman",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/milka/cover_milka2.jpg",
         "button": "milkatoys",
         "brand1": "Milka",
         "brand2": "Toys Center",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "categories": [{ "name": "Brand" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:copyright-line", "color": "second" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
 
       {
@@ -56,21 +72,27 @@
         "button": "citrustartarugheninja",
         "brand1": "Citrus",
         "brand2": "Tartarughe Ninja",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/american/sonic2.jpg",
         "button": "americanunclesonic2",
         "brand1": "American Uncle",
         "brand2": "Sonic 2",
-        "categories": [{ "name": "Movie" }, { "name": "Box" }]
+        "categories": [{ "name": "Movie" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:movie-line", "color": "yellow" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "button": "rossopomodoroghostbusters",
         "brand1": "Rossopomodoro",
         "brand2": "Ghostbusters",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       }
     ],
     "singleCase": {

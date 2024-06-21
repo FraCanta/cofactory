@@ -203,17 +203,13 @@ const Stories = ({ translation }) => {
                       </span>
                     </div>
                     <div className="text-white text-sm uppercase flex justify-between w-full lg:hidden">
-                      <div>
-                        {el.categories.map((cat, index) => (
-                          <span
+                      <div className="flex gap-4">
+                        {el.icons.map((icon, index) => (
+                          <Icon
                             key={index}
-                            className={`${myFont2.className} ${
-                              index > 0 ? "ml-1" : ""
-                            }`}
-                          >
-                            {cat.name}
-                            {index !== el.categories.length - 1 && " , "}
-                          </span>
+                            icon={icon.name}
+                            className={`text-${icon.color}  w-6`}
+                          />
                         ))}
                       </div>
                       <div>
