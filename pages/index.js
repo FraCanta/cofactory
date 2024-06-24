@@ -41,24 +41,18 @@ const Home = ({ translation }) => {
         <Hero>
           <MaskText>
             <h1
+              dangerouslySetInnerHTML={{ __html: translation.hero.title }}
               className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
-            >
-              Sì. Siamo un’
-              <span className="text-white/60 dark:text-third/60">
-                agenzia
-              </span>{" "}
-              di incontri.
-            </h1>
+            ></h1>
           </MaskText>
           <div className="lg:w-[65%] mx-auto flex flex-col gap-8">
             <MaskText>
               <p
+                dangerouslySetInnerHTML={{
+                  __html: translation.hero.description,
+                }}
                 className={`${myFont2.className}   font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
-              >
-                A volte creiamo legami duraturi. Altre volte, invece, nascono
-                dei colpi di fulmine, brevi ma intensi, elettrizzanti e
-                memorabili
-              </p>
+              ></p>
             </MaskText>
           </div>
         </Hero>
@@ -88,7 +82,7 @@ const Home = ({ translation }) => {
 
         <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
         <div className="w-full mx-auto overflow-hidden">
-          <ParallaxText />
+          <ParallaxText marqueeText={translation.marqueeLink} />
         </div>
         <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
 

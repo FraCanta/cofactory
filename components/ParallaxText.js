@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-function ParallaxText() {
+function ParallaxText({ marqueeText }) {
   const container = useRef(null);
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -82,6 +82,7 @@ function ParallaxText() {
         fourthText={fourthText}
         fifthText={fifthText}
         sixthText={sixthText}
+        marqueeText={marqueeText}
       />
     </div>
   );
@@ -100,6 +101,7 @@ const Slide = ({
   fourthText,
   fifthText,
   sixthText,
+  marqueeText,
 }) => {
   const translateX = useTransform(
     progress,
@@ -119,6 +121,7 @@ const Slide = ({
         fourthText={fourthText}
         fifthText={fifthText}
         sixthText={sixthText}
+        marqueeText={marqueeText}
       />
     </motion.div>
   );
@@ -132,6 +135,7 @@ const Phrase = ({
   fourthText,
   fifthText,
   sixthText,
+  marqueeText,
 }) => {
   return (
     <Link href="/stories">
@@ -140,37 +144,37 @@ const Phrase = ({
           ref={firstText}
           className="text-stroke text-transparent dark:text-stroke-dark"
         >
-          tutte le storie
+          {marqueeText.text1}
         </p>
         <p
           ref={secondText}
           className="text-stroke text-transparent dark:text-stroke-dark"
         >
-          tutte le storie
+          {marqueeText.text2}
         </p>
         <p
           ref={thirdText}
           className="text-stroke text-transparent dark:text-stroke-dark"
         >
-          tutte le storie
+          {marqueeText.text3}
         </p>
         <p
           ref={fourthText}
           className="text-stroke text-transparent dark:text-stroke-dark"
         >
-          tutte le storie
+          {marqueeText.text4}
         </p>
         <p
           ref={fifthText}
           className="text-stroke text-transparent dark:text-stroke-dark"
         >
-          tutte le storie
+          {marqueeText.text5}
         </p>
         <p
           ref={sixthText}
           className="text-stroke text-transparent dark:text-stroke-dark"
         >
-          tutte le storie
+          {marqueeText.text6}
         </p>
       </div>
     </Link>

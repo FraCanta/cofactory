@@ -1,5 +1,9 @@
 {
   "home": {
+    "hero": {
+      "title": "Sì. Siamo un'<span class='text-white/60 dark:text-third/60'>agenzia</span> di incontri.",
+      "description": "A volte creiamo legami duraturi. Altre volte, invece, nascono dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+    },
     "cards": [
       {
         "img": "/assets/cases/orociok/cover_orociok.jpg",
@@ -39,6 +43,14 @@
         "brand2": "Dangeons&Dragons",
         "categories": [{ "name": "Movie" }]
       }
-    ]
+    ],
+    "marqueeLink": {
+      "text1": "tutte le storie",
+      "text2": "tutte le storie",
+      "text3": "tutte le storie",
+      "text4": "tutte le storie",
+      "text5": "tutte le storie",
+      "text6": "tutte le storie"
+    }
   }
 }

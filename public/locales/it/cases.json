@@ -160,6 +160,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "yummersghostbusters": {
@@ -232,6 +240,14 @@
           "descrizione2": "L’evento ha generato un’impressionante redemption grazie a stories, post e reel dei creator che hanno realizzato contenuti ad altissima viralità.",
           "img": "/assets/cases/yummers/arrampicata.jpg",
           "video": "/assets/cases/yummers/reel.jpg"
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "rossopomodorotartarugheninja": {
@@ -323,6 +339,14 @@
           "img": "/assets/cases/rossopomodoro/tartarughenija/giffoni.jpg",
           "video": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.mp4",
           "video2": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.m4v"
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "treccanifaoschwarz": {
@@ -377,6 +401,14 @@
               "img": "/assets/cases/treccani/treccani10.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "bobbled&d": {
@@ -418,6 +450,14 @@
 
         "row5bis": {
           "video": "/assets/cases/bobble/bobble5.mp4"
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "nestleaquaman": {
@@ -483,6 +523,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "milkatoys": {
@@ -553,6 +601,14 @@
               "img": "/assets/cases/milka/galleria/tour_1.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
 
@@ -621,6 +677,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "americanunclesonic2": {
@@ -688,6 +752,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "rossopomodoroghostbusters": {
@@ -755,6 +827,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       }
     }

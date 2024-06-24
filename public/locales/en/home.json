@@ -1,19 +1,56 @@
 {
   "home": {
+    "hero": {
+      "title": "Yes. We’re a dating <span class='text-white/60 dark:text-third/60'>agency</span>.",
+      "description": "Sometimes we create lasting bonds. Other times, however, lightning strikes arise, short but intense, electrifying and memorable."
+    },
     "cards": [
       {
-        "img": "/assets/cases/milka/cover_milka.png",
-        "button": "/cases/milkatoys"
+        "img": "/assets/cases/orociok/cover_orociok.jpg",
+        "button": "orocioktoys",
+        "name": "Oro Ciok e Toys Center",
+        "categories": [{ "name": "brand" }, { "name": "box" }],
+        "brand1": "Oro Ciok",
+        "brand2": "Toys Center"
       },
-
       {
-        "img": "/assets/works/2.jpg",
-        "button": "/cases/brand2"
+        "img": "/assets/cases/yummers/cover_yummers.jpg",
+        "button": "yummersghostbusters",
+        "name": "Yummers e Ghostbusters",
+        "brand1": "Yummer's",
+        "brand2": "Ghostbusters",
+        "categories": [{ "name": "movie" }]
       },
       {
-        "img": "/assets/cases/bobble/cover_bobble.jpg",
-        "button": "/cases/bobbled&d"
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
+        "button": "rossopomodorotartarugheninja",
+        "name": "Rosso Pomodoro e Tartarughe Ninja",
+        "brand1": "Rossopomodoro",
+        "brand2": "Tartarughe Ninja",
+        "categories": [{ "name": "movie" }]
+      },
+      {
+        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
+        "button": "treccanifaoschwarz",
+        "brand1": "Treccani",
+        "brand2": "Fao Schwarz",
+        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+      },
+      {
+        "img": "/assets/cases/bobble/cover_bobble_new.jpg",
+        "button": "bobbled&d",
+        "brand1": "Bobble Bobble",
+        "brand2": "Dangeons&Dragons",
+        "categories": [{ "name": "Movie" }]
       }
-    ]
+    ],
+    "marqueeLink": {
+      "text1": "all stories",
+      "text2": "all stories",
+      "text3": "all stories",
+      "text4": "all stories",
+      "text5": "all stories",
+      "text6": "all stories"
+    }
   }
 }

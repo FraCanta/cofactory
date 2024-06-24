@@ -1,4 +1,4 @@
-.paragraph {
+/* .paragraph {
   display: flex;
   font-size: 40px;
   max-width: 1280px;
@@ -9,7 +9,6 @@
 .paragraph .word {
   position: relative;
   margin-right: 12px;
-  /* margin-top: 12px; */
 }
 
 .paragraph .word .shadow {
@@ -21,4 +20,26 @@
   .paragraph {
     font-size: 22px;
   }
+} */
+
+/* Add this to your global CSS file or a style tag */
+
+.scroll-section-outer {
+  overflow: hidden;
+}
+
+.scroll-section-inner {
+  height: 100vh;
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.scroll-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

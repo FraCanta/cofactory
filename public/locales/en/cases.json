@@ -6,49 +6,65 @@
         "button": "orocioktoys",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "categories": [{ "name": "Brand" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:copyright-line", "color": "second" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
       {
         "img": "/assets/cases/yummers/cover_yummers.jpg",
         "button": "yummersghostbusters",
         "brand1": "Yummer's",
         "brand2": "Ghostbusters",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
         "button": "rossopomodorotartarugheninja",
         "brand1": "Rossopomodoro",
         "brand2": "Tartarughe Ninja",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/treccani/cover_treccani.jpg",
         "button": "treccanifaoschwarz",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "categories": [{ "name": "Brand" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:copyright-line", "color": "second" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
       {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "button": "bobbled&d",
         "brand1": "Bobble Bobble",
         "brand2": "Dangeons&Dragons",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/nestle/nestle.jpg",
         "button": "nestleaquaman",
         "brand1": "Nestlè",
         "brand2": "Aquaman",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/milka/cover_milka2.jpg",
         "button": "milkatoys",
         "brand1": "Milka",
         "brand2": "Toys Center",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "categories": [{ "name": "Brand" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:copyright-line", "color": "second" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
 
       {
@@ -56,21 +72,27 @@
         "button": "citrustartarugheninja",
         "brand1": "Citrus",
         "brand2": "Tartarughe Ninja",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
         "img": "/assets/cases/american/sonic2.jpg",
         "button": "americanunclesonic2",
         "brand1": "American Uncle",
         "brand2": "Sonic 2",
-        "categories": [{ "name": "Movie" }, { "name": "Box" }]
+        "categories": [{ "name": "Movie" }, { "name": "Box" }],
+        "icons": [
+          { "name": "mingcute:movie-line", "color": "yellow" },
+          { "name": "mingcute:box-2-line", "color": "pink" }
+        ]
       },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "button": "rossopomodoroghostbusters",
         "brand1": "Rossopomodoro",
         "brand2": "Ghostbusters",
-        "categories": [{ "name": "Movie" }]
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       }
     ],
     "singleCase": {
@@ -138,6 +160,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "yummersghostbusters": {
@@ -210,6 +240,14 @@
           "descrizione2": "L’evento ha generato un’impressionante redemption grazie a stories, post e reel dei creator che hanno realizzato contenuti ad altissima viralità.",
           "img": "/assets/cases/yummers/arrampicata.jpg",
           "video": "/assets/cases/yummers/reel.jpg"
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "rossopomodorotartarugheninja": {
@@ -301,6 +339,14 @@
           "img": "/assets/cases/rossopomodoro/tartarughenija/giffoni.jpg",
           "video": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.mp4",
           "video2": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.m4v"
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "treccanifaoschwarz": {
@@ -355,6 +401,14 @@
               "img": "/assets/cases/treccani/treccani10.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "bobbled&d": {
@@ -396,6 +450,14 @@
 
         "row5bis": {
           "video": "/assets/cases/bobble/bobble5.mp4"
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "nestleaquaman": {
@@ -461,6 +523,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "milkatoys": {
@@ -531,6 +601,14 @@
               "img": "/assets/cases/milka/galleria/tour_1.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
 
@@ -599,6 +677,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "americanunclesonic2": {
@@ -666,6 +752,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       },
       "rossopomodoroghostbusters": {
@@ -733,6 +827,14 @@
               "img": "/assets/cases/milka/milka4.jpg"
             }
           ]
+        },
+        "marqueeLink": {
+          "text1": "all stories",
+          "text2": "all stories",
+          "text3": "all stories",
+          "text4": "all stories",
+          "text5": "all stories",
+          "text6": "all stories"
         }
       }
     }

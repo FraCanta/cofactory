@@ -22,6 +22,7 @@ import VideoPlayer3 from "@/components/VideoPlayer3";
 import ParallaxText from "@/components/ParallaxText";
 
 const SingleCases = ({ work, previousWork, nextWork }) => {
+  console.log(work);
   return (
     <>
       <Head>
@@ -753,7 +754,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           </div>
         </section>
         <div className="w-full mx-auto overflow-hidden">
-          <ParallaxText />
+          <ParallaxText marqueeText={work.marqueeLink} />
         </div>
         <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-8 gap-6 ">
           {previousWork.titlePrev && (
