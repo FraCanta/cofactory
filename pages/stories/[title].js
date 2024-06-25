@@ -52,7 +52,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="absolute top-0 left-0 w-full h-full z-20"
+            className="absolute top-0 left-0 z-20 w-full h-full"
           >
             <Image
               src={work.img}
@@ -70,8 +70,8 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div className="flex flex-col gap-10 col-span-2">
-            <div className="justify-between  flex flex-col">
+          <div className="flex flex-col col-span-2 gap-10">
+            <div className="flex flex-col justify-between">
               <h1
                 className={`${myFont.className} dark:text-third text-white text-4xl md:text-6xl lg:text-4xl 2xl:text-[3.3rem] flex flex-wrap items-center gap-2 md:gap-4 2xl:gap-4`}
               >
@@ -81,14 +81,14 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={Icona}
                     alt=""
                     fill
-                    className="h-auto w-auto dark:contrast-0"
+                    className="w-auto h-auto dark:contrast-0"
                   />
                 </span>
 
                 {work.brand2}
               </h1>
             </div>
-            <div className="justify-between items-center flex ">
+            <div className="flex items-center justify-between ">
               <p
                 className={`${myFont2.className} dark:text-third text-white text-base md:text-xl lg:text-lg  2xl:text-xl  flex  gap-4 h-full`}
               >
@@ -96,8 +96,8 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </p>
             </div>
           </div>
-          <div className="z-10  grid grid-cols-1 gap-6">
-            <div className=" flex flex-col space-y-1">
+          <div className="z-10 grid grid-cols-1 gap-6">
+            <div className="flex flex-col space-y-1 ">
               <h2
                 className={`${myFont2.className} text-second text-base md:text-[3.2vw] lg:text-[1.8vw] 2xl:text-lg font-normal lowercase `}
               >
@@ -110,7 +110,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
               </h3>
             </div>
 
-            <div className="h-full justify-between items-start flex flex-col ">
+            <div className="flex flex-col items-start justify-between h-full ">
               <div
                 className={`${myFont2.className}  flex flex-wrap  gap-2 dark:text-third text-white  text-sm md:text-base lg:text-sm uppercase`}
               >
@@ -139,7 +139,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   id="#videoplayer2"
                 />
                 <div
-                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  className="flex flex-col gap-6 py-8 font-medium leading-10 text-center lg:py-14"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -161,13 +161,13 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   src={work.row0bis.img}
                   alt=""
                   fill
-                  className=" object-cover rounded-lg"
+                  className="object-cover rounded-lg "
                 />
               </div>
             ) : null}
             {work.row1 ? (
               <div
-                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                className="grid grid-cols-1 gap-6 lg:grid-cols-2"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -176,7 +176,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={work.row1.img1}
                     alt=""
                     fill
-                    className=" object-cover rounded-lg"
+                    className="object-cover rounded-lg "
                   />
                 </div>
                 {work.row1.img2 ? (
@@ -189,13 +189,13 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row1.img2}
                       alt=""
                       fill
-                      className="aspect-square object-cover rounded-lg"
+                      className="object-cover rounded-lg aspect-square"
                     />
                   </div>
                 ) : (
                   <VideoPlayer3
                     video={work.row1.video}
-                    className="h-full w-full object-cover  rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 )}
               </div>
@@ -203,7 +203,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row1bis ? (
               <div data-aos="fade-up" data-aos-delay="100">
                 <div
-                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  className="flex flex-col gap-6 py-8 font-medium leading-10 text-center lg:py-14"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -214,7 +214,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </p>
                 </div>
                 <div
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full justify-center relative"
+                  className="relative grid items-center justify-center h-full grid-cols-1 gap-6 lg:grid-cols-2"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -227,7 +227,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row1bis.bobble3}
                       alt=""
                       fill
-                      className="object-cover rounded-lg h-full aspect-auto"
+                      className="object-cover h-full rounded-lg aspect-auto"
                     />
                   </div>{" "}
                 </div>
@@ -235,7 +235,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
             {work.row2 ? (
               <div
-                className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center"
+                className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -250,12 +250,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row2.title.secondo}
                   </h2>
                 ) : (
-                  <div className="aspect-square w-full relative">
+                  <div className="relative w-full aspect-square">
                     <Image
                       src={work.row2.img3}
                       alt=""
                       fill
-                      className="h-full w-full object-cover  rounded-lg"
+                      className="object-cover w-full h-full rounded-lg"
                     />
                   </div>
                 )}
@@ -263,7 +263,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 {work.row2.video && work.row2.video2 ? (
                   <div className="w-full h-full">
                     <video
-                      className="h-full w-full aspect-square rounded-lg"
+                      className="w-full h-full rounded-lg aspect-square"
                       autoPlay
                       loop
                       muted
@@ -281,7 +281,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
             {work.limited ? (
               <div
-                className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                className="flex flex-col gap-6 py-8 font-medium leading-10 text-center lg:py-14"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -306,14 +306,14 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={work.row3.img4}
                     alt=""
                     fill
-                    className="h-full w-full object-cover  rounded-lg"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 </div>
               </>
             ) : null}
             {work.row3bis ? (
               <div
-                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                className="grid grid-cols-1 gap-6 lg:grid-cols-2"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -322,7 +322,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={work.row3bis.img1}
                     alt=""
                     fill
-                    className=" object-cover rounded-lg"
+                    className="object-cover rounded-lg "
                   />
                 </div>
                 {work.row3bis.img2 ? (
@@ -331,7 +331,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row3bis.img2}
                       alt=""
                       fill
-                      className="aspect-square object-cover rounded-lg"
+                      className="object-cover rounded-lg aspect-square"
                     />
                   </div>
                 ) : (
@@ -342,7 +342,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row4 ? (
               <>
                 <div
-                  className="text-center font-medium leading-10 py-8 lg:py-14 flex flex-col gap-6"
+                  className="flex flex-col gap-6 py-8 font-medium leading-10 text-center lg:py-14"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -370,7 +370,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
             {work.row5bis ? (
               <div
-                className=" w-full h-full"
+                className="w-full h-full "
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -394,7 +394,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 data-aos-delay="100"
               >
                 <video
-                  className="w-full h-full rounded-lg  object-cover"
+                  className="object-cover w-full h-full rounded-lg"
                   autoPlay
                   loop
                   muted
@@ -408,7 +408,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
             {work.row6bis ? (
               <div
-                className="aspect-square lg:h-screen w-auto relative "
+                className="relative w-auto aspect-square lg:h-screen "
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -416,14 +416,14 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   src={work.row6bis.img3}
                   alt=""
                   fill
-                  className="h-full w-full object-cover rounded-lg"
+                  className="object-cover w-full h-full rounded-lg"
                 />
               </div>
             ) : null}
 
             {work.row8 ? (
               <div data-aos="fade-up" data-aos-delay="100">
-                <div className=" w-full h-full">
+                <div className="w-full h-full ">
                   <video
                     id="videoPlayer"
                     className="rounded-lg  w-full object-cover lg:object-contain lg:aspect-video lg:w-[50%] mx-auto"
@@ -438,7 +438,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </video>
                 </div>
                 <div
-                  className="text-center font-medium leading-10 py-8 md:py-14 flex flex-col gap-6"
+                  className="flex flex-col gap-6 py-8 font-medium leading-10 text-center md:py-14"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -453,7 +453,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     {work.row8.descrizione}
                   </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                   <div
                     className="relative aspect-square"
                     data-aos="fade-up"
@@ -463,17 +463,17 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row8.img}
                       alt=""
                       fill
-                      className=" object-cover rounded-lg"
+                      className="object-cover rounded-lg "
                     />
                   </div>
                   <div
-                    className=" w-full h-full"
+                    className="w-full h-full "
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
                     <video
                       id="videoPlayer"
-                      className="rounded-lg  w-full object-cover  aspect-square"
+                      className="object-cover w-full rounded-lg aspect-square"
                       autoPlay
                       loop
                       muted
@@ -491,7 +491,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row7 ? (
               <div className="w-full" data-aos="fade-up" data-aos-delay="100">
                 {work.row7.paragrafo && (
-                  <div className="text-center font-medium leading-10 py-8 md:py-20 flex flex-col gap-6">
+                  <div className="flex flex-col gap-6 py-8 font-medium leading-10 text-center md:py-20">
                     {work.row7.paragrafo.map((el, i) => {
                       return (
                         <p
@@ -547,11 +547,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       {work.row7.carousel.map((c, i) => {
                         return (
                           <SwiperSlide key={i}>
-                            <div className="aspect-square relative">
+                            <div className="relative aspect-square">
                               <Image
                                 src={c.img}
                                 fill
-                                className="w-full h-full object-cover "
+                                className="object-cover w-full h-full "
                               />
                             </div>
                           </SwiperSlide>
@@ -581,13 +581,13 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
 
             {work.row7bis ? (
               <div
-                className=" w-full h-full"
+                className="w-full h-full "
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
                 {work.row7bis.paragrafo && (
                   <div
-                    className="text-center font-medium leading-10 mb-4 md:my-20 flex flex-col "
+                    className="flex flex-col mb-4 font-medium leading-10 text-center md:my-20 "
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -614,10 +614,10 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
             {work.row8bis ? (
               <div data-aos="fade-up" data-aos-delay="100">
-                <div className=" w-full h-full">
+                <div className="w-full h-full ">
                   <video
                     id="videoPlayer"
-                    className="rounded-lg  w-full object-cover  lg:aspect-video  mx-auto"
+                    className="object-cover w-full mx-auto rounded-lg lg:aspect-video"
                     autoPlay
                     loop
                     muted
@@ -629,7 +629,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   </video>
                 </div>
                 <div
-                  className="text-center font-medium leading-10 py-8 lg:py-20 flex flex-col gap-6"
+                  className="flex flex-col gap-6 py-8 font-medium leading-10 text-center lg:py-20"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -657,7 +657,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     </p>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                   <div
                     className="relative aspect-square"
                     data-aos="fade-up"
@@ -667,17 +667,17 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row8bis.img}
                       alt=""
                       fill
-                      className=" object-cover rounded-lg"
+                      className="object-cover rounded-lg "
                     />
                   </div>
                   <div
-                    className=" w-full h-full"
+                    className="w-full h-full "
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
                     <video
                       id="videoPlayer"
-                      className="rounded-lg  w-full object-cover  aspect-square"
+                      className="object-cover w-full rounded-lg aspect-square"
                       autoPlay
                       loop
                       muted
@@ -702,11 +702,11 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     src={work.row9.img}
                     alt=""
                     fill
-                    className=" object-cover rounded-lg"
+                    className="object-cover rounded-lg "
                   />
                 </div>
                 <div
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                  className="grid grid-cols-1 gap-6 lg:grid-cols-2"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -718,12 +718,12 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       src={work.row9.img1}
                       alt=""
                       fill
-                      className=" object-cover rounded-lg"
+                      className="object-cover rounded-lg "
                     />
                   </div>
                 </div>
                 <div
-                  className="text-center font-medium leading-10 mb-4 md:my-20 flex flex-col "
+                  className="flex flex-col mb-4 font-medium leading-10 text-center md:my-20 "
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -744,7 +744,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                         src={el.img}
                         alt=""
                         fill
-                        className=" object-cover rounded-lg"
+                        className="object-cover rounded-lg "
                       />
                     </div>
                   );
@@ -764,9 +764,9 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   src={previousWork.imgPrev}
                   fill
                   alt=""
-                  className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-30 hover:opacity-100"
+                  className="object-cover h-full transition-all rounded-lg grayscale hover:grayscale-0 opacity-30 hover:opacity-100"
                 />{" "}
-                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2 flex justify-center items-center gap-2 text-white dark:text-third">
+                <div className="absolute flex items-center justify-center gap-2 text-white translate-x-1/2 top-1/2 right-1/2 traslate-y-1/2 dark:text-third">
                   <p> PREV</p>
                   <Image
                     src="/assets/logo/per2.svg"
@@ -786,10 +786,10 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   src={nextWork.imgNext}
                   fill
                   alt=""
-                  className="h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100 "
+                  className="object-cover h-full transition-all rounded-lg opacity-50 grayscale hover:grayscale-0 hover:opacity-100 "
                 />
 
-                <div className="absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2  w-full flex justify-center items-center gap-2 text-white dark:text-third">
+                <div className="absolute flex items-center justify-center w-full gap-2 text-white translate-x-1/2 top-1/2 right-1/2 traslate-y-1/2 dark:text-third">
                   <Image
                     src="/assets/logo/per1.svg"
                     alt=""

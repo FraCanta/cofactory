@@ -45,7 +45,7 @@ const Stories = ({ translation }) => {
           className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xl:text-8xl w-[90%] mx-auto `}
         >
           <span>Happy</span>
-          <span className="text-white/60 dark:text-third/60 ml-4">
+          <span className="ml-4 text-white/60 dark:text-third/60">
             stories
           </span>{" "}
           for happy clients.
@@ -65,10 +65,10 @@ const Stories = ({ translation }) => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <div className="w-[90%] mx-auto">
-          <div className="relative w-full mt-10 flex flex-wrap gap-y-6 justify-between items-center">
+          <div className="relative flex flex-wrap items-center justify-between w-full mt-10 gap-y-6">
             <div>
-              <label className="text-white/60 text-xl">Filter: </label>
-              <span className="text-white text-xl ml-2">
+              <label className="text-xl text-white/60">Filter: </label>
+              <span className="ml-2 text-xl text-white">
                 {selectedCategory}
               </span>
             </div>
@@ -83,7 +83,7 @@ const Stories = ({ translation }) => {
               >
                 <Icon
                   icon="mage:filter"
-                  className="text-white dark:text-third w-6"
+                  className="w-6 text-white dark:text-third"
                 />
                 All
               </button>
@@ -93,7 +93,7 @@ const Stories = ({ translation }) => {
               >
                 <Icon
                   icon="mage:filter"
-                  className="text-white dark:text-third w-6"
+                  className="w-6 text-white dark:text-third"
                 />
                 Filter
               </button>
@@ -107,7 +107,7 @@ const Stories = ({ translation }) => {
               >
                 <Icon
                   icon="mingcute:copyright-line"
-                  className="text-second dark:text-third w-6"
+                  className="w-6 text-second dark:text-third"
                 />
                 Brand
               </button>
@@ -121,7 +121,7 @@ const Stories = ({ translation }) => {
               >
                 <Icon
                   icon="mingcute:box-2-line"
-                  className="text-pink dark:text-third w-6"
+                  className="w-6 text-pink dark:text-third"
                 />
                 Box
               </button>
@@ -135,7 +135,7 @@ const Stories = ({ translation }) => {
               >
                 <Icon
                   icon="mingcute:movie-line"
-                  className="text-yellow dark:text-third w-6"
+                  className="w-6 text-yellow dark:text-third"
                 />
                 Movie
               </button>
@@ -170,15 +170,15 @@ const Stories = ({ translation }) => {
                         className="object-cover rounded-lg lg:opacity-100 hover:lg:opacity-50 hover:lg:rounded-[250px] hover:transition-all hover:duration-700 hover:lg:grayscale"
                       />
                       {isHovered && (
-                        <div className="absolute hidden top-1/2 left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2 lg:flex flex-col lg:flex-row items-center justify-center transition-all duration-1000 ease-in text-white dark:text-third text-3xl lg:text-4xl font-bold w-full">
+                        <div className="absolute flex-col items-center justify-center hidden w-full text-3xl font-bold text-white transition-all duration-1000 ease-in -translate-x-1/2 translate-y-1/2 top-1/2 left-1/2 bottom-1/2 lg:flex lg:flex-row dark:text-third lg:text-4xl">
                           <span className={`${myFont.className}`}>
                             {el.brand1}
                           </span>{" "}
-                          <span className="relative h-8 w-8 mx-6">
+                          <span className="relative w-8 h-8 mx-6">
                             <Image
                               src="/assets/logo/new_logo_intro.svg"
                               fill
-                              className="h-full w-full object-cover"
+                              className="object-cover w-full h-full"
                             />
                           </span>{" "}
                           <span className={`${myFont.className}`}>
@@ -187,28 +187,29 @@ const Stories = ({ translation }) => {
                         </div>
                       )}
                     </div>
-                    <div className="py-6 text-white text-lg font-bold flex flex-wrap items-center lg:hidden">
+                    <div className="flex flex-wrap items-center py-6 text-lg font-bold text-white lg:hidden">
                       <span className={`${myFont2.className}`}>
                         {el.brand1}
                       </span>{" "}
-                      <span className="relative h-5 w-5 mx-4">
+                      <span className="relative w-5 h-5 mx-4">
                         <Image
                           src="/assets/logo/new_logo_intro.svg"
                           fill
-                          className="h-full w-full object-cover"
+                          className="object-cover w-full h-full"
                         />
                       </span>{" "}
                       <span className={`${myFont2.className}`}>
                         {el.brand2}
                       </span>
                     </div>
-                    <div className="text-white text-sm uppercase flex justify-between w-full lg:hidden">
-                      <div className="flex gap-4">
+                    <div className="flex justify-between w-full text-sm text-white uppercase lg:hidden">
+                      <div className="flex gap-2">
                         {el.icons.map((icon, index) => (
                           <Icon
                             key={index}
                             icon={icon.name}
-                            className={`text-${icon.color}  w-6`}
+                            width={25}
+                            className={`text-${icon.color}`}
                           />
                         ))}
                       </div>
@@ -232,15 +233,15 @@ const Stories = ({ translation }) => {
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
           transition={{ type: "linear", stiffness: 100 }}
-          className="fixed bottom-0 left-0 right-0 bg-white rounded-t-lg p-4 shadow-lg z-50 lg:hidden"
+          className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white rounded-t-lg shadow-lg lg:hidden"
         >
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-bold">Select Category</h2>
             <button className="text-lg" onClick={() => setShowDrawer(false)}>
               <IoChevronDownOutline size={24} />
             </button>
           </div>
-          <div className="flex flex-col gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4">
             <button
               className={`py-2 px-8 rounded-lg shadow flex items-center text-white uppercase gap-1 w-full justify-center ${
                 activeButton === "All"
@@ -251,7 +252,7 @@ const Stories = ({ translation }) => {
             >
               <Icon
                 icon="mage:filter"
-                className="text-white dark:text-third w-6"
+                className="w-6 text-white dark:text-third"
               />
               All
             </button>
@@ -265,7 +266,7 @@ const Stories = ({ translation }) => {
             >
               <Icon
                 icon="mingcute:copyright-line"
-                className="text-second dark:text-third w-6"
+                className="w-6 text-second dark:text-third"
               />
               Brand
             </button>
@@ -279,7 +280,7 @@ const Stories = ({ translation }) => {
             >
               <Icon
                 icon="mingcute:box-2-line"
-                className="text-pink dark:text-third w-6"
+                className="w-6 text-pink dark:text-third"
               />
               Box
             </button>
@@ -293,7 +294,7 @@ const Stories = ({ translation }) => {
             >
               <Icon
                 icon="mingcute:movie-line"
-                className="text-yellow dark:text-third w-6"
+                className="w-6 text-yellow dark:text-third"
               />
               Movie
             </button>

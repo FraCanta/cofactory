@@ -15,8 +15,6 @@ const Factory = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
     const pin = gsap.fromTo(
       sectionRef.current,
@@ -26,7 +24,6 @@ const Factory = () => {
       {
         translateX: "-300vw",
         ease: "none",
-        duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
@@ -36,13 +33,36 @@ const Factory = () => {
         },
       }
     );
+
+    const sections = document.querySelectorAll("[data-bgcolor]");
+
+    sections.forEach((section, i) => {
+      const prevSection = sections[i - 1];
+      const prevBgColor = prevSection ? prevSection.dataset.bgcolor : "";
+      const prevTextColor = prevSection ? prevSection.dataset.textcolor : "";
+      const bgColor = section.dataset.bgcolor;
+      const textColor = section.dataset.textcolor;
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () =>
+          gsap.to("body", { backgroundColor: bgColor, color: textColor }),
+        onLeaveBack: () =>
+          gsap.to("body", {
+            backgroundColor: prevBgColor,
+            color: prevTextColor,
+          }),
+      });
+    });
+
     return () => {
-      {
-        /* A return function for killing the animation on component unmount */
-      }
       pin.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
   return (
     <>
       <motion.div
@@ -50,7 +70,8 @@ const Factory = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="flex flex-col items-center justify-center w-full h-screen gap-6 mx-auto bg-second/20 dark:bg-second/30"
+        className="flex flex-col items-center justify-center w-full h-screen gap-6 mx-auto "
+        data-bgcolor="#1b1b1c"
       >
         <MaskText>
           <h1
@@ -90,14 +111,76 @@ const Factory = () => {
           </MaskText>
         </div>
       </motion.div>
+      {/* Sections con Transizione di Colore */}
+      <div>
+        <section
+          className="relative flex items-center justify-center lg:w-screen min-h-screen w-[90%] mx-auto scroll-section"
+          data-bgcolor="rgb(54 139 144 / 1.8)"
+          data-textcolor="#fffffff"
+        >
+          <div className="flex flex-wrap items-center justify-around w-full gap-8">
+            <div className="w-full text-3xl lg:text-5xl lg:w-96">
+              In nature, nothing is <span className="text-green">perfect</span>{" "}
+              and everything is perfect. Trees can be contorted, bent in weird
+              ways, and they're still beautiful.
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/5604966/pexels-photo-5604966.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt=""
+                className="rounded-3xl"
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          className="relative flex items-center justify-center lg:w-screen min-h-screen w-[90%] mx-auto scroll-section"
+          data-bgcolor="rgb(187 84 113 / 1.4)"
+          data-textcolor="#c2c1b3"
+        >
+          <div className="flex flex-wrap items-center justify-around w-full gap-8">
+            <div>
+              <img
+                src="https://images.pexels.com/photos/4467879/pexels-photo-4467879.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt=""
+                className="rounded-3xl"
+              />
+            </div>
+            <div className="text-3xl lg:text-5xl w-96">
+              Look deep into <span className="text-green">Yourself</span>, and
+              then you will understand everything better.
+            </div>
+          </div>
+        </section>
+        <section
+          className="relative flex items-center justify-center lg:w-screen min-h-screen w-[90%] mx-auto scroll-section"
+          data-bgcolor="#032F35"
+          data-textcolor="#b3c2ba"
+        >
+          <div className="flex flex-wrap items-center justify-around w-full gap-8">
+            <div className="text-3xl lg:text-5xl w-96">
+              The best thing one can do when it's raining is{" "}
+              <span className="text-green">to let it rain.</span>
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt=""
+                className="rounded-3xl"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
 
-      <section className="scroll-section-outer">
+      <div className="scroll-section-outer" data-bgcolor="#1b1b1c">
         <div ref={triggerRef}>
           <div ref={sectionRef} className="scroll-section-inner">
             <div className="scroll-section">
               <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 p-4">
                 <div
                   className={`${myFont2.className}   dark:text-third text-white  text-lg `}
+                  data-aos="fade-right"
                 >
                   <p>
                     Intuiamo una potenziale{" "}
@@ -122,7 +205,10 @@ const Factory = () => {
                     className="object-contain rounded-lg dark:contrast-50 w-[100px] h-[100px]"
                   />
                 </motion.div> */}
-                <div className="flex flex-col items-center justify-center gap-6 text-2xl lg:text-center">
+                <div
+                  className="flex flex-col items-center justify-center gap-6 text-2xl lg:text-center"
+                  data-aos="fade-left"
+                >
                   <h2 className="text-5xl text-white lg:text-6xl dark:text-third">
                     <span
                       className={`${myFont.className} text-white/60 dark:text-third/60`}
@@ -307,7 +393,7 @@ const Factory = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
