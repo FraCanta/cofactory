@@ -16,7 +16,6 @@ const images = [
   "../assets/cases/yummers/cover_yummers.jpg",
 ];
 
-console.log(images);
 function SmoothParallaxImage({ translation }) {
   console.log(translation);
   const gallery = useRef(null);
@@ -78,7 +77,12 @@ const Column = ({ images, y }) => {
       {images.map((src, i) => {
         return (
           <div key={i} className="imageContainer">
-            <Image src={`/images/${src}`} alt="image" fill />
+            <Image
+              src={`/images/${src}`}
+              alt="image"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         );
       })}
