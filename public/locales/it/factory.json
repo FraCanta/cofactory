@@ -6,5 +6,16 @@
     "text4": "tutte le storie",
     "text5": "tutte le storie",
     "text6": "tutte le storie"
-  }
+  },
+  "images": [
+    "/assets/cases/american/cover_american_new.jpg",
+    "/assets/cases/bobble/cover_bobble_new.jpg",
+    "/assets/cases/citrus/citrus.jpeg",
+    "/assets/cases/milka/cover_milka2.jpg",
+    "/assets/cases/nestle/nestle.jpg",
+    "/assets/cases/orociok/cover_orociok.jpg",
+    "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
+    "/assets/cases/treccani/cover_treccani_new.jpg",
+    "/assets/cases/yummers/cover_yummers.jpg"
+  ]
 }

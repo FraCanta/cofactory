@@ -4,20 +4,20 @@ import Lenis from "@studio-freight/lenis";
 import { useTransform, useScroll, motion } from "framer-motion";
 import ParallaxText from "../ParallaxText";
 
-const images = [
-  "../assets/cases/american/cover_american_new.jpg",
-  "../assets/cases/bobble/cover_bobble_new.jpg",
-  "../assets/cases/citrus/citrus.jpeg",
-  "../assets/cases/milka/cover_milka2.jpg",
-  "../assets/cases/nestle/nestle.jpg",
-  "../assets/cases/orociok/cover_orociok.jpg",
-  "../assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
-  "../assets/cases/treccani/cover_treccani_new.jpg",
-  "../assets/cases/yummers/cover_yummers.jpg",
-];
+// const images = [
+//   "../assets/cases/american/cover_american_new.jpg",
+//   "../assets/cases/bobble/cover_bobble_new.jpg",
+//   "../assets/cases/citrus/citrus.jpeg",
+//   "../assets/cases/milka/cover_milka2.jpg",
+//   "../assets/cases/nestle/nestle.jpg",
+//   "../assets/cases/orociok/cover_orociok.jpg",
+//   "../assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
+//   "../assets/cases/treccani/cover_treccani_new.jpg",
+//   "../assets/cases/yummers/cover_yummers.jpg",
+// ];
 
 function SmoothParallaxImage({ translation }) {
-  console.log(translation);
+  console.log(typeof translation?.images);
   const gallery = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
@@ -34,11 +34,10 @@ function SmoothParallaxImage({ translation }) {
   useEffect(() => {
     const lenis = new Lenis();
 
-    function raf(time) {
+    const raf = (time) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+    };
 
     const resize = () => {
       setDimension({ width: window.innerWidth, height: window.innerHeight });
@@ -50,16 +49,36 @@ function SmoothParallaxImage({ translation }) {
 
     return () => {
       window.removeEventListener("resize", resize);
-      lenis.destroy();
     };
   }, []);
   return (
     <main className="main">
       <div className="spacer"></div>
       <div ref={gallery} className="gallery">
-        <Column images={[images[0], images[1], images[2]]} y={y} />
-        <Column images={[images[3], images[4], images[5]]} y={y2} />
-        <Column images={[images[6], images[7], images[8]]} y={y3} />
+        <Column
+          translation={[
+            translation?.images[0],
+            translation?.images[1],
+            translation?.images[2],
+          ]}
+          y={y}
+        />
+        <Column
+          translation={[
+            translation?.images[3],
+            translation?.images[4],
+            translation?.images[5],
+          ]}
+          y={y2}
+        />
+        <Column
+          translation={[
+            translation?.images[6],
+            translation?.images[7],
+            translation?.images[8],
+          ]}
+          y={y3}
+        />
       </div>
       <div className="w-full ">
         <ParallaxText marqueeText={translation.marqueeLink} />
@@ -71,18 +90,13 @@ function SmoothParallaxImage({ translation }) {
 
 export default SmoothParallaxImage;
 
-const Column = ({ images, y }) => {
+const Column = ({ translation, y }) => {
   return (
     <motion.div className="column" style={{ y }}>
-      {images.map((src, i) => {
+      {translation?.map((src, i) => {
         return (
           <div key={i} className="imageContainer">
-            <Image
-              src={`/images/${src}`}
-              alt="image"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
+            <Image src={`${src}`} alt="image" fill />
           </div>
         );
       })}
