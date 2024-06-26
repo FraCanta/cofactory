@@ -15,6 +15,16 @@ module.exports = withPlugins([
       localeDetection: false,
     },
   },
+  {
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "images.pexels.com",
+        },
+      ],
+    },
+  },
   // {
   //   async headers() {
   //     return [

@@ -71,11 +71,11 @@ const Navbar = ({ lang }) => {
             className="w-[130px]"
           />
         </Link>
-        <div className="flex gap-8 items-center relative">
+        <div className="relative flex items-center gap-8">
           <DarkModeToggle />
           <div
             onClick={() => setOpen(!isOpen)}
-            className="block ease-in duration-300 z-20 cursor-pointer"
+            className="z-20 block duration-300 ease-in cursor-pointer"
           >
             <MenuButton
               isOpen={isOpen}
@@ -94,14 +94,14 @@ const Navbar = ({ lang }) => {
           initial={{ opacity: 0, y: "-100%" }}
           animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? "0%" : "-100%" }}
           transition={{ ease: "easeOut", duration: 0.4 }}
-          className="absolute top-0 lg:top-0 left-0 right-0 bottom-0 flex w-full h-screen bg-third dark:bg-white text-white dark:text-third"
+          className="absolute top-0 bottom-0 left-0 right-0 flex w-full h-screen text-white lg:top-0 bg-third dark:bg-white dark:text-third"
         >
           <div className="w-[90%] mx-auto lg:mt-[95px] flex items-center justify-center">
             <ul
               className={`${myFont.className} grid grid-cols-1 lg:grid-cols-3 items-center w-full gap-8`}
             >
               <li
-                className="flex flex-row lg:flex-col gap-2 items-center"
+                className="flex flex-row items-center gap-2 lg:flex-col"
                 onClick={() => setOpen(false)}
                 onMouseEnter={() => setHoveredItem("/factory")}
                 onMouseLeave={() => setHoveredItem(null)}
@@ -129,7 +129,7 @@ const Navbar = ({ lang }) => {
                   />
                 </Link>
                 <motion.span
-                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0"
+                  className="relative w-8 h-8 -rotate-90 lg:h-20 lg:w-20 lg:rotate-0"
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity:
@@ -143,12 +143,13 @@ const Navbar = ({ lang }) => {
                   <Image
                     src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain contrast-50"
+                    alt="freccia in su"
+                    className="object-contain w-full h-full contrast-50"
                   />
                 </motion.span>
               </li>
               <li
-                className="flex flex-row lg:flex-col gap-2 items-center"
+                className="flex flex-row items-center gap-2 lg:flex-col"
                 onClick={() => setOpen(false)}
                 onMouseEnter={() => setHoveredItem("/stories")}
                 onMouseLeave={() => setHoveredItem(null)}
@@ -176,7 +177,7 @@ const Navbar = ({ lang }) => {
                   />
                 </Link>
                 <motion.span
-                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0"
+                  className="relative w-8 h-8 -rotate-90 lg:h-20 lg:w-20 lg:rotate-0"
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity:
@@ -190,12 +191,12 @@ const Navbar = ({ lang }) => {
                   <Image
                     src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain contrast-50"
+                    className="object-contain w-full h-full contrast-50"
                   />
                 </motion.span>
               </li>
               <li
-                className="flex flex-row lg:flex-col gap-2 items-center"
+                className="flex flex-row items-center gap-2 lg:flex-col"
                 onClick={() => setOpen(false)}
                 onMouseEnter={() => setHoveredItem("/affinity")}
                 onMouseLeave={() => setHoveredItem(null)}
@@ -224,7 +225,7 @@ const Navbar = ({ lang }) => {
                   />
                 </Link>
                 <motion.span
-                  className="relative h-8 w-8 lg:h-20 lg:w-20 -rotate-90 lg:rotate-0 "
+                  className="relative w-8 h-8 -rotate-90 lg:h-20 lg:w-20 lg:rotate-0 "
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity:
@@ -238,7 +239,7 @@ const Navbar = ({ lang }) => {
                   <Image
                     src="/assets/logo/frecciaSU.svg"
                     fill
-                    className="w-full h-full object-contain contrast-50"
+                    className="object-contain w-full h-full contrast-50"
                   />
                 </motion.span>
               </li>

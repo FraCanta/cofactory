@@ -6,6 +6,7 @@
   position: sticky;
   top: 0px;
   margin-top: 150px;
+  width: 100%;
 }
 
 .cardContainer .card {
@@ -28,12 +29,14 @@
 .cardContainer .card .body {
   display: flex;
   height: 100%;
+  width: 100%;
   gap: 50px;
 }
 
 .cardContainer .card .body .imageContainer {
   position: relative;
   width: 100%;
+  margin: 0 auto;
   height: 100vh;
   border-radius: 25px;
   overflow: hidden;

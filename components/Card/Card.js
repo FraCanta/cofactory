@@ -29,7 +29,7 @@ const Card = ({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={`/stories/${button}`} className="relative">
+    <Link href={`/stories/${button}`} className="relative w-full">
       <div
         className="cardContainer"
         ref={container}
@@ -42,19 +42,17 @@ const Card = ({
         >
           <div className="body">
             <div className="imageContainer">
-              <motion.div style={{ scale: imageScale }} className="inner">
+              <motion.div className="inner">
                 <Image
                   fill
                   src={img}
-                  alt="image"
+                  alt="cover stories"
                   className="object-cover rounded-lg"
                 />
               </motion.div>
               <div
-                className={`absolute top-0 h-full w-full flex flex-col items-center justify-center text-3xl lg:text-6xl  text-white transition-opacity duration-300 gap-4 lg:gap-6 ${
-                  hovered
-                    ? "bg-third/80 opacity-100 h-full w-full"
-                    : "opacity-0"
+                className={`absolute top-0 h-full w-full flex flex-col items-center justify-center text-3xl lg:text-6xl text-white transition-opacity duration-300 gap-4 lg:gap-6 ${
+                  hovered ? "bg-third/80 opacity-100" : "opacity-0"
                 }`}
               >
                 <MaskText>
@@ -62,12 +60,12 @@ const Card = ({
                     {brand1}
                   </span>
                 </MaskText>
-
-                <span className="relative h-6 w-6 lg:h-8 lg:w-8 mx-6">
+                <span className="relative w-6 h-6 mx-6 lg:h-8 lg:w-8">
                   <Image
                     src="/assets/logo/new_logo_intro.svg"
                     fill
-                    className="object-cover contrast-125 rotate-90"
+                    className="object-cover rotate-90 contrast-125"
+                    alt="logo"
                   />
                 </span>
                 <MaskText>

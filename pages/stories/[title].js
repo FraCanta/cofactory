@@ -20,9 +20,22 @@ import Link from "next/link";
 import SlidingCard from "@/components/SlidingCard/SlidingCard";
 import VideoPlayer3 from "@/components/VideoPlayer3";
 import ParallaxText from "@/components/ParallaxText";
-
+import Lenis from "@studio-freight/lenis";
+import { useEffect } from "react";
 const SingleCases = ({ work, previousWork, nextWork }) => {
-  console.log(work);
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy(); // Pulizia per prevenire eventuali perdite di memoria
+    };
+  }, []);
   return (
     <>
       <Head>

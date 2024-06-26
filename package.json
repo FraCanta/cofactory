@@ -12,6 +12,7 @@
     "@gsap/react": "^2.1.1",
     "@iconify/react": "^4.1.1",
     "@motionone/utils": "^10.18.0",
+    "@studio-freight/lenis": "^1.0.42",
     "@tippyjs/react": "^4.2.6",
     "animejs": "^3.2.2",
     "aos": "^2.3.4",

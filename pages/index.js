@@ -14,7 +14,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
 import ParallaxText from "@/components/ParallaxText";
 import Card from "@/components/Card/Card";
-
+import Lenis from "@studio-freight/lenis";
 gsap.registerPlugin(ScrollTrigger);
 
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
@@ -26,6 +26,20 @@ const Home = ({ translation }) => {
     target: container,
     offset: ["start start", "end end"],
   });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy(); // Pulizia per prevenire eventuali perdite di memoria
+    };
+  }, []);
 
   return (
     <>
@@ -57,12 +71,12 @@ const Home = ({ translation }) => {
           </div>
         </Hero>
         <div className="relative w-full">
-          <div className="w-11/12 mx-auto flex justify-end absolute -bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+          <div className="absolute z-20 flex justify-end w-11/12 mx-auto -translate-x-1/2 -translate-y-1/2 -bottom-10 left-1/2">
             <TimbroMarquee />
           </div>
         </div>
 
-        <div className="w-11/12 mx-auto relative min-h-screen">
+        <div className="relative w-11/12 min-h-screen mx-auto" ref={container}>
           {translation.cards.map((card, index) => {
             const targetScale = 1 - (translation.cards.length - index) * 0.05;
             return (
@@ -86,17 +100,16 @@ const Home = ({ translation }) => {
         </div>
         <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
 
-        {/* 
         <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white dark:text-third min-h-screen gap-8 md:gap-10 ">
           <Chat />
-          <div className="flex flex-col gap-8 py-6 p-0 md:p-8">
+          <div className="flex flex-col gap-8 p-0 py-6 md:p-8">
             <h2 className={`${myFont.className} text-4xl lg:text-7xl`}>
               Testo accattivante da mettere qui
             </h2>
             <p className={`${myFont2.className} text-xl`}>
-              un paragrafo che spieghi velocemente cosa avrebbero da
-              guadagnarci e invitandoli a contattarvi. Un testo che arrivi
-              fino al max il terzo rigo!
+              un paragrafo che spieghi velocemente cosa avrebbero da guadagnarci
+              e invitandoli a contattarvi. Un testo che arrivi fino al max il
+              terzo rigo!
             </p>
             <Link
               href="/contatti"
@@ -107,7 +120,6 @@ const Home = ({ translation }) => {
             </Link>
           </div>
         </div>
-        */}
       </motion.div>
     </>
   );

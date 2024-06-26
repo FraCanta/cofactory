@@ -69,7 +69,7 @@ const SplashScreen = ({ finishLoading }) => {
 
   return (
     <div
-      className="flex h-screen items-center justify-center text-white fixed inset-0 bg-third"
+      className="fixed inset-0 flex items-center justify-center h-screen text-white bg-third"
       id="bgIntro"
     >
       <div>
@@ -107,13 +107,14 @@ const SplashScreen = ({ finishLoading }) => {
               di incontri
             </div>
             <div
-              className="flex opacity-0 w-3 h-3 lg:w-5 lg:h-5 relative mt-0 xl:mt-2 "
+              className="relative flex w-3 h-3 mt-0 opacity-0 lg:w-5 lg:h-5 xl:mt-2 "
               id="newLogoIntro"
             >
               <Image
                 src="/assets/logo/new_logo_intro.svg"
                 fill
-                className="object-contain h-full w-full "
+                alt="logo icon"
+                className="object-contain w-full h-full "
               />
             </div>
             <div
