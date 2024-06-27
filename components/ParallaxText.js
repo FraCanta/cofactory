@@ -40,7 +40,7 @@ function ParallaxText({ marqueeText }) {
       });
       requestAnimationFrame(animation);
     }
-  }, [sliderItems]);
+  }, [sliderItems.current]);
 
   const animation = () => {
     if (xPercent < -100) {
@@ -142,37 +142,37 @@ const Phrase = ({
       <div ref={sliderItems} className={`${myFont.className} sliderItems`}>
         <p
           ref={firstText}
-          className="text-stroke text-transparent dark:text-stroke-dark"
+          className="text-transparent text-stroke dark:text-stroke-dark"
         >
           {marqueeText.text1}
         </p>
         <p
           ref={secondText}
-          className="text-stroke text-transparent dark:text-stroke-dark"
+          className="text-transparent text-stroke dark:text-stroke-dark"
         >
           {marqueeText.text2}
         </p>
         <p
           ref={thirdText}
-          className="text-stroke text-transparent dark:text-stroke-dark"
+          className="text-transparent text-stroke dark:text-stroke-dark"
         >
           {marqueeText.text3}
         </p>
         <p
           ref={fourthText}
-          className="text-stroke text-transparent dark:text-stroke-dark"
+          className="text-transparent text-stroke dark:text-stroke-dark"
         >
           {marqueeText.text4}
         </p>
         <p
           ref={fifthText}
-          className="text-stroke text-transparent dark:text-stroke-dark"
+          className="text-transparent text-stroke dark:text-stroke-dark"
         >
           {marqueeText.text5}
         </p>
         <p
           ref={sixthText}
-          className="text-stroke text-transparent dark:text-stroke-dark"
+          className="text-transparent text-stroke dark:text-stroke-dark"
         >
           {marqueeText.text6}
         </p>

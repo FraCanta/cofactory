@@ -73,8 +73,8 @@ const imagePaths = [
 ];
 
 const MarqueeItem = ({ marqueeVisible }) => {
-  const logosRef = useRef(null);
-  const sliderLogo = useRef(null);
+  const logosRef = useRef();
+  const sliderLogo = useRef();
   let xPercent = 0;
   let direction = -1;
 

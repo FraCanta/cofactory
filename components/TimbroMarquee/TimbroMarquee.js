@@ -5,7 +5,7 @@ import CofactoryButton from "../layout/CofactoryButton/CofactoryButton";
 
 function TimbroMarquee() {
   const [marqueeVisible, setMarqueeVisible] = useState(false);
-  const marqueeRef = useRef(null);
+  const marqueeRef = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleToggleMarquee = () => {
@@ -39,16 +39,16 @@ function TimbroMarquee() {
   };
 
   return (
-    <div className="relative flex items-center w-full">
+    <div className="relative flex items-center w-full overflow-hidden">
       <div
         ref={marqueeRef}
         style={{ overflow: "hidden", width: 0, opacity: 0, display: "none" }}
-        className="absolute right-20 z-0 "
+        className="absolute z-0 right-20 "
       >
         <Marquee marqueeVisible={marqueeVisible} />
       </div>
       <div
-        className="relative w-24 lg:w-28 2xla:w-32 aspect-square z-20 cursor-pointer animate-spin"
+        className="relative z-20 w-24 cursor-pointer lg:w-28 2xla:w-32 aspect-square animate-spin"
         onClick={() => {
           handleToggleMarquee();
           togglePlayPause(); // Cambia lo stato di play/pause

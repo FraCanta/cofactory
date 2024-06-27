@@ -20,34 +20,6 @@ const myFont3 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 gsap.registerPlugin(ScrollTrigger);
 
 const Factory = ({ translation }) => {
-  console.log(translation);
-  // const sectionRef = useRef(null);
-  // const triggerRef = useRef(null);
-
-  // useEffect(() => {
-  //   const pin = gsap.fromTo(
-  //     sectionRef.current,
-  //     {
-  //       x: 0,
-  //     },
-  //     {
-  //       x: "-300vw",
-  //       ease: "none",
-  //       scrollTrigger: {
-  //         trigger: triggerRef.current,
-  //         start: "top top",
-  //         end: "+=3000",
-  //         scrub: 2,
-  //         pin: true,
-  //       },
-  //     }
-  //   );
-
-  //   return () => {
-  //     pin.kill();
-  //   };
-  // }, []);
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -318,7 +290,6 @@ export async function getStaticProps(locale, context) {
       obj = translationIT;
       break;
   }
-  console.log(obj);
 
   return {
     props: {

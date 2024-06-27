@@ -18,7 +18,7 @@ import ParallaxText from "../ParallaxText";
 
 function SmoothParallaxImage({ translation }) {
   console.log(typeof translation?.images);
-  const gallery = useRef(null);
+  const gallery = useRef();
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
   const { scrollYProgress } = useScroll({
@@ -50,7 +50,7 @@ function SmoothParallaxImage({ translation }) {
     return () => {
       window.removeEventListener("resize", resize);
     };
-  }, []);
+  }, [gallery]);
   return (
     <main className="main">
       <div className="spacer"></div>

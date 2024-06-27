@@ -43,7 +43,7 @@ const RevealOnScroll = () => {
     return () => {
       tl.kill();
     };
-  }, []);
+  }, [revealRef]);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -57,7 +57,7 @@ const RevealOnScroll = () => {
     return () => {
       lenis.destroy(); // Pulizia per prevenire eventuali perdite di memoria
     };
-  }, []);
+  }, [revealRef]);
 
   return (
     <div className="relative" style={{ Height: "100vh" }} ref={revealRef}>
