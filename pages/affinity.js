@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MaskText } from "@/components/MaskText";
 import localFont from "next/font/local";
-import Line from "@/components/Line";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import Link from "next/link";
@@ -36,11 +35,11 @@ const Contatti = () => {
           compilando questo semplice modulo e ti risponderemo in un attimo.
           Naturalmente, se preferisci farlo alla vecchia maniera, puoi sempre
           scriverci a
-          <Link href="mailto:info@cofactory.it" className="text-pink mx-2">
+          <Link href="mailto:info@cofactory.it" className="mx-2 text-pink">
             info@cofactory.it
           </Link>{" "}
         </p>
-        <ul className="text-white text-2xl flex flex-col gap-4">
+        <ul className="flex flex-col gap-4 text-2xl text-white">
           <li className="px-6 py-4 border border-pink max-w-max rounded-xl">
             A Parlaci del tuo progetto
           </li>

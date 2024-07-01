@@ -2,34 +2,55 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Lenis from "@studio-freight/lenis";
 import { useTransform, useScroll, motion } from "framer-motion";
-import ParallaxText from "../ParallaxText";
-
-// const images = [
-//   "../assets/cases/american/cover_american_new.jpg",
-//   "../assets/cases/bobble/cover_bobble_new.jpg",
-//   "../assets/cases/citrus/citrus.jpeg",
-//   "../assets/cases/milka/cover_milka2.jpg",
-//   "../assets/cases/nestle/nestle.jpg",
-//   "../assets/cases/orociok/cover_orociok.jpg",
-//   "../assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
-//   "../assets/cases/treccani/cover_treccani_new.jpg",
-//   "../assets/cases/yummers/cover_yummers.jpg",
-// ];
 
 function SmoothParallaxImage({ translation }) {
-  console.log(typeof translation?.images);
   const gallery = useRef();
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setDimension({ width, height: window.innerHeight });
+      setIsMobile(width < 768); // Consider mobile if width is less than 768px
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: gallery,
     offset: ["start end", "end start"],
   });
-  const { height } = dimension;
-  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
+
+  // Adjust parallax intensity based on screen size
+  const intensity = isMobile ? 0.8 : 1; // Reduce parallax effect by half on mobile
+
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, dimension.height * 2 * intensity]
+  );
+  const y2 = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, dimension.height * 3.3 * intensity]
+  );
+  const y3 = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, dimension.height * 1.25 * intensity]
+  );
+  const y4 = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, dimension.height * 3 * intensity]
+  );
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -39,18 +60,13 @@ function SmoothParallaxImage({ translation }) {
       requestAnimationFrame(raf);
     };
 
-    const resize = () => {
-      setDimension({ width: window.innerWidth, height: window.innerHeight });
-    };
-
-    window.addEventListener("resize", resize);
     requestAnimationFrame(raf);
-    resize();
 
     return () => {
-      window.removeEventListener("resize", resize);
+      lenis.destroy();
     };
-  }, [gallery]);
+  }, []);
+
   return (
     <main className="main">
       <div className="spacer"></div>
@@ -80,10 +96,6 @@ function SmoothParallaxImage({ translation }) {
           y={y3}
         />
       </div>
-      <div className="w-full ">
-        <ParallaxText marqueeText={translation.marqueeLink} />
-      </div>
-      <div className="spacer"></div>
     </main>
   );
 }
@@ -96,7 +108,12 @@ const Column = ({ translation, y }) => {
       {translation?.map((src, i) => {
         return (
           <div key={i} className="imageContainer">
-            <Image src={`${src}`} alt="image" fill />
+            <Image
+              src={`${src}`}
+              alt="gallery img"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         );
       })}

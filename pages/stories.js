@@ -8,7 +8,7 @@ import localFont from "next/font/local";
 import Head from "next/head";
 import casesIT from "../public/locales/it/cases.json";
 import casesEN from "../public/locales/en/cases.json";
-import Lenis from "@studio-freight/lenis";
+// import Lenis from "@studio-freight/lenis";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
@@ -29,19 +29,19 @@ const Stories = ({ translation }) => {
     setShowDrawer((prev) => !prev);
   };
 
-  useEffect(() => {
-    const lenis = new Lenis();
+  // useEffect(() => {
+  //   const lenis = new Lenis();
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
 
-    return () => {
-      lenis.destroy(); // Pulizia per prevenire eventuali perdite di memoria
-    };
-  }, []);
+  //   return () => {
+  //     lenis.destroy(); // Pulizia per prevenire eventuali perdite di memoria
+  //   };
+  // }, []);
   return (
     <>
       <Head>

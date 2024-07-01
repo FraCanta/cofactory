@@ -1,38 +1,29 @@
 import React, { useEffect, useRef } from "react";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import Image from "next/image";
 import { MaskText } from "@/components/MaskText";
-import Lenis from "@studio-freight/lenis";
 import translationIT from "@/public/locales/it/factory.json";
 import translationEN from "@/public/locales/en/factory.json";
 
 import RevealOnScroll from "@/components/RevealOnScroll/RevealOnScroll";
 import SmoothParallaxImage from "@/components/SmoothParallaxImage/SmoothParallaxImage";
+import ParallaxText from "@/components/ParallaxText";
+import Link from "next/link";
+import Head from "next/head";
+
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 const myFont3 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Factory = ({ translation }) => {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  });
-
   return (
     <>
+      <Head>
+        <title>Factory</title>
+      </Head>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -48,7 +39,7 @@ const Factory = ({ translation }) => {
             <span className="relative mr-4">
               <span>agenzia</span>
               <Tippy
-                className="!bg-pink "
+                className="!bg-pink"
                 content={
                   <span className="w-full text-base !leading-4 font-light">
                     *Potrebbero esserci altre agenzie come la nostra, ma da
@@ -239,6 +230,7 @@ const Factory = ({ translation }) => {
                   <Image
                     src="/assets/logo/per1.svg"
                     fill
+                    alt="freccia a sx"
                     className="w-full h-full"
                   />
                 </span>{" "}
@@ -249,6 +241,7 @@ const Factory = ({ translation }) => {
                   <Image
                     src="/assets/logo/per1.svg"
                     fill
+                    alt="freccia a sx"
                     className="w-full h-full"
                   />
                 </span>{" "}
@@ -259,6 +252,7 @@ const Factory = ({ translation }) => {
                   <Image
                     src="/assets/logo/per1.svg"
                     fill
+                    alt="freccia a sx"
                     className="w-full h-full"
                   />
                 </span>{" "}
@@ -270,19 +264,22 @@ const Factory = ({ translation }) => {
       </div>
 
       <SmoothParallaxImage translation={translation} />
+      <div className="w-full ">
+        <ParallaxText marqueeText={translation.marqueeLink} />
+      </div>
+      <div className="spacer"></div>
     </>
   );
 };
 
 export default Factory;
 
-export async function getStaticProps(locale, context) {
+export async function getStaticProps({ locale }) {
   let obj;
-  switch (locale.locale) {
+  switch (locale) {
     case "it":
       obj = translationIT;
       break;
-
     case "en":
       obj = translationEN;
       break;

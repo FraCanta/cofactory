@@ -87,15 +87,17 @@ const MarqueeItem = ({ marqueeVisible }) => {
   }, [marqueeVisible]);
 
   const animation = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
+    if (logosRef.current) {
+      if (xPercent < -100) {
+        xPercent = 0;
+      } else if (xPercent > 0) {
+        xPercent = -100;
+      }
+      gsap.set(logosRef.current, {
+        xPercent: xPercent,
+      });
+      xPercent += 0.025 * direction;
     }
-    gsap.set(logosRef.current, {
-      xPercent: xPercent,
-    });
-    xPercent += 0.025 * direction;
     requestAnimationFrame(animation);
   };
 
@@ -107,7 +109,7 @@ const MarqueeItem = ({ marqueeVisible }) => {
             key={index}
             src={imagePath}
             alt={`Image ${index + 1}`}
-            className="inline-block mr-[50px] lg:mr-[100px]  object-contain  dark:contrast-50"
+            className="inline-block mr-[50px] lg:mr-[100px] object-contain dark:contrast-50"
           />
         ))}
       </div>

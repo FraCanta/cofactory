@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, Transition } from "framer-motion";
+import { motion } from "framer-motion";
 
 const MenuButton = ({
   isOpen = false,

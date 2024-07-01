@@ -17,9 +17,9 @@ const Card = ({
   range,
   targetScale,
 }) => {
-  const container = useRef(null);
+  const cardContainer = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: container,
+    target: cardContainer,
     offset: ["start end", "start start"],
     smooth: true,
   });
@@ -32,7 +32,7 @@ const Card = ({
     <Link href={`/stories/${button}`} className="relative w-full">
       <div
         className="cardContainer"
-        ref={container}
+        ref={cardContainer}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >

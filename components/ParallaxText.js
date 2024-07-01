@@ -4,12 +4,11 @@ import { useRef, useEffect } from "react";
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 
-import gsap from "gsap";
+import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
 function ParallaxText({ marqueeText }) {
-  const container = useRef(null);
+  const parallaxContainer = useRef(null);
   const firstText = useRef(null);
   const secondText = useRef(null);
   const thirdText = useRef(null);
@@ -19,7 +18,7 @@ function ParallaxText({ marqueeText }) {
 
   const sliderItems = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: container,
+    target: parallaxContainer,
     offset: ["start end", "end start"],
   });
 
@@ -70,7 +69,7 @@ function ParallaxText({ marqueeText }) {
   };
 
   return (
-    <div ref={container}>
+    <div ref={parallaxContainer}>
       <Slide
         direction={"left"}
         left={"-10%"}

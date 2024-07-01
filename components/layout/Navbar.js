@@ -5,14 +5,10 @@ import Logo from "@/public/assets/logo/logo.svg";
 import Image from "next/image";
 import DarkModeToggle from "../DarkModeToggle";
 import { MenuButton } from "./MenuButton";
-import Line from "../Line";
 import localFont from "next/font/local";
-import SocialBar from "./SocialBar";
-import { MaskText } from "../MaskText";
 import { useRouter } from "next/router";
 
 const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
-const myFont2 = localFont({ src: "../../fonts/Sneak-Regular.ttf" });
 
 const Navbar = ({ lang }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -42,12 +38,6 @@ const Navbar = ({ lang }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollTop]);
-
-  const menuItems = [
-    { href: "/factory", label: "factory", color: "#368b90" },
-    { href: "/stories", label: "stories", color: "#bb5471" },
-    { href: "/affinity", label: "affinity", color: "#368b90" },
-  ];
 
   return (
     <motion.div

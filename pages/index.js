@@ -9,14 +9,10 @@ import { PiArrowUpRightThin } from "react-icons/pi";
 import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
 import ParallaxText from "@/components/ParallaxText";
 import Card from "@/components/Card/Card";
 import Lenis from "@studio-freight/lenis";
-gsap.registerPlugin(ScrollTrigger);
-
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 
@@ -37,7 +33,7 @@ const Home = ({ translation }) => {
     requestAnimationFrame(raf);
 
     return () => {
-      lenis.destroy(); // Pulizia per prevenire eventuali perdite di memoria
+      lenis.destroy();
     };
   }, []);
 
@@ -65,13 +61,13 @@ const Home = ({ translation }) => {
                 dangerouslySetInnerHTML={{
                   __html: translation.hero.description,
                 }}
-                className={`${myFont2.className}   font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
+                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
               ></p>
             </MaskText>
           </div>
         </Hero>
         <div className="relative w-full">
-          <div className="absolute z-20 flex justify-end w-11/12 mx-auto -translate-x-1/2 -translate-y-1/2 -bottom-10 left-1/2">
+          <div className="absolute z-20 flex justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-10">
             <TimbroMarquee />
           </div>
         </div>
@@ -98,7 +94,7 @@ const Home = ({ translation }) => {
         <div className="w-full mx-auto overflow-hidden">
           <ParallaxText marqueeText={translation.marqueeLink} />
         </div>
-        <div className="w-[90%] mx-auto  h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
+        <div className="w-[90%] mx-auto h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
 
         <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white dark:text-third min-h-screen gap-8 md:gap-10 ">
           <Chat />
@@ -127,13 +123,12 @@ const Home = ({ translation }) => {
 
 export default Home;
 
-export async function getStaticProps(locale, context) {
+export async function getStaticProps({ locale }) {
   let obj;
-  switch (locale.locale) {
+  switch (locale) {
     case "it":
       obj = translationIT;
       break;
-
     case "en":
       obj = translationEN;
       break;

@@ -8,7 +8,7 @@ import localFont from "next/font/local";
 function CofactoryButton({ isPlaying }) {
   return (
     <main className="main">
-      <button className="roundButton bg-third/80 dark:bg-white/80 border border-white dark:border-third w-[90px] h-[90px] lg:w-[100px] lg:h-[100px] 2xla:w-[130px] 2xla:h-[130px]">
+      <button className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[90px] h-[90px] lg:w-[100px] lg:h-[100px] 2xla:w-[120px] 2xla:h-[120px]">
         <svg viewBox="0 0 200 200" className="svg ">
           <defs>
             <path
@@ -69,8 +69,7 @@ function CofactoryButton({ isPlaying }) {
             icon={isPlaying ? "mingcute:stop-fill" : "mingcute:play-fill"}
             width="22"
             height="22"
-            className="text-white hover:scale-125 transition-all dark:text-third
-          hover:text-white dark:hover:text-white"
+            className="text-white transition-all hover:scale-125 dark:text-third hover:text-white dark:hover:text-white"
           />
         </div>
       </button>
