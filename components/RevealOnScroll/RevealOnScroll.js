@@ -47,11 +47,7 @@ const RevealOnScroll = () => {
   }, [revealRef.current]);
 
   return (
-    <div
-      ref={revealRef}
-      className="reveal-container"
-      style={{ position: "relative", height: "100vh", overflow: "hidden" }}
-    >
+    <div ref={revealRef} className="reveal-container">
       <svg
         version="1.1"
         id="Livello_1"

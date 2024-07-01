@@ -28,44 +28,38 @@ function SmoothParallaxImage({ translation }) {
     offset: ["start end", "end start"],
   });
 
-  // Adjust parallax intensity based on screen size
-  const intensity = isMobile ? 0.8 : 1; // Reduce parallax effect by half on mobile
-
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, dimension.height * 2 * intensity]
+    [0, dimension.height * (isMobile ? 0 : 2)]
   );
   const y2 = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, dimension.height * 3.3 * intensity]
+    [0, dimension.height * (isMobile ? 0 : 3.3)]
   );
   const y3 = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, dimension.height * 1.25 * intensity]
-  );
-  const y4 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, dimension.height * 3 * intensity]
+    [0, dimension.height * (isMobile ? 0 : 1.25)]
   );
 
   useEffect(() => {
-    const lenis = new Lenis();
+    if (!isMobile) {
+      const lenis = new Lenis();
 
-    const raf = (time) => {
-      lenis.raf(time);
+      const raf = (time) => {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      };
+
       requestAnimationFrame(raf);
-    };
 
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+      return () => {
+        lenis.destroy();
+      };
+    }
+  }, [isMobile]);
 
   return (
     <main className="main">
