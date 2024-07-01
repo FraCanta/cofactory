@@ -8,6 +8,11 @@
   overflow: hidden;
 }
 
+.reveal-container svg {
+  width: 100%;
+  height: 100%;
+}
+
 .reveal-mask {
   width: 100%;
   height: 100%;
@@ -118,6 +123,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .reveal-container svg {
+    width: fit-content;
+    height: fit-content;
+  }
   #cont {
     height: 70vh;
   }

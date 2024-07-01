@@ -15,7 +15,7 @@ const ScrollEffect = () => {
   useLayoutEffect(() => {
     const mm = gsap.matchMedia();
 
-    gsap.set(".slide-1", { opacity: 1 });
+    gsap.set(".slide-1", { opacity: 1, y: 20 });
     mm.add("(min-width: 360px)", () => {
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -42,7 +42,7 @@ const ScrollEffect = () => {
     <div id="cont">
       <div className="slide slide-1">
         <div>
-          <h2 className="text-5xl text-white lg:text-6xl dark:text-third">
+          <h2 className="text-4xl text-white lg:text-6xl dark:text-third">
             <span
               className={`${myFont.className} text-white/60 dark:text-third/60`}
             >
@@ -71,7 +71,7 @@ const ScrollEffect = () => {
       </div>
       <div className="slide slide-2">
         <div>
-          <h2 className="text-5xl lg:text-6xl">
+          <h2 className="text-4xl lg:text-6xl">
             <span
               className={`${myFont.className} text-white/60 dark:text-third/60`}
             >
@@ -103,7 +103,7 @@ const ScrollEffect = () => {
       </div>
       <div className="slide slide-3">
         <div>
-          <h2 className="text-5xl lg:text-6xl">
+          <h2 className="text-4xl lg:text-6xl">
             <span
               className={`${myFont3.className} font-bold text-white dark:text-third`}
             >
@@ -132,7 +132,7 @@ const ScrollEffect = () => {
       </div>
       <div className="slide slide-4">
         <div>
-          <h2 className="text-5xl lg:text-6xl">
+          <h2 className="text-4xl lg:text-6xl">
             <span
               className={`${myFont3.className} font-bold text-white dark:text-third`}
             >
@@ -156,60 +156,60 @@ const ScrollEffect = () => {
           </h2>
         </div>
         <div
-          className={`${myFont2.className} dark:text-third text-white text-lg `}
+          className={`${myFont2.className} dark:text-third text-white  `}
           data-aos="fade-up"
         >
           <div
-            className={`${myFont2.className} flex flex-col dark:text-third text-white justify-center gap-6 text-xl`}
+            className={`${myFont2.className} flex flex-col dark:text-third text-white justify-center gap-6 `}
           >
-            <h3>
+            <h3 className="text-xl">
               Quando c'è feeling e scatta la scintilla, il nostro x diventa
               tanti +:
             </h3>
-            <ul className="font-bold">
+            <ul className="flex flex-col gap-4 text-base font-bold">
               <li className="flex items-center gap-2">
                 <span className="relative w-4 h-4">
                   <Image
-                    src="/assets/logo/per1.svg"
+                    src="/assets/logo/frecciaSU.svg"
                     fill
                     alt="freccia a sx"
-                    className="w-full h-full"
+                    className="w-full h-full rotate-90"
                   />
                 </span>{" "}
-                AUMENTO DELL'AWARENESS
+                <span>AUMENTO DELL'AWARENESS</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="relative w-4 h-4">
                   <Image
-                    src="/assets/logo/per1.svg"
+                    src="/assets/logo/frecciaSU.svg"
                     fill
                     alt="freccia a sx"
-                    className="w-full h-full"
+                    className="w-full h-full rotate-90"
                   />
                 </span>{" "}
-                RIDUZIONE DEI COSTI DELLA CAMPAGNA
+                <span>RIDUZIONE DEI COSTI DELLA CAMPAGNA</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="relative w-4 h-4">
                   <Image
-                    src="/assets/logo/per1.svg"
+                    src="/assets/logo/frecciaSU.svg"
                     fill
                     alt="freccia a sx"
-                    className="w-full h-full"
+                    className="w-full h-full rotate-90"
                   />
                 </span>{" "}
-                AMPLIAMENTO DEL TARGET
+                <span>AMPLIAMENTO DEL TARGET</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="relative w-4 h-4">
                   <Image
-                    src="/assets/logo/per1.svg"
+                    src="/assets/logo/frecciaSU.svg"
                     fill
                     alt="freccia a sx"
-                    className="w-full h-full"
+                    className="w-full h-full rotate-90"
                   />
                 </span>{" "}
-                PERCEZIONE POSITIVA DEI BRAND
+                <span>PERCEZIONE POSITIVA DEI BRAND</span>
               </li>
             </ul>
           </div>

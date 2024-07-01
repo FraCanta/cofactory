@@ -17,12 +17,12 @@ const RevealOnScroll = () => {
         start: "top +=320px",
         end: "+=400px",
         scrub: 2,
-        pin: ".svg",
+        pin: ".title",
       },
     });
 
     tl.to(".svg", {
-      scale: 50,
+      scale: 80,
       duration: 5,
       ease: "power2.inOut",
     });
@@ -57,8 +57,6 @@ const RevealOnScroll = () => {
         y="0px"
         viewBox="0 0 220.2 221.2"
         style={{
-          width: "100%",
-          height: "100%",
           enableBackground: "new 0 0 220.2 221.2",
         }}
         xmlSpace="preserve"
