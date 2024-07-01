@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRef, useEffect } from "react";
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
+import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
 
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -25,20 +26,18 @@ function ParallaxText({ marqueeText }) {
   let xPercent = 0;
   let direction = +1;
 
-  useEffect(() => {
-    if (sliderItems.current) {
-      gsap.to(sliderItems.current, {
-        scrollTrigger: {
-          trigger: document.documentElement,
-          scrub: 0.25,
-          start: 0,
-          end: window.innerHeight,
-          onUpdate: (e) => (direction = e.direction * -1),
-        },
-        x: "-500px",
-      });
-      requestAnimationFrame(animation);
-    }
+  useLayoutEffect(() => {
+    gsap.to(sliderItems.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: 0,
+        end: window.innerHeight,
+        onUpdate: (e) => (direction = e.direction * -1),
+      },
+      x: "-500px",
+    });
+    requestAnimationFrame(animation);
   }, [sliderItems.current]);
 
   const animation = () => {
