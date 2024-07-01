@@ -16,7 +16,7 @@ const ScrollEffect = () => {
     const mm = gsap.matchMedia();
 
     gsap.set(".slide-1", { opacity: 1 });
-    mm.add("(min-width: 390px)", () => {
+    mm.add("(min-width: 360px)", () => {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#cont",
