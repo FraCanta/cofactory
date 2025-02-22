@@ -127,7 +127,7 @@
           "video2": "/assets/cases/milka/milkavideo2.mv4"
         },
         "row3": {
-          "img4": "/assets/cases/milka1.jpg"
+          "img4": "/assets/cases/milka/milka32.jpg"
         },
         "row4": {
           "title": " Quando i premi fanno gola a tutti!",
@@ -138,27 +138,27 @@
           "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
-          "pacchetti": "/assets/cases/prova_valigette.png"
+          "video": "/assets/cases/milka/valigette_video2.mp4"
         },
         "row7": {
           "carousel": [
             {
-              "img": "/assets/cases/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/milka1.jpg"
             },
             {
-              "img": "/assets/cases/milka5.jpg"
+              "img": "/assets/cases/milka/galleria/milka2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_1.jpg"
+              "img": "/assets/cases/milka/galleria/tour_1.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_2.jpg"
+              "img": "/assets/cases/milka/galleria/tour_2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_3.jpg"
+              "img": "/assets/cases/milka/galleria/tour_3.jpg"
             },
             {
-              "img": "/assets/cases/milka/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/milka4.jpg"
             }
           ]
         },

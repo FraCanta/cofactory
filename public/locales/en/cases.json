@@ -123,10 +123,11 @@
             "span": "Natale",
             "secondo": "tenerissimo."
           },
-          "img3": "/assets/cases/milka/milkavideo2.mp4"
+          "video": "/assets/cases/milka/milkavideo2.mp4",
+          "video2": "/assets/cases/milka/milkavideo2.mv4"
         },
         "row3": {
-          "img4": "/assets/cases/milka1.jpg"
+          "img4": "/assets/cases/milka/milka32.jpg"
         },
         "row4": {
           "title": " Quando i premi fanno gola a tutti!",
@@ -137,37 +138,37 @@
           "poster": "/assets/cases/milka/spot_milka-2.jpg"
         },
         "row6": {
-          "pacchetti": "/assets/cases/prova_valigette.png"
+          "video": "/assets/cases/milka/valigette_video2.mp4"
         },
         "row7": {
           "carousel": [
             {
-              "img": "/assets/cases/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/milka1.jpg"
             },
             {
-              "img": "/assets/cases/milka5.jpg"
+              "img": "/assets/cases/milka/galleria/milka2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_1.jpg"
+              "img": "/assets/cases/milka/galleria/tour_1.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_2.jpg"
+              "img": "/assets/cases/milka/galleria/tour_2.jpg"
             },
             {
-              "img": "/assets/cases/milka/tour_3.jpg"
+              "img": "/assets/cases/milka/galleria/tour_3.jpg"
             },
             {
-              "img": "/assets/cases/milka/milka4.jpg"
+              "img": "/assets/cases/milka/galleria/milka4.jpg"
             }
           ]
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "yummersghostbusters": {
@@ -242,12 +243,12 @@
           "video": "/assets/cases/yummers/reel.jpg"
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "rossopomodorotartarugheninja": {
@@ -341,12 +342,12 @@
           "video2": "/assets/cases/rossopomodoro/tartarughenija/video_giffoni.m4v"
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "treccanifaoschwarz": {
@@ -403,12 +404,12 @@
           ]
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "bobbled&d": {
@@ -452,12 +453,12 @@
           "video": "/assets/cases/bobble/bobble5.mp4"
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "nestleaquaman": {
@@ -525,12 +526,12 @@
           ]
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "milkatoys": {
@@ -603,12 +604,12 @@
           ]
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
 
@@ -679,12 +680,12 @@
           ]
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "americanunclesonic2": {
@@ -754,12 +755,12 @@
           ]
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       },
       "rossopomodoroghostbusters": {
@@ -829,12 +830,12 @@
           ]
         },
         "marqueeLink": {
-          "text1": "all stories",
-          "text2": "all stories",
-          "text3": "all stories",
-          "text4": "all stories",
-          "text5": "all stories",
-          "text6": "all stories"
+          "text1": "tutte le storie",
+          "text2": "tutte le storie",
+          "text3": "tutte le storie",
+          "text4": "tutte le storie",
+          "text5": "tutte le storie",
+          "text6": "tutte le storie"
         }
       }
     }
