@@ -3,25 +3,19 @@ import { motion, useScroll } from "framer-motion";
 import Hero from "@/components/layout/Hero";
 import localFont from "next/font/local";
 import Head from "next/head";
-import Chat from "@/components/ChatBubble/Chat";
 import Link from "next/link";
-import { PiArrowUpRightThin } from "react-icons/pi";
 import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
 import ParallaxText from "@/components/ParallaxText";
-import Card from "@/components/Card/Card";
 import Lenis from "@studio-freight/lenis";
+import Image from "next/image";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 
 const Home = ({ translation }) => {
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
+  console.log(translation.cards[0].brand1);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -52,70 +46,73 @@ const Home = ({ translation }) => {
           <MaskText>
             <h1
               dangerouslySetInnerHTML={{ __html: translation.hero.title }}
-              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[6rem] text-white dark:text-third lg:text-center 2xla:text-9xl max-w-6xl`}
+              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[5rem] text-white dark:text-third uppercase font-bold max-w-2xl`}
             ></h1>
           </MaskText>
-          <div className="lg:w-[65%] mx-auto flex flex-col gap-8">
+          <div className="flex flex-col">
             <MaskText>
               <p
                 dangerouslySetInnerHTML={{
                   __html: translation.hero.description,
                 }}
-                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third md:text-center 2xl:text-xl 2xla:text-[25px]`}
+                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third  2xl:text-xl 2xla:text-[25px] max-w-xl`}
               ></p>
             </MaskText>
           </div>
-        </Hero>
-        <div className="relative w-full">
-          <div className="absolute z-20 flex justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-10">
+          <div className="absolute z-20 flex items-end justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 -bottom-10 left-[55%] lg:top-[80%]">
             <TimbroMarquee />
           </div>
-        </div>
+        </Hero>
 
-        <div className="relative w-11/12 min-h-screen mx-auto" ref={container}>
+        <div className="relative z-20 w-full min-h-screen">
           {translation.cards.map((card, index) => {
-            const targetScale = 1 - (translation.cards.length - index) * 0.05;
             return (
-              <Card
-                key={index}
-                {...card}
-                i={index}
-                range={[index * 0.25, 1]}
-                targetScale={targetScale}
-                progress={scrollYProgress}
-                brand1={card.brand1}
-                brand2={card.brand2}
-              />
+              <>
+                <div className="relative h-[50vh] lg:h-screen" key={index}>
+                  <Image
+                    fill
+                    src={card.img}
+                    alt="cover stories"
+                    className="object-cover w-full h-full"
+                  />
+                  <div className="absolute z-20 flex items-end w-full h-full bottom-4 left-4 lg:left-10 lg:bottom-10 ">
+                    <div className="flex items-center gap-1 uppercase">
+                      <MaskText>
+                        <span
+                          className={`${myFont.className} leading-snug text-lg lg:text-4xl text-white `}
+                        >
+                          {card.brand1}
+                        </span>
+                      </MaskText>
+                      <span className="relative w-4 h-4 mx-2 lg:h-8 lg:w-8">
+                        <Image
+                          src="/assets/logo/new_logo_intro.svg"
+                          fill
+                          className="object-cover rotate-90 contrast-125"
+                          alt="logo"
+                        />
+                      </span>
+                      <MaskText>
+                        <span
+                          className={`${myFont.className} leading-snug text-lg lg:text-4xl text-white`}
+                        >
+                          {card.brand2}
+                        </span>
+                      </MaskText>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 w-full h-full bg-third/30"></div>
+                </div>
+              </>
             );
           })}
         </div>
 
-        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
+        {/* <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
         <div className="w-full mx-auto overflow-hidden">
           <ParallaxText marqueeText={translation.marqueeLink} />
         </div>
-        <div className="w-[90%] mx-auto h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
-
-        <div className="w-[90%] mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 text-white dark:text-third min-h-screen gap-8 md:gap-10 ">
-          <Chat />
-          <div className="flex flex-col gap-8 p-0 py-6 md:p-8">
-            <h2 className={`${myFont.className} text-4xl lg:text-7xl`}>
-              Testo accattivante da mettere qui
-            </h2>
-            <p className={`${myFont2.className} text-xl`}>
-              un paragrafo che spieghi velocemente cosa avrebbero da guadagnarci
-              e invitandoli a contattarvi. Un testo che arrivi fino al max il
-              terzo rigo!
-            </p>
-            <Link
-              href="/contatti"
-              className={`${myFont2.className} flex gap-1 items-center text-xl uppercase hover:text-second font-bold`}
-              target="_blank"
-            >
-              contattaci <PiArrowUpRightThin />
-            </Link>
-          </div>
-        </div>
+        <div className="w-[90%] mx-auto h-[0.05rem] bg-white/60 dark:bg-third/60"></div> */}
       </motion.div>
     </>
   );

@@ -8,7 +8,6 @@ import "@/styles/linkMarquee2.css";
 import "@/styles/paragraph.css";
 import "@/styles/cases.css";
 import "@/styles/sliding.css";
-import "@/styles/card.css";
 import "@/styles/cofactorybutton.css";
 
 import { useState, useEffect } from "react";
@@ -40,15 +39,15 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <SplashScreen finishLoading={finishLoading} />
-      ) : (
-        <ThemeProvider attribute="class">
-          <Layout>
-            <Component {...pageProps} key={router.asPath} />
-          </Layout>
-        </ThemeProvider>
-      )}
+      ) : ( */}
+      <ThemeProvider attribute="class">
+        <Layout>
+          <Component {...pageProps} key={router.asPath} />
+        </Layout>
+      </ThemeProvider>
+      {/* )} */}
     </>
   );
 }

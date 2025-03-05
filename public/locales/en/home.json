@@ -6,6 +6,13 @@
     },
     "cards": [
       {
+        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
+        "button": "treccanifaoschwarz",
+        "brand1": "Treccani",
+        "brand2": "Fao Schwarz",
+        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+      },
+      {
         "img": "/assets/cases/orociok/cover_orociok.jpg",
         "button": "orocioktoys",
         "name": "Oro Ciok e Toys Center",
@@ -13,6 +20,7 @@
         "brand1": "Oro Ciok",
         "brand2": "Toys Center"
       },
+
       {
         "img": "/assets/cases/yummers/cover_yummers.jpg",
         "button": "yummersghostbusters",
@@ -29,13 +37,7 @@
         "brand2": "Tartarughe Ninja",
         "categories": [{ "name": "movie" }]
       },
-      {
-        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
-        "button": "treccanifaoschwarz",
-        "brand1": "Treccani",
-        "brand2": "Fao Schwarz",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
-      },
+
       {
         "img": "/assets/cases/bobble/cover_bobble_new.jpg",
         "button": "bobbled&d",

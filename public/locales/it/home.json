@@ -1,26 +1,10 @@
 {
   "home": {
     "hero": {
-      "title": "Sì. Siamo un'<span class='text-white/60 dark:text-third/60'>agenzia</span> di incontri.",
-      "description": "A volte creiamo legami duraturi. Altre volte, invece, nascono dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+      "title": "Si. Siamo un'agenzia <br/>di <span class='dark:text-stroke2'>incontri.</span>",
+      "description": "Siamo la prima agenzia di matchmaking per brand: ideiamo e realizziamo campagne di comunicazione congiunta. A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
     },
     "cards": [
-      {
-        "img": "/assets/cases/orociok/cover_orociok.jpg",
-        "button": "orocioktoys",
-        "name": "Oro Ciok e Toys Center",
-        "categories": [{ "name": "brand" }, { "name": "box" }],
-        "brand1": "Oro Ciok",
-        "brand2": "Toys Center"
-      },
-      {
-        "img": "/assets/cases/yummers/cover_yummers.jpg",
-        "button": "yummersghostbusters",
-        "name": "Yummers e Ghostbusters",
-        "brand1": "Yummer's",
-        "brand2": "Ghostbusters",
-        "categories": [{ "name": "movie" }]
-      },
       {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
         "button": "rossopomodorotartarugheninja",
@@ -35,6 +19,23 @@
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
         "categories": [{ "name": "Brand" }, { "name": "Box" }]
+      },
+
+      {
+        "img": "/assets/cases/american/cover_american_new.jpg",
+        "button": "yummersghostbusters",
+        "name": "Yummers e Ghostbusters",
+        "brand1": "Yummer's",
+        "brand2": "Ghostbusters",
+        "categories": [{ "name": "movie" }]
+      },
+      {
+        "img": "/assets/cases/bobble/cover_bobble_new.jpg",
+        "button": "orocioktoys",
+        "name": "Oro Ciok e Toys Center",
+        "categories": [{ "name": "brand" }, { "name": "box" }],
+        "brand1": "Oro Ciok",
+        "brand2": "Toys Center"
       }
     ],
     "marqueeLink": {

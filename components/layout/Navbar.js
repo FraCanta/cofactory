@@ -61,9 +61,15 @@ const Navbar = ({ lang }) => {
             className="w-[130px]"
           />
         </Link>
-        <div className="relative flex items-center gap-8">
+        <div className="relative flex items-center gap-4 lg:gap-8">
+          <Link
+            href="/"
+            className="px-2 py-2 text-sm font-medium text-white uppercase border-2 rounded-md lg:text-base border-pink dark:text-third"
+          >
+            cerchi un partner?
+          </Link>
           <DarkModeToggle />
-          <div
+          {/* <div
             onClick={() => setOpen(!isOpen)}
             className="z-20 block duration-300 ease-in cursor-pointer"
           >
@@ -76,11 +82,11 @@ const Navbar = ({ lang }) => {
               width="30"
               height="15"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Menu */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: "-100%" }}
           animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? "0%" : "-100%" }}
           transition={{ ease: "easeOut", duration: 0.4 }}
@@ -235,7 +241,7 @@ const Navbar = ({ lang }) => {
               </li>
             </ul>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

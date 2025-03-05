@@ -66,7 +66,7 @@ function CofactoryButton({ isPlaying }) {
         </svg>
         <div className="innerCircle w-[40px] h-[40px] 2xla:w-[50px] 2xla:h-[50px] flex items-center justify-center border border-white dark:border-third hover:bg-second dark:hover:bg-second">
           <Icon
-            icon={isPlaying ? "mingcute:stop-fill" : "mingcute:play-fill"}
+            icon="akar-icons:arrow-right"
             width="22"
             height="22"
             className="text-white transition-all hover:scale-125 dark:text-third hover:text-white dark:hover:text-white"
