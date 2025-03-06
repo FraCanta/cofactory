@@ -56,7 +56,7 @@ const Home = ({ translation }) => {
           {/* <div className="absolute z-20 flex items-end justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-8 lg:bottom-10 lg:left-10">
            
           </div> */}
-          <div className="absolute left-0 flex items-center justify-between w-full bottom-20 lg:bottom-0">
+          <div className="absolute left-0 flex items-center justify-between w-full bottom-14 lg:bottom-20 ">
             <Link
               href="/"
               className="px-2 py-2 text-sm font-medium text-white uppercase border-2 border-white rounded-md lg:text-base dark:text-third"
