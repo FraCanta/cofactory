@@ -2,7 +2,10 @@
   "home": {
     "hero": {
       "title": "Yes. We’re a dating <span class='text-white/60 dark:text-third/60'>agency</span>.",
-      "description": "Sometimes we create lasting bonds. Other times, however, lightning strikes arise, short but intense, electrifying and memorable."
+      "description": [
+        "Siamo la prima agenzia di matchmaking per brand: ideiamo e realizziamo campagne di comunicazione congiunta. ",
+        "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+      ]
     },
     "cards": [
       {

@@ -34,7 +34,7 @@ const Home = ({ translation }) => {
           <MaskText>
             <h1
               dangerouslySetInnerHTML={{ __html: translation.hero.title }}
-              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[5rem] text-white dark:text-third uppercase font-bold  lg:text-center`}
+              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[5rem] text-white dark:text-third uppercase font-bold  text-center`}
             ></h1>
           </MaskText>
           <div className="flex flex-col gap-2">
@@ -46,7 +46,7 @@ const Home = ({ translation }) => {
                     dangerouslySetInnerHTML={{
                       __html: text,
                     }}
-                    className={`${myFont2.className} font-[300] text-lg  text-white dark:text-third  2xl:text-xl lg:text-center lg:max-w-2xl 2xl:max-w-4xl`}
+                    className={`${myFont2.className} font-[300] text-base  text-white dark:text-third  2xl:text-xl text-center lg:max-w-2xl 2xl:max-w-4xl`}
                   ></p>
                 );
               })}
