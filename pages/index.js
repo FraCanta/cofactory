@@ -69,9 +69,9 @@ const Home = ({ translation }) => {
                   <p
                     key={index}
                     dangerouslySetInnerHTML={{
-                      __html: text,
+                      __html: text.text,
                     }}
-                    className={`${myFont2.className} font-[300] text-base  text-white dark:text-third  2xl:text-xl lg:text-center lg:max-w-2xl 2xl:max-w-4xl`}
+                    className={`${myFont2.className} font-semibold text-base  text-white dark:text-third  2xl:text-xl lg:text-center lg:max-w-2xl 2xl:max-w-4xl`}
                   ></p>
                 );
               })}
@@ -88,7 +88,7 @@ const Home = ({ translation }) => {
           <div className="absolute left-0 flex items-center justify-between w-full bottom-14 lg:bottom-20 ">
             <Link
               href="/"
-              className="px-2 py-2 text-sm font-medium text-white uppercase border-2 border-white rounded-md lg:text-base dark:text-third"
+              className="px-4 py-2 text-sm font-medium text-white uppercase border-2 border-white rounded-md lg:text-base dark:text-third"
             >
               get in touch
             </Link>
@@ -151,9 +151,6 @@ const Home = ({ translation }) => {
         </div>
         <div className="w-[90%] mx-auto h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
       </motion.div>
-      <div className="w-full my-20">
-        <RevealOnScroll />
-      </div>
     </>
   );
 };

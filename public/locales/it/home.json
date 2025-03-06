@@ -1,10 +1,14 @@
 {
   "home": {
     "hero": {
-      "title": "Si. Siamo un'agenzia <br/>di <span class='dark:text-stroke2'>incontri.</span>",
+      "title": "Si. Siamo un'agenzia <br/>di <span class='text-stroke2'>incontri.</span>",
       "description": [
-        "Siamo la prima agenzia di matchmaking per brand: ideiamo e realizziamo campagne di comunicazione congiunta. ",
-        "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+        {
+          "text": "<span class='text-second'>Siamo la prima agenzia di <i>matchmaking</i> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. </span>"
+        },
+        {
+          "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+        }
       ]
     },
     "cards": [

@@ -3,8 +3,12 @@
     "hero": {
       "title": "Yes. We’re a dating <span class='text-white/60 dark:text-third/60'>agency</span>.",
       "description": [
-        "Siamo la prima agenzia di matchmaking per brand: ideiamo e realizziamo campagne di comunicazione congiunta. ",
-        "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+        {
+          "text": "<span class='text-second'>Siamo la prima agenzia di <i>matchmaking</i> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. </span>"
+        },
+        {
+          "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+        }
       ]
     },
     "cards": [

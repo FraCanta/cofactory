@@ -21,30 +21,30 @@ const RevealOnScroll = () => {
       },
     });
 
-    // tl.from(".svg-co", {
-    //   scale: 20,
-    //   duration: 5,
-    //   ease: "power2.inOut",
-    // });
-    // tl.to(".svg-co", {
-    //   scale: 80,
-    //   duration: 5,
-    //   ease: "power2.inOut",
-    // });
+    tl.from(".svg-co", {
+      scale: 20,
+      duration: 5,
+      ease: "power2.inOut",
+    });
+    tl.to(".svg-co", {
+      scale: 80,
+      duration: 5,
+      ease: "power2.inOut",
+    });
 
-    // tl.from(".title", {
-    //   opacity: 0,
-    //   x: 300,
-    //   duration: 1,
-    //   ease: "power2.out",
-    // });
+    tl.from(".title", {
+      opacity: 0,
+      x: 300,
+      duration: 1,
+      ease: "power2.out",
+    });
 
-    // tl.to(".title", {
-    //   opacity: 1,
-    //   x: 0,
-    //   duration: 1,
-    //   ease: "power2.out",
-    // });
+    tl.to(".title", {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power2.out",
+    });
 
     return () => {
       tl.kill();
