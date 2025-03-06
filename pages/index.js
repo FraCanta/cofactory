@@ -11,25 +11,13 @@ import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
 import ParallaxText from "@/components/ParallaxText";
 import Lenis from "@studio-freight/lenis";
 import Image from "next/image";
+import RevealOnScroll from "@/components/RevealOnScroll/RevealOnScroll";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
+const myFont3 = localFont({ src: "../fonts/Tactico-Grunge.otf" });
 
 const Home = ({ translation }) => {
   console.log(translation.cards[0].brand1);
-
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
 
   return (
     <>
@@ -46,21 +34,38 @@ const Home = ({ translation }) => {
           <MaskText>
             <h1
               dangerouslySetInnerHTML={{ __html: translation.hero.title }}
-              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[5rem] text-white dark:text-third uppercase font-bold max-w-2xl`}
+              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[5rem] text-white dark:text-third uppercase font-bold  lg:text-center`}
             ></h1>
           </MaskText>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             <MaskText>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: translation.hero.description,
-                }}
-                className={`${myFont2.className} font-[300] text-[20px] md:text-[30px] lg:text-[20px] xl:text-[30px] text-white dark:text-third  2xl:text-xl 2xla:text-[25px] max-w-xl`}
-              ></p>
+              {translation.hero.description.map((text, index) => {
+                return (
+                  <p
+                    key={index}
+                    dangerouslySetInnerHTML={{
+                      __html: text,
+                    }}
+                    className={`${myFont2.className} font-[300] text-lg  text-white dark:text-third  2xl:text-xl lg:text-center lg:max-w-2xl 2xl:max-w-4xl`}
+                  ></p>
+                );
+              })}
             </MaskText>
+            <div className="py-6 text-center text-white">icona</div>
           </div>
-          <div className="absolute z-20 flex items-end justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 -bottom-10 left-[55%] lg:top-[80%]">
-            <TimbroMarquee />
+          {/* <div className="absolute z-20 flex items-end justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-8 lg:bottom-10 lg:left-10">
+           
+          </div> */}
+          <div className="absolute bottom-0 left-0 flex items-center justify-between w-full">
+            <Link
+              href="/"
+              className="px-2 py-2 text-sm font-medium text-white uppercase border-2 border-white rounded-md lg:text-base dark:text-third"
+            >
+              get in touch
+            </Link>
+            <div>
+              <TimbroMarquee />
+            </div>
           </div>
         </Hero>
 
@@ -108,12 +113,15 @@ const Home = ({ translation }) => {
           })}
         </div>
 
-        {/* <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
+        {/* <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 lg:mt-6"></div>
         <div className="w-full mx-auto overflow-hidden">
           <ParallaxText marqueeText={translation.marqueeLink} />
         </div>
         <div className="w-[90%] mx-auto h-[0.05rem] bg-white/60 dark:bg-third/60"></div> */}
       </motion.div>
+      <div className="w-full my-20">
+        <RevealOnScroll />
+      </div>
     </>
   );
 };

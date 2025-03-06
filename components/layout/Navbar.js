@@ -58,9 +58,10 @@ const Navbar = ({ lang }) => {
             alt="logo"
             width={200}
             height={200}
-            className="w-[130px]"
+            className="w-[100px] lg:w-[130px]"
           />
         </Link>
+        <DarkModeToggle />
         <div className="relative flex items-center gap-4 lg:gap-8">
           <Link
             href="/"
@@ -68,7 +69,7 @@ const Navbar = ({ lang }) => {
           >
             cerchi un partner?
           </Link>
-          <DarkModeToggle />
+
           {/* <div
             onClick={() => setOpen(!isOpen)}
             className="z-20 block duration-300 ease-in cursor-pointer"

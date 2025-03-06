@@ -2,7 +2,10 @@
   "home": {
     "hero": {
       "title": "Si. Siamo un'agenzia <br/>di <span class='dark:text-stroke2'>incontri.</span>",
-      "description": "Siamo la prima agenzia di matchmaking per brand: ideiamo e realizziamo campagne di comunicazione congiunta. A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+      "description": [
+        "Siamo la prima agenzia di matchmaking per brand: ideiamo e realizziamo campagne di comunicazione congiunta. ",
+        "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
+      ]
     },
     "cards": [
       {

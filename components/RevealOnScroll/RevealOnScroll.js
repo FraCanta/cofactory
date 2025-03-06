@@ -14,32 +14,37 @@ const RevealOnScroll = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: revealRef.current,
-        start: "top +=320px",
-        end: "+=400px",
-        scrub: 2,
-        pin: ".title",
+        start: "top top",
+        end: () => "+=" + revealRef.current.scrollHeight,
+        scrub: 1,
+        pin: true,
       },
     });
 
-    tl.to(".svg", {
-      scale: 80,
-      duration: 5,
-      ease: "power2.inOut",
-    });
+    // tl.from(".svg-co", {
+    //   scale: 20,
+    //   duration: 5,
+    //   ease: "power2.inOut",
+    // });
+    // tl.to(".svg-co", {
+    //   scale: 80,
+    //   duration: 5,
+    //   ease: "power2.inOut",
+    // });
 
-    tl.from(".title", {
-      opacity: 0,
-      x: 300,
-      duration: 1,
-      ease: "power2.out",
-    });
+    // tl.from(".title", {
+    //   opacity: 0,
+    //   x: 300,
+    //   duration: 1,
+    //   ease: "power2.out",
+    // });
 
-    tl.to(".title", {
-      opacity: 1,
-      x: 0,
-      duration: 1,
-      ease: "power2.out",
-    });
+    // tl.to(".title", {
+    //   opacity: 1,
+    //   x: 0,
+    //   duration: 1,
+    //   ease: "power2.out",
+    // });
 
     return () => {
       tl.kill();
@@ -60,7 +65,7 @@ const RevealOnScroll = () => {
           enableBackground: "new 0 0 220.2 221.2",
         }}
         xmlSpace="preserve"
-        className="fill-second svg"
+        className="fill-second svg-co"
       >
         <path
           className="st0"
@@ -77,9 +82,12 @@ const RevealOnScroll = () => {
       </svg>
       <div className="absolute inset-0 z-10 flex items-center justify-center text-center w-[90%] mx-auto title">
         <h2
-          className={`${myFont.className} z-auto text-3xl lg:text-6xl text-third dark:text-white font-bold uppercase`}
+          className={`${myFont.className} z-auto text-2xl lg:text-6xl dark:text-third text-white font-bold`}
         >
-          Questo è un testo che si anima all'entrata
+          Tranquillo, la prima mossa la facciamo noi: intuiamo una potenziale
+          affinità tra i partner e, dopo averne valutato l’effettiva
+          compatibilità, concepiamo l’idea creativa e sviluppiamo la campagna di
+          comunicazione.
         </h2>
       </div>
     </div>

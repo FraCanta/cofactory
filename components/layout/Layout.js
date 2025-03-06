@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import LenisScroll from "./LenisScroll";
 
 const Layout = (props) => {
   // Configura ScrollTrigger globalmente usando gsap.context
@@ -14,6 +15,7 @@ const Layout = (props) => {
 
   return (
     <>
+      <LenisScroll />
       <Navbar />
       <main>{props.children}</main>
       <Footer />
