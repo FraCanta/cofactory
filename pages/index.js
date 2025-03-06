@@ -56,44 +56,42 @@ const Home = ({ translation }) => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <Hero>
-          <MaskText>
-            <h1
-              dangerouslySetInnerHTML={{ __html: translation.hero.title }}
-              className={`${myFont.className} text-5xl py-1 md:text-[6rem]  lg:text-[5rem] xl:text-[5rem] text-white dark:text-third uppercase font-bold  lg:text-center`}
-            ></h1>
-          </MaskText>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col w-full gap-4 lg:flex-row lg:justify-between lg:gap-0">
             <MaskText>
+              <h1
+                dangerouslySetInnerHTML={{ __html: translation.hero.title }}
+                className="text-6xl font-bold leading-none  xl:text-[6rem] text-white"
+              ></h1>
+            </MaskText>
+            <div className="flex flex-col justify-end gap-4">
               {translation.hero.description.map((text, index) => {
                 return (
-                  <p
-                    key={index}
-                    dangerouslySetInnerHTML={{
-                      __html: text.text,
-                    }}
-                    className={`${myFont2.className} font-semibold text-base  text-white dark:text-third  2xl:text-xl lg:text-center lg:max-w-2xl 2xl:max-w-4xl`}
-                  ></p>
+                  <MaskText>
+                    <p
+                      key={index}
+                      dangerouslySetInnerHTML={{
+                        __html: text.text,
+                      }}
+                      className={`${myFont2.className} my-1 font-semibold text-base  text-white dark:text-third  lg:text-2xl lg:max-w-2xl 2xl:max-w-4xl`}
+                    ></p>
+                  </MaskText>
                 );
               })}
-            </MaskText>
-            <div className="flex justify-center py-6 text-second">
-              <Link href="#works" onClick={scrollToWorks}>
-                <motion.div
-                  animate={{ y: [0, 10, 0] }} // Movimento su e giù
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <Icon
-                    icon="entypo:chevron-thin-down"
-                    width="30"
-                    height="30"
-                  />
-                </motion.div>
-              </Link>
             </div>
+          </div>
+          <div className="flex justify-center py-6 text-second">
+            <Link href="#works" onClick={scrollToWorks}>
+              <motion.div
+                animate={{ y: [0, 10, 0] }} // Movimento su e giù
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Icon icon="entypo:chevron-thin-down" width="30" height="30" />
+              </motion.div>
+            </Link>
           </div>
           {/* <div className="absolute z-20 flex items-end justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-8 lg:bottom-10 lg:left-10">
            
@@ -103,7 +101,7 @@ const Home = ({ translation }) => {
               href="mailto:info@thallion-dev.it"
               className="px-4 py-2 text-sm font-medium text-white uppercase border-2 border-white rounded-md lg:text-base dark:text-third"
             >
-              get in touch
+              Contattaci
             </Link>
             <div>
               <TimbroMarquee />
@@ -126,10 +124,10 @@ const Home = ({ translation }) => {
                     className="object-cover w-full h-full"
                   />
                   <div className="absolute z-20 flex items-end w-full h-full bottom-4 left-4 lg:left-10 lg:bottom-10 ">
-                    <div className="flex items-center gap-1 uppercase">
+                    <h2 className="flex items-center gap-1 uppercase">
                       <MaskText>
                         <span
-                          className={`${myFont.className} leading-snug text-lg lg:text-4xl text-white `}
+                          className={`leading-snug text-2xl lg:text-4xl text-white `}
                         >
                           {card.brand1}
                         </span>
@@ -144,12 +142,12 @@ const Home = ({ translation }) => {
                       </span>
                       <MaskText>
                         <span
-                          className={`${myFont.className} leading-snug text-lg lg:text-4xl text-white`}
+                          className={` leading-snug text-2xl lg:text-4xl text-white`}
                         >
                           {card.brand2}
                         </span>
                       </MaskText>
-                    </div>
+                    </h2>
                   </div>
                   <div className="absolute inset-0 w-full h-full bg-third/30"></div>
                 </div>
