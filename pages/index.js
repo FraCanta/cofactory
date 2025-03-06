@@ -22,7 +22,7 @@ const Home = ({ translation }) => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.5,
+      duration: 0.8,
       easing: (t) => 1 - Math.pow(1 - t, 3),
     });
 
@@ -98,7 +98,10 @@ const Home = ({ translation }) => {
           </div>
         </Hero>
 
-        <div className="relative z-20 w-full min-h-screen" id="works">
+        <div
+          className="relative z-20 w-screen min-h-screen overflow-x-hidden"
+          id="works"
+        >
           {translation.cards.map((card, index) => {
             return (
               <>
