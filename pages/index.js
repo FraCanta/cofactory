@@ -12,13 +12,38 @@ import ParallaxText from "@/components/ParallaxText";
 import Lenis from "@studio-freight/lenis";
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll/RevealOnScroll";
+import { Icon } from "@iconify/react";
 const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Light.ttf" });
 const myFont3 = localFont({ src: "../fonts/Tactico-Grunge.otf" });
 
 const Home = ({ translation }) => {
-  console.log(translation.cards[0].brand1);
+  const lenisRef = useRef(null); // Memorizza Lenis
 
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
+    });
+
+    lenisRef.current = lenis; // Salva l'istanza
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy(); // Pulizia dell'istanza
+  }, []);
+
+  const scrollToWorks = (e) => {
+    e.preventDefault();
+    const target = document.querySelector("#works");
+    if (target && lenisRef.current) {
+      lenisRef.current.scrollTo(target, { offset: -50 }); // Usa l'istanza salvata
+    }
+  };
   return (
     <>
       <Head>
@@ -51,7 +76,11 @@ const Home = ({ translation }) => {
                 );
               })}
             </MaskText>
-            <div className="py-6 text-center text-white">icona</div>
+            <div className="flex justify-center py-6 text-second">
+              <Link href="#works" onClick={scrollToWorks}>
+                <Icon icon="entypo:chevron-thin-down" width="30" height="30" />
+              </Link>
+            </div>
           </div>
           {/* <div className="absolute z-20 flex items-end justify-end w-full mx-auto -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-8 lg:bottom-10 lg:left-10">
            
@@ -69,7 +98,7 @@ const Home = ({ translation }) => {
           </div>
         </Hero>
 
-        <div className="relative z-20 w-full min-h-screen">
+        <div className="relative z-20 w-full min-h-screen" id="works">
           {translation.cards.map((card, index) => {
             return (
               <>
@@ -113,11 +142,11 @@ const Home = ({ translation }) => {
           })}
         </div>
 
-        {/* <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 lg:mt-6"></div>
+        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 lg:mt-6"></div>
         <div className="w-full mx-auto overflow-hidden">
           <ParallaxText marqueeText={translation.marqueeLink} />
         </div>
-        <div className="w-[90%] mx-auto h-[0.05rem] bg-white/60 dark:bg-third/60"></div> */}
+        <div className="w-[90%] mx-auto h-[0.05rem] bg-white/60 dark:bg-third/60"></div>
       </motion.div>
       <div className="w-full my-20">
         <RevealOnScroll />
