@@ -78,7 +78,20 @@ const Home = ({ translation }) => {
             </MaskText>
             <div className="flex justify-center py-6 text-second">
               <Link href="#works" onClick={scrollToWorks}>
-                <Icon icon="entypo:chevron-thin-down" width="30" height="30" />
+                <motion.div
+                  animate={{ y: [0, 10, 0] }} // Movimento su e giù
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Icon
+                    icon="entypo:chevron-thin-down"
+                    width="30"
+                    height="30"
+                  />
+                </motion.div>
               </Link>
             </div>
           </div>
