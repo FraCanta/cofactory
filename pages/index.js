@@ -100,7 +100,7 @@ const Home = ({ translation }) => {
           </div> */}
           <div className="absolute left-0 flex items-center justify-between w-full bottom-14 lg:bottom-20 ">
             <Link
-              href="/"
+              href="mailto:info@thallion-dev.it"
               className="px-4 py-2 text-sm font-medium text-white uppercase border-2 border-white rounded-md lg:text-base dark:text-third"
             >
               get in touch
