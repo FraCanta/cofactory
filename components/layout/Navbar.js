@@ -58,7 +58,7 @@ const Navbar = ({ lang }) => {
             alt="logo"
             width={200}
             height={200}
-            className="w-[100px] lg:w-[130px]"
+            className="w-[110px] lg:w-[130px]"
           />
         </Link>
         <DarkModeToggle />
