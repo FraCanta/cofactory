@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import anime from "animejs";
 import Image from "next/image";
 import localFont from "next/font/local";
+
 const myFont2 = localFont({ src: "../../fonts/Raleway-Light.ttf" });
+
 const SplashScreen = ({ finishLoading }) => {
   useEffect(() => {
     const loader = anime.timeline({
@@ -10,15 +12,12 @@ const SplashScreen = ({ finishLoading }) => {
     });
 
     loader
+      // Fai apparire logo e payoff insieme
       .add({
-        targets: "#agencyText",
+        targets: ["#logo", "#agencyText", "#creativeText"],
         opacity: [0, 1],
         easing: "easeInOutQuad",
-      })
-      .add({
-        targets: "#creativeText",
-        opacity: [0, 1],
-        easing: "easeInOutQuad",
+        duration: 1000,
       })
       .add(
         {
@@ -26,45 +25,63 @@ const SplashScreen = ({ finishLoading }) => {
           opacity: [0, 1],
           easing: "easeInOutQuad",
         },
-        "-=1000"
+        "-=800"
       )
-
+      // Fade out del logo e payoff prima della "X"
+      .add(
+        {
+          targets: ["#logo", "#agencyText", "#creativeText"],
+          opacity: 0,
+          easing: "easeInOutQuad",
+          duration: 1000,
+        },
+        "+=500"
+      )
+      .add(
+        {
+          targets: "#newLogoIntro",
+          easing: "easeInOutExpo",
+          duration: 700,
+          begin: function () {
+            const logoIntro = document.querySelector("#newLogoIntro");
+            logoIntro.style.position = "absolute";
+            logoIntro.style.left = "50%";
+            logoIntro.style.top = "50%";
+          },
+        },
+        "+=100"
+      )
+      // Resto dell'animazione della X
       .add({
-        targets: "#logo",
-        opacity: [0, 1],
-        easing: "easeInOutQuad",
+        targets: "#newLogoIntro",
+        opacity: 1,
+        scale: [1, 8],
+        duration: 700,
+        easing: "easeInOutExpo",
       })
-
       .add({
         targets: "#newLogoIntro",
         rotate: "45deg",
-        duration: 2000,
+        duration: 1500,
         easing: "easeInOutExpo",
       })
-
-      .add({
-        targets: "#newLogoIntro",
-        scale: 1500,
-        opacity: 0.5,
-        duration: 500,
-        easing: "easeInOutQuad",
-      })
-      .add(
-        {
-          targets: ["#logo", "#creativeText", "#agencyText"],
-          opacity: 0,
-          easing: "easeInOutQuad",
-        },
-        "-=700"
-      )
+      // Sfuma lo sfondo quando la X è al massimo
       .add(
         {
           targets: "#bgIntro",
           opacity: [1, 0],
+          duration: 1200,
           easing: "easeInOutQuad",
         },
         "-=1100"
-      );
+      )
+      .add({
+        targets: "#newLogoIntro",
+        scale: 1500,
+        opacity: 0, // Ora la X svanisce completamente
+        duration: 500,
+        easing: "easeInOutQuad",
+      });
   }, [finishLoading]);
 
   return (
@@ -73,14 +90,14 @@ const SplashScreen = ({ finishLoading }) => {
       id="bgIntro"
     >
       <div>
-        {/* Logo e payoff */}
+        {/* Logo and payoff */}
         <div>
           {/* Logo */}
           <img
             id="logo"
             src="/assets/logo/logo.svg"
             alt="Logo"
-            className="w-full md:w-[700px] lg:w-[600px] opacity-0"
+            className="w-full md:w-[700px] lg:w-[600px] opacity-0 h-auto"
           />
 
           {/* Payoff */}
@@ -90,36 +107,36 @@ const SplashScreen = ({ finishLoading }) => {
           >
             <div
               id="agencyText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
             >
               Agenzia
             </div>
             <div
               id="creativeText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
             >
               creativa
             </div>
             <div
               id="agencyText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
             >
               di incontri
             </div>
             <div
-              className="relative flex w-3 h-3 mt-0 opacity-0 lg:w-5 lg:h-5 xl:mt-2 "
+              className="relative flex items-center w-5 opacity-0 aspect-square lg:w-8 lg:mt-2"
               id="newLogoIntro"
             >
               <Image
-                src="/assets/logo/new_logo_intro.svg"
+                src="/assets/cofactory_nuovaX_green2.svg"
                 fill
                 alt="logo icon"
-                className="object-contain w-full h-full "
+                className="object-contain w-full h-full"
               />
             </div>
             <div
               id="creativeText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl  `}
+              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
             >
               brand
             </div>

@@ -2,7 +2,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
 import localFont from "next/font/local";
-const myFont = localFont({ src: "../fonts/ClearfaceStd-Bold.woff" });
+const myFont = localFont({ src: "../fonts/Raleway-Light.ttf" });
 import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
 
 import gsap from "gsap/dist/gsap";
@@ -137,10 +137,10 @@ const Phrase = ({
 }) => {
   return (
     <Link href="/stories">
-      <div ref={sliderItems} className={`${myFont.className} sliderItems`}>
+      <div ref={sliderItems} className={`${myFont.className} sliderItems `}>
         <p
           ref={firstText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
+          className="text-transparent text-stroke dark:text-stroke-dark "
         >
           {marqueeText.text1}
         </p>

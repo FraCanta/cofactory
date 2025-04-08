@@ -4,8 +4,10 @@ import Footer from "./Footer";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import LenisScroll from "./LenisScroll";
+import { useRouter } from "next/router";
 
 const Layout = (props) => {
+  const router = useRouter();
   // Configura ScrollTrigger globalmente usando gsap.context
   useEffect(() => {
     gsap.context({
@@ -13,12 +15,15 @@ const Layout = (props) => {
     });
   }, []);
 
+  const noLayoutPages = ["/cerchi-un-partner"];
+  const showLayout = !noLayoutPages.includes(router.pathname);
+
   return (
     <>
       <LenisScroll />
-      <Navbar />
+      {showLayout && <Navbar />}
       <main>{props.children}</main>
-      <Footer />
+      {showLayout && <Footer />}
     </>
   );
 };

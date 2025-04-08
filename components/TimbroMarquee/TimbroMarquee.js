@@ -61,8 +61,7 @@ function TimbroMarquee() {
       <Link
         href="/stories"
         passHref
-        className="relative z-20 w-24 cursor-pointer lg:w-28 2xla:w-32 aspect-square animate-spin"
-        // onClick={handleToggleMarquee}
+        className="relative z-20 w-24 cursor-pointer lg:w-28 2xla:w-32 aspect-square animate-spin" // onClick={handleToggleMarquee}
         style={{ marginLeft: "auto" }}
       >
         <CofactoryButton isPlaying={isPlaying} />

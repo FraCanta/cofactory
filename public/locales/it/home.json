@@ -1,10 +1,10 @@
 {
   "home": {
     "hero": {
-      "title": "Si. Siamo un'agenzia <br/>di <span class='text-stroke2'>incontri.</span>",
+      "title": "<span class='font-bold'>Si. Siamo un'agenzia</span> <br/>di <span class='text-stroke2'>incontri.</span>",
       "description": [
         {
-          "text": "<span class='text-second'>Siamo la prima agenzia di <i>matchmaking</i> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. </span>"
+          "text": "Siamo la prima agenzia di <span class='px-1 text-second'><i>matchmaking </i></span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
         },
         {
           "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
@@ -31,18 +31,18 @@
       {
         "img": "/assets/cases/american/cover_american_new.jpg",
         "button": "yummersghostbusters",
-        "name": "Yummers e Ghostbusters",
-        "brand1": "Yummer's",
-        "brand2": "Ghostbusters",
+        "name": "American Uncle e Sonic 2",
+        "brand1": "American Uncle",
+        "brand2": "Sonic 2",
         "categories": [{ "name": "movie" }]
       },
       {
         "img": "/assets/cases/bobble/cover_bobble_new.jpg",
         "button": "orocioktoys",
-        "name": "Oro Ciok e Toys Center",
+        "name": "Bobble Bobble e Dungeons&Dragons",
         "categories": [{ "name": "brand" }, { "name": "box" }],
-        "brand1": "Oro Ciok",
-        "brand2": "Toys Center"
+        "brand1": "Bobble Bobble",
+        "brand2": "Dungeons&Dragons"
       }
     ],
     "marqueeLink": {

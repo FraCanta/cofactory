@@ -39,15 +39,15 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {/* {loading ? (
+      {loading ? (
         <SplashScreen finishLoading={finishLoading} />
-      ) : ( */}
-      <ThemeProvider attribute="class">
-        <Layout>
-          <Component {...pageProps} key={router.asPath} />
-        </Layout>
-      </ThemeProvider>
-      {/* )} */}
+      ) : (
+        <ThemeProvider attribute="class">
+          <Layout>
+            <Component {...pageProps} key={router.asPath} />
+          </Layout>
+        </ThemeProvider>
+      )}
     </>
   );
 }

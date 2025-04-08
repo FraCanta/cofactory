@@ -1,0 +1,94 @@
+{
+  "progetto": {
+    "step0": {
+      "title": "30 minutes free of charge <br /> &quot;Let’s talk about your project&quot;.",
+      "text": "Fill in the form and get your session 100% free, dedicated to freelancers, small companies, start-ups and artisans who want to improve their online presence by applying a good design process.",
+      "cta": "get started"
+    },
+    "step1": {
+      "title": "Perfect! It will only take a minute to understand your situation better.",
+      "text": "Let’s start with your name what's your name?",
+      "placeholder": "Enter your name*",
+      "prev": "Back",
+      "next": "next"
+    },
+    "step2": {
+      "title": { "span": "Hi", "span2": "can you tell me what is your email?" },
+      "placeholder": "Enter your email*",
+      "isValid": "Please enter a valid email.",
+      "prev": "Back",
+      "next": "next"
+    },
+    "step3": {
+      "title": {
+        "span": "Thank you",
+        "span2": "I have a few more questions to understand how I can support you at the best."
+      },
+      "text": "What are your goals?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "ecommerce",
+          "label": "🚀 Launch a new e-commerce"
+        },
+        {
+          "id": "goal-2",
+          "value": "Redesign an e-commerce",
+          "label": "💪 Redesign an e-commerce"
+        },
+        {
+          "id": "goal-3",
+          "value": "Launch a new website",
+          "label": "😃 Launch a new website"
+        },
+        {
+          "id": "goal-4",
+          "value": "Redesign an existing website",
+          "label": "🛠 Redesign an existing website"
+        }
+      ],
+      "prev": "Back",
+      "next": "next"
+    },
+    "step4": {
+      "title": "what are the main difficulties you are experiencing?",
+      "text": "Knowing these details is crucial to understanding how I can help you achieve your goals.",
+      "prev": "Back",
+      "next": "next",
+      "placeholder": "Feel free to tell me anything*"
+    },
+    "step5": {
+      "title": "Final question",
+      "text": "If you were to start tomorrow, what amount do you plan to achieve for your project?",
+      "prev": "Back",
+      "next": "next",
+      "options": [
+        {
+          "value": "",
+          "label": "Select an option",
+          "isDisabled": true
+        },
+        {
+          "value": "Less than 1.500",
+          "label": "Less than 1.500",
+          "isDisabled": false
+        },
+        {
+          "value": "Between 3.000 and 5.000",
+          "label": "Between 3.000 and 5.000",
+          "isDisabled": false
+        },
+        {
+          "value": "5.000+",
+          "label": "5.000+",
+          "isDisabled": false
+        }
+      ]
+    },
+    "step6": {
+      "title": "Woo-ooh! 🎉",
+      "text": "Your request has been successfully sent and <br /> you will receive a confirmation email soon. <br /> <br /> Within <strong>72 hours</strong> I will answer you to plan your <strong>Tell me about <br class=’d-none d-sm-block' /> your 30 minutes project</strong> and figure out together <br class=’d-none d-sm-block' /> what I can do for you.",
+      "cta": "scopri i miei lavori"
+    }
+  }
+}

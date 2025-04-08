@@ -1,0 +1,155 @@
+{
+  "progetto": {
+    "marqueeLink": {
+      "text1": "tutte le storie",
+      "text2": "tutte le storie",
+      "text3": "tutte le storie",
+      "text4": "tutte le storie",
+      "text5": "tutte le storie",
+      "text6": "tutte le storie"
+    },
+    "images": [
+      "/assets/cases/american/cover_american_new.jpg",
+      "/assets/cases/bobble/cover_bobble_new.jpg",
+      "/assets/cases/citrus/citrus.jpeg",
+      "/assets/cases/milka/cover_milka2.jpg",
+      "/assets/cases/nestle/nestle.jpg",
+      "/assets/cases/orociok/cover_orociok.jpg",
+      "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
+      "/assets/cases/treccani/cover_treccani_new.jpg",
+      "/assets/cases/yummers/cover_yummers.jpg"
+    ],
+    "step0": {
+      "title": "te lo troviamo noi.",
+      "title2": "<span class='text-stroke2'> ma prima</span>",
+      "cta": "parlaci di te"
+    },
+    "step1": {
+      "text": "Che partner vorresti per il tuo brand?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "movie partnership",
+          "label": "Vedo il mio brand insieme a un grande film: Movie Partnership"
+        },
+        {
+          "id": "goal-2",
+          "value": "Brand Match",
+          "label": "Un altro brand che condivida i miei valori: Brand Match"
+        },
+        {
+          "id": "goal-3",
+          "value": "Coboxing",
+          "label": "Un sito e-commerce che mi porti in casa delle persone: Coboxing"
+        }
+      ],
+      "prev": "Indietro",
+      "next": "Avanti"
+    },
+    "step2": {
+      "text": "Che tipo di rapporto cerchi?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "Partnership che cresce nel tempo",
+          "label": "Una storia d’amore a lungo termine – Partnership che cresce nel tempo"
+        },
+        {
+          "id": "goal-2",
+          "value": "Progetto breve, ma con impatto immediato",
+          "label": "Un colpo di fulmine – Progetto breve, ma con impatto immediato"
+        },
+        {
+          "id": "goal-3",
+          "value": "Collaborazione mirata per obiettivi comuni",
+          "label": "Un’alleanza strategica – Collaborazione mirata per obiettivi comuni"
+        }
+      ],
+      "prev": "Indietro",
+      "next": "Avanti"
+    },
+    "step3": {
+      "text": "Che target ha il tuo brand?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "Kids & Family (0-12 anni) – Giocoso",
+          "label": "Kids & Family (0-12 anni) – Giocoso "
+        },
+        {
+          "id": "goal-2",
+          "value": "Gen Alpha (2013-2025) – Innovativo",
+          "label": "Gen Alpha (2013-2025) – Innovativo"
+        },
+        {
+          "id": "goal-3",
+          "value": "Gen Z (1997-2012) – Digitale",
+          "label": "Gen Z (1997-2012) – Digitale"
+        },
+        {
+          "id": "goal-4",
+          "value": "Millennials (1981-1996) – Ambizioso",
+          "label": "Millennials (1981-1996) – Ambizioso"
+        },
+        {
+          "id": "goal-5",
+          "value": "Gen X (1965-1980) – Resiliente",
+          "label": "Gen X (1965-1980) – Resiliente"
+        },
+        {
+          "id": "goal-6",
+          "value": "Boomers (1946-1964) – Tradizionale",
+          "label": "Boomers (1946-1964) – Tradizionale"
+        }
+      ],
+      "prev": "Back",
+      "next": "next"
+    },
+    "step4": {
+      "title": {
+        "span": "Thank you",
+        "span2": "I have a few more questions to understand how I can support you at the best."
+      },
+      "text": "What are your goals?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "ecommerce",
+          "label": "🚀 Launch a new e-commerce"
+        },
+        {
+          "id": "goal-2",
+          "value": "Redesign an e-commerce",
+          "label": "💪 Redesign an e-commerce"
+        },
+        {
+          "id": "goal-3",
+          "value": "Launch a new website",
+          "label": "😃 Launch a new website"
+        },
+        {
+          "id": "goal-4",
+          "value": "Redesign an existing website",
+          "label": "🛠 Redesign an existing website"
+        }
+      ],
+      "prev": "Back",
+      "next": "next"
+    },
+
+    "step5": {
+      "title": "Ultima domanda",
+      "text": "Puoi dirmi la tua email?",
+      "placeholder": "Inserisci la tua email*",
+      "isValid": "Per favore inserisci una email valida.",
+      "prev": "Indietro",
+      "next": "Avanti"
+    },
+
+    "step6": {
+      "title": "Woo-ooh! 🎉",
+      "text": " La tua richiesta è stata inviata con successo e <br /> riceverai presto una mail di conferma. <br /> <br /> Entro <strong>72 ore</strong> ti risponderò per pianificare la tua <strong>Parlami del <br class='d-none d-sm-block' /> tuo progetto da 30 minuti</strong> e capire insieme <br class='d-none d-sm-block' /> cosa posso fare per te.",
+      "cta": "scopri i miei lavori"
+    }
+  }
+}

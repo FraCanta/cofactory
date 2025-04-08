@@ -8,13 +8,13 @@ const myFont2 = localFont({ src: "../../fonts/Raleway-Regular.ttf" });
 function Footer() {
   return (
     <div className="w-full bg-[#161617] dark:bg-[#D9D9D9] text-white/90 dark:text-third h-auto py-10">
-      <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="text-md text-white/60">
           <p>© 2024 Cofactory srl</p>
           <p>All rights reserved</p>
           <p>P.I. 10233611218</p>
         </div>
-        <div className="grid grid-cols-1 gap-6">
+        {/* <div className="grid grid-cols-1 gap-6">
           <div className="flex flex-col w-full gap-2 lg:text-center">
             <p className={`${myFont2.className} text-lg`}>CERCHI UN PARTNER?</p>
             <Link
@@ -35,7 +35,7 @@ function Footer() {
               </span>
             </Link>
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-1 lg:items-end">
           <div
             className={`${myFont2.className} flex gap-4 text-md text-white/60 text-lg justify  lg:justify-end`}

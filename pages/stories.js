@@ -47,7 +47,7 @@ const Stories = ({ translation }) => {
       <Head>
         <title>Cofactory - Stories</title>
       </Head>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -70,14 +70,14 @@ const Stories = ({ translation }) => {
             Ideiamo e realizziamo campagne di comunicazione congiunta.
           </p>
         </div>
-      </motion.div>
+      </motion.div> */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
-        <div className="w-[90%] mx-auto">
+        <div className="w-[90%] mx-auto mt-[120px]">
           <div className="relative flex flex-wrap items-center justify-between w-full mt-10 gap-y-6">
             <div>
               <label className="text-xl text-white/60">Filter: </label>

@@ -1,7 +1,7 @@
 {
   "home": {
     "hero": {
-      "title": "Yes. We’re a dating <span class='text-white/60 dark:text-third/60'>agency</span>.",
+      "title": "Yes. We’re  <br/> a <span class='text-stroke2'>dating</span> agency.",
       "description": [
         {
           "text": "<span class='text-second'>Siamo la prima agenzia di <i>matchmaking</i> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. </span>"
@@ -13,30 +13,6 @@
     },
     "cards": [
       {
-        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
-        "button": "treccanifaoschwarz",
-        "brand1": "Treccani",
-        "brand2": "Fao Schwarz",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
-      },
-      {
-        "img": "/assets/cases/orociok/cover_orociok.jpg",
-        "button": "orocioktoys",
-        "name": "Oro Ciok e Toys Center",
-        "categories": [{ "name": "brand" }, { "name": "box" }],
-        "brand1": "Oro Ciok",
-        "brand2": "Toys Center"
-      },
-
-      {
-        "img": "/assets/cases/yummers/cover_yummers.jpg",
-        "button": "yummersghostbusters",
-        "name": "Yummers e Ghostbusters",
-        "brand1": "Yummer's",
-        "brand2": "Ghostbusters",
-        "categories": [{ "name": "movie" }]
-      },
-      {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
         "button": "rossopomodorotartarugheninja",
         "name": "Rosso Pomodoro e Tartarughe Ninja",
@@ -44,13 +20,29 @@
         "brand2": "Tartarughe Ninja",
         "categories": [{ "name": "movie" }]
       },
+      {
+        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
+        "button": "treccanifaoschwarz",
+        "brand1": "Treccani",
+        "brand2": "Fao Schwarz",
+        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+      },
 
       {
+        "img": "/assets/cases/american/cover_american_new.jpg",
+        "button": "yummersghostbusters",
+        "name": "American Uncle e Sonic 2",
+        "brand1": "American Uncle",
+        "brand2": "Sonic 2",
+        "categories": [{ "name": "movie" }]
+      },
+      {
         "img": "/assets/cases/bobble/cover_bobble_new.jpg",
-        "button": "bobbled&d",
+        "button": "orocioktoys",
+        "name": "Bobble Bobble e Dangeons&Dragons",
+        "categories": [{ "name": "brand" }, { "name": "box" }],
         "brand1": "Bobble Bobble",
-        "brand2": "Dangeons&Dragons",
-        "categories": [{ "name": "Movie" }]
+        "brand2": "Dangeons&Dragons"
       }
     ],
     "marqueeLink": {
