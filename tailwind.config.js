@@ -8,9 +8,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // backgroundImage: (theme) => ({
-      //   "gradient-to-50": "linear-gradient(-135deg, #9c733c, #ecce80)",
-      // }),
+      images: {
+        formats: ["image/avif", "image/webp"],
+        domains: ["www.cofactory-eight.vercel.app"],
+        deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+        minimumCacheTTL: 60,
+        // NON scrivere unoptimized: true
+      },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
       },
