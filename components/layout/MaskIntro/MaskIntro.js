@@ -107,7 +107,7 @@ function MaskIntro({ onAnimationEnd }) {
         className="Maskcontainer"
         style={{ backgroundColor: "white" }}
       >
-        <div ref={stickyMask} className="opacity-0 stickyMask">
+        <div ref={stickyMask} className="stickyMask">
           <div className="video">
             <BlurryLights />
           </div>
