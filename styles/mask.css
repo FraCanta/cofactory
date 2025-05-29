@@ -20,8 +20,8 @@
   z-index: 5; /* Al di sotto della Hero */
 
   /* Maschera */
-  mask-image: url("/assets/logo_tracciatoPIENO.PNG");
-  -webkit-mask-image: url("/assets/logo_tracciatoPIENO.PNG");
+  mask-image: url("/assets/logo_pieno.png");
+  -webkit-mask-image: url("/assets/logo_pieno.png");
 
   mask-position: center;
   -webkit-mask-position: center;
