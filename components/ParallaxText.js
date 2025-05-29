@@ -2,7 +2,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
 import localFont from "next/font/local";
-const myFont = localFont({ src: "../fonts/Raleway-Light.ttf" });
+const myFont = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
 
 import gsap from "gsap/dist/gsap";

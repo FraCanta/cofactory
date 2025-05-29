@@ -97,7 +97,7 @@ const SplashScreen = ({ finishLoading }) => {
             id="logo"
             src="/assets/logo/logo.svg"
             alt="Logo"
-            className="w-full md:w-[700px] lg:w-[600px] opacity-0 h-auto"
+            className="w-full md:w-[700px] lg:w-[600px] opacity-0 h-auto -mb-4"
           />
 
           {/* Payoff */}

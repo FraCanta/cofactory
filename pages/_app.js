@@ -9,6 +9,7 @@ import "@/styles/paragraph.css";
 import "@/styles/cases.css";
 import "@/styles/sliding.css";
 import "@/styles/cofactorybutton.css";
+import "@/styles/mask.css";
 
 import { useState, useEffect } from "react";
 
@@ -17,6 +18,7 @@ import SplashScreen from "@/components/layout/SplashScreen";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
+import MaskIntro from "@/components/layout/MaskIntro/MaskIntro";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -40,7 +42,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {loading ? (
-        <SplashScreen finishLoading={finishLoading} />
+        <MaskIntro onAnimationEnd={finishLoading} />
       ) : (
         <ThemeProvider attribute="class">
           <Layout>

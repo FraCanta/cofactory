@@ -1,13 +1,13 @@
 import React from "react";
-import BlurryLights from "./BlurryLights";
+import BlurryLights from "./BlurryLights"; // Se hai bisogno degli effetti luminosi
 
 const Hero = ({ children }) => {
   return (
-    <div className="relative min-h-[100svh] lg:h-[92vh] my-10">
-      <div className="flex flex-col lg:justify-center items-center absolute top-16 left-0 right-0 bottom-0 lg:inset-0 z-10 w-[90%] mx-auto">
+    <div className="relative min-h-[100svh] lg:h-[92vh] my-10 w-full">
+      <div className="flex flex-col lg:justify-center items-center absolute top-16 left-0 right-0 bottom-0 lg:inset-0 z-20 w-[90%] mx-auto">
         {children}
       </div>
-      <BlurryLights />
+      <BlurryLights /> {/* Effetti luminosi che restano sotto */}
     </div>
   );
 };

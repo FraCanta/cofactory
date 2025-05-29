@@ -1,7 +1,9 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 const myFont = localFont({ src: "../../../fonts/Tactico-Grunge.otf" });
-const myFont2 = localFont({ src: "../../../fonts/ClearfaceStd-Bold.woff" });
+const myFont2 = localFont({
+  src: "../../../fonts/Raleway-Regular.ttf",
+});
 
 import localFont from "next/font/local";
 

@@ -11,6 +11,9 @@ module.exports = {
       // backgroundImage: (theme) => ({
       //   "gradient-to-50": "linear-gradient(-135deg, #9c733c, #ecce80)",
       // }),
+      fontFamily: {
+        raleway: ["Raleway", "sans-serif"],
+      },
       screens: {
         xs: "360px",
         sm: "390px",

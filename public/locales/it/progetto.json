@@ -30,17 +30,17 @@
         {
           "id": "goal-1",
           "value": "movie partnership",
-          "label": "Vedo il mio brand insieme a un grande film: Movie Partnership"
+          "label": "Vedo il mio brand insieme a un grande film: <strong>Movie Partnership</strong>"
         },
         {
           "id": "goal-2",
           "value": "Brand Match",
-          "label": "Un altro brand che condivida i miei valori: Brand Match"
+          "label": "Un altro brand che condivida i miei valori: <strong>Brand Match</strong>"
         },
         {
           "id": "goal-3",
           "value": "Coboxing",
-          "label": "Un sito e-commerce che mi porti in casa delle persone: Coboxing"
+          "label": "Un sito e-commerce che mi porti in casa delle persone: <strong>Coboxing</strong>"
         }
       ],
       "prev": "Indietro",
@@ -52,17 +52,17 @@
         {
           "id": "goal-1",
           "value": "Partnership che cresce nel tempo",
-          "label": "Una storia d’amore a lungo termine – Partnership che cresce nel tempo"
+          "label": "Una storia d’amore a lungo termine – <strong>Partnership che cresce nel tempo</strong>"
         },
         {
           "id": "goal-2",
           "value": "Progetto breve, ma con impatto immediato",
-          "label": "Un colpo di fulmine – Progetto breve, ma con impatto immediato"
+          "label": "Un colpo di fulmine – <strong>Progetto breve, ma con impatto immediato</strong>"
         },
         {
           "id": "goal-3",
           "value": "Collaborazione mirata per obiettivi comuni",
-          "label": "Un’alleanza strategica – Collaborazione mirata per obiettivi comuni"
+          "label": "Un’alleanza strategica – <strong>Collaborazione mirata per obiettivi comuni</strong>"
         }
       ],
       "prev": "Indietro",
@@ -73,33 +73,33 @@
       "goalItems": [
         {
           "id": "goal-1",
-          "value": "Kids & Family (0-12 anni) – Giocoso",
-          "label": "Kids & Family (0-12 anni) – Giocoso "
+          "value": "Kids & Family (0-12 anni) – <strong>Giocoso</strong>",
+          "label": "Kids & Family (0-12 anni) – <strong>Giocoso</strong> "
         },
         {
           "id": "goal-2",
-          "value": "Gen Alpha (2013-2025) – Innovativo",
-          "label": "Gen Alpha (2013-2025) – Innovativo"
+          "value": "Gen Alpha (2013-2025) – <strong>Innovativo</strong>",
+          "label": "Gen Alpha (2013-2025) – <strong>Innovativo</strong>"
         },
         {
           "id": "goal-3",
-          "value": "Gen Z (1997-2012) – Digitale",
-          "label": "Gen Z (1997-2012) – Digitale"
+          "value": "Gen Z (1997-2012) – <strong>Digitale</strong>",
+          "label": "Gen Z (1997-2012) – <strong>Digitale</strong>"
         },
         {
           "id": "goal-4",
-          "value": "Millennials (1981-1996) – Ambizioso",
-          "label": "Millennials (1981-1996) – Ambizioso"
+          "value": "Millennials (1981-1996) – <strong>Ambizioso</strong>",
+          "label": "Millennials (1981-1996) – <strong>Ambizioso</strong>"
         },
         {
           "id": "goal-5",
-          "value": "Gen X (1965-1980) – Resiliente",
-          "label": "Gen X (1965-1980) – Resiliente"
+          "value": "Gen X (1965-1980) – <strong>Resiliente</strong>",
+          "label": "Gen X (1965-1980) – <strong>Resiliente</strong>"
         },
         {
           "id": "goal-6",
-          "value": "Boomers (1946-1964) – Tradizionale",
-          "label": "Boomers (1946-1964) – Tradizionale"
+          "value": "Boomers (1946-1964) – <strong>Tradizionale</strong>",
+          "label": "Boomers (1946-1964) – <strong>Tradizionale</strong>"
         }
       ],
       "prev": "Back",

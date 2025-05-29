@@ -1,0 +1,79 @@
+.mainMask {
+  margin-bottom: 200vh;
+  position: relative;
+  z-index: 999999;
+  overflow: hidden;
+}
+
+.Maskcontainer {
+  position: relative;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 10; /* Sotto la Hero */
+  overflow: hidden;
+}
+
+.stickyMask {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 5; /* Al di sotto della Hero */
+
+  /* Maschera */
+  mask-image: url("/assets/logo_tracciatoPIENO.PNG");
+  -webkit-mask-image: url("/assets/logo_tracciatoPIENO.PNG");
+
+  mask-position: center;
+  -webkit-mask-position: center;
+
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-size: 35%; /* Parte iniziale piccola */
+  -webkit-mask-size: 35%;
+
+  mask-type: alpha;
+  -webkit-mask-type: alpha;
+
+  transform-origin: center;
+
+  will-change: transform, mask-size, -webkit-mask-size, opacity;
+  background-color: #000000;
+}
+
+.stickyMask .video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.payoffContainer {
+  position: relative;
+  top: -40vh;
+  text-align: center;
+  z-index: 15;
+}
+
+.scrollRef {
+  position: absolute;
+  bottom: 4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero .relative {
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .stickyMask {
+    mask-size: 80%;
+    -webkit-mask-size: 80%;
+  }
+  .payoffContainer {
+    top: -42vh; /* Adatta la posizione per mobile */
+  }
+}

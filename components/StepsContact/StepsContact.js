@@ -132,7 +132,7 @@ export default function StepsContact({ translation }) {
           <>
             <div className="flex flex-col items-start justify-start mx-auto lg:justify-center lg:items-center w-[90%] lg:max-w-max">
               <h1
-                className="text-5xl font-bold text-left text-white lg:text-8xl dark:text-third"
+                className="text-5xl text-left text-white font-regular lg:text-8xl dark:text-third"
                 dangerouslySetInnerHTML={{
                   __html: translation.step0.title,
                 }}
@@ -192,9 +192,10 @@ export default function StepsContact({ translation }) {
                           ? "text-white"
                           : "text-white"
                       }
-                    >
-                      {goal.label}
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: goal.label,
+                      }}
+                    ></p>
                   </label>
                 ))}
               </div>
@@ -253,9 +254,10 @@ export default function StepsContact({ translation }) {
                           ? "text-white"
                           : "text-white"
                       }
-                    >
-                      {goal.label}
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: goal.label,
+                      }}
+                    ></p>
                   </label>
                 ))}
               </div>
@@ -314,9 +316,10 @@ export default function StepsContact({ translation }) {
                           ? "text-second"
                           : "text-black"
                       }
-                    >
-                      {goal.label}
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: goal.label,
+                      }}
+                    ></p>
                   </label>
                 ))}
               </div>
@@ -375,9 +378,10 @@ export default function StepsContact({ translation }) {
                           ? "text-second"
                           : "text-black"
                       }
-                    >
-                      {goal.label}
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: goal.label,
+                      }}
+                    ></p>
                   </label>
                 ))}
               </div>

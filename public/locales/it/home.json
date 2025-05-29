@@ -1,7 +1,8 @@
 {
   "home": {
     "hero": {
-      "title": "<span class='font-bold'>Si. Siamo un'agenzia</span> <br/>di <span class='text-stroke2'>incontri.</span>",
+      "title": "<div class='block mb-2'>SI. SIAMO UN'AGENZIA</div><div class='flex gap-4 '>di <div class=' text-stroke2'>INCONTRI.</div></div>",
+
       "description": [
         {
           "text": "Siamo la prima agenzia di <span class='px-1 text-second'><i>matchmaking </i></span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
@@ -13,36 +14,197 @@
     },
     "cards": [
       {
-        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
-        "button": "rossopomodorotartarugheninja",
-        "name": "Rosso Pomodoro e Tartarughe Ninja",
-        "brand1": "Rossopomodoro",
-        "brand2": "Tartarughe Ninja",
-        "categories": [{ "name": "movie" }]
+        "brand": "CITRUS",
+        "cases": [
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citruspeter_rabbit_2",
+            "name": "CITRUS x Peter Rabbit 2",
+            "brand1": "CITRUS",
+            "brand2": "Peter Rabbit 2"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citrusfamiglia_addams_2",
+            "name": "CITRUS x La Famiglia Addams 2",
+            "brand1": "CITRUS",
+            "brand2": "La Famiglia Addams 2"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citrusmr_crocodile",
+            "name": "CITRUS x Il Talento di Mr.Crocodile",
+            "brand1": "CITRUS",
+            "brand2": "Il Talento di Mr.Crocodile"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citrustartarughe_ninja",
+            "name": "CITRUS x Tartarughe Ninja: Caos Mutante",
+            "brand1": "CITRUS",
+            "brand2": "Tartarughe Ninja: Caos Mutante"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citruspaddington",
+            "name": "CITRUS x Paddington in Perù",
+            "brand1": "CITRUS",
+            "brand2": "Paddington in Perù"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citrustoys_center_fao",
+            "name": "CITRUS x Toys Center & FAO Schwarz",
+            "brand1": "CITRUS",
+            "brand2": "Toys Center & FAO Schwarz"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citrusgardaland",
+            "name": "CITRUS x Gardaland",
+            "brand1": "CITRUS",
+            "brand2": "Gardaland"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "citrussophia_loren",
+            "name": "CITRUS x Sophia Loren",
+            "brand1": "CITRUS",
+            "brand2": "Sophia Loren"
+          }
+        ]
       },
       {
-        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
-        "button": "treccanifaoschwarz",
-        "brand1": "Treccani",
-        "brand2": "Fao Schwarz",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "brand": "AMERICAN UNCLE",
+        "cases": [
+          {
+            "img": "/assets/placeholder.png",
+            "button": "americanunclele_streghe",
+            "name": "AMERICAN UNCLE x Le Streghe",
+            "brand1": "AMERICAN UNCLE",
+            "brand2": "Le Streghe"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "americanunclesonic_2",
+            "name": "AMERICAN UNCLE x Sonic 2",
+            "brand1": "AMERICAN UNCLE",
+            "brand2": "Sonic 2"
+          }
+        ]
       },
+      {
+        "brand": "BOBBLE BOBBLE",
+        "cases": [
+          {
+            "img": "/assets/placeholder.png",
+            "button": "bobblebobblemorbius",
+            "name": "BOBBLE BOBBLE x Morbius",
+            "brand1": "BOBBLE BOBBLE",
+            "brand2": "Morbius"
+          },
+          {
+            "img": "/assets/cases/bobble/cover_bobble_new.jpg",
+            "button": "bobblebobblehonoredeiladri",
+            "name": "BOBBLE BOBBLE x Dungeons & Dragons: L'onore dei ladri",
+            "brand1": "BOBBLE BOBBLE",
+            "brand2": "Dungeons & Dragons"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "bobblebobbletransformersone",
+            "name": "BOB BUBBLE TEA x Transformers One",
+            "brand1": "BOBBLE BOBBLE",
+            "brand2": "Transformers One"
+          }
+        ]
+      },
+      {
+        "brand": "ROSSOPOMODORO",
+        "cases": [
+          {
+            "img": "/assets/placeholder.png",
+            "button": "rossopomodorotalento_mr_crocodile",
+            "name": "ROSSOPOMODORO x Il Talento di Mr.Crocodile",
+            "brand1": "ROSSOPOMODORO",
+            "brand2": "Il Talento di Mr.Crocodile"
+          },
+          {
+            "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
+            "button": "rossopomodorotartarughe_ninja",
+            "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
+            "brand1": "ROSSOPOMODORO",
+            "brand2": "Tartarughe Ninja"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "rossopomodoroghostbusters",
+            "name": "ROSSOPOMODORO x Ghostbusters: Minaccia Glaciale",
+            "brand1": "ROSSOPOMODORO",
+            "brand2": "Ghostbusters: Minaccia Glaciale"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "rossopomodorotoyscenter2023",
+            "name": "ROSSOPOMODORO x Toys Center - Primavera 2023",
+            "brand1": "ROSSOPOMODORO",
+            "brand2": "Toys Center"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "rossopomodoronatale2022",
+            "name": "ROSSOPOMODORO x Natale 2022",
+            "brand1": "ROSSOPOMODORO",
+            "brand2": "Natale 2022"
+          },
+          {
+            "img": "/assets/placeholder.png",
+            "button": "rossopomodorocarnevale2023",
+            "name": "ROSSOPOMODORO x Carnevale 2023",
+            "brand1": "ROSSOPOMODORO",
+            "brand2": "Carnevale 2023"
+          }
+        ]
+      },
+      {
+        "brand": "SONY",
+        "cases": [
+          {
+            "img": "/assets/placeholder.png",
+            "button": "sonypicturesuntildawn",
+            "name": "SONY PICTURES x UNTIL DAWN FINO ALL'ALBA - ROMICS 2025",
+            "brand1": "SONY",
+            "brand2": "UNTIL DAWN FINO ALL'ALBA"
+          },
 
-      {
-        "img": "/assets/cases/american/cover_american_new.jpg",
-        "button": "yummersghostbusters",
-        "name": "American Uncle e Sonic 2",
-        "brand1": "American Uncle",
-        "brand2": "Sonic 2",
-        "categories": [{ "name": "movie" }]
+          {
+            "img": "/assets/placeholder.png",
+            "button": "sonypicturesspiderman",
+            "name": "SONY PICTURES x SPIDER-MAN: ACROSS THE SPEDERVERSE - ROADSHOW 2023",
+            "brand1": "SONY",
+            "brand2": "SPIDER-MAN: ACROSS THE SPEDERVERSE"
+          }
+        ]
       },
       {
-        "img": "/assets/cases/bobble/cover_bobble_new.jpg",
-        "button": "orocioktoys",
-        "name": "Bobble Bobble e Dungeons&Dragons",
-        "categories": [{ "name": "brand" }, { "name": "box" }],
-        "brand1": "Bobble Bobble",
-        "brand2": "Dungeons&Dragons"
+        "brand": "MILKA",
+        "cases": [
+          {
+            "img": "/assets/cases/milka/cover_milka.jpg",
+            "button": "milkatoyscenter1",
+            "name": "MILKA x TOYS CENTER - NATALE 2023",
+            "brand1": "MILKA",
+            "brand2": "TOYS CENTER - NATALE 2023"
+          },
+
+          {
+            "img": "/assets/placeholder.png",
+            "button": "milkatoyscenter2",
+            "name": "MILKA x TOYS CENTER - NATALE 2024",
+            "brand1": "MILKA",
+            "brand2": "TOYS CENTER - NATALE 2024"
+          }
+        ]
       }
     ],
     "marqueeLink": {
