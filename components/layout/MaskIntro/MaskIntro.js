@@ -60,11 +60,12 @@ function MaskIntro({ onAnimationEnd }) {
         start: "top top",
         end: "50% top",
         pin: true,
+        scrub: true, // per animazione fluida
         onUpdate: (self) => {
           const progress = self.progress;
 
           // Dinamica diversa per mobile
-          const baseSize = isMobile ? 60 : 35;
+          const baseSize = isMobile ? 80 : 35;
           const scaleFactor = isMobile ? 1500 : 2965;
           const blurMax = isMobile ? 15 : 30;
           const contrastMax = isMobile ? 130 : 150;
