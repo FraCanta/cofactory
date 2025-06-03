@@ -17,6 +17,14 @@
 html::-webkit-scrollbar {
   display: none;
 }
+
+body {
+  transition-property: background-color, color, border-color, filter, transform,
+    opacity;
+  transition-duration: 1.5s;
+  transition-timing-function: cubic-bezier(0.13, 0.37, 0.06, 0.99);
+}
+
 h1,
 h2 {
   font-family: "Bebas Neue", sans-serif;

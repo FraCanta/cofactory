@@ -5,7 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
-
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
 const myFont2 = localFont({ src: "../../../fonts/Raleway-Light.ttf" });
 
 function MaskIntro({ onAnimationEnd }) {
@@ -57,20 +58,24 @@ function MaskIntro({ onAnimationEnd }) {
       ScrollTrigger.create({
         trigger: container.current,
         start: "top top",
-        end: "10% top",
-        scrub: 1.5, // invece di true
+        end: "50% top",
         pin: true,
-
         onUpdate: (self) => {
           const progress = self.progress;
 
           // Dinamica diversa per mobile
-          const baseSize = isMobile ? 80 : 35;
+          const baseSize = isMobile ? 60 : 35;
           const scaleFactor = isMobile ? 1500 : 2965;
           const blurMax = isMobile ? 15 : 30;
           const contrastMax = isMobile ? 130 : 150;
 
+          const shiftX = isMobile ? -10 : -30; // quanto verso sinistra (valore negativo)
+          const shiftY = isMobile ? -5 : -20; // quanto verso l'alto (valore negativo)
+
           gsap.to(stickyMask.current, {
+            transform: `translate(${progress * shiftX}px, ${
+              progress * shiftY
+            }px)`,
             maskSize: `${baseSize + progress * scaleFactor}%`,
             webkitMaskSize: `${baseSize + progress * scaleFactor}%`,
             filter: `blur(${progress * blurMax}px) contrast(${
@@ -86,7 +91,14 @@ function MaskIntro({ onAnimationEnd }) {
           });
         },
         onLeave: () => {
-          onAnimationEnd();
+          // 💥 Quando finisce, scrolla alla Hero
+          gsap.to(window, {
+            scrollTo: 0, // ← usa il plugin ScrollToPlugin
+            duration: 0.2,
+            ease: "sine.in",
+          });
+
+          onAnimationEnd(); // tua callback
         },
       });
     }, container);
