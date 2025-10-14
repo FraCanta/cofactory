@@ -87,11 +87,14 @@ function MaskIntro({ onAnimationEnd }) {
           }
         },
         onLeave: () => {
+          if (lenis) lenis.stop(); // <-- ferma Lenis prima dello scroll
           gsap.to(window, {
             scrollTo: 0,
             duration: 0.2,
             ease: "sine.in",
-            onComplete: () => onAnimationEnd(),
+            onComplete: () => {
+              onAnimationEnd();
+            },
           });
         },
       });
