@@ -6,6 +6,7 @@ import SmoothParallaxImage from "../SmoothParallaxImage/SmoothParallaxImage";
 import RevealOnScroll from "../RevealOnScroll/RevealOnScroll";
 import ScrollEffect from "../ScrollEffect.js/ScrollEffect";
 import Footer from "../layout/Footer";
+import FloatingLogos from "../FloatingLogos/FloatingLogos";
 
 export default function StepsContact({ translation }) {
   const [step, setStep] = useState(0);
@@ -113,7 +114,7 @@ export default function StepsContact({ translation }) {
   };
   return (
     <>
-      <div className="w-full">
+      <div className="relative w-full">
         <div
           className={`transition-opacity duration-500 flex justify-center w-[90%] mx-auto mb-10 lg:mt-20 ${
             showBar ? "opacity-100" : "opacity-0"
@@ -146,23 +147,22 @@ export default function StepsContact({ translation }) {
                 ></h1>
                 <button
                   onClick={nextStep}
-                  className="py-2 text-sm font-medium text-white uppercase border-2 rounded-[30px] px-4 lg:text-lg lg:min-w-[240px] border-pink dark:text-third 3xl:text-2xl text-center"
+                  className="py-2 text-sm font-medium  uppercase border-2 rounded-[30px] px-4 lg:text-lg lg:min-w-[240px] border-pink  3xl:text-2xl text-center"
                 >
-                  <span className="px-2 text-white">
+                  <span className="px-2 text-white dark:text-third">
                     {translation.step0.cta}
                   </span>
                 </button>
               </div>
             </div>
-            <SmoothParallaxImage translation={translation} />
-            <ScrollEffect />
+            <FloatingLogos />
             <Footer />
           </>
         )}
 
         {step === 1 && (
           <div className="flex flex-col max-w-2xl gap-4 pb-10 mx-auto">
-            <h3 className="text-2xl text-white font-regular lg:text-4xl">
+            <h3 className="text-2xl text-white dark:text-third font-regular lg:text-4xl">
               {translation.step1.text}
             </h3>
             <div className="flex my-5 lg:justify-center">
@@ -174,7 +174,7 @@ export default function StepsContact({ translation }) {
                     className={`cursor-pointer goal-label flex items-center justify-center py-2 px-4 border ${
                       formData.goal.includes(goal.value)
                         ? "border-second bg-second "
-                        : "border-white text-white"
+                        : "border-white dark:border-third text-white dark:text-third"
                     } rounded-full hover:border-second `}
                   >
                     <input
@@ -190,7 +190,7 @@ export default function StepsContact({ translation }) {
                       className={
                         formData.goal.includes(goal.value)
                           ? "text-white"
-                          : "text-white"
+                          : "dark:text-third"
                       }
                       dangerouslySetInnerHTML={{
                         __html: goal.label,

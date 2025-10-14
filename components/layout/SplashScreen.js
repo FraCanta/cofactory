@@ -1,147 +1,163 @@
-import React, { useEffect } from "react";
-import anime from "animejs";
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import localFont from "next/font/local";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const myFont2 = localFont({ src: "../../fonts/Raleway-Light.ttf" });
 
-const SplashScreen = ({ finishLoading }) => {
-  useEffect(() => {
-    const loader = anime.timeline({
-      complete: () => finishLoading(),
-    });
+const SplashScreen = () => {
+  const heroRef = useRef(null);
+  const videoRef = useRef(null);
+  const logoRef = useRef(null);
+  const payoffRef = useRef(null);
+  const scrollIconRef = useRef(null);
 
-    loader
-      // Fai apparire logo e payoff insieme
-      .add({
-        targets: ["#logo", "#agencyText", "#creativeText"],
-        opacity: [0, 1],
-        easing: "easeInOutQuad",
-        duration: 1000,
-      })
-      .add(
-        {
-          targets: "#newLogoIntro",
-          opacity: [0, 1],
-          easing: "easeInOutQuad",
-        },
-        "-=800"
-      )
-      // Fade out del logo e payoff prima della "X"
-      .add(
-        {
-          targets: ["#logo", "#agencyText", "#creativeText"],
-          opacity: 0,
-          easing: "easeInOutQuad",
-          duration: 1000,
-        },
-        "+=500"
-      )
-      .add(
-        {
-          targets: "#newLogoIntro",
-          easing: "easeInOutExpo",
-          duration: 700,
-          begin: function () {
-            const logoIntro = document.querySelector("#newLogoIntro");
-            logoIntro.style.position = "absolute";
-            logoIntro.style.left = "50%";
-            logoIntro.style.top = "50%";
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // TIMELINE INIZIALE
+      const tl = gsap
+        .timeline()
+        .fromTo(
+          videoRef.current,
+          { clipPath: "circle(0% at 50% 50%)" },
+          {
+            clipPath: "circle(100% at 50% 50%)",
+            duration: 2,
+            ease: "power2.out",
+          }
+        )
+        .fromTo(
+          logoRef.current,
+          { autoAlpha: 0, scale: 1.1, filter: "blur(4px)" },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 0.5,
+            ease: "power2.out",
           },
+          "<"
+        )
+        .fromTo(
+          payoffRef.current,
+          { autoAlpha: 0, y: 40 },
+          { autoAlpha: 1, y: 0, duration: 0.5, ease: "power2.out" },
+          "<0.2"
+        )
+        .fromTo(
+          scrollIconRef.current,
+          { autoAlpha: 0, filter: "blur(3px)" },
+          {
+            autoAlpha: 1,
+            filter: "blur(0px)",
+            duration: 0.3,
+            ease: "power2.out",
+          },
+          "<0.3"
+        );
+
+      // SCROLL ANIMATION
+      const maxScroll = window.innerHeight * 5;
+
+      gsap.to(logoRef.current, {
+        scale: 6,
+        z: 350,
+        filter: "blur(10px)",
+        opacity: 0,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: `${maxScroll}px`,
+          scrub: true,
         },
-        "+=100"
-      )
-      // Resto dell'animazione della X
-      .add({
-        targets: "#newLogoIntro",
-        opacity: 1,
-        scale: [1, 8],
-        duration: 700,
-        easing: "easeInOutExpo",
-      })
-      .add({
-        targets: "#newLogoIntro",
-        rotate: "45deg",
-        duration: 1500,
-        easing: "easeInOutExpo",
-      })
-      // Sfuma lo sfondo quando la X è al massimo
-      .add(
-        {
-          targets: "#bgIntro",
-          opacity: [1, 0],
-          duration: 1200,
-          easing: "easeInOutQuad",
-        },
-        "-=1100"
-      )
-      .add({
-        targets: "#newLogoIntro",
-        scale: 1500,
-        opacity: 0, // Ora la X svanisce completamente
-        duration: 500,
-        easing: "easeInOutQuad",
       });
-  }, [finishLoading]);
+
+      gsap.to(payoffRef.current, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: `${maxScroll}px`,
+          scrub: true,
+        },
+      });
+
+      gsap.to(scrollIconRef.current, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: `${maxScroll}px`,
+          scrub: true,
+        },
+      });
+    }, heroRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center h-screen text-white bg-third"
-      id="bgIntro"
+      ref={heroRef}
+      className="relative w-screen h-[100vh] overflow-hidden bg-black"
     >
-      <div>
-        {/* Logo and payoff */}
-        <div>
-          {/* Logo */}
-          <img
-            id="logo"
-            src="/assets/logo/logo.svg"
-            alt="Logo"
-            className="w-full md:w-[700px] lg:w-[600px] opacity-0 h-auto -mb-4"
-          />
+      {/* VIDEO DI SFONDO */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <video
+          ref={videoRef}
+          className="object-cover w-full h-full"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/assets/blurry_lights.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-          {/* Payoff */}
-          <div
-            style={{ color: "#fff" }}
-            className="flex items-center justify-center gap-2 lg:gap-3 "
-          >
-            <div
-              id="agencyText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
-            >
-              Agenzia
-            </div>
-            <div
-              id="creativeText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
-            >
-              creativa
-            </div>
-            <div
-              id="agencyText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
-            >
-              di incontri
-            </div>
-            <div
-              className="relative flex items-center w-5 opacity-0 aspect-square lg:w-8 lg:mt-2"
-              id="newLogoIntro"
-            >
-              <Image
-                src="/assets/cofactory_nuovaX_green2.svg"
-                fill
-                alt="logo icon"
-                className="object-contain w-full h-full"
-              />
-            </div>
-            <div
-              id="creativeText"
-              className={`${myFont2.className} opacity-0 leading-snug text-lg md:text-4xl`}
-            >
-              brand
-            </div>
-          </div>
+      {/* LOGO + PAYOFF */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center">
+        <div
+          ref={logoRef}
+          style={{
+            width: "380px",
+            height: "380px",
+            maskImage: "url(/assets/logo/logo.svg)",
+            WebkitMaskImage: "url(/assets/logo/logo.svg)",
+            maskRepeat: "no-repeat",
+            WebkitMaskRepeat: "no-repeat",
+            maskPosition: "center",
+            WebkitMaskPosition: "center",
+            maskSize: "contain",
+            WebkitMaskSize: "contain",
+            background: "radial-gradient(circle at 50% 50%, #0ff, #c26)",
+          }}
+        />
+        <div
+          ref={payoffRef}
+          className={`${myFont2.className} mt-6 text-lg md:text-3xl`}
+        >
+          Agenzia creativa di incontri brand
         </div>
+      </div>
+
+      {/* SCROLL ICON */}
+      <div
+        ref={scrollIconRef}
+        className="fixed inset-0 flex items-end justify-center pb-10"
+      >
+        <Image
+          src="/assets/icons/scroll.svg"
+          alt="Scroll down"
+          width={28}
+          height={28}
+        />
       </div>
     </div>
   );

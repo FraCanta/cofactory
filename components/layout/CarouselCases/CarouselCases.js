@@ -87,7 +87,7 @@ function CarouselCases({ translation }) {
               className="object-cover object-top w-full h-full"
             />
             <div className="absolute z-20 flex items-end w-full h-full bottom-4 left-4 lg:left-10 lg:bottom-10">
-              <h2 className="flex items-center uppercase">
+              <h2 className="flex items-center space-x-2 uppercase">
                 <MaskText key={`${cardGroup.brand}-${active}-brand1`}>
                   <span
                     ref={(el) => (brand1Refs.current[cardGroup.brand] = el)}
@@ -97,7 +97,7 @@ function CarouselCases({ translation }) {
                   </span>
                 </MaskText>
 
-                <span className="relative w-4 h-4 mx-2 lg:h-8 lg:w-8 2xl:w-[4.5rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-24 fxl:h-24">
+                <span className="relative w-2 h-4 mx-2 lg:h-8 lg:w-8 2xl:w-[2.5rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-24 fxl:h-24">
                   <Image
                     src="/assets/cofactory_nuovaX_green.svg"
                     fill

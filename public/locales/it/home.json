@@ -5,215 +5,106 @@
 
       "description": [
         {
-          "text": "Siamo la prima agenzia di <span class='px-1 text-second'><i>matchmaking </i></span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
+          "text": "Siamo la prima agenzia di <span class='px-1 text-second font-italic'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
         },
         {
           "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
         }
       ]
     },
-    "cards": [
+    "cases": [
       {
-        "brand": "CITRUS",
-        "cases": [
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citruspeter_rabbit_2",
-            "name": "CITRUS x Peter Rabbit 2",
-            "brand1": "CITRUS",
-            "brand2": "Peter Rabbit 2"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citrusfamiglia_addams_2",
-            "name": "CITRUS x La Famiglia Addams 2",
-            "brand1": "CITRUS",
-            "brand2": "La Famiglia Addams 2"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citrusmr_crocodile",
-            "name": "CITRUS x Il Talento di Mr.Crocodile",
-            "brand1": "CITRUS",
-            "brand2": "Il Talento di Mr.Crocodile"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citrustartarughe_ninja",
-            "name": "CITRUS x Tartarughe Ninja: Caos Mutante",
-            "brand1": "CITRUS",
-            "brand2": "Tartarughe Ninja: Caos Mutante"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citruspaddington",
-            "name": "CITRUS x Paddington in Perù",
-            "brand1": "CITRUS",
-            "brand2": "Paddington in Perù"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citrustoys_center_fao",
-            "name": "CITRUS x Toys Center & FAO Schwarz",
-            "brand1": "CITRUS",
-            "brand2": "Toys Center & FAO Schwarz"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citrusgardaland",
-            "name": "CITRUS x Gardaland",
-            "brand1": "CITRUS",
-            "brand2": "Gardaland"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "citrussophia_loren",
-            "name": "CITRUS x Sophia Loren",
-            "brand1": "CITRUS",
-            "brand2": "Sophia Loren"
-          }
-        ]
+        "media": "/assets/cases/santanna/SantannaPro_x_MissionImpossible.webp",
+        "type": "image",
+        "name": "Santanna Pro x Mission Impossible",
+        "brand1": "Santanna Pro",
+        "brand2": "Mission Impossible"
       },
       {
-        "brand": "AMERICAN UNCLE",
-        "cases": [
-          {
-            "img": "/assets/placeholder.png",
-            "button": "americanunclele_streghe",
-            "name": "AMERICAN UNCLE x Le Streghe",
-            "brand1": "AMERICAN UNCLE",
-            "brand2": "Le Streghe"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "americanunclesonic_2",
-            "name": "AMERICAN UNCLE x Sonic 2",
-            "brand1": "AMERICAN UNCLE",
-            "brand2": "Sonic 2"
-          }
-        ]
+        "media": "/assets/cases/slomp/Slomp_x_IPuffi.webp",
+        "type": "image",
+        "name": "Slomp x I Puffi",
+        "brand1": "Slomp",
+        "brand2": "I Puffi"
       },
       {
-        "brand": "BOBBLE BOBBLE",
-        "cases": [
-          {
-            "img": "/assets/placeholder.png",
-            "button": "bobblebobblemorbius",
-            "name": "BOBBLE BOBBLE x Morbius",
-            "brand1": "BOBBLE BOBBLE",
-            "brand2": "Morbius"
-          },
-          {
-            "img": "/assets/cases/bobble/cover_bobble_new.jpg",
-            "button": "bobblebobblehonoredeiladri",
-            "name": "BOBBLE BOBBLE x Dungeons & Dragons: L'onore dei ladri",
-            "brand1": "BOBBLE BOBBLE",
-            "brand2": "Dungeons & Dragons"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "bobblebobbletransformersone",
-            "name": "BOB BUBBLE TEA x Transformers One",
-            "brand1": "BOBBLE BOBBLE",
-            "brand2": "Transformers One"
-          }
-        ]
+        "media": "/assets/cases/cooltra/Cooltra_x_Sonic3.webp",
+        "type": "image",
+        "name": "Cooltra x Sonic 3",
+        "brand1": "Cooltra",
+        "brand2": "Sonic 3"
       },
       {
-        "brand": "ROSSOPOMODORO",
-        "cases": [
-          {
-            "img": "/assets/placeholder.png",
-            "button": "rossopomodorotalento_mr_crocodile",
-            "name": "ROSSOPOMODORO x Il Talento di Mr.Crocodile",
-            "brand1": "ROSSOPOMODORO",
-            "brand2": "Il Talento di Mr.Crocodile"
-          },
-          {
-            "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
-            "button": "rossopomodorotartarughe_ninja",
-            "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
-            "brand1": "ROSSOPOMODORO",
-            "brand2": "Tartarughe Ninja"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "rossopomodoroghostbusters",
-            "name": "ROSSOPOMODORO x Ghostbusters: Minaccia Glaciale",
-            "brand1": "ROSSOPOMODORO",
-            "brand2": "Ghostbusters: Minaccia Glaciale"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "rossopomodorotoyscenter2023",
-            "name": "ROSSOPOMODORO x Toys Center - Primavera 2023",
-            "brand1": "ROSSOPOMODORO",
-            "brand2": "Toys Center"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "rossopomodoronatale2022",
-            "name": "ROSSOPOMODORO x Natale 2022",
-            "brand1": "ROSSOPOMODORO",
-            "brand2": "Natale 2022"
-          },
-          {
-            "img": "/assets/placeholder.png",
-            "button": "rossopomodorocarnevale2023",
-            "name": "ROSSOPOMODORO x Carnevale 2023",
-            "brand1": "ROSSOPOMODORO",
-            "brand2": "Carnevale 2023"
-          }
-        ]
+        "media": "/assets/video/Carpisa_x_PaddingtonInPeru.mp4",
+        "type": "video",
+        "name": "Carpisa x Paddington in Perù",
+        "brand1": "Carpisa",
+        "brand2": "Paddington in Perù"
       },
       {
-        "brand": "SONY",
-        "cases": [
-          {
-            "img": "/assets/placeholder.png",
-            "button": "sonypicturesuntildawn",
-            "name": "SONY PICTURES x UNTIL DAWN FINO ALL'ALBA - ROMICS 2025",
-            "brand1": "SONY",
-            "brand2": "UNTIL DAWN FINO ALL'ALBA"
-          },
-
-          {
-            "img": "/assets/placeholder.png",
-            "button": "sonypicturesspiderman",
-            "name": "SONY PICTURES x SPIDER-MAN: ACROSS THE SPEDERVERSE - ROADSHOW 2023",
-            "brand1": "SONY",
-            "brand2": "SPIDER-MAN: ACROSS THE SPEDERVERSE"
-          }
-        ]
+        "media": "/assets/cases/milka/Milka_x_ToysCenter24_25.webp",
+        "type": "image",
+        "name": "MILKA x Toys Center - Natale 2024 2025",
+        "brand1": "MILKA",
+        "brand2": "Toys Center"
       },
       {
-        "brand": "MILKA",
-        "cases": [
-          {
-            "img": "/assets/cases/milka/cover_milka.jpg",
-            "button": "milkatoyscenter1",
-            "name": "MILKA x TOYS CENTER - NATALE 2023",
-            "brand1": "MILKA",
-            "brand2": "TOYS CENTER - NATALE 2023"
-          },
-
-          {
-            "img": "/assets/placeholder.png",
-            "button": "milkatoyscenter2",
-            "name": "MILKA x TOYS CENTER - NATALE 2024",
-            "brand1": "MILKA",
-            "brand2": "TOYS CENTER - NATALE 2024"
-          }
-        ]
+        "media": "/assets/video/UntilDown_x_Romics25.mp4",
+        "type": "video",
+        "name": "Until Down x Romics 25",
+        "brand1": "Until Down",
+        "brand2": "Romics 25"
+      },
+      {
+        "media": "/assets/cases/yummers/yummers_cover.webp",
+        "type": "image",
+        "name": "Yummer's x Ghostbusters: Minaccia Glaciale",
+        "brand1": "Yummer's",
+        "brand2": "Ghostbusters"
+      },
+      {
+        "media": "/assets/video/RossoPomodoro_x_TartarugheNinja.mp4",
+        "type": "video",
+        "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
+        "brand1": "ROSSOPOMODORO",
+        "brand2": "Tartarughe Ninja"
+      },
+      {
+        "media": "/assets/cases/bobble/bobblebobble.webp",
+        "type": "image",
+        "name": "BOBBLE BOBBLE x Transformers One",
+        "brand1": "BOBBLE BOBBLE",
+        "brand2": "Transformers One"
+      },
+      {
+        "media": "/assets/cases/treccani/Treccani_x_FaoSchwarz.webp",
+        "type": "image",
+        "name": "TRECCANI x Fao Schwarz",
+        "brand1": "TRECCANI",
+        "brand2": "Fao Schwarz"
+      },
+      {
+        "media": "/assets/cases/nestle/Nestle_x_Aquaman.webp",
+        "type": "image",
+        "name": "Nestlè x Aquaman",
+        "brand1": "Nestlè",
+        "brand2": "Aquaman"
+      },
+      {
+        "media": "/assets/cases/eathappy/BulletTrain_x_EatHappy.webp",
+        "type": "image",
+        "name": "Bullet Train x Eat Happy",
+        "brand1": "Bullet Train",
+        "brand2": "Eat Happy"
       }
     ],
     "marqueeLink": {
-      "text1": "tutte le storie",
-      "text2": "tutte le storie",
-      "text3": "tutte le storie",
-      "text4": "tutte le storie",
-      "text5": "tutte le storie",
-      "text6": "tutte le storie"
+      "text1": "il nostro approccio",
+      "text2": "il nostro approccio",
+      "text3": "il nostro approccio",
+      "text4": "il nostro approccio",
+      "text5": "il nostro approccio",
+      "text6": "il nostro approccio"
     }
   }
 }

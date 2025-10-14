@@ -10,11 +10,11 @@ import "@/styles/cases.css";
 import "@/styles/sliding.css";
 import "@/styles/cofactorybutton.css";
 import "@/styles/mask.css";
+import "@/styles/floating.css";
 
 import { useState, useEffect } from "react";
 
 import { ThemeProvider } from "next-themes";
-import SplashScreen from "@/components/layout/SplashScreen";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";

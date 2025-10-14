@@ -1,23 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import Hero from "@/components/layout/Hero";
-import localFont from "next/font/local";
 import Head from "next/head";
 import Link from "next/link";
 import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
-import ParallaxText from "@/components/ParallaxText";
 import Lenis from "@studio-freight/lenis";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import MaskIntro from "@/components/layout/MaskIntro/MaskIntro";
 import CarouselCases from "@/components/layout/CarouselCases/CarouselCases";
-const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
+import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
+import ParallaxText from "@/components/ParallaxText";
+import BannerList from "@/components/BannerList/BannerList";
 
 const Home = ({ translation }) => {
-  const [maskDone, setMaskDone] = useState(false);
   const lenisRef = useRef(null); // Memorizza Lenis
 
   useEffect(() => {
@@ -106,12 +104,17 @@ const Home = ({ translation }) => {
             </div>
           </div>
         </Hero>
+        <div className="w-full mx-auto mb-20 overflow-hidden">
+          <ParallaxText marqueeText={translation.marqueeLink} />
+        </div>
+        {/* <HorizontalScroll /> */}
 
         <div
           className="relative z-20 w-screen min-h-screen overflow-x-hidden"
           id="works"
         >
-          <CarouselCases translation={translation} />
+          {/* <CarouselCases translation={translation} /> */}
+          <BannerList translation={translation} />
         </div>
       </motion.div>
     </>

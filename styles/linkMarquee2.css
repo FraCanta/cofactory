@@ -1,6 +1,6 @@
 .sliderContainer {
   display: flex;
-  height: 25vh;
+  height: 10vh;
   overflow: hidden;
   align-items: center;
 }
@@ -13,7 +13,7 @@
 .sliderItems p {
   position: relative;
   margin: 0px;
-  font-size: 100px;
+  font-size: 80px;
   padding-right: 50px;
 }
 

@@ -110,7 +110,7 @@ const Slide = ({
     ]
   );
   return (
-    <motion.div style={{ x: translateX, left }} className="sliderContainer">
+    <motion.div style={{ x: translateX, left }} className="sliderContainer ">
       <Phrase
         sliderItems={sliderItems}
         firstText={firstText}
@@ -136,7 +136,7 @@ const Phrase = ({
   marqueeText,
 }) => {
   return (
-    <Link href="/stories">
+    <Link href="/stories" className="">
       <div ref={sliderItems} className={`${myFont.className} sliderItems `}>
         <p
           ref={firstText}

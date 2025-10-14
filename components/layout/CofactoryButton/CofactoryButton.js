@@ -53,7 +53,7 @@ function CofactoryButton({ isPlaying }) {
               startOffset="76%"
               className={`${myFont2.className} fill-pink  font-regular`}
             >
-              LOVERS
+              STORIES
             </textPath>
           </text>
           <text fontSize="30" fill="currentColor" textAnchor="middle">

@@ -18,6 +18,7 @@ module.exports = {
       },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
+        italic: ["Raleway Italic", "sans-serif"],
       },
       screens: {
         xs: "360px",
