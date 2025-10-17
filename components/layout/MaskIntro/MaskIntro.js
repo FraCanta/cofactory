@@ -126,7 +126,7 @@ function MaskIntro({ onAnimationEnd }) {
             alt="Logo"
             width={600}
             height={200}
-            className="mx-auto w-[300px] sm:w-[320px] 2xl:w-[550px] 2xla:w-[700px]"
+            className="mx-auto w-[300px] sm:w-[320px] 2xl:w-[600px] 2xla:w-[750px]"
           />
         </div>
 

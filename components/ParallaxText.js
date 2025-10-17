@@ -1,6 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import localFont from "next/font/local";
 const myFont = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
@@ -8,7 +8,8 @@ import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-function ParallaxText({ marqueeText }) {
+
+function ParallaxText({ marqueeText, onToggle }) {
   const parallaxContainer = useRef(null);
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -81,6 +82,7 @@ function ParallaxText({ marqueeText }) {
         fifthText={fifthText}
         sixthText={sixthText}
         marqueeText={marqueeText}
+        onToggle={onToggle} // ✅ passaggio corretto
       />
     </div>
   );
@@ -100,6 +102,7 @@ const Slide = ({
   fifthText,
   sixthText,
   marqueeText,
+  onToggle, // ✅ riceve qui
 }) => {
   const translateX = useTransform(
     progress,
@@ -120,6 +123,7 @@ const Slide = ({
         fifthText={fifthText}
         sixthText={sixthText}
         marqueeText={marqueeText}
+        onToggle={onToggle} // ✅ propagato anche qui
       />
     </motion.div>
   );
@@ -134,13 +138,14 @@ const Phrase = ({
   fifthText,
   sixthText,
   marqueeText,
+  onToggle, // ✅ riceve infine qui
 }) => {
   return (
-    <Link href="/stories" className="">
-      <div ref={sliderItems} className={`${myFont.className} sliderItems `}>
+    <button onClick={onToggle}>
+      <div ref={sliderItems} className={`${myFont.className} sliderItems`}>
         <p
           ref={firstText}
-          className="text-transparent text-stroke dark:text-stroke-dark "
+          className="text-transparent text-stroke dark:text-stroke-dark"
         >
           {marqueeText.text1}
         </p>
@@ -175,6 +180,6 @@ const Phrase = ({
           {marqueeText.text6}
         </p>
       </div>
-    </Link>
+    </button>
   );
 };

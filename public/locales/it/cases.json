@@ -2,7 +2,7 @@
   "works": {
     "cards": [
       {
-        "img": "/assets/cases/orociok/cover_orociok.jpg",
+        "img": "/assets/cases/santanna/SantannaPro_x_MissionImpossible.webp",
         "button": "orocioktoys",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
@@ -13,7 +13,7 @@
         ]
       },
       {
-        "img": "/assets/cases/yummers/cover_yummers.jpg",
+        "img": "/assets/cases/slomp/Slomp_x_IPuffi.webp",
         "button": "yummersghostbusters",
         "brand1": "Yummer's",
         "brand2": "Ghostbusters",
@@ -21,7 +21,7 @@
         "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
-        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
+        "img": "/assets/cases/cooltra/Cooltra_x_Sonic3.webp",
         "button": "rossopomodorotartarugheninja",
         "brand1": "Rossopomodoro",
         "brand2": "Tartarughe Ninja",
@@ -29,7 +29,7 @@
         "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
-        "img": "/assets/cases/treccani/cover_treccani.jpg",
+        "img": "/assets/cases/carpisa/cover_carpisa_paddington.png",
         "button": "treccanifaoschwarz",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
@@ -40,7 +40,7 @@
         ]
       },
       {
-        "img": "/assets/cases/bobble/cover_bobble.jpg",
+        "img": "/assets/cases/milka/Milka_x_ToysCenter24_25.webp",
         "button": "bobbled&d",
         "brand1": "Bobble Bobble",
         "brand2": "Dangeons&Dragons",
@@ -48,7 +48,7 @@
         "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
-        "img": "/assets/cases/nestle/nestle.jpg",
+        "img": "/assets/cases/untildown/cover_untildown_romics.png",
         "button": "nestleaquaman",
         "brand1": "Nestlè",
         "brand2": "Aquaman",
@@ -56,7 +56,7 @@
         "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
-        "img": "/assets/cases/milka/cover_milka2.jpg",
+        "img": "/assets/cases/yummers/Yummers_cover.webp",
         "button": "milkatoys",
         "brand1": "Milka",
         "brand2": "Toys Center",
@@ -68,7 +68,7 @@
       },
 
       {
-        "img": "/assets/cases/citrus/citrus.jpeg",
+        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
         "button": "citrustartarugheninja",
         "brand1": "Citrus",
         "brand2": "Tartarughe Ninja",
@@ -76,7 +76,7 @@
         "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
       },
       {
-        "img": "/assets/cases/american/sonic2.jpg",
+        "img": "/assets/cases/bobble/bobblebobble.webp",
         "button": "americanunclesonic2",
         "brand1": "American Uncle",
         "brand2": "Sonic 2",
@@ -87,7 +87,39 @@
         ]
       },
       {
-        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
+        "img": "/assets/cases/treccani/Treccani_x_FaoSchwarz.webp",
+        "button": "rossopomodoroghostbusters",
+        "brand1": "Rossopomodoro",
+        "brand2": "Ghostbusters",
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+      },
+      {
+        "img": "/assets/cases/nestle/Nestle_x_Aquaman.webp",
+        "button": "rossopomodoroghostbusters",
+        "brand1": "Rossopomodoro",
+        "brand2": "Ghostbusters",
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+      },
+      {
+        "img": "/assets/cases/eathappy/BulletTrain_x_EatHappy.webp",
+        "button": "rossopomodoroghostbusters",
+        "brand1": "Rossopomodoro",
+        "brand2": "Ghostbusters",
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+      },
+      {
+        "img": "/assets/cases/orociok/cover_orociok.jpg",
+        "button": "rossopomodoroghostbusters",
+        "brand1": "Rossopomodoro",
+        "brand2": "Ghostbusters",
+        "categories": [{ "name": "Movie" }],
+        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+      },
+      {
+        "img": "/assets/cases/bobble/cover_bobble_new.jpg",
         "button": "rossopomodoroghostbusters",
         "brand1": "Rossopomodoro",
         "brand2": "Ghostbusters",

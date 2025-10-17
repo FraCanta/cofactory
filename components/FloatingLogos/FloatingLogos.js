@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Noise } from "noisejs";
 
 const SCROLL_SPEED = 0.3;
-const NOISE_SPEED = 0.004;
-const NOISE_AMOUNT = 5;
 const CANVAS_WIDTH = 2800;
 
 const bubbleSpecs = [
@@ -44,12 +41,9 @@ const bubbleSpecs = [
 
 function FloatingLogos() {
   const bubblesRef = useRef(null);
-  const noise = useRef(new Noise(Math.floor(Math.random() * 6000)));
   const animationFrameId = useRef(null);
-  const bubbles = useRef([]);
 
   useEffect(() => {
-    // Pulisci la div prima di aggiungere
     if (bubblesRef.current) {
       bubblesRef.current.innerHTML = "";
     }
@@ -61,38 +55,26 @@ function FloatingLogos() {
         this.y = y;
         this.scale = s;
 
-        this.noiseSeedX = Math.floor(Math.random() * 64000);
-        this.noiseSeedY = Math.floor(Math.random() * 64000);
-
         this.el = document.createElement("div");
         this.el.className = `bubble logo${this.index + 1}`;
         bubblesRef.current.appendChild(this.el);
       }
 
       update() {
-        this.noiseSeedX += NOISE_SPEED;
-        this.noiseSeedY += NOISE_SPEED;
-        const randomX = noise.current.simplex2(this.noiseSeedX, 0);
-        const randomY = noise.current.simplex2(this.noiseSeedY, 0);
-
+        // solo scorrimento orizzontale, senza "floating"
         this.x -= SCROLL_SPEED;
-        const xWithNoise = this.x + randomX * NOISE_AMOUNT;
-        const yWithNoise = this.y + randomY * NOISE_AMOUNT;
 
         if (this.x < -200) {
           this.x = CANVAS_WIDTH;
         }
 
-        this.el.style.transform = `translate(${xWithNoise}px, ${yWithNoise}px) scale(${this.scale})`;
+        this.el.style.transform = `translate(${this.x}px, ${this.y}px) scale(${this.scale})`;
       }
     }
 
     class Bubbles {
       constructor(specs) {
-        this.bubbles = [];
-        specs.forEach((spec, index) => {
-          this.bubbles.push(new Bubble(index, spec));
-        });
+        this.bubbles = specs.map((spec, i) => new Bubble(i, spec));
       }
 
       update() {
@@ -103,20 +85,13 @@ function FloatingLogos() {
       }
     }
 
-    // Inizializza
     const bubblesInstance = new Bubbles(bubbleSpecs);
-    bubbles.current = bubblesInstance.bubbles;
-
     bubblesInstance.update();
 
     return () => {
-      // Cleanup: cancella animazione e pulisci DOM
-      if (animationFrameId.current) {
+      if (animationFrameId.current)
         cancelAnimationFrame(animationFrameId.current);
-      }
-      if (bubblesRef.current) {
-        bubblesRef.current.innerHTML = "";
-      }
+      if (bubblesRef.current) bubblesRef.current.innerHTML = "";
     };
   }, []);
 

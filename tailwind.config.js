@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        raleway: ["Raleway", "sans-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
+      },
       images: {
         formats: ["image/avif", "image/webp"],
         domains: ["www.cofactory-eight.vercel.app"],
@@ -19,6 +23,7 @@ module.exports = {
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
         italic: ["Raleway Italic", "sans-serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
       },
       screens: {
         xs: "360px",
@@ -36,7 +41,7 @@ module.exports = {
 
         "2xl": "1500px",
         // => @media (min-width: 1536px) { ... }
-        "2xla": "1650px",
+        "2xla": "1800px",
         // => @media (min-width: 1680px) { ... }
         fxl: "1920px",
         // => @media (min-width: 1920px) { ... }

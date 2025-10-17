@@ -20,7 +20,7 @@ function HoverBanner({ item, myFont2 }) {
 
   return (
     <div
-      className="relative h-[50vh] lg:h-screen w-full group overflow-hidden cursor-pointer"
+      className="relative w-full overflow-hidden cursor-pointer aspect-video group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

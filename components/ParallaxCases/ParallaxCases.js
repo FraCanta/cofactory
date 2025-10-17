@@ -55,7 +55,7 @@ const ParallaxCases = ({
   );
 
   // Se la categoria è "All" usa 3 colonne, altrimenti 2 colonne
-  const numberOfColumns = selectedCategory === "All" ? 3 : 2;
+  const numberOfColumns = isMobile ? 2 : selectedCategory === "All" ? 3 : 2;
 
   // Inizializza colonne dinamicamente
   const columns = Array.from({ length: numberOfColumns }, () => []);
@@ -78,20 +78,24 @@ const ParallaxCases = ({
       ref={galleryRef}
       className="w-full mt-10 mb-10 overflow-hidden lg:mb-20 lg:mt-0"
     >
-      <div className="flex flex-col md:flex-row justify-center items-start w-[90%] mx-auto gap-6 md:gap-4">
+      <div className="flex items-start justify-center gap-2 md:gap-4">
         {columns.map((columnCases, colIndex) => (
           <motion.div
             key={colIndex}
-            style={{ y: transforms[colIndex] || y }} // fallback al primo se mancano trasformazioni
-            className={`flex flex-col w-full gap-y-8 ${
-              numberOfColumns === 3 ? "md:w-1/3" : "md:w-1/2"
+            style={{ y: transforms[colIndex] || y }}
+            className={`flex flex-col gap-y-8 ${
+              numberOfColumns === 3 ? "w-1/2 md:w-1/3" : "w-1/2 md:w-1/2"
             }`}
           >
             {columnCases.map((el, i) => (
-              <Link
-                key={i}
-                href={`/stories/${el.button}`}
+              // <Link
+              //   key={i}
+              //   href={`/stories/${el.button}`}
+              //   className="relative block overflow-hidden group aspect-square rounded-xs"
+              // >
+              <div
                 className="relative block overflow-hidden group aspect-square rounded-xs"
+                key={i}
               >
                 <Image
                   src={el.img}
@@ -119,12 +123,13 @@ const ParallaxCases = ({
                     {el.brand2}
                   </span>
                 </div>
-              </Link>
+                {/* </Link> */}
+              </div>
             ))}
           </motion.div>
         ))}
       </div>
-      <div className="h-auto lg:h-[150vh]"></div>
+      <div className="h-auto lg:h-[220vh]"></div>
     </div>
   );
 };

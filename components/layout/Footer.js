@@ -60,12 +60,12 @@ function Footer() {
     //   </div>
     // </div>
     <footer class="footer-main bg-[#161617] dark:bg-[#D9D9D9] dark:text-white/90 text-third">
-      <div class="relative z-20 bg-third h-[250px] [clip-path:inset(0_0_0_0)]">
+      <div class="relative z-20 bg-third h-[200px] [clip-path:inset(0_0_0_0)]">
         <div class="footer-content fixed left-0 bottom-0 h-[250px] w-full flex flex-col items-center lg:items-start text-center lg:text-left gap-6 py-14 md:py-40 md:px-14 bg-black text-white">
           {/* <SocialLinks class="text-4xl" /> */}Social
           <div class="copyright flex flex-col lg:flex-row gap-2.5 [&_a]:anim-underline-white">
             <p>
-              &copy; 2025 Cofactory srl
+              &copy; 2025 Cofactory srl - <p>P.I. 10233611218</p>
               <span class="inline-block ml-2.5">&pi; Privacy Policy</span>
             </p>
             <p>

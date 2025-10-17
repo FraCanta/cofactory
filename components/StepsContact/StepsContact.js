@@ -1,14 +1,28 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import toast from "react-hot-toast";
-import SmoothParallaxImage from "../SmoothParallaxImage/SmoothParallaxImage";
-import RevealOnScroll from "../RevealOnScroll/RevealOnScroll";
-import ScrollEffect from "../ScrollEffect.js/ScrollEffect";
+import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../layout/Footer";
 import FloatingLogos from "../FloatingLogos/FloatingLogos";
+import ParallaxText from "../ParallaxText";
+import HorizontalScroll from "../HorizontalScroll/HorizontalScroll";
 
 export default function StepsContact({ translation }) {
+  const [showScroll, setShowScroll] = useState(false);
+  const scrollRef = useRef(null);
+
+  // ✅ Questa funzione verrà passata come onToggle a ParallaxText
+  const handleToggle = () => {
+    setShowScroll((prev) => !prev);
+    // 👇 piccolo timeout per aspettare il render del motion.div
+    setTimeout(() => {
+      scrollRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 400);
+  };
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -147,14 +161,36 @@ export default function StepsContact({ translation }) {
                 ></h1>
                 <button
                   onClick={nextStep}
-                  className="py-2 text-sm font-medium  uppercase border-2 rounded-[30px] px-4 lg:text-lg lg:min-w-[240px] border-pink  3xl:text-2xl text-center"
+                  className="relative overflow-hidden py-2 px-4 text-sm font-medium uppercase border-2 border-pink text-center transition-all duration-300 lg:text-lg lg:min-w-[240px] 3xl:text-2xl group"
                 >
-                  <span className="px-2 text-white dark:text-third">
+                  <span className="relative z-10 px-2 text-white transition-colors duration-500 dark:text-third group-hover:text-white">
                     {translation.step0.cta}
                   </span>
+                  <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
                 </button>
               </div>
             </div>
+            {/* <div className="w-full mx-auto mt-24 overflow-hidden">
+              <ParallaxText
+                marqueeText={translation.marqueeLink}
+                onToggle={handleToggle}
+              />
+            </div>
+            <AnimatePresence>
+              {showScroll && (
+                <motion.div
+                  ref={scrollRef}
+                  className="w-full my-20 lg:my-40"
+                  key="scroll"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <HorizontalScroll />
+                </motion.div>
+              )}
+            </AnimatePresence> */}
             <FloatingLogos />
             <Footer />
           </>

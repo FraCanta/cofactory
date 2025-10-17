@@ -58,7 +58,7 @@ const Home = ({ translation }) => {
           <div className="relative flex flex-col items-end w-full gap-4 lg:flex-row lg:justify-between lg:gap-0">
             <MaskText>
               <h1
-                className="leading-none text-6xl xl:text-[6rem] xl:-mb-3 text-white dark:text-third fxl:text-[9rem] 3xl:text-[12rem] 3xl:max-w-3xl"
+                className="leading-none text-6xl xl:text-[7rem] xl:-mb-3 text-white dark:text-third fxl:text-[9rem] 3xl:text-[12rem] 3xl:max-w-3xl"
                 dangerouslySetInnerHTML={{ __html: translation.hero.title }}
               ></h1>
             </MaskText>
@@ -104,18 +104,8 @@ const Home = ({ translation }) => {
             </div>
           </div>
         </Hero>
-        <div className="w-full mx-auto mb-20 overflow-hidden">
-          <ParallaxText marqueeText={translation.marqueeLink} />
-        </div>
-        {/* <HorizontalScroll /> */}
 
-        <div
-          className="relative z-20 w-screen min-h-screen overflow-x-hidden"
-          id="works"
-        >
-          {/* <CarouselCases translation={translation} /> */}
-          <BannerList translation={translation} />
-        </div>
+        <BannerList translation={translation} />
       </motion.div>
     </>
   );

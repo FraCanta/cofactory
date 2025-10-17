@@ -1,7 +1,7 @@
 .bubble-wrap {
   overflow: hidden;
   height: 600px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   margin-top: 50px;
 }
 
@@ -11,10 +11,10 @@
 
 .bubble {
   position: absolute;
-  width: 152px;
-  height: 152px;
+  width: 154px;
+  height: 154px;
   border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1); */
   background-image: url("/assets/logos/sprites.png");
   background-size: 1076px 1076px;
 }

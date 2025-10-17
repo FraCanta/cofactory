@@ -43,30 +43,7 @@ const Stories = ({ translation }) => {
       <Head>
         <title>Cofactory - Stories</title>
       </Head>
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="h-[75vh]  flex items-center flex-col justify-center w-full mx-auto gap-6 bg-pink/20 dark:bg-pink/30"
-      >
-        <h1
-          className={`${myFont.className} text-5xl py-1 md:text-[6rem] text-white dark:text-third lg:text-center 2xl:text-8xl w-[90%] mx-auto `}
-        >
-          <span>Happy</span>
-          <span className="ml-4 text-white/60 dark:text-third/60">
-            stories
-          </span>{" "}
-          for happy clients.
-        </h1>
-        <div className="w-[90%] lg:w-[65%] mx-auto">
-          <p
-            className={`${myFont2.className} text-[20px] md:text-[25px] text-white dark:text-third lg:text-center `}
-          >
-            Ideiamo e realizziamo campagne di comunicazione congiunta.
-          </p>
-        </div>
-      </motion.div> */}
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

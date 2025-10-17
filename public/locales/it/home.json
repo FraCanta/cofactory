@@ -5,7 +5,7 @@
 
       "description": [
         {
-          "text": "Siamo la prima agenzia di <span class='px-1 text-second font-italic'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
+          "text": "Siamo la prima agenzia di <span class='px-1 italic text-second font-raleway'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
         },
         {
           "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
@@ -97,14 +97,6 @@
         "brand1": "Bullet Train",
         "brand2": "Eat Happy"
       }
-    ],
-    "marqueeLink": {
-      "text1": "il nostro approccio",
-      "text2": "il nostro approccio",
-      "text3": "il nostro approccio",
-      "text4": "il nostro approccio",
-      "text5": "il nostro approccio",
-      "text6": "il nostro approccio"
-    }
+    ]
   }
 }

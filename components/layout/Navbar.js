@@ -62,10 +62,12 @@ const Navbar = ({ lang }) => {
         <div className="relative flex items-center gap-4 lg:gap-8">
           <Link
             href="/cerchi-un-partner"
-            className="px-2 py-2 text-sm font-medium text-white uppercase border-2 rounded-[30px] lg:px-4 lg:text-base border-pink dark:text-third 3xl:text-2xl"
+            className="relative px-4 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 border-pink lg:px-5 lg:text-base 3xl:text-2xl group"
           >
-            cerchi un partner?
+            <span className="relative z-10">cerchi un partner?</span>
+            <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
           </Link>
+
           <DarkModeToggle />
         </div>
       </div>
