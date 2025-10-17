@@ -78,12 +78,12 @@ const ParallaxCases = ({
       ref={galleryRef}
       className="w-full mt-10 mb-10 overflow-hidden lg:mb-20 lg:mt-0"
     >
-      <div className="flex items-start justify-center gap-2 md:gap-4">
+      <div className="flex items-start justify-center gap-3 md:gap-4">
         {columns.map((columnCases, colIndex) => (
           <motion.div
             key={colIndex}
             style={{ y: transforms[colIndex] || y }}
-            className={`flex flex-col gap-y-8 ${
+            className={`flex flex-col gap-y-3 lg:gap-y-8 ${
               numberOfColumns === 3 ? "w-1/2 md:w-1/3" : "w-1/2 md:w-1/2"
             }`}
           >
