@@ -19,18 +19,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 import MaskIntro from "@/components/layout/MaskIntro/MaskIntro";
+import MaskIntro2 from "@/components/layout/MaskIntro/MaskIntro2";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-
   const [loading, setLoading] = useState(true);
+  const [showHome, setShowHome] = useState(false);
 
   const finishLoading = () => {
-    setLoading(false);
+    // attiva fade-in
+    setShowHome(true);
+    setTimeout(() => setLoading(false), 300); // durata fade-in
   };
 
   useEffect(() => {
-    // here you can add your aos options
     AOS.init({
       offset: 200,
       duration: 500,
@@ -42,11 +44,17 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {loading ? (
-        <MaskIntro onAnimationEnd={finishLoading} />
+        <MaskIntro2 onAnimationEnd={finishLoading} />
       ) : (
         <ThemeProvider attribute="class">
           <Layout>
-            <Component {...pageProps} key={router.asPath} />
+            <div
+              className={`transition-opacity duration-300 ${
+                showHome ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Component {...pageProps} key={router.asPath} />
+            </div>
           </Layout>
         </ThemeProvider>
       )}

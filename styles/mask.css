@@ -8,7 +8,6 @@
 .Maskcontainer {
   position: relative;
   height: 100vh;
-  background-color: #ffffff;
   z-index: 10; /* Sotto la Hero */
   overflow: hidden;
 }
@@ -40,6 +39,26 @@
   will-change: transform, mask-size, -webkit-mask-size, opacity;
   background-color: #000000;
   transform: translate(0, 0); /* Aggiunta consigliata */
+}
+
+.video-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.blurry-lights {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
 }
 
 .stickyMask .video {
@@ -135,5 +154,45 @@
   }
   .payoffContainer {
     top: -42vh; /* Adatta la posizione per mobile */
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 850px) {
+  .stickyMask {
+    mask-size: 70%;
+    -webkit-mask-size: 70%;
+  }
+  .payoffContainer {
+    top: -42vh; /* Adatta la posizione per mobile */
+  }
+}
+
+/* esempio maschera */
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.mask {
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: screen;
+  z-index: 2;
+  position: relative;
+}
+
+h2 {
+  font-size: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 90px;
   }
 }

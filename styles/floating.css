@@ -1,8 +1,8 @@
 .bubble-wrap {
   overflow: hidden;
   height: 600px;
-  margin-bottom: 100px;
-  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-top: 200px;
 }
 
 .bubbles {
@@ -122,5 +122,114 @@
 @media screen and (max-width: 840px) {
   .bubble-wrap {
     margin-top: 0;
+  }
+
+  .bubble {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: url("/assets/logos/sprite2.png");
+    background-size: 896px 896px; /* ridimensionamento proporzionale: 1076 * (128/154) ≈ 896 */
+  }
+
+  .logo1 {
+    background-position: 0 0;
+  }
+  .logo2 {
+    background-position: -128px 0;
+  }
+  .logo3 {
+    background-position: -256px 0;
+  }
+  .logo4 {
+    background-position: -384px 0;
+  }
+  .logo5 {
+    background-position: -512px 0;
+  }
+  .logo6 {
+    background-position: -640px 0;
+  }
+  .logo7 {
+    background-position: -768px 0;
+  }
+  .logo8 {
+    background-position: 0 -128px;
+  }
+  .logo9 {
+    background-position: -128px -128px;
+  }
+  .logo10 {
+    background-position: -256px -128px;
+  }
+  .logo11 {
+    background-position: -384px -128px;
+  }
+  .logo12 {
+    background-position: -512px -128px;
+  }
+  .logo13 {
+    background-position: -640px -128px;
+  }
+  .logo14 {
+    background-position: -768px -128px;
+  }
+  .logo15 {
+    background-position: 0 -256px;
+  }
+  .logo16 {
+    background-position: -128px -256px;
+  }
+  .logo17 {
+    background-position: -256px -256px;
+  }
+  .logo18 {
+    background-position: -384px -256px;
+  }
+  .logo19 {
+    background-position: -512px -256px;
+  }
+  .logo20 {
+    background-position: -640px -256px;
+  }
+  .logo21 {
+    background-position: -768px -256px;
+  }
+  .logo22 {
+    background-position: 0 -384px;
+  }
+  .logo23 {
+    background-position: -128px -384px;
+  }
+  .logo24 {
+    background-position: -256px -384px;
+  }
+  .logo25 {
+    background-position: -384px -384px;
+  }
+  .logo26 {
+    background-position: -512px -384px;
+  }
+  .logo27 {
+    background-position: -640px -384px;
+  }
+  .logo28 {
+    background-position: -768px -384px;
+  }
+  .logo29 {
+    background-position: 0 -512px;
+  }
+  .logo30 {
+    background-position: -128px -512px;
+  }
+  .logo31 {
+    background-position: -256px -512px;
+  }
+  .logo32 {
+    background-position: -384px -512px;
+  }
+  .logo33 {
+    background-position: -512px -512px;
   }
 }
