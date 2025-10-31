@@ -12,20 +12,28 @@
         }
       ]
     },
+    "marqueeLink": {
+      "text1": "il nostro approccio",
+      "text2": "il nostro approccio",
+      "text3": "il nostro approccio",
+      "text4": "il nostro approccio",
+      "text5": "il nostro approccio",
+      "text6": "il nostro approccio"
+    },
     "cases": [
       {
         "media": "/assets/cases/santanna/SantannaPro_x_MissionImpossible.webp",
         "type": "image",
-        "name": "Santanna Pro x Mission Impossible",
-        "brand1": "Santanna Pro",
-        "brand2": "Mission Impossible"
+        "name": "Sant'anna Pro x Mission Impossible",
+        "brand1": "Sant'anna Pro",
+        "brand2": "Mission Impossible: The Final Reckoning"
       },
       {
         "media": "/assets/cases/slomp/Slomp_x_IPuffi.webp",
         "type": "image",
-        "name": "Slomp x I Puffi",
+        "name": "Slomp x I Puffi: Il Film",
         "brand1": "Slomp",
-        "brand2": "I Puffi"
+        "brand2": "I Puffi: Il Film"
       },
       {
         "media": "/assets/cases/cooltra/Cooltra_x_Sonic3.webp",
@@ -46,13 +54,13 @@
         "type": "image",
         "name": "MILKA x Toys Center - Natale 2024 2025",
         "brand1": "MILKA",
-        "brand2": "Toys Center"
+        "brand2": "Toys Center 2024"
       },
       {
         "media": "/assets/video/UntilDown_x_Romics25.mp4",
         "type": "video",
-        "name": "Until Down x Romics 25",
-        "brand1": "Until Down",
+        "name": "Until Dawn x Romics 25",
+        "brand1": "Until Dawn: Fino all'alba",
         "brand2": "Romics 25"
       },
       {
@@ -60,14 +68,14 @@
         "type": "image",
         "name": "Yummer's x Ghostbusters: Minaccia Glaciale",
         "brand1": "Yummer's",
-        "brand2": "Ghostbusters"
+        "brand2": "Ghostbusters: Minaccia Glaciale"
       },
       {
         "media": "/assets/video/RossoPomodoro_x_TartarugheNinja.mp4",
         "type": "video",
         "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
         "brand1": "ROSSOPOMODORO",
-        "brand2": "Tartarughe Ninja"
+        "brand2": "Tartarughe Ninja: Caos Mutante"
       },
       {
         "media": "/assets/cases/bobble/bobblebobble.webp",
@@ -88,14 +96,14 @@
         "type": "image",
         "name": "Nestlè x Aquaman",
         "brand1": "Nestlè",
-        "brand2": "Aquaman"
+        "brand2": "Aquaman: Il Regno Perduto"
       },
       {
         "media": "/assets/cases/eathappy/BulletTrain_x_Eathappy.webp",
         "type": "image",
         "name": "Bullet Train x Eat Happy",
-        "brand1": "Bullet Train",
-        "brand2": "Eat Happy"
+        "brand1": "Eat Happy & Wakame",
+        "brand2": "Bullet Train"
       }
     ]
   }

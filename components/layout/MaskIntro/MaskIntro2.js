@@ -124,7 +124,7 @@ function MaskIntro2({ onAnimationEnd }) {
 
       {/* Maschera */}
       <div className="mask">
-        <h2>COFACTORY</h2>
+        <h2 className="titleMask">COFACTORY</h2>
       </div>
 
       {/* Logo/Payoff */}

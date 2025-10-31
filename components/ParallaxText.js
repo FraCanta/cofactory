@@ -142,7 +142,10 @@ const Phrase = ({
 }) => {
   return (
     <button onClick={onToggle}>
-      <div ref={sliderItems} className={`${myFont.className} sliderItems`}>
+      <div
+        ref={sliderItems}
+        className={`${myFont.className} sliderItems uppercase`}
+      >
         <p
           ref={firstText}
           className="text-transparent text-stroke dark:text-stroke-dark"

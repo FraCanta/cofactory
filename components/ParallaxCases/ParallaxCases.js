@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { MaskText } from "../MaskText";
+import BlurryLights from "../layout/BlurryLights";
 
 const ParallaxCases = ({
   cases = [],
@@ -34,12 +36,12 @@ const ParallaxCases = ({
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    [isMobile ? 0 : -100, isMobile ? 0 : dimension.height * 1.5]
+    [isMobile ? 0 : -150, isMobile ? 0 : dimension.height * 1.5]
   );
   const y2 = useTransform(
     scrollYProgress,
     [0, 1],
-    [isMobile ? 0 : -250, isMobile ? 0 : dimension.height * 2.5]
+    [isMobile ? 0 : -275, isMobile ? 0 : dimension.height * 2.5]
   );
   const y3 = useTransform(
     scrollYProgress,
@@ -76,7 +78,7 @@ const ParallaxCases = ({
   return (
     <div
       ref={galleryRef}
-      className="w-full mt-10 mb-10 overflow-hidden lg:mb-20 lg:mt-0"
+      className="w-full mt-10 mb-10 overflow-hidden lg:mb-20 lg:mt-10 2xla:mt-0"
     >
       <div className="flex items-start justify-center gap-3 md:gap-4">
         {columns.map((columnCases, colIndex) => (
@@ -101,28 +103,42 @@ const ParallaxCases = ({
                   src={el.img}
                   alt={el.name}
                   fill
-                  className="object-cover transition-all duration-700 group-hover:grayscale group-hover:opacity-50 group-hover:scale-105"
+                  className="object-cover "
                 />
-                <div className="absolute z-10 flex items-center text-white transition-opacity duration-500 opacity-0 bottom-4 left-4 group-hover:opacity-100">
-                  <span
-                    className={`text-sm lg:text-xl font-semibold uppercase ${myFont.className}`}
-                  >
-                    {el.brand1}
-                  </span>
-                  <span className="relative w-[1.5rem] h-8 mx-2 lg:h-8 lg:w-8 2xl:w-[3rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-24 fxl:h-24">
-                    <Image
-                      src="/assets/cofactory_nuovaX_green.svg"
-                      alt="Logo"
-                      fill
-                      className="object-contain"
-                    />
-                  </span>
-                  <span
-                    className={`text-sm lg:text-xl font-semibold uppercase ${myFont.className}`}
-                  >
-                    {el.brand2}
-                  </span>
-                </div>
+                {/* <div
+                  className={`absolute inset-0 flex flex-col items-center justify-center gap-y-2 transition-opacity duration-500 
+                   
+                  `}
+                >
+                  <h2 className="flex flex-col items-center justify-center gap-2 text-center uppercase">
+                    <MaskText>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: el.brand1,
+                        }}
+                        className={`text-raleway font-regular leading-none text-sm lg:text-[2.5rem] text-white `}
+                      ></span>
+                    </MaskText>
+
+                    <span className="relative w-2 h-4 mx-2 lg:h-8 lg:w-8 2xl:w-[5rem] ">
+                      <Image
+                        src="/assets/cofactory_nuovaX_green.svg"
+                        fill
+                        className="object-cover"
+                        alt="logo"
+                      />
+                    </span>
+
+                    <MaskText>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: el.brand2,
+                        }}
+                        className={`text-raleway font-regular leading-tight text-sm lg:text-[2.5rem] text-white`}
+                      ></span>
+                    </MaskText>
+                  </h2>
+                </div> */}
                 {/* </Link> */}
               </div>
             ))}

@@ -14,6 +14,7 @@ const myFont = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import cx from "clsx";
 import ParallaxCases from "@/components/ParallaxCases/ParallaxCases";
+import BlurryLights from "@/components/layout/BlurryLights";
 const Stories = ({ translation }) => {
   const cases = translation.cards;
   const [showDrawer, setShowDrawer] = useState(false);
@@ -49,14 +50,18 @@ const Stories = ({ translation }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="relative z-[1] pb-20 md:pb-40 lg:pb-0"
       >
-        <div className="w-[90%] mx-auto mt-[120px]">
-          <div className="relative flex flex-wrap items-center justify-between w-full gap-y-6">
-            <div>
-              <label className="text-xl text-white/60">Filter: </label>
+        <div className="absolute inset-0 -z-10">
+          <BlurryLights />
+        </div>
+        <div className="w-[90%] mx-auto md:mt-[200px] mt-[120px] ">
+          <div className="relative flex flex-wrap items-center justify-center w-full my-24 lg:justify-between gap-y-6">
+            <div className="hidden lg:block">
+              {/* <label className="text-xl text-white/60">Filter: </label>
               <span className="ml-2 text-xl text-white">
                 {selectedCategory}
-              </span>
+              </span> */}
             </div>
             <div className="flex items-start gap-6 lg:gap-10 ">
               <label className="flex items-center gap-2 text-white uppercase cursor-pointer">

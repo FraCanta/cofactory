@@ -5,17 +5,17 @@ import { useState } from "react";
 
 const myFont2 = localFont({ src: "../../fonts/Raleway-Regular.ttf" });
 
-function BannerList({ translation }) {
+function BannerList({ translation, id }) {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full" id={id}>
       {translation.cases.map((item, index) => (
-        <HoverBanner key={index} item={item} myFont2={myFont2} />
+        <HoverBanner key={index} item={item} />
       ))}
     </div>
   );
 }
 
-function HoverBanner({ item, myFont2 }) {
+function HoverBanner({ item }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -43,21 +43,25 @@ function HoverBanner({ item, myFont2 }) {
         />
       )}
 
-      {/* Overlay SOLO in hover */}
-      {hovered && (
-        <div className="absolute inset-0 transition-opacity duration-500 opacity-100 bg-third/30" />
-      )}
-
-      {/* Testo MaskText visibile solo in hover */}
+      {/* OVERLAY sempre presente */}
       <div
-        className={`absolute inset-0 flex flex-col justify-end p-6 lg:p-10 transition-opacity duration-500 ${
-          hovered ? "opacity-100" : "opacity-0"
+        className={`absolute inset-0 bg-third/50 transition-opacity duration-700 ${
+          hovered ? "opacity-0" : "opacity-40"
+        }`}
+      />
+
+      {/* SFONDO TESTO con blur visibile solo in hover */}
+      <div
+        className={`absolute bottom-0 left-0 w-full flex items-center p-6 lg:p-10 transition-all duration-700 h-[20vh] ${
+          hovered
+            ? "opacity-100 backdrop-blur-md bg-third/40"
+            : "opacity-0 backdrop-blur-none bg-transparent"
         }`}
       >
         <h2 className="flex items-center space-x-2 uppercase">
           <MaskText trigger={hovered}>
             <span
-              className={`${myFont2.className} leading-none text-sm lg:text-3xl text-white fxl:text-5xl 3xl:text-6xl`}
+              className={`text-raleway font-regular  text-[0.85rem] lg:text-3xl text-white fxl:text-5xl 3xl:text-6xl`}
             >
               {item.brand1}
             </span>
@@ -74,7 +78,7 @@ function HoverBanner({ item, myFont2 }) {
 
           <MaskText trigger={hovered}>
             <span
-              className={`${myFont2.className} leading-none text-sm lg:text-3xl text-white fxl:text-5xl 3xl:text-6xl`}
+              className={`text-raleway font-regular leading-none text-[0.85rem] lg:text-3xl text-white fxl:text-5xl 3xl:text-6xl`}
             >
               {item.brand2}
             </span>
