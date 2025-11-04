@@ -83,7 +83,7 @@
 
 @media screen and (max-width: 768px) {
   .gallery {
-    height: 100vh; /* Allow the gallery height to adjust based on content */
+    height: 100dvh; /* Allow the gallery height to adjust based on content */
   }
 
   .gallery .column {
@@ -101,7 +101,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 100vh;
+  height: 100dvh;
   margin: 0 auto;
 }
 
@@ -112,7 +112,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 50px;
-  height: 100vh;
+  height: 100dvh;
   opacity: 0;
 }
 

@@ -24,7 +24,7 @@ const AnimatedX = () => {
   }, []);
 
   return (
-    <div className="h-screen w-[90%] mx-auto flex flex-col items-center justify-center gap-20">
+    <div className="h-[100dvh] w-[90%] mx-auto flex flex-col items-center justify-center gap-20">
       <div className="w-20 h-20 bg-second a ">a</div>
       <div className="w-20 h-20 bg-second b">b</div>
       <div className="w-20 h-20 bg-second c">c</div>

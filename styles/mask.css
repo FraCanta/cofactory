@@ -66,7 +66,7 @@
 
 .Maskcontainer {
   width: 100vw !important;
-  height: 100vh;
+  height: 100dvh;
   position: fixed !important;
 }
 
@@ -99,7 +99,7 @@
 
 .Maskcontainer2 {
   width: 100vw !important;
-  height: 100vh;
+  height: 100dvh;
   position: relative !important;
   overflow: hidden;
 }

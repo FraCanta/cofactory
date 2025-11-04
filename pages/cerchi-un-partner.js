@@ -48,7 +48,7 @@ const Contatti = ({ translation }) => {
           </div>
         </nav>
 
-        <div className="flex flex-col items-center w-full min-h-screen">
+        <div className="flex flex-col items-center w-full min-h-[100dvh]">
           <StepsContact translation={translation} />
         </div>
       </motion.div>

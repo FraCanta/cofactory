@@ -60,7 +60,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
-        <div className="relative flex items-center h-[75vh] lg:h-screen">
+        <div className="relative flex items-center h-[75vh] lg:h-[100dvh]">
           <motion.div
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
@@ -142,7 +142,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             </div>
           </div>
         </section>
-        <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-screen flex flex-col  items-center py-[50px] ">
+        <section className="bg-[#161617] dark:bg-[#D9D9D9] min-h-[100dvh] flex flex-col  items-center py-[50px] ">
           <div className="w-[90%] mx-auto flex flex-col gap-6">
             {work.row0 ? (
               <div data-aos="fade-up" data-aos-delay="100">
@@ -311,7 +311,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row3 ? (
               <>
                 <div
-                  className="aspect-square lg:h-screen fxl:h-[90vh] w-full relative"
+                  className="aspect-square lg:h-[100dvh] fxl:h-[90vh] w-full relative"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -421,7 +421,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
             {work.row6bis ? (
               <div
-                className="relative w-auto aspect-square lg:h-screen "
+                className="relative w-auto aspect-square lg:h-[100dvh] "
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -707,7 +707,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             {work.row9 ? (
               <>
                 <div
-                  className="relative w-full aspect-video lg:h-screen"
+                  className="relative w-full aspect-video lg:h-[100dvh]"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
@@ -749,7 +749,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                 {work.row9.gallery.map((el, i) => {
                   return (
                     <div
-                      className="relative w-full aspect-video lg:h-screen"
+                      className="relative w-full aspect-video lg:h-[100dvh]"
                       data-aos="fade-up"
                       data-aos-delay="100"
                     >

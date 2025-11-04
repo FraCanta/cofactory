@@ -79,7 +79,7 @@ function CarouselCases({ translation }) {
         const activeCard = cardGroup.cases[active];
 
         return (
-          <div className="relative h-[50vh] lg:h-screen" key={groupIndex}>
+          <div className="relative h-[50vh] lg:h-[100dvh]" key={groupIndex}>
             <Image
               fill
               src={activeCard.img ? activeCard.img : "/assets/placeholder.png"}
