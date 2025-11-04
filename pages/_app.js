@@ -33,13 +33,23 @@ export default function App({ Component, pageProps }) {
   };
 
   useEffect(() => {
+    // ✅ controlla se è la prima visita della sessione
+    const alreadyPlayed = sessionStorage.getItem("maskPlayed");
+
+    if (!alreadyPlayed && router.pathname === "/") {
+      setLoading(true);
+      sessionStorage.setItem("maskPlayed", "true");
+    } else {
+      setShowHome(true);
+    }
+
     AOS.init({
       offset: 200,
       duration: 500,
       easing: "ease-in-out",
       once: true,
     });
-  }, []);
+  }, [router.pathname]);
 
   return (
     <>

@@ -25,6 +25,7 @@ module.exports = {
         italic: ["Raleway Italic", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
         regular: ["Raleway Regular", "sans-serif"],
+        tactico: ["Tactito Grunge", "sans-serif"],
       },
       screens: {
         xs: "360px",
