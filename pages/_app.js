@@ -18,30 +18,37 @@ import { ThemeProvider } from "next-themes";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
-import MaskIntro from "@/components/layout/MaskIntro/MaskIntro";
 import MaskIntro2 from "@/components/layout/MaskIntro/MaskIntro2";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+
+  // ✅ evita hydration error
+  const [isClient, setIsClient] = useState(false);
+
+  // ✅ controlla la mask
   const [loading, setLoading] = useState(true);
-  const [showHome, setShowHome] = useState(false);
 
   const finishLoading = () => {
-    // attiva fade-in
-    setShowHome(true);
-    setTimeout(() => setLoading(false), 300); // durata fade-in
+    // home diventa visibile
+    setLoading(false);
   };
 
   useEffect(() => {
-    // ✅ controlla se è la prima visita della sessione
-    const alreadyPlayed = sessionStorage.getItem("maskPlayed");
+    setIsClient(true); // ora siamo sul client e possiamo usare sessionStorage
+  }, []);
 
-    if (!alreadyPlayed && router.pathname === "/") {
-      setLoading(true);
-      sessionStorage.setItem("maskPlayed", "true");
-    } else {
-      setShowHome(true);
-    }
+  useEffect(() => {
+    // if (!isClient) return;
+
+    // const alreadyPlayed = sessionStorage.getItem("maskPlayed");
+
+    // if (!alreadyPlayed && router.pathname === "/") {
+    //   sessionStorage.setItem("maskPlayed", "true");
+    //   setLoading(true);
+    // } else {
+    //   setLoading(false);
+    // }
 
     AOS.init({
       offset: 200,
@@ -49,25 +56,34 @@ export default function App({ Component, pageProps }) {
       easing: "ease-in-out",
       once: true,
     });
-  }, [router.pathname]);
+  }, [isClient, router.pathname]);
+
+  // ✅ evita mismatch server/client
+  if (!isClient) return null;
 
   return (
-    <>
-      {loading ? (
-        <MaskIntro2 onAnimationEnd={finishLoading} />
-      ) : (
-        <ThemeProvider attribute="class">
-          <Layout>
-            <div
-              className={`transition-opacity duration-300 ${
-                showHome ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <Component {...pageProps} key={router.asPath} />
-            </div>
-          </Layout>
-        </ThemeProvider>
-      )}
-    </>
+    <ThemeProvider attribute="class">
+      <Layout>
+        {/* ✅ LA HOME È SEMPRE SOTTO LE TENDINE */}
+        <div
+          id="app-content"
+          style={{
+            opacity: loading ? 0 : 1,
+            transition: "opacity 0.5s ease-in-out",
+            position: "relative",
+            zIndex: 1, // sotto la mask
+          }}
+        >
+          <Component {...pageProps} key={router.asPath} />
+        </div>
+
+        {/* ✅ MASK SOLO SE SERVE */}
+        {loading && (
+          <div style={{ position: "fixed", inset: 0, zIndex: 99999 }}>
+            <MaskIntro2 onAnimationEnd={finishLoading} />
+          </div>
+        )}
+      </Layout>
+    </ThemeProvider>
   );
 }
