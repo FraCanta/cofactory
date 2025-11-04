@@ -4,7 +4,10 @@ export default function Document() {
   return (
     <Html lang="it">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
