@@ -221,30 +221,35 @@ function MaskIntro2({ onAnimationEnd }) {
         </button>
       </div>
 
-      {/* ✅ CURTAINS FUORI DAL CONTAINER (funzionano anche dopo display:none) */}
       <div className="fixed inset-0 pointer-events-none z-[9999]">
+        {/* Curtain sinistro */}
         <div
           ref={curtainLeft}
           className="absolute top-0 left-0 flex items-center justify-center w-1/2 h-full bg-third dark:bg-white"
         >
-          <Image
-            src="/assets/logo/per1.svg"
-            alt="Logo Cofactory"
-            fill
-            className=" w-[60px] md:w-[150px]"
-          />
+          <div className="relative w-12 h-12 md:w-20 md:h-20">
+            <Image
+              src="/assets/logo/per1.svg"
+              alt="Logo Cofactory"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
+
+        {/* Curtain destro */}
         <div
           ref={curtainRight}
           className="absolute top-0 right-0 flex items-center justify-center w-1/2 h-full bg-third dark:bg-white"
         >
-          {" "}
-          <Image
-            src="/assets/logo/per2.svg"
-            alt="Logo Cofactory"
-            fill
-            className="w-[60px] md:w-[150px]"
-          />
+          <div className="relative w-12 h-12 md:w-20 md:h-20">
+            <Image
+              src="/assets/logo/per2.svg"
+              alt="Logo Cofactory"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
     </>
