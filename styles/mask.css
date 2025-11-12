@@ -75,14 +75,20 @@
   inset: 0;
   width: 100vw;
   height: 100%;
-  background: #ffff;
+  background: #ffffff; /* ✅ di base: sfondo bianco per fondersi su bg nero */
   display: flex;
   justify-content: center;
   align-items: center;
-  mix-blend-mode: screen;
+  mix-blend-mode: screen; /* effetto luminoso su dark bg */
   z-index: 999;
-  isolation: isolate; /* ✅ il fix reale */
-  will-change: transform; /* ottimizza la scala */
+  isolation: isolate; /* evita conflitti di blending */
+  will-change: transform; /* ottimizza performance */
+}
+
+/* ✅ versione per il tema "dark" (cioè sfondo bianco nel tuo caso) */
+.dark .mask {
+  background: #000000; /* inverso */
+  mix-blend-mode: multiply; /* effetto scuro su bg chiaro */
 }
 
 .titleMask {
@@ -91,50 +97,6 @@
 
 @media screen and (max-width: 768px) {
   .titleMask {
-    font-size: 90px;
-  }
-}
-
-/* per l'altro componente */
-
-.Maskcontainer2 {
-  width: 100vw !important;
-  height: 100dvh;
-  position: relative !important;
-  overflow: hidden;
-}
-
-.mask2 {
-  position: absolute;
-  inset: 0;
-  width: 100vw;
-  height: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  mix-blend-mode: screen;
-  z-index: 999;
-  isolation: isolate;
-}
-
-.titleMask2 {
-  font-size: 800px;
-  font-weight: 900;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.intro-text2 img {
-  display: block;
-}
-
-.tendina2 {
-  transform: translateY(100%);
-}
-
-@media screen and (max-width: 768px) {
-  .titleMask2 {
     font-size: 90px;
   }
 }

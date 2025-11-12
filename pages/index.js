@@ -14,6 +14,7 @@ import CarouselCases from "@/components/layout/CarouselCases/CarouselCases";
 import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
 import ParallaxText from "@/components/ParallaxText";
 import BannerList from "@/components/BannerList/BannerList";
+import HeroLogo from "@/components/layout/HeroLogo";
 
 const Home = ({ translation }) => {
   const lenisRef = useRef(null); // Memorizza Lenis
@@ -59,6 +60,7 @@ const Home = ({ translation }) => {
       <Head>
         <title>Cofactory - Home</title>
       </Head>
+      <HeroLogo />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -82,7 +84,7 @@ const Home = ({ translation }) => {
                       dangerouslySetInnerHTML={{
                         __html: text.text,
                       }}
-                      className={`font-raleway font-medium xl:leading-none text-base text-white dark:text-third md:text-2xl lg:max-w-2xl 2xl:max-w-4xl fxl:max-w-7xl 3xl:text-4xl 3xl:max-w-7xl`}
+                      className={`font-raleway font-medium  xl:leading-none text-base text-white dark:text-third md:text-2xl lg:max-w-2xl 2xl:max-w-4xl fxl:max-w-7xl 3xl:text-4xl 3xl:max-w-7xl`}
                     ></p>
                   </MaskText>
                 );
@@ -90,27 +92,9 @@ const Home = ({ translation }) => {
             </div>
           </div>
 
-          <div className="absolute left-0 grid items-center w-full grid-cols-2 lg:grid-cols-3 bottom-14 md:bottom-24 lg:bottom-20 ">
+          <div className="absolute left-0 grid items-center w-full grid-cols-2 lg:grid-cols-3 bottom-14 md:bottom-24 lg:bottom-20">
             <div className="hidden lg:block"></div>
-            <div className="flex lg:justify-center text-second">
-              <Link href="#works" onClick={scrollToWorks}>
-                <motion.div
-                  animate={{ y: [0, 10, 0] }} // Movimento su e giù
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <Icon
-                    icon="entypo:chevron-thin-down"
-                    width="30"
-                    height="30"
-                    className="text-second"
-                  />
-                </motion.div>
-              </Link>
-            </div>
+            <div className="flex lg:justify-center text-second"></div>
             <div>
               <TimbroMarquee />
             </div>

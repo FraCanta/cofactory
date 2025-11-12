@@ -11,6 +11,7 @@ import "@/styles/sliding.css";
 import "@/styles/cofactorybutton.css";
 import "@/styles/mask.css";
 import "@/styles/floating.css";
+import "@/styles/herologo.css";
 
 import { useState, useEffect } from "react";
 
@@ -65,24 +66,16 @@ export default function App({ Component, pageProps }) {
     <ThemeProvider attribute="class">
       <Layout>
         {/* ✅ LA HOME È SEMPRE SOTTO LE TENDINE */}
-        <div
-          id="app-content"
-          style={{
-            opacity: loading ? 0 : 1,
-            transition: "opacity 0.5s ease-in-out",
-            position: "relative",
-            zIndex: 1, // sotto la mask
-          }}
-        >
+        <div>
           <Component {...pageProps} key={router.asPath} />
         </div>
 
         {/* ✅ MASK SOLO SE SERVE */}
-        {loading && (
+        {/* {loading && (
           <div style={{ position: "fixed", inset: 0, zIndex: 99999 }}>
             <MaskIntro2 onAnimationEnd={finishLoading} />
           </div>
-        )}
+        )} */}
       </Layout>
     </ThemeProvider>
   );
