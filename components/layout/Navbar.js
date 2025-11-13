@@ -55,14 +55,14 @@ const Navbar = ({ lang }) => {
             alt="logo"
             width={200}
             height={200}
-            className="w-[110px] lg:w-[130px] 3xl:w-[200px]"
+            className="w-[110px] lg:w-[130px] 3xl:w-[200px] 4xl:w-[350px]"
           />
         </Link>
 
         <div className="relative flex items-center gap-3 lg:gap-8">
           <Link
             href="/cerchi-un-partner"
-            className="relative px-3 py-3 overflow-hidden text-xs font-medium text-white uppercase transition-all duration-300 border-2 dark:text-third sm:px-4 border-pink lg:px-5 lg:text-base 3xl:text-2xl group"
+            className="relative px-3 py-3 overflow-hidden text-xs font-medium text-white uppercase transition-all duration-300 border-2 dark:text-third sm:px-4 border-pink lg:px-5 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group"
           >
             <span className="relative z-10">cerchi un partner?</span>
             <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
