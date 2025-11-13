@@ -111,6 +111,22 @@ export default function HeroLogo() {
     return () => ScrollTrigger.killAll();
   }, [windowWidth, showControls, hasStarted]);
 
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.muted = false;
+      if (!hasStarted) {
+        videoRef.current.currentTime = 0;
+        setHasStarted(true);
+      }
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
+
   // ✅ Scelta clipPath dinamica anche nel render
   const currentClipId =
     windowWidth < 768 || (windowWidth >= 901 && windowWidth <= 1600)
