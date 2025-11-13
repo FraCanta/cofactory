@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "@/public/assets/logo/logo.svg";
 import Image from "next/image";
 import DarkModeToggle from "../DarkModeToggle";
-import { MenuButton } from "./MenuButton";
-import localFont from "next/font/local";
-import { useRouter } from "next/router";
-
-const myFont = localFont({ src: "../../fonts/ClearfaceStd-Bold.woff" });
 
 const Navbar = ({ lang }) => {
   const [isVisible, setIsVisible] = useState(true);
