@@ -1,25 +1,103 @@
 {
   "progetto": {
+    "images": [
+      "/assets/cases/american/cover_american_new.jpg",
+      "/assets/cases/bobble/cover_bobble_new.jpg",
+      "/assets/cases/citrus/citrus.jpeg",
+      "/assets/cases/milka/cover_milka2.jpg",
+      "/assets/cases/nestle/nestle.jpg",
+      "/assets/cases/orociok/cover_orociok.jpg",
+      "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
+      "/assets/cases/treccani/cover_treccani_new.jpg",
+      "/assets/cases/yummers/cover_yummers.jpg"
+    ],
     "step0": {
-      "title": "30 minutes free of charge <br /> &quot;Let’s talk about your project&quot;.",
-      "text": "Fill in the form and get your session 100% free, dedicated to freelancers, small companies, start-ups and artisans who want to improve their online presence by applying a good design process.",
-      "cta": "get started"
+      "title": "te lo troviamo noi.",
+      "title2": "<span class='text-stroke2'> ma prima</span>",
+      "cta": "parlaci di te"
     },
     "step1": {
-      "title": "Perfect! It will only take a minute to understand your situation better.",
-      "text": "Let’s start with your name what's your name?",
-      "placeholder": "Enter your name*",
-      "prev": "Back",
-      "next": "next"
+      "text": "Che partner vorresti per il tuo brand?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "movie partnership",
+          "label": "Vedo il mio brand insieme a un grande film: <strong>Movie Partnership</strong>"
+        },
+        {
+          "id": "goal-2",
+          "value": "Brand Match",
+          "label": "Un altro brand che condivida i miei valori: <strong>Brand Match</strong>"
+        },
+        {
+          "id": "goal-3",
+          "value": "Coboxing",
+          "label": "Un sito e-commerce che mi porti in casa delle persone: <strong>Coboxing</strong>"
+        }
+      ],
+      "prev": "Indietro",
+      "next": "Avanti"
     },
     "step2": {
-      "title": { "span": "Hi", "span2": "can you tell me what is your email?" },
-      "placeholder": "Enter your email*",
-      "isValid": "Please enter a valid email.",
+      "text": "Che tipo di rapporto cerchi?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "Partnership che cresce nel tempo",
+          "label": "Una storia d’amore a lungo termine – <strong>Partnership che cresce nel tempo</strong>"
+        },
+        {
+          "id": "goal-2",
+          "value": "Progetto breve, ma con impatto immediato",
+          "label": "Un colpo di fulmine – <strong>Progetto breve, ma con impatto immediato</strong>"
+        },
+        {
+          "id": "goal-3",
+          "value": "Collaborazione mirata per obiettivi comuni",
+          "label": "Un’alleanza strategica – <strong>Collaborazione mirata per obiettivi comuni</strong>"
+        }
+      ],
+      "prev": "Indietro",
+      "next": "Avanti"
+    },
+    "step3": {
+      "text": "Che target ha il tuo brand?",
+      "goalItems": [
+        {
+          "id": "goal-1",
+          "value": "Kids & Family (0-12 anni) – <strong>Giocoso</strong>",
+          "label": "Kids & Family (0-12 anni) – <strong>Giocoso</strong> "
+        },
+        {
+          "id": "goal-2",
+          "value": "Gen Alpha (2013-2025) – <strong>Innovativo</strong>",
+          "label": "Gen Alpha (2013-2025) – <strong>Innovativo</strong>"
+        },
+        {
+          "id": "goal-3",
+          "value": "Gen Z (1997-2012) – <strong>Digitale</strong>",
+          "label": "Gen Z (1997-2012) – <strong>Digitale</strong>"
+        },
+        {
+          "id": "goal-4",
+          "value": "Millennials (1981-1996) – <strong>Ambizioso</strong>",
+          "label": "Millennials (1981-1996) – <strong>Ambizioso</strong>"
+        },
+        {
+          "id": "goal-5",
+          "value": "Gen X (1965-1980) – <strong>Resiliente</strong>",
+          "label": "Gen X (1965-1980) – <strong>Resiliente</strong>"
+        },
+        {
+          "id": "goal-6",
+          "value": "Boomers (1946-1964) – <strong>Tradizionale</strong>",
+          "label": "Boomers (1946-1964) – <strong>Tradizionale</strong>"
+        }
+      ],
       "prev": "Back",
       "next": "next"
     },
-    "step3": {
+    "step4": {
       "title": {
         "span": "Thank you",
         "span2": "I have a few more questions to understand how I can support you at the best."
@@ -50,44 +128,19 @@
       "prev": "Back",
       "next": "next"
     },
-    "step4": {
-      "title": "what are the main difficulties you are experiencing?",
-      "text": "Knowing these details is crucial to understanding how I can help you achieve your goals.",
-      "prev": "Back",
-      "next": "next",
-      "placeholder": "Feel free to tell me anything*"
-    },
+
     "step5": {
-      "title": "Final question",
-      "text": "If you were to start tomorrow, what amount do you plan to achieve for your project?",
-      "prev": "Back",
-      "next": "next",
-      "options": [
-        {
-          "value": "",
-          "label": "Select an option",
-          "isDisabled": true
-        },
-        {
-          "value": "Less than 1.500",
-          "label": "Less than 1.500",
-          "isDisabled": false
-        },
-        {
-          "value": "Between 3.000 and 5.000",
-          "label": "Between 3.000 and 5.000",
-          "isDisabled": false
-        },
-        {
-          "value": "5.000+",
-          "label": "5.000+",
-          "isDisabled": false
-        }
-      ]
+      "title": "Ultima domanda",
+      "text": "Puoi dirmi la tua email?",
+      "placeholder": "Inserisci la tua email*",
+      "isValid": "Per favore inserisci una email valida.",
+      "prev": "Indietro",
+      "next": "Avanti"
     },
+
     "step6": {
       "title": "Woo-ooh! 🎉",
-      "text": "Your request has been successfully sent and <br /> you will receive a confirmation email soon. <br /> <br /> Within <strong>72 hours</strong> I will answer you to plan your <strong>Tell me about <br class=’d-none d-sm-block' /> your 30 minutes project</strong> and figure out together <br class=’d-none d-sm-block' /> what I can do for you.",
+      "text": " La tua richiesta è stata inviata con successo e <br /> riceverai presto una mail di conferma. <br /> <br /> Entro <strong>72 ore</strong> ti risponderò per pianificare la tua <strong>Parlami del <br class='d-none d-sm-block' /> tuo progetto da 30 minuti</strong> e capire insieme <br class='d-none d-sm-block' /> cosa posso fare per te.",
       "cta": "scopri i miei lavori"
     }
   }

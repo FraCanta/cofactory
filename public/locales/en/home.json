@@ -1,57 +1,110 @@
 {
   "home": {
     "hero": {
-      "title": "Yes. We’re  <br/> a <span class='text-stroke2'>dating</span> agency.",
+      "title": "<div class='block mb-2'>SI. SIAMO UN'AGENZIA</div><div class='flex gap-4 '>di <div class=' text-stroke2'>INCONTRI.</div></div>",
+
       "description": [
         {
-          "text": "<span class='text-second'>Siamo la prima agenzia di <i>matchmaking</i> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. </span>"
+          "text": "Siamo la prima agenzia di <span class='px-1 italic text-second font-raleway'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
         },
         {
           "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
         }
       ]
     },
-    "cards": [
-      {
-        "img": "/assets/cases/rossopomodoro/cover_rossopomodoro_new.jpg",
-        "button": "rossopomodorotartarugheninja",
-        "name": "Rosso Pomodoro e Tartarughe Ninja",
-        "brand1": "Rossopomodoro",
-        "brand2": "Tartarughe Ninja",
-        "categories": [{ "name": "movie" }]
-      },
-      {
-        "img": "/assets/cases/treccani/cover_treccani_new.jpg",
-        "button": "treccanifaoschwarz",
-        "brand1": "Treccani",
-        "brand2": "Fao Schwarz",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
-      },
-
-      {
-        "img": "/assets/cases/american/cover_american_new.jpg",
-        "button": "yummersghostbusters",
-        "name": "American Uncle e Sonic 2",
-        "brand1": "American Uncle",
-        "brand2": "Sonic 2",
-        "categories": [{ "name": "movie" }]
-      },
-      {
-        "img": "/assets/cases/bobble/cover_bobble_new.jpg",
-        "button": "orocioktoys",
-        "name": "Bobble Bobble e Dangeons&Dragons",
-        "categories": [{ "name": "brand" }, { "name": "box" }],
-        "brand1": "Bobble Bobble",
-        "brand2": "Dangeons&Dragons"
-      }
-    ],
     "marqueeLink": {
-      "text1": "all stories",
-      "text2": "all stories",
-      "text3": "all stories",
-      "text4": "all stories",
-      "text5": "all stories",
-      "text6": "all stories"
-    }
+      "text1": "il nostro approccio",
+      "text2": "il nostro approccio",
+      "text3": "il nostro approccio",
+      "text4": "il nostro approccio",
+      "text5": "il nostro approccio",
+      "text6": "il nostro approccio"
+    },
+    "cases": [
+      {
+        "media": "/assets/cases/santanna/SantannaPro_x_MissionImpossible.webp",
+        "type": "image",
+        "name": "Sant'anna Pro x Mission Impossible",
+        "brand1": "Sant'anna Pro",
+        "brand2": "Mission Impossible: The Final Reckoning"
+      },
+      {
+        "media": "/assets/cases/slomp/Slomp_x_IPuffi.webp",
+        "type": "image",
+        "name": "Slomp x I Puffi: Il Film",
+        "brand1": "Slomp",
+        "brand2": "I Puffi: Il Film"
+      },
+      {
+        "media": "/assets/cases/cooltra/Cooltra_x_Sonic3.webp",
+        "type": "image",
+        "name": "Cooltra x Sonic 3",
+        "brand1": "Cooltra",
+        "brand2": "Sonic 3"
+      },
+      {
+        "media": "/assets/video/Carpisa_x_PaddingtonInPeru.mp4",
+        "type": "video",
+        "name": "Carpisa x Paddington in Perù",
+        "brand1": "Carpisa",
+        "brand2": "Paddington in Perù"
+      },
+      {
+        "media": "/assets/cases/milka/Milka_x_ToysCenter24_25.webp",
+        "type": "image",
+        "name": "MILKA x Toys Center - Natale 2024 2025",
+        "brand1": "MILKA",
+        "brand2": "Toys Center 2024"
+      },
+      {
+        "media": "/assets/video/UntilDown_x_Romics25.mp4",
+        "type": "video",
+        "name": "Until Dawn x Romics 25",
+        "brand1": "Until Dawn: Fino all'alba",
+        "brand2": "Romics 25"
+      },
+      {
+        "media": "/assets/cases/yummers/Yummers_cover.webp",
+        "type": "image",
+        "name": "Yummer's x Ghostbusters: Minaccia Glaciale",
+        "brand1": "Yummer's",
+        "brand2": "Ghostbusters: Minaccia Glaciale"
+      },
+      {
+        "media": "/assets/video/RossoPomodoro_x_TartarugheNinja.mp4",
+        "type": "video",
+        "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
+        "brand1": "ROSSOPOMODORO",
+        "brand2": "Tartarughe Ninja: Caos Mutante"
+      },
+      {
+        "media": "/assets/cases/bobble/bobblebobble.webp",
+        "type": "image",
+        "name": "BOBBLE BOBBLE x Transformers One",
+        "brand1": "BOBBLE BOBBLE",
+        "brand2": "Transformers One"
+      },
+      {
+        "media": "/assets/cases/treccani/Treccani_x_FaoSchwarz.webp",
+        "type": "image",
+        "name": "TRECCANI x Fao Schwarz",
+        "brand1": "TRECCANI",
+        "brand2": "Fao Schwarz"
+      },
+      {
+        "media": "/assets/cases/nestle/Nestle_x_Aquaman.webp",
+        "type": "image",
+        "name": "Nestlè x Aquaman",
+        "brand1": "Nestlè",
+        "brand2": "Aquaman: Il Regno Perduto"
+      },
+      {
+        "media": "/assets/cases/eathappy/BulletTrain_x_Eathappy.webp",
+        "type": "image",
+        "name": "Bullet Train x Eat Happy",
+        "brand1": "Eat Happy & Wakame",
+        "brand2": "Bullet Train"
+      }
+    ]
   }
 }
