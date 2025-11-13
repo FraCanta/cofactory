@@ -54,9 +54,13 @@
 }
 
 /* mid-desktop: da 768 a 1599px */
-@media (min-width: 768px) and (max-width: 1599px) {
+@media (min-width: 768px) and (max-width: 1600px) {
   .mid-only {
     display: block;
+  }
+
+  .desktop-only {
+    visibility: hidden;
   }
 }
 
