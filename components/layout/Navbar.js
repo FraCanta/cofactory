@@ -13,22 +13,27 @@ const Navbar = ({ lang }) => {
     const handleScroll = () => {
       const currentScrollTop = window.scrollY;
 
-      if (currentScrollTop > lastScrollTop) {
-        // Scrolling down
-        setIsVisible(false);
-      } else {
-        // Scrolling up
+      // Controllo se la sezione pinnata è presente
+      const pinnedSection = document.querySelector(".video-mask-section");
+      const sectionBottom = pinnedSection?.getBoundingClientRect().bottom ?? 0;
+
+      if (sectionBottom > 0) {
+        // Siamo nella sezione pinnata → menu sempre visibile
         setIsVisible(true);
+      } else {
+        // Logica normale scroll up/down
+        if (currentScrollTop > lastScrollTop) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
       }
 
       setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollTop]);
 
   return (
@@ -44,7 +49,7 @@ const Navbar = ({ lang }) => {
       className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm"
     >
       <div className="w-[90%] m-auto flex justify-between items-center text-white h-[70px] md:h-[100px] 3xl:h-[200px]">
-        <Link href="/" className="z-[20]" onClick={() => setOpen(false)}>
+        <Link href="/" className="z-[20]">
           <Image
             src={Logo}
             alt="logo"
