@@ -43,15 +43,13 @@
 }
 
 @media (max-width: 768px) {
-  .mobile-only {
-    visibility: visible;
-  }
   .desktop-only {
     visibility: hidden;
   }
 
   .video-wrapper {
     height: calc(100vh - 70px);
+    margin-top: 70px;
   }
 }
 
@@ -59,6 +57,13 @@
 @media (min-width: 768px) and (max-width: 1599px) {
   .mid-only {
     display: block;
+  }
+}
+
+@media (min-width: 2560px) {
+  .video-wrapper {
+    height: 100vh;
+    margin-top: 220px;
   }
 }
 

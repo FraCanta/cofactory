@@ -130,14 +130,14 @@ export default function StepsContact({ translation }) {
           <>
             <div className="flex flex-col items-start justify-start mx-auto lg:justify-center lg:items-center w-[90%] lg:max-w-max">
               <h1
-                className="text-5xl text-left text-white uppercase font-bebas lg:text-8xl dark:text-third"
+                className="text-[14vw] text-left text-white uppercase font-bebas lg:text-8xl dark:text-third leading-none"
                 dangerouslySetInnerHTML={{
                   __html: translation.step0.title,
                 }}
               ></h1>
-              <div className="flex items-center justify-between gap-4 lg:w-full">
+              <div className="flex items-center justify-between w-full gap-4">
                 <h2
-                  className="flex-1 text-5xl text-left lg:text-8xl"
+                  className="flex-1 text-[14vw] text-left lg:text-8xl"
                   dangerouslySetInnerHTML={{
                     __html: translation.step0.title2,
                   }}

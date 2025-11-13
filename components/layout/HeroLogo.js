@@ -22,6 +22,9 @@ export default function HeroLogo() {
   useLayoutEffect(() => {
     if (typeof window !== "undefined") {
       setWindowWidth(window.innerWidth);
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
 
@@ -29,8 +32,12 @@ export default function HeroLogo() {
     if (!sectionRef.current || windowWidth === null) return;
 
     const section = sectionRef.current;
+
+    // logica clipPath in base alle viewport
     const clip =
-      windowWidth < 1600 ? clipRefMid.current : clipRefDesktop.current;
+      windowWidth < 768 || (windowWidth >= 901 && windowWidth <= 1600)
+        ? clipRefMid.current
+        : clipRefDesktop.current;
 
     if (!clip) return;
 
@@ -42,9 +49,7 @@ export default function HeroLogo() {
         scrub: 2,
         pin: true,
         onUpdate: (self) => {
-          if (!showControls && self.progress >= 0.95) {
-            setShowControls(true);
-          }
+          if (!showControls && self.progress >= 0.95) setShowControls(true);
         },
         onLeaveBack: () => {
           if (videoRef.current) videoRef.current.muted = true;
@@ -53,18 +58,26 @@ export default function HeroLogo() {
       },
     });
 
-    // valori differenziati in base alla finestra
+    // valori personalizzati per ogni fascia
     let xInitial, xFinal, scaleFinal;
 
     if (windowWidth < 768) {
+      // mobile
       xInitial = "-115%";
       xFinal = "160%";
       scaleFinal = 60;
-    } else if (windowWidth < 1600) {
+    } else if (windowWidth >= 768 && windowWidth <= 900) {
+      // desktop piccolo
+      xInitial = "-80%";
+      xFinal = "140%";
+      scaleFinal = 55;
+    } else if (windowWidth >= 901 && windowWidth <= 1600) {
+      // mid range
       xInitial = "-90%";
-      xFinal = "120%";
+      xFinal = "160%";
       scaleFinal = 60;
     } else {
+      // desktop grande
       xInitial = "-68%";
       xFinal = "150%";
       scaleFinal = 50;
@@ -107,13 +120,21 @@ export default function HeroLogo() {
     }
   };
 
+  // scelta del clipPath dinamica anche nel render
+  const currentClipId =
+    windowWidth < 768 || (windowWidth >= 901 && windowWidth <= 1600)
+      ? "myMaskMid"
+      : "myMask";
+
   return (
     <section ref={sectionRef} className="relative video-mask-section">
       <div className="mask-container">
         <svg
           width="100%"
           height="100%"
-          viewBox={windowWidth < 1600 ? "0 0 2000 400" : "0 0 3493.15 700"}
+          viewBox={
+            currentClipId === "myMaskMid" ? "0 0 2000 400" : "0 0 3493.15 700"
+          }
           fill="white"
           stroke="#b2b2b2"
           strokeLinecap="round"
@@ -121,7 +142,7 @@ export default function HeroLogo() {
           strokeWidth="4.88px"
         >
           <defs>
-            {/* Clip desktop grande */}
+            {/* Clip desktop grande */}{" "}
             <clipPath id="myMask" ref={clipRefDesktop} className="desktop-only">
               {" "}
               <path d="M166.34,699.07c-90.54,0-164.14-73.66-164.14-164.14V166.54C2.21,75.99,75.86,2.4,166.34,2.4h23.03c90.54,0,164.14,73.66,164.14,164.14v19.17h-106.63v-19.17c0-31.16-26.37-57.57-57.57-57.57h-23.03c-31.8,0-57.57,25.77-57.57,57.57v368.44c0,31.74,25.77,57.57,57.57,57.57h23.03c31.74,0,57.57-25.77,57.57-57.57v-19.17h106.63v19.17c0,90.54-73.66,164.14-164.14,164.14h-23.03v-.04h0ZM570.46,699.07c-90.54,0-164.14-73.66-164.14-164.14V166.54c0-90.54,73.66-164.14,164.14-164.14h23.03c90.54,0,164.14,73.66,164.14,164.14v368.44c0,90.54-73.66,164.14-164.14,164.14h-23.03v-.04h0ZM570.46,108.95c-31.8,0-57.57,25.77-57.57,57.57v368.44c0,31.74,25.77,57.57,57.57,57.57h23.03c31.74,0,57.57-25.77,57.57-57.57V166.52c0-31.74-25.77-57.57-57.57-57.57,0,0-23.03,0-23.03,0ZM839.27,699.07V2.34h300.2v106.57h-193.59v188.45h148.83v106.57h-148.83v295.08h-106.57l-.04.04v.02h0ZM1400.52,699.07l-10.67-83.58h-111.75l-10.67,83.58h-107.61L1251.25,2.34h165.96l90.98,696.74h-107.67,0ZM1292.43,508.9h83.14l-41.58-319.83-41.58,319.83h.02,0ZM1724.11,699.07c-90.54,0-164.14-73.66-164.14-164.14V166.54c0-90.54,73.66-164.14,164.14-164.14h23.03c90.54,0,164.14,73.66,164.14,164.14v19.17h-106.63v-19.17c0-31.16-26.37-57.57-57.57-57.57h-23.03c-31.8,0-57.57,25.77-57.57,57.57v368.44c0,31.74,25.77,57.57,57.57,57.57h23.03c31.74,0,57.57-25.77,57.57-57.57v-19.17h106.63v19.17c0,90.54-73.66,164.14-164.14,164.14h-23.03v-.04h0ZM2045.59,699.07V108.91h-122.32V2.34h351.33v106.57h-122.38v590.16h-106.63ZM2471.66,699.07c-90.54,0-164.14-73.66-164.14-164.14V166.54c0-90.54,73.66-164.14,164.14-164.14h23.03c90.54,0,164.14,73.66,164.14,164.14v368.44c0,90.54-73.66,164.14-164.14,164.14h-23.03v-.04h0ZM2471.66,108.95c-31.8,0-57.57,25.77-57.57,57.57v368.44c0,31.74,25.77,57.57,57.57,57.57h23.03c31.74,0,57.57-25.77,57.57-57.57V166.52c0-31.74-25.77-57.57-57.57-57.57,0,0-23.03,0-23.03,0ZM2980.32,699.07l-73.76-295.08h-59.47v295.08h-106.57V2.34h187.19c90.54,0,164.14,73.66,164.14,164.14v73.38c0,55.85-27.97,107.17-74.84,137.29l-6.46,4.16,79.48,317.81h-109.71v-.04h0ZM2847.1,297.4h80.6c20.45,0,39.52-11.05,49.74-28.75,5.04-8.06,7.82-18.15,7.82-28.75v-73.38c0-31.74-25.77-57.57-57.57-57.57h-80.6v188.45h.01ZM3248.75,699.07v-286.92L3111.74,2.34h101.01l89.12,305.25L3389.82,2.48l102.07-.14-135.97,405.18-.54,291.56h-106.63Z" />{" "}
@@ -141,7 +162,7 @@ export default function HeroLogo() {
       <div
         className="relative video-wrapper"
         style={{
-          clipPath: windowWidth < 1600 ? "url(#myMaskMid)" : "url(#myMask)",
+          clipPath: `url(#${currentClipId})`,
         }}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
@@ -203,7 +224,7 @@ export default function HeroLogo() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-6 lg:left-20 lg:bottom-10 flex items-center gap-[1.2rem]">
+      <div className="absolute bottom-10 2xs:bottom-4 sm:bottom-10 left-6 lg:left-20 flex items-center gap-[1.2rem]">
         <p className="text-sm text-white uppercase lg:text-lg font-raleway">
           Scroll to discover
         </p>
