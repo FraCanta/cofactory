@@ -16,8 +16,6 @@ const Stories = ({ translation }) => {
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
-    setActiveButton(category);
-    setShowDrawer(false); // Close the drawer when a category is selected
   };
 
   const [checkedItems, setCheckedItems] = useState({
