@@ -8,23 +8,30 @@ export default function HeroLogo() {
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
   const controlsRef = useRef(null);
-  const [hasStarted, setHasStarted] = useState(false);
-  const [hovering, setHovering] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [showControls, setShowControls] = useState(false);
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const isMidDesktop =
-    typeof window !== "undefined" &&
-    window.innerWidth >= 768 &&
-    window.innerWidth < 1600;
 
   const clipRefDesktop = useRef(null);
   const clipRefMid = useRef(null);
   const clipRefMobile = useRef(null);
 
+  const [windowWidth, setWindowWidth] = useState(null);
+  const [showControls, setShowControls] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const [hovering, setHovering] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Aggiorno larghezza finestra solo lato client
   useLayoutEffect(() => {
-    if (!sectionRef.current) return;
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
+
+  const isMobile = windowWidth !== null && windowWidth < 768;
+  const isMidDesktop =
+    windowWidth !== null && windowWidth >= 768 && windowWidth < 1600;
+
+  useLayoutEffect(() => {
+    if (!sectionRef.current || windowWidth === null) return;
 
     const section = sectionRef.current;
     const clip = isMobile
@@ -44,11 +51,10 @@ export default function HeroLogo() {
         pin: true,
         onUpdate: (self) => {
           if (!showControls && self.progress >= 0.95) {
-            setShowControls(true); // prima apparizione
+            setShowControls(true);
           }
         },
         onLeaveBack: () => {
-          // quando si chiude la clip
           if (videoRef.current) videoRef.current.muted = true;
           setIsPlaying(false);
         },
@@ -73,20 +79,17 @@ export default function HeroLogo() {
     );
 
     return () => ScrollTrigger.killAll();
-  }, [isMobile, isMidDesktop, showControls]);
+  }, [isMobile, isMidDesktop, showControls, windowWidth]);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
 
     if (videoRef.current.paused) {
-      videoRef.current.muted = false; // volume attivo
-
-      // se non è mai partito, resetta il video
+      videoRef.current.muted = false;
       if (!hasStarted) {
         videoRef.current.currentTime = 0;
         setHasStarted(true);
       }
-
       videoRef.current.play();
       setIsPlaying(true);
     } else {
