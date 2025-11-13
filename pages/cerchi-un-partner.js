@@ -4,12 +4,8 @@ import { motion } from "framer-motion";
 import translationIT from "@/public/locales/it/progetto.json";
 import translationEN from "@/public/locales/en/progetto.json";
 import Link from "next/link";
-import { Icon } from "@iconify/react";
 import Image from "next/image";
 import DarkModeToggle from "@/components/DarkModeToggle";
-import SmoothParallaxImage from "@/components/SmoothParallaxImage/SmoothParallaxImage";
-import Hero from "@/components/layout/Hero";
-import { MaskText } from "@/components/MaskText";
 import StepsContact from "@/components/StepsContact/StepsContact";
 import Head from "next/head";
 const Contatti = ({ translation }) => {

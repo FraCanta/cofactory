@@ -1,14 +1,9 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { IoChevronDownOutline } from "react-icons/io5";
-import Image from "next/image";
-import Link from "next/link";
-import { Icon } from "@iconify/react";
 import localFont from "next/font/local";
 import Head from "next/head";
 import casesIT from "../public/locales/it/cases.json";
 import casesEN from "../public/locales/en/cases.json";
-// import Lenis from "@studio-freight/lenis";
 const myFont = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 
 const myFont2 = localFont({ src: "../fonts/Raleway-Regular.ttf" });
@@ -17,10 +12,7 @@ import ParallaxCases from "@/components/ParallaxCases/ParallaxCases";
 import BlurryLights from "@/components/layout/BlurryLights";
 const Stories = ({ translation }) => {
   const cases = translation.cards;
-  const [showDrawer, setShowDrawer] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [activeButton, setActiveButton] = useState("All");
-  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
@@ -57,12 +49,7 @@ const Stories = ({ translation }) => {
         </div>
         <div className="w-[90%] mx-auto md:mt-[200px] mt-[120px] ">
           <div className="relative flex flex-wrap items-center justify-center w-full my-24 lg:justify-between gap-y-6">
-            <div className="hidden lg:block">
-              {/* <label className="text-xl text-white/60">Filter: </label>
-              <span className="ml-2 text-xl text-white">
-                {selectedCategory}
-              </span> */}
-            </div>
+            <div className="hidden lg:block"></div>
             <div className="flex items-start gap-6 lg:gap-10 ">
               <label className="flex items-center gap-2 text-white uppercase cursor-pointer">
                 <div className="grid place-items-center">

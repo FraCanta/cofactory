@@ -2,27 +2,10 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import toast from "react-hot-toast";
-import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../layout/Footer";
 import FloatingLogos from "../FloatingLogos/FloatingLogos";
-import ParallaxText from "../ParallaxText";
-import HorizontalScroll from "../HorizontalScroll/HorizontalScroll";
 
 export default function StepsContact({ translation }) {
-  const [showScroll, setShowScroll] = useState(false);
-  const scrollRef = useRef(null);
-
-  // ✅ Questa funzione verrà passata come onToggle a ParallaxText
-  const handleToggle = () => {
-    setShowScroll((prev) => !prev);
-    // 👇 piccolo timeout per aspettare il render del motion.div
-    setTimeout(() => {
-      scrollRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }, 400);
-  };
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -147,18 +130,18 @@ export default function StepsContact({ translation }) {
           <>
             <div className="flex flex-col items-start justify-start mx-auto lg:justify-center lg:items-center w-[90%] lg:max-w-max">
               <h1
-                className="text-5xl text-left text-white font-regular lg:text-8xl dark:text-third"
+                className="text-5xl text-left text-white uppercase font-bebas lg:text-8xl dark:text-third"
                 dangerouslySetInnerHTML={{
                   __html: translation.step0.title,
                 }}
               ></h1>
               <div className="flex items-center justify-between gap-4 lg:w-full">
-                <h1
+                <h2
                   className="flex-1 text-5xl text-left lg:text-8xl"
                   dangerouslySetInnerHTML={{
                     __html: translation.step0.title2,
                   }}
-                ></h1>
+                ></h2>
                 <button
                   onClick={nextStep}
                   className="relative overflow-hidden py-2 px-4 text-sm font-medium uppercase border-2 border-pink text-center transition-all duration-300 lg:text-lg lg:min-w-[240px] 3xl:text-2xl group"
@@ -170,27 +153,7 @@ export default function StepsContact({ translation }) {
                 </button>
               </div>
             </div>
-            {/* <div className="w-full mx-auto mt-24 overflow-hidden">
-              <ParallaxText
-                marqueeText={translation.marqueeLink}
-                onToggle={handleToggle}
-              />
-            </div>
-            <AnimatePresence>
-              {showScroll && (
-                <motion.div
-                  ref={scrollRef}
-                  className="w-full my-20 lg:my-40"
-                  key="scroll"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <HorizontalScroll />
-                </motion.div>
-              )}
-            </AnimatePresence> */}
+
             <FloatingLogos />
             <Footer />
           </>

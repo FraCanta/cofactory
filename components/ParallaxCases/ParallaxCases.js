@@ -25,7 +25,11 @@ const ParallaxCases = ({
     window.addEventListener("resize", handleResize);
     handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -69,12 +73,6 @@ const ParallaxCases = ({
   // Prendi solo i primi n trasform per non errori
   const transforms = [y, y2, y3];
 
-  // Ricava la lista unica delle categorie per il filtro (se vuoi puoi passare da props)
-  const allCategories = [
-    "All",
-    ...new Set(cases.flatMap((c) => c.categories.map((cat) => cat.name))),
-  ];
-
   return (
     <div
       ref={galleryRef}
@@ -83,7 +81,7 @@ const ParallaxCases = ({
       <div className="flex items-start justify-center gap-3 md:gap-4">
         {columns.map((columnCases, colIndex) => (
           <motion.div
-            key={colIndex}
+            key={`col-${colIndex}-${numberOfColumns}`}
             style={{ y: transforms[colIndex] || y }}
             className={`flex flex-col gap-y-3 lg:gap-y-8 ${
               numberOfColumns === 3 ? "w-1/2 md:w-1/3" : "w-1/2 md:w-1/2"
@@ -97,7 +95,7 @@ const ParallaxCases = ({
               // >
               <div
                 className="relative block overflow-hidden group aspect-square rounded-xs"
-                key={i}
+                key={`${el.name}-${i}`}
               >
                 <Image
                   src={el.img}
