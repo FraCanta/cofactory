@@ -20,7 +20,7 @@ function HoverBanner({ item }) {
 
   return (
     <div
-      className="relative w-full h-screen overflow-hidden aspect-square lg:aspect-video group"
+      className="relative w-full overflow-hidden lg:h-screen aspect-square lg:aspect-video group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -52,7 +52,7 @@ function HoverBanner({ item }) {
 
       {/* SFONDO TESTO con blur visibile solo in hover */}
       <div
-        className={`absolute bottom-0 left-0 w-full flex items-center p-6 lg:p-10 transition-all duration-700 h-[20vh] ${
+        className={`hidden absolute bottom-0 left-0 w-full lg:flex items-center p-6 lg:p-10 transition-all duration-700 h-[20vh] ${
           hovered
             ? "opacity-100 bg-gradient-to-t from-black/90 via-black/70 to-transparent"
             : "opacity-0 backdrop-blur-none bg-transparent"
