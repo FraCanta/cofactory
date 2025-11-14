@@ -19,6 +19,7 @@ export default function HeroLogo() {
   const [hasStarted, setHasStarted] = useState(false);
   const [hovering, setHovering] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const isIOS = /iP(hone|od|ad)/.test(navigator.userAgent);
 
   useLayoutEffect(() => {
     if (typeof window !== "undefined") {
@@ -72,8 +73,8 @@ export default function HeroLogo() {
     let xInitial, xFinal, scaleFinal;
 
     if (windowWidth < 768) {
-      xInitial = "-115%";
-      xFinal = "160%";
+      xInitial = "-113.5%";
+      xFinal = "150%";
       scaleFinal = 60;
     } else if (windowWidth >= 768 && windowWidth <= 900) {
       xInitial = "-80%";
@@ -202,9 +203,14 @@ export default function HeroLogo() {
 
       <div
         className="relative video-wrapper"
-        style={{
-          clipPath: `url(#${currentClipId})`,
-        }}
+        style={
+          isIOS
+            ? {
+                mask: `url(#${currentClipId})`,
+                WebkitMask: `url(#${currentClipId})`,
+              }
+            : { clipPath: `url(#${currentClipId})` }
+        }
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
         onClick={() => setHovering(true)}

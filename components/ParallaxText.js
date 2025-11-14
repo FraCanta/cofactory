@@ -28,6 +28,8 @@ function ParallaxText({ marqueeText, onToggle }) {
   let direction = +1;
 
   useLayoutEffect(() => {
+    if (!sliderItems.current) return;
+
     gsap.to(sliderItems.current, {
       scrollTrigger: {
         trigger: document.documentElement,
@@ -38,8 +40,9 @@ function ParallaxText({ marqueeText, onToggle }) {
       },
       x: "-500px",
     });
+
     requestAnimationFrame(animation);
-  }, [sliderItems.current]);
+  }, []); // ← dipendenze vuote
 
   const animation = () => {
     if (xPercent < -100) {

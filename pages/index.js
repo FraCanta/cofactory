@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Hero from "@/components/layout/Hero";
 import Head from "next/head";
@@ -15,12 +15,21 @@ import HeroLogo from "@/components/layout/HeroLogo";
 const Home = ({ translation }) => {
   const [showApproach, setShowApproach] = useState(false);
 
-  // Blocca lo scroll del body quando l'overlay è attivo
+  // salva la posizione verticale corrente
+  const [savedScrollY, setSavedScrollY] = useState(0);
+
+  // ref al contenitore scrollabile dell’overlay
+  const approachRef = useRef(null);
+
+  // blocca lo scroll del body quando l’overlay è aperto
   useEffect(() => {
-    if (showApproach) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+    document.body.style.overflow = showApproach ? "hidden" : "";
+  }, [showApproach]);
+
+  // resetta lo scroll interno quando apri overlay
+  useEffect(() => {
+    if (showApproach && approachRef.current) {
+      approachRef.current.scrollTop = 0; // prima sezione
     }
   }, [showApproach]);
 
@@ -66,7 +75,13 @@ const Home = ({ translation }) => {
       <div className="w-full mx-auto overflow-hidden lg:mb-4">
         <ParallaxText
           marqueeText={translation.marqueeLink}
-          onToggle={() => setShowApproach(true)}
+          onToggle={() => {
+            // salva la posizione pagina
+            setSavedScrollY(window.scrollY);
+
+            // apri overlay
+            setShowApproach(true);
+          }}
         />
       </div>
       {/* Overlay */}
@@ -83,11 +98,13 @@ const Home = ({ translation }) => {
             {/* Bottone chiudi */}
             <button
               onClick={() => {
-                // 🔥 Riporta subito in cima, invisibilmente
-                window.scrollTo({ top: 0, behavior: "auto" });
-
-                // Poi chiudi l’overlay
                 setShowApproach(false);
+
+                // ripristina la posizione della pagina di apertura
+                window.scrollTo({
+                  top: savedScrollY,
+                  behavior: "instant",
+                });
               }}
               className="absolute z-50 px-4 py-1 text-white uppercase border border-white top-8 right-6 hover:bg-white hover:text-black"
             >
@@ -95,8 +112,8 @@ const Home = ({ translation }) => {
             </button>
 
             {/* Contenitore scrollabile interno */}
-            <div className="flex-1 overflow-y-auto">
-              <HorizontalScroll scrollTarget="self" />
+            <div ref={approachRef} className="flex-1 overflow-y-auto">
+              <HorizontalScroll scrollTarget={approachRef} />
             </div>
           </motion.div>
         )}

@@ -58,16 +58,16 @@ function HoverBanner({ item }) {
             : "opacity-0 backdrop-blur-none bg-transparent"
         }`}
       >
-        <h2 className="flex items-center space-x-2 uppercase">
+        <h2 className="flex items-center uppercase">
           <MaskText trigger={hovered}>
             <span
-              className={`text-raleway font-regular  text-[0.85rem] lg:text-3xl text-white fxl:text-5xl 3xl:text-6xl`}
+              className={`text-raleway font-regular  text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl`}
             >
               {item.brand1}
             </span>
           </MaskText>
 
-          <span className="relative w-2 h-4 lg:h-8 lg:w-8 2xl:w-[2rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-20 fxl:h-26">
+          <span className="relative w-2 h-4 lg:h-8 lg:w-8 2xl:w-[2rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-16 fxl:h-32">
             <Image
               src="/assets/cofactory_nuovaX_green.svg"
               fill
@@ -78,7 +78,7 @@ function HoverBanner({ item }) {
 
           <MaskText trigger={hovered}>
             <span
-              className={`text-raleway font-regular leading-none text-[0.85rem] lg:text-3xl text-white fxl:text-5xl 3xl:text-6xl`}
+              className={`text-raleway font-regular leading-none text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl`}
             >
               {item.brand2}
             </span>

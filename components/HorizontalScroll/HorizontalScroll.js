@@ -7,27 +7,26 @@ const sections = [
   { title: "Sezione 3", text: "Contenuto 3", color: "rgba(54, 139, 144, 0.5)" },
 ];
 
-export default function HorizontalScroll() {
+export default function HorizontalScroll({ scrollTarget }) {
   const containerRef = useRef(null);
   const [viewportWidth, setViewportWidth] = useState(0);
-  const sectionHeight = 0.7; // ogni sezione occupa 100vh
 
   useEffect(() => {
-    const updateWidth = () => setViewportWidth(window.innerWidth);
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+    const update = () => setViewportWidth(window.innerWidth);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
+  const targetRef = scrollTarget || containerRef;
+
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: targetRef,
     offset: ["start start", "end end"],
   });
 
-  // distanza totale da scorrere in orizzontale
   const distanceToScroll = (sections.length - 1) * viewportWidth;
 
-  // posizione orizzontale interpolata
   const rawX = useTransform(scrollYProgress, [0, 1], [0, -distanceToScroll]);
   const x = useSpring(rawX, { stiffness: 100, damping: 20 });
 
@@ -35,9 +34,8 @@ export default function HorizontalScroll() {
     <div
       ref={containerRef}
       style={{
-        height: `${
-          window.innerWidth * (sections.length - 1) + window.innerHeight
-        }px`,
+        height:
+          window.innerWidth * (sections.length - 1) + window.innerHeight + "px",
         position: "relative",
       }}
     >
@@ -45,25 +43,24 @@ export default function HorizontalScroll() {
         style={{
           position: "sticky",
           top: "20vh",
-          height: `${sectionHeight * 100}vh`,
+          height: "70vh",
           display: "flex",
           width: `${sections.length * 100}vw`,
           x,
         }}
       >
-        {sections.map((section, index) => (
+        {sections.map((section, i) => (
           <section
-            key={index}
+            key={i}
             style={{
               flex: "0 0 100vw",
-              height: `${sectionHeight * 100}vh`,
+              height: "70vh",
               backgroundColor: section.color,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
               color: "#fff",
-              textAlign: "center",
             }}
           >
             <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
