@@ -155,6 +155,7 @@ export default function StepsContact({ translation }) {
             </div>
 
             <FloatingLogos />
+
             <Footer />
           </>
         )}
