@@ -85,7 +85,7 @@ export default function HeroLogo() {
       scaleFinal = 60;
     } else if (windowWidth > 3999) {
       // ✅ nuova condizione per 4K+
-      xInitial = "-72%";
+      xInitial = "-75%";
       xFinal = "140%";
       scaleFinal = 40;
     } else if (windowWidth > 2559) {
