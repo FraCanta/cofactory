@@ -19,7 +19,13 @@ export default function HeroLogo() {
   const [hasStarted, setHasStarted] = useState(false);
   const [hovering, setHovering] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const isIOS = /iP(hone|od|ad)/.test(navigator.userAgent);
+  const [isIOS, setIsIOS] = useState(false);
+
+  useLayoutEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsIOS(/iP(hone|od|ad)/.test(navigator.userAgent));
+    }
+  }, []);
 
   useLayoutEffect(() => {
     if (typeof window !== "undefined") {
