@@ -67,7 +67,7 @@ function HoverBanner({ item }) {
             </span>
           </MaskText>
 
-          <span className="relative w-2 h-4 mx-2 lg:h-8 lg:w-8 2xl:w-[2.5rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-24 fxl:h-24">
+          <span className="relative w-2 h-4 lg:h-8 lg:w-8 2xl:w-[2rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-20 fxl:h-26">
             <Image
               src="/assets/cofactory_nuovaX_green.svg"
               fill
