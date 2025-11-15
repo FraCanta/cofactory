@@ -45,12 +45,17 @@ export default function HeroLogo() {
 
     if (!clip) return;
 
+    const origin =
+      windowWidth >= 1920 || (windowWidth <= 2000 && windowWidth >= 4400)
+        ? "right center"
+        : "right bottom";
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
         start: "top top",
-        end: "400% top",
-        scrub: 2,
+        end: "300% top",
+        scrub: 3,
         pin: true,
         anticipatePin: 1,
         onUpdate: (self) => {
@@ -72,17 +77,21 @@ export default function HeroLogo() {
     let xInitial, xFinal, scaleFinal;
 
     if (windowWidth < 768) {
-      xInitial = "-113.5%";
-      xFinal = "150%";
-      scaleFinal = 60;
-    } else if (windowWidth >= 768 && windowWidth <= 900) {
+      xInitial = "-115%";
+      xFinal = "-325%";
+      scaleFinal = 10;
+    } else if (windowWidth >= 769 && windowWidth <= 900) {
       xInitial = "-80%";
       xFinal = "140%";
       scaleFinal = 55;
-    } else if (windowWidth >= 901 && windowWidth <= 1600) {
-      xInitial = "-90%";
-      xFinal = "160%";
-      scaleFinal = 60;
+    } else if (windowWidth >= 901 && windowWidth <= 1280) {
+      xInitial = "-92%";
+      xFinal = "-542%";
+      scaleFinal = 20;
+    } else if (windowWidth >= 1281 && windowWidth <= 1600) {
+      xInitial = "-85.5%";
+      xFinal = "-536%";
+      scaleFinal = 20;
     } else if (windowWidth > 3999) {
       // ✅ nuova condizione per 4K+
       xInitial = "-75%";
@@ -93,7 +102,7 @@ export default function HeroLogo() {
       xFinal = "180%";
       scaleFinal = 45;
     } else {
-      xInitial = "-68%";
+      xInitial = "-67%";
       xFinal = "200%";
       scaleFinal = 50;
     }
@@ -110,7 +119,7 @@ export default function HeroLogo() {
       {
         scale: scaleFinal,
         x: xFinal,
-        transformOrigin: "right center",
+        transformOrigin: origin,
         ease: "power2.out",
       },
       ">0"
@@ -241,7 +250,7 @@ export default function HeroLogo() {
             {isPlaying ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-white lg:w-16 lg:h-16"
+                className="w-8 h-8 text-white lg:w-16 lg:h-16 4xl:w-42 4xl:h-42"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

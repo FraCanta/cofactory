@@ -35,7 +35,7 @@
   visibility: visible;
 }
 
-.mid-only {
+.mid-desktop-only {
   visibility: hidden;
 }
 
@@ -51,7 +51,7 @@
   .desktop-only {
     visibility: hidden;
   }
-  .mid-only {
+  .mid-desktop-only {
     visibility: visible;
   }
 
@@ -71,8 +71,8 @@
 
 /* mid-desktop: da 768 a 1599px */
 @media (min-width: 769px) and (max-width: 1600px) {
-  .mid-only {
-    display: block;
+  .mid-desktop-only {
+    visibility: visible;
   }
 
   .desktop-only {
@@ -97,8 +97,8 @@
     visibility: hidden;
   }
 
-  .mid-only {
-    display: hidden;
+  .mid-desktop-only {
+    visibility: hidden;
   }
 
   .desktop-only {
@@ -123,8 +123,8 @@
     visibility: hidden;
   }
 
-  .mid-only {
-    display: hidden;
+  .mid-desktop-only {
+    visibility: hidden;
   }
 
   .desktop-only {
