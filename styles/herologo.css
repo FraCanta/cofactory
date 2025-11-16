@@ -46,8 +46,11 @@
 .large-desktop-only {
   visibility: hidden;
 }
+.tablet-only {
+  visibility: hidden;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 441px) {
   .desktop-only {
     visibility: hidden;
   }
@@ -67,10 +70,34 @@
     height: calc(100vh - 70px);
     margin-top: 70px;
   }
+  .tablet-only {
+    visibility: hidden;
+  }
 }
 
 /* mid-desktop: da 768 a 1599px */
-@media (min-width: 769px) and (max-width: 1600px) {
+@media (min-width: 800px) and (max-width: 900px) {
+  .mid-desktop-only {
+    visibility: hidden;
+  }
+
+  .desktop-only {
+    visibility: hidden;
+  }
+
+  .extra-desktop-only {
+    visibility: hidden;
+  }
+
+  .large-desktop-only {
+    visibility: hidden;
+  }
+  .tablet-only {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1700px) {
   .mid-desktop-only {
     visibility: visible;
   }
@@ -84,6 +111,9 @@
   }
 
   .large-desktop-only {
+    visibility: hidden;
+  }
+  .tablet-only {
     visibility: hidden;
   }
 }
@@ -112,6 +142,10 @@
   .large-desktop-only {
     visibility: hidden;
   }
+
+  .tablet-only {
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 3999px) {
@@ -137,6 +171,10 @@
 
   .large-desktop-only {
     visibility: visible;
+  }
+
+  .tablet-only {
+    visibility: hidden;
   }
 }
 
