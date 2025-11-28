@@ -94,39 +94,35 @@
           "label": "Boomers (1946-1964) – <strong>Tradizionale</strong>"
         }
       ],
-      "prev": "Back",
-      "next": "next"
+      "prev": "Indietro",
+      "next": "Avanti"
     },
     "step4": {
-      "title": {
-        "span": "Thank you",
-        "span2": "I have a few more questions to understand how I can support you at the best."
-      },
-      "text": "What are your goals?",
+      "text": "Cosa ti aspetti da questa relazione?",
       "goalItems": [
         {
           "id": "goal-1",
-          "value": "ecommerce",
-          "label": "🚀 Launch a new e-commerce"
+          "value": "Aumentare la brand awareness",
+          "label": "Aumentare <strong>la brand awareness</strong>"
         },
         {
           "id": "goal-2",
-          "value": "Redesign an e-commerce",
-          "label": "💪 Redesign an e-commerce"
+          "value": "Acquisire un nuovo segmento di pubblico.",
+          "label": "Acquisire <strong>un nuovo segmento</strong> di pubblico."
         },
         {
           "id": "goal-3",
-          "value": "Launch a new website",
-          "label": "😃 Launch a new website"
+          "value": "Differenziarsi dalla concorrenza con un progetto innovativo.",
+          "label": "Differenziarsi dalla concorrenza con <strong>un progetto innovativo</strong>."
         },
         {
           "id": "goal-4",
-          "value": "Redesign an existing website",
-          "label": "🛠 Redesign an existing website"
+          "value": "Promuovere un nuovo prodotto/servizio in modo distintivo.",
+          "label": "Promuovere <strong>un nuovo prodotto/servizio</strong> in modo distintivo."
         }
       ],
-      "prev": "Back",
-      "next": "next"
+      "prev": "Indietro",
+      "next": "Avanti"
     },
 
     "step5": {
@@ -141,7 +137,7 @@
     "step6": {
       "title": "Woo-ooh! 🎉",
       "text": " La tua richiesta è stata inviata con successo e <br /> riceverai presto una mail di conferma. <br /> <br /> Entro <strong>72 ore</strong> ti risponderò per pianificare la tua <strong>Parlami del <br class='d-none d-sm-block' /> tuo progetto da 30 minuti</strong> e capire insieme <br class='d-none d-sm-block' /> cosa posso fare per te.",
-      "cta": "scopri i miei lavori"
+      "cta": "guarda le nostre stories"
     }
   }
 }

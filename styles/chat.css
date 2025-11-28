@@ -1,0 +1,90 @@
+/* Container generale */
+.chat-container {
+  padding: 6rem 2rem;
+  width: 100%;
+  display: grid;
+  gap: 4rem;
+}
+
+/* ----- TITLE ANIMATO ----- */
+.chat-heading {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  color: #ff4d4d; /* coral red */
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.chat-word-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.chat-word {
+  transform: translateY(100%);
+  opacity: 0;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* ----- LINKS ----- */
+.chat-links {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.chat-connect-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.chat-title {
+  color: #d7c3a1; /* warm sand */
+  font-size: 1rem;
+  margin: 0;
+}
+
+.chat-link {
+  position: relative;
+  color: #d7c3a1;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.chat-link span {
+  position: absolute;
+  height: 2px;
+  background: currentColor;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+}
+
+.chat-link span:nth-child(2) {
+  opacity: 0.4;
+}
+
+/* Hover underline effect */
+.chat-link:hover span {
+  transform: translateX(0);
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .chat-heading {
+    font-size: 2.2rem;
+  }
+
+  .chat-links {
+    flex-direction: column;
+  }
+}

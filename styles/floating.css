@@ -1,8 +1,6 @@
 .bubble-wrap {
   overflow: hidden;
-  height: 600px;
-  margin-bottom: 0px;
-  margin-top: 200px;
+  height: 550px;
 }
 
 .bubbles {
@@ -11,11 +9,10 @@
 
 .bubble {
   position: absolute;
-  width: 154px;
-  height: 154px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1); */
-  background-image: url("/assets/logos/sprites.png");
+  background-image: url("/assets/logos/sprite3.png");
   background-size: 1076px 1076px;
 }
 
@@ -128,8 +125,7 @@
     position: absolute;
     width: 128px;
     height: 128px;
-    border-radius: 50%;
-    background-image: url("/assets/logos/sprite2.png");
+    background-image: url("/assets/logos/sprite3.png");
     background-size: 896px 896px; /* ridimensionamento proporzionale: 1076 * (128/154) ≈ 896 */
   }
 

@@ -2,7 +2,6 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import localFont from "next/font/local";
-const myFont = localFont({ src: "../fonts/Raleway-Regular.ttf" });
 import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
 
 import gsap from "gsap/dist/gsap";
@@ -145,10 +144,7 @@ const Phrase = ({
 }) => {
   return (
     <button onClick={onToggle}>
-      <div
-        ref={sliderItems}
-        className={`${myFont.className} sliderItems uppercase`}
-      >
+      <div ref={sliderItems} className={`font-raleway sliderItems uppercase`}>
         <p
           ref={firstText}
           className="text-transparent text-stroke dark:text-stroke-dark"

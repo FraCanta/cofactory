@@ -15,13 +15,6 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: "Raleway";
@@ -33,7 +26,13 @@
 
 @font-face {
   font-family: "Tactico Grunge";
-  src: url("/fonts/Tactico-Grunge.otf") format("opentype");
+  src: url("/fonts/Tactico-Grunge.otf") format("truetype");
+  font-display: swap;
+}
+
+.tactico {
+  font-family: "Tactico Grunge";
+  src: url("/fonts/Tactico-Grunge.otf") format("truetype");
   font-display: swap;
 }
 
@@ -58,6 +57,14 @@ body {
 h1,
 h2 {
   font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3,
+input,
+label {
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -125,6 +132,26 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* default (light) */
+.contact-form__input {
+  -webkit-appearance: none;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+  background: transparent;
+  border-radius: 0;
+  display: inline-block;
+  outline: none;
+  padding: 0.48vw 0;
+  text-align: center;
+  transition: border-color 0.32s ease;
+  width: 100%;
+}
+
+/* when you toggle .dark on <html> or <body> */
+.dark .contact-form__input {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 @layer utilities {

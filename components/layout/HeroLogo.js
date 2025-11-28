@@ -167,7 +167,10 @@ export default function HeroLogo() {
       : "myMask";
 
   return (
-    <section ref={sectionRef} className="relative video-mask-section">
+    <section
+      ref={sectionRef}
+      className="relative video-mask-section bg-third dark:bg-white"
+    >
       <div className="mask-container">
         <svg
           width="100%"

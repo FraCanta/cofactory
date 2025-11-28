@@ -3,8 +3,6 @@ import localFont from "next/font/local";
 import { MaskText } from "../MaskText";
 import { useState } from "react";
 
-const myFont2 = localFont({ src: "../../fonts/Raleway-Regular.ttf" });
-
 function BannerList({ translation, id }) {
   return (
     <div className="flex flex-col w-full" id={id}>
@@ -20,7 +18,7 @@ function HoverBanner({ item }) {
 
   return (
     <div
-      className="relative w-full overflow-hidden lg:h-screen aspect-square lg:aspect-video group"
+      className="relative z-50 w-full overflow-hidden lg:h-screen aspect-square lg:aspect-video group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -54,7 +52,7 @@ function HoverBanner({ item }) {
       <div
         className={`hidden absolute bottom-0 left-0 w-full lg:flex items-center p-6 lg:p-10 transition-all duration-700 h-[20vh] ${
           hovered
-            ? "opacity-100 bg-gradient-to-t from-black/90 via-black/70 to-transparent"
+            ? "opacity-100 bg-[linear-gradient(359.99deg,rgba(0,0,0,0.9)_15%,rgba(0,0,0,0)_75%)]"
             : "opacity-0 backdrop-blur-none bg-transparent"
         }`}
       >

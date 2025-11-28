@@ -44,7 +44,7 @@ const Home = ({ translation }) => {
         <div className="relative flex flex-col items-end w-full gap-4 md:items-start lg:items-end lg:flex-row lg:justify-between lg:gap-0">
           <MaskText>
             <h1
-              className="leading-none text-6xl  md:text-[7.5rem] xl:-mb-3 text-white dark:text-third fxl:text-[9rem] 3xl:text-[12rem] 3xl:max-w-3xl"
+              className="leading-none text-6xl md:text-[7.5rem] xl:-mb-6 text-white dark:text-third fxl:text-[9rem] 3xl:text-[12rem] 3xl:max-w-3xl"
               dangerouslySetInnerHTML={{ __html: translation.hero.title }}
             ></h1>
           </MaskText>

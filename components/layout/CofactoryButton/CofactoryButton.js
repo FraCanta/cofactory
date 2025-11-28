@@ -1,11 +1,5 @@
 import { Icon } from "@iconify/react";
 import React from "react";
-const myFont = localFont({ src: "../../../fonts/Tactico-Grunge.otf" });
-const myFont2 = localFont({
-  src: "../../../fonts/Raleway-Regular.ttf",
-});
-
-import localFont from "next/font/local";
 
 function CofactoryButton({ isPlaying }) {
   return (
@@ -33,7 +27,7 @@ function CofactoryButton({ isPlaying }) {
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="26%"
-              className={`${myFont.className} fill-white dark:fill-third font-regular`}
+              className={`tactico fill-white dark:fill-third `}
             >
               COFACTORY
             </textPath>
@@ -42,7 +36,7 @@ function CofactoryButton({ isPlaying }) {
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="52%"
-              className={`${myFont2.className} fill-second`}
+              className={`font-raleway fill-second`}
             >
               <tspan>&bull;</tspan>
             </textPath>
@@ -51,7 +45,7 @@ function CofactoryButton({ isPlaying }) {
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="76%"
-              className={`${myFont2.className} fill-pink  font-regular`}
+              className={`font-raleway fill-pink  `}
             >
               STORIES
             </textPath>
@@ -60,7 +54,7 @@ function CofactoryButton({ isPlaying }) {
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="1%"
-              className={`${myFont2.className} fill-second `}
+              className={`font-raleway fill-second `}
             >
               <tspan>&bull;</tspan>
             </textPath>

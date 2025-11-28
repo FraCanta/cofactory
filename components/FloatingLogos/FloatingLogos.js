@@ -96,14 +96,7 @@ function FloatingLogos() {
   }, []);
 
   return (
-    <div className="bubble-wrap">
-      <div className="text-4xl text-center text-white">
-        <h3>
-          Lavoriamo con amore <br />
-          con i migliori marchi
-        </h3>
-      </div>
-
+    <div className="bubble-wrap bg-third dark:bg-white">
       <div className="bubbles" ref={bubblesRef}></div>
     </div>
   );
