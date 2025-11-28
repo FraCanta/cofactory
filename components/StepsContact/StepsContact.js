@@ -494,7 +494,7 @@ export default function StepsContact({ translation }) {
                 STEP 6 (SUCCESS)
         ----------------------------*/}
         {step === 6 && (
-          <div className="flex flex-col items-center w-[90%]  lg:max-w-2xlmax-w-2xl gap-4 pb-20 mx-auto text-center">
+          <div className="flex flex-col items-center w-[90%]  lg:max-w-2xl gap-4 pb-20 mx-auto text-center">
             <h2 className="text-4xl font-bold lg:text-5xl text-pink">
               {translation.step6.title}
             </h2>
