@@ -96,7 +96,7 @@ function FloatingLogos() {
   }, []);
 
   return (
-    <div className="bubble-wrap bg-third dark:bg-white">
+    <div className="bubble-wrap ">
       <div className="bubbles" ref={bubblesRef}></div>
     </div>
   );

@@ -16,6 +16,7 @@ function ParallaxText({ marqueeText, onToggle }) {
   const fourthText = useRef(null);
   const fifthText = useRef(null);
   const sixthText = useRef(null);
+  const seventhText = useRef(null);
 
   const sliderItems = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -56,7 +57,8 @@ function ParallaxText({ marqueeText, onToggle }) {
       thirdText.current &&
       fourthText.current &&
       fifthText.current &&
-      sixthText.current
+      sixthText.current &&
+      seventhText.current
     ) {
       gsap.set(firstText.current, { xPercent: xPercent });
       gsap.set(secondText.current, { xPercent: xPercent });
@@ -64,6 +66,7 @@ function ParallaxText({ marqueeText, onToggle }) {
       gsap.set(fourthText.current, { xPercent: xPercent });
       gsap.set(fifthText.current, { xPercent: xPercent });
       gsap.set(sixthText.current, { xPercent: xPercent });
+      gsap.set(seventhText.current, { xPercent: xPercent });
     }
 
     xPercent += 0.1 * direction;
@@ -83,6 +86,7 @@ function ParallaxText({ marqueeText, onToggle }) {
         fourthText={fourthText}
         fifthText={fifthText}
         sixthText={sixthText}
+        seventhText={seventhText}
         marqueeText={marqueeText}
         onToggle={onToggle} // ✅ passaggio corretto
       />
@@ -103,6 +107,7 @@ const Slide = ({
   fourthText,
   fifthText,
   sixthText,
+  seventhText,
   marqueeText,
   onToggle, // ✅ riceve qui
 }) => {
@@ -110,12 +115,12 @@ const Slide = ({
     progress,
     [0, 1],
     [
-      150 * (direction === "left" ? -1 : 1),
-      -150 * (direction === "left" ? -1 : 1),
+      100 * (direction === "left" ? -1 : 1),
+      -100 * (direction === "left" ? -1 : 1),
     ]
   );
   return (
-    <motion.div style={{ x: translateX, left }} className="sliderContainer ">
+    <motion.div style={{ x: translateX, left }} className="sliderContainer">
       <Phrase
         sliderItems={sliderItems}
         firstText={firstText}
@@ -124,6 +129,7 @@ const Slide = ({
         fourthText={fourthText}
         fifthText={fifthText}
         sixthText={sixthText}
+        seventhText={seventhText}
         marqueeText={marqueeText}
         onToggle={onToggle} // ✅ propagato anche qui
       />
@@ -139,11 +145,12 @@ const Phrase = ({
   fourthText,
   fifthText,
   sixthText,
+  seventhText,
   marqueeText,
   onToggle, // ✅ riceve infine qui
 }) => {
   return (
-    <button onClick={onToggle}>
+    <Link href="/stories">
       <div ref={sliderItems} className={`font-raleway sliderItems uppercase`}>
         <p
           ref={firstText}
@@ -181,7 +188,13 @@ const Phrase = ({
         >
           {marqueeText.text6}
         </p>
+        <p
+          ref={seventhText}
+          className="text-transparent text-stroke dark:text-stroke-dark"
+        >
+          {marqueeText.text7}
+        </p>
       </div>
-    </button>
+    </Link>
   );
 };

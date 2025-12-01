@@ -77,7 +77,7 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
   return (
     <div
       ref={galleryRef}
-      className="w-full mt-10 mb-10 overflow-hidden lg:mb-20 lg:mt-10 2xla:mt-0 z-[999999] "
+      className="w-full mt-10 mb-0 overflow-hidden lg:mb-20 lg:mt-10 2xla:mt-0 z-[999999] "
     >
       <div className="flex items-start justify-center gap-3 md:gap-4">
         {columns.map((columnCases, colIndex) => (

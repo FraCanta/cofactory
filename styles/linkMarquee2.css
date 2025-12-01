@@ -3,6 +3,7 @@
   height: 10vh;
   overflow: hidden;
   align-items: center;
+  width: 120vw;
 }
 
 .sliderItems {

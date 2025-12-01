@@ -2,6 +2,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import { MaskText } from "../MaskText";
 import { useState } from "react";
+import ParallaxText from "../ParallaxText";
 
 function BannerList({ translation, id }) {
   return (
@@ -9,6 +10,9 @@ function BannerList({ translation, id }) {
       {translation.cases.map((item, index) => (
         <HoverBanner key={index} item={item} />
       ))}
+      <div className="z-50 w-full mx-auto overflow-hidden z bg-third dark:bg-white">
+        <ParallaxText marqueeText={translation.marqueeLink} />
+      </div>
     </div>
   );
 }

@@ -64,7 +64,7 @@ const Home = ({ translation }) => {
           </div>
         </div>
 
-        <div className="absolute left-0 grid items-center w-full grid-cols-2 lg:grid-cols-3 bottom-14 md:bottom-24 lg:bottom-20">
+        <div className="absolute left-0 grid items-center w-full grid-cols-2 lg:grid-cols-3 bottom-10 md:bottom-24 lg:bottom-0">
           <div className="hidden lg:block"></div>
           <div className="flex lg:justify-center text-second"></div>
           <div>
@@ -72,53 +72,11 @@ const Home = ({ translation }) => {
           </div>
         </div>
       </Hero>
-      <div className="w-full mx-auto overflow-hidden lg:mb-4">
-        <ParallaxText
-          marqueeText={translation.marqueeLink}
-          onToggle={() => {
-            // salva la posizione pagina
-            setSavedScrollY(window.scrollY);
 
-            // apri overlay
-            setShowApproach(true);
-          }}
-        />
-      </div>
-      {/* Overlay */}
-      <AnimatePresence>
-        {showApproach && (
-          <motion.div
-            key="approach"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1] }}
-            className="fixed inset-0 z-[20000] flex flex-col bg-third backdrop-blur-md"
-          >
-            {/* Bottone chiudi */}
-            <button
-              onClick={() => {
-                setShowApproach(false);
-
-                // ripristina la posizione della pagina di apertura
-                window.scrollTo({
-                  top: savedScrollY,
-                  behavior: "instant",
-                });
-              }}
-              className="absolute z-50 px-4 py-1 text-white uppercase border border-white top-8 right-6 hover:bg-white hover:text-black"
-            >
-              Chiudi
-            </button>
-
-            {/* Contenitore scrollabile interno */}
-            <div ref={approachRef} className="flex-1 overflow-y-auto">
-              <HorizontalScroll scrollTarget={approachRef} />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
       <BannerList translation={translation} id="works" />
+
+      {/* Overlay */}
+
       {/* </motion.div> */}
     </>
   );

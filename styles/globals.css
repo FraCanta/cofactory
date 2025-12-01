@@ -30,6 +30,12 @@
   font-display: swap;
 }
 
+.clear {
+  font-family: "Claerface Std";
+  src: url("/fonts/ClearfaceStd.woff") format("truetype");
+  font-display: swap;
+}
+
 .tactico {
   font-family: "Tactico Grunge";
   src: url("/fonts/Tactico-Grunge.otf") format("truetype");

@@ -4,8 +4,12 @@ import React from "react";
 function CofactoryButton({ isPlaying }) {
   return (
     <main className="main">
-      <button className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[90px] h-[90px] lg:w-[100px] lg:h-[100px] 2xla:w-[120px] 2xla:h-[120px] 3xl:w-[200px] 3xl:h-[200px]">
-        <svg viewBox="0 0 200 200" className="svg ">
+      <button className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[110px] h-[110px] lg:w-[130px] lg:h-[130px] fxl:w-[160px] fxl:h-[160px] 3xl:w-[260px] 3xl:h-[200px]">
+        <svg
+          viewBox="0 0 200 200"
+          preserveAspectRatio="xMidYMid meet"
+          className="w-full h-full svg"
+        >
           <defs>
             <path
               id="circlePath"
@@ -29,38 +33,38 @@ function CofactoryButton({ isPlaying }) {
               startOffset="26%"
               className={`tactico fill-white dark:fill-third `}
             >
-              COFACTORY
+              il nostro
             </textPath>
           </text>
-          <text fontSize="30" fill="currentColor" textAnchor="middle">
+          <text fontSize="28" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
-              startOffset="52%"
+              startOffset="48%"
               className={`font-raleway fill-second`}
             >
               <tspan>&bull;</tspan>
             </textPath>
           </text>
-          <text fontSize="34" fill="currentColor" textAnchor="middle">
+          <text fontSize="29" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="76%"
               className={`font-raleway fill-pink  `}
             >
-              STORIES
+              APPROCCIO
             </textPath>
           </text>
           <text fontSize="30" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
-              startOffset="1%"
+              startOffset="4%"
               className={`font-raleway fill-second `}
             >
               <tspan>&bull;</tspan>
             </textPath>
           </text>
         </svg>
-        <div className="innerCircle w-[40px] h-[40px] 2xla:w-[50px] 2xla:h-[50px] flex items-center justify-center border border-white dark:border-third hover:bg-second dark:hover:bg-second">
+        <div className="innerCircle w-[40px] h-[40px] fxl:w-[60px] fxl:h-[60px] flex items-center justify-center border border-white dark:border-third hover:bg-second dark:hover:bg-second">
           <Icon
             icon="akar-icons:arrow-right"
             width="22"

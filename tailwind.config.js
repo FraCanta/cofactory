@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
+        clear: ["Clearface Std", "sans-serif"],
       },
       images: {
         formats: ["image/avif", "image/webp"],
