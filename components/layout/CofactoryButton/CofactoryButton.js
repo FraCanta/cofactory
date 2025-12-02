@@ -27,37 +27,37 @@ function CofactoryButton({ isPlaying }) {
             />
           </defs>
 
-          <text fontSize="38" fill="currentColor" textAnchor="middle">
+          <text fontSize="43" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="26%"
-              className={`tactico fill-white dark:fill-third `}
+              className={`font-bebas fill-white dark:fill-third `}
             >
-              il nostro
+              IL NOSTRO
             </textPath>
           </text>
-          <text fontSize="28" fill="currentColor" textAnchor="middle">
+          <text fontSize="40" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
-              startOffset="48%"
+              startOffset="50%"
               className={`font-raleway fill-second`}
             >
               <tspan>&bull;</tspan>
             </textPath>
           </text>
-          <text fontSize="29" fill="currentColor" textAnchor="middle">
+          <text fontSize="43" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="76%"
-              className={`font-raleway fill-pink  `}
+              className={`font-bebas  fill-pink  `}
             >
               APPROCCIO
             </textPath>
           </text>
-          <text fontSize="30" fill="currentColor" textAnchor="middle">
+          <text fontSize="40" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
-              startOffset="4%"
+              startOffset="2%"
               className={`font-raleway fill-second `}
             >
               <tspan>&bull;</tspan>
