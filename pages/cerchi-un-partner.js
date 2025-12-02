@@ -20,7 +20,7 @@ const Contatti = ({ translation }) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
-        <nav className="w-screen bg-third dark:bg-white">
+        <nav className="z-[999999] w-screen bg-third dark:bg-white relative">
           <div className="w-[90%] m-auto flex justify-between items-center text-white h-[70px] md:h-[100px] 3xl:h-[200px] ">
             {/*  */}
             <Link href="/">

@@ -23,10 +23,10 @@ function Footer() {
             </div>
 
             {/* Separator */}
-            <div className="w-full h-[1px] bg-white/20 "></div>
+            <div className="w-full h-[1px] bg-white/20 dark:bg-third/20"></div>
 
             {/* Grid finale */}
-            <div className="grid items-end w-full grid-cols-1 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-3 text-md text-white/60 gap-y-4">
+            <div className="grid items-end w-full grid-cols-1 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-3 text-md text-white/60 dark:text-third/60 gap-y-4">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-4 ">
                 <span>&copy;2025 Cofactory srl - P.I. 10233611218 </span>
               </div>
