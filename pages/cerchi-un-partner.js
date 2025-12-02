@@ -29,13 +29,13 @@ const Contatti = ({ translation }) => {
               <Image
                 src={Logo}
                 alt="logo"
-                className="w-[110px] lg:w-[130px] 3xl:w-[200px]"
+                className="w-[120px] h-auto lg:w-[130px] 3xl:w-[200px] 4xl:w-[350px]"
               />
             </Link>
             <div className="flex items-center gap-6">
               <Link
                 href="/"
-                className="relative px-4 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 dark:text-third border-second lg:px-5 lg:text-base 3xl:text-2xl group"
+                className="relative px-2 py-2 overflow-hidden text-xs font-medium uppercase transition-all duration-300 border-2 text-whitedark:text-third dark:text-third sm:px-4 border-second lg:px-5 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group"
               >
                 <span className="relative z-10">torni indietro?</span>
                 <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-second group-hover:w-full"></span>
