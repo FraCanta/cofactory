@@ -108,7 +108,9 @@ const Home = ({ translation }) => {
             {translation.modal.map((_, index) => (
               <button
                 key={index}
-                className="w-3 h-3 transition rounded-full bg-white/50 hover:bg-white"
+                className={`w-3 h-3 transition rounded-full 
+        ${activeIndex === index ? "bg-white" : "bg-white/50"} 
+        hover:bg-white`}
                 onClick={() => {
                   sectionsRef.current[index]?.scrollIntoView({
                     behavior: "smooth",
