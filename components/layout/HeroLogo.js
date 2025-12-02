@@ -138,12 +138,16 @@ export default function HeroLogo() {
 
   const togglePlay = () => {
     if (!videoRef.current) return;
+
     if (videoRef.current.paused) {
       videoRef.current.muted = false;
+
+      // Se è il primo play, partire da 0
       if (!hasStarted) {
         videoRef.current.currentTime = 0;
         setHasStarted(true);
       }
+
       videoRef.current.play();
       setIsPlaying(true);
     } else {
@@ -299,7 +303,7 @@ export default function HeroLogo() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-14 2xs:bottom-4 sm:bottom-10 left-6 lg:left-20 flex items-center gap-[1.2rem]">
-        <p className="text-sm text-white uppercase lg:text-lg 3xl:text-2xl 4xl:text-5xl font-raleway">
+        <p className="text-sm text-white uppercase dark:text-third lg:text-lg 3xl:text-2xl 4xl:text-5xl font-raleway">
           Scroll to discover
         </p>
         <div className="relative w-[4rem] lg:w-[6rem] h-[1.5px] 4xl:w-[12rem] 4xl:h-[3px] overflow-hidden animate-scroll-indicator"></div>

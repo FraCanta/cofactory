@@ -198,3 +198,15 @@
   transform: translateX(-120%);
   animation: scroll-indicator 1.25s linear infinite;
 }
+
+.dark .animate-scroll-indicator::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-120%);
+  animation: scroll-indicator 1.25s linear infinite;
+}

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import localFont from "next/font/local";
+import { useState } from "react";
 import Head from "next/head";
 import casesIT from "../public/locales/it/cases.json";
 import casesEN from "../public/locales/en/cases.json";
@@ -14,17 +13,6 @@ const Stories = ({ translation }) => {
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
-  };
-
-  const [checkedItems, setCheckedItems] = useState({
-    all: true,
-    brand: false,
-    movie: false,
-    box: false,
-  });
-
-  const toggleCheck = (key) => {
-    setCheckedItems((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   return (

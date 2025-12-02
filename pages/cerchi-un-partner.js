@@ -8,9 +8,7 @@ import Image from "next/image";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import StepsContact from "@/components/StepsContact/StepsContact";
 import Head from "next/head";
-import Footer from "@/components/layout/Footer";
 const Contatti = ({ translation }) => {
-  console.log(translation);
   return (
     <>
       <Head>

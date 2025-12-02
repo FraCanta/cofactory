@@ -1,37 +1,51 @@
-import React, { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import Hero from "@/components/layout/Hero";
 import Head from "next/head";
 import { MaskText } from "@/components/MaskText";
 import translationIT from "@/public/locales/it/home.json";
 import translationEN from "@/public/locales/en/home.json";
 import TimbroMarquee from "@/components/TimbroMarquee/TimbroMarquee";
-import { AnimatePresence } from "framer-motion";
-import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
-import ParallaxText from "@/components/ParallaxText";
 import BannerList from "@/components/BannerList/BannerList";
 import HeroLogo from "@/components/layout/HeroLogo";
+import ModalSection from "@/components/layout/ModalSection";
+import { gsap } from "gsap/dist/gsap";
+import { Icon } from "@iconify/react";
 
 const Home = ({ translation }) => {
-  const [showApproach, setShowApproach] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const colors = ["#1b1b1c", "#80c0c0", "#bb5471"]; // colori diversi per le sezioni
 
-  // salva la posizione verticale corrente
-  const [savedScrollY, setSavedScrollY] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  // Riferimenti per GSAP
+  const modalRef = useRef();
+  const sectionsRef = useRef([]);
 
-  // ref al contenitore scrollabile dell’overlay
-  const approachRef = useRef(null);
+  // Gestione apertura modale
+  const handleToggleMarquee = () => setOpenModal(true);
+  const handleCloseModal = () => {
+    gsap.to(modalRef.current, {
+      autoAlpha: 0,
 
-  // blocca lo scroll del body quando l’overlay è aperto
+      duration: 0.5,
+      onComplete: () => setOpenModal(false),
+    });
+  };
+
+  // Timeline GSAP
   useEffect(() => {
-    document.body.style.overflow = showApproach ? "hidden" : "";
-  }, [showApproach]);
+    if (!openModal) return;
+    const interval = setInterval(() => {
+      if (!sectionsRef.current.length) return;
 
-  // resetta lo scroll interno quando apri overlay
-  useEffect(() => {
-    if (showApproach && approachRef.current) {
-      approachRef.current.scrollTop = 0; // prima sezione
-    }
-  }, [showApproach]);
+      const nextIndex = (activeIndex + 1) % sectionsRef.current.length;
+      sectionsRef.current[nextIndex]?.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
+    }, 6000); // cambia slide ogni 4 secondi
+    return () => clearInterval(interval);
+  }, [openModal, activeIndex]);
 
   return (
     <>
@@ -39,7 +53,6 @@ const Home = ({ translation }) => {
         <title>Cofactory - Home</title>
       </Head>
       <HeroLogo />
-
       <Hero>
         <div className="relative flex flex-col items-end w-full gap-4 md:items-start lg:items-end lg:flex-row lg:justify-between lg:gap-0">
           <MaskText>
@@ -49,18 +62,14 @@ const Home = ({ translation }) => {
             ></h1>
           </MaskText>
           <div className="flex flex-col justify-end gap-4">
-            {translation.hero.description.map((text, index) => {
-              return (
-                <MaskText key={index}>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: text.text,
-                    }}
-                    className={`font-raleway font-medium  xl:leading-none text-base text-white dark:text-third md:text-2xl lg:max-w-2xl 2xl:max-w-4xl fxl:max-w-7xl 3xl:text-4xl 3xl:max-w-7xl`}
-                  ></p>
-                </MaskText>
-              );
-            })}
+            {translation.hero.description.map((text, index) => (
+              <MaskText key={index}>
+                <p
+                  dangerouslySetInnerHTML={{ __html: text.text }}
+                  className="text-base font-medium text-white font-raleway xl:leading-none dark:text-third md:text-2xl lg:max-w-2xl 2xl:max-w-4xl fxl:max-w-7xl 3xl:text-4xl 3xl:max-w-7xl"
+                ></p>
+              </MaskText>
+            ))}
           </div>
         </div>
 
@@ -68,16 +77,82 @@ const Home = ({ translation }) => {
           <div className="hidden lg:block"></div>
           <div className="flex lg:justify-center text-second"></div>
           <div>
-            <TimbroMarquee />
+            <TimbroMarquee onClick={handleToggleMarquee} />
           </div>
         </div>
       </Hero>
+      {/* MODALE CON TIMELINE */}
+      {openModal && (
+        <div
+          ref={modalRef}
+          className="fixed inset-0 z-[9999] backdrop-blur-xl text-white flex flex-col transition-colors duration-1000"
+          style={{ backgroundColor: colors[activeIndex] }}
+        >
+          {/* Close button */}
+          <button
+            onClick={handleCloseModal}
+            className="absolute z-10 text-3xl font-bold transition top-6 right-6 hover:scale-110"
+          >
+            <Icon
+              icon="mdi:close-box"
+              width="40px"
+              height="40px"
+              className="text-white"
+            />
+          </button>
+
+          {/* Dots verticali / responsive */}
+          <div
+            className={`absolute z-10 flex gap-4 flex-col left-6 top-1/2 transform -translate-y-1/2 sm:flex-row sm:bottom-16 sm:left-1/2 sm:top-auto sm:-translate-x-1/2 sm:translate-y-0`}
+          >
+            {translation.modal.map((_, index) => (
+              <button
+                key={index}
+                className="w-3 h-3 transition rounded-full bg-white/50 hover:bg-white"
+                onClick={() => {
+                  sectionsRef.current[index]?.scrollIntoView({
+                    behavior: "smooth",
+                    inline: "start",
+                  });
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Scroll orizzontale con sfondi diversi */}
+          <div
+            className="relative flex w-full h-full overflow-x-auto snap-x snap-mandatory scroll-smooth"
+            onScroll={(e) => {
+              const el = e.target;
+              const sectionWidth = el.scrollWidth / translation.modal.length;
+              const index = Math.round(el.scrollLeft / sectionWidth);
+              setActiveIndex(index);
+              setScrollProgress(
+                el.scrollLeft / (el.scrollWidth - el.clientWidth)
+              );
+            }}
+          >
+            {translation.modal.map((item, index) => (
+              <ModalSection
+                key={index}
+                ref={(el) => (sectionsRef.current[index] = el)}
+                title={item.title}
+                text={item.text}
+              />
+            ))}
+          </div>
+
+          {/* Barra progress */}
+          {/* <div className="absolute w-11/12 h-1 transform -translate-x-1/2 bottom-6 left-1/2 bg-white/50">
+            <div
+              className="h-full transition-all duration-200 bg-white"
+              style={{ width: `${scrollProgress * 100}%` }}
+            />
+          </div> */}
+        </div>
+      )}
 
       <BannerList translation={translation} id="works" />
-
-      {/* Overlay */}
-
-      {/* </motion.div> */}
     </>
   );
 };

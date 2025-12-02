@@ -200,6 +200,18 @@ label {
   color: transparent;
 }
 
+.text-stroke3 {
+  -webkit-text-stroke-width: 1.5px !important;
+  -webkit-text-stroke-color: rgb(187, 84, 113) !important;
+  color: transparent;
+}
+
+.text-stroke4 {
+  -webkit-text-stroke-width: 1.5px !important;
+  -webkit-text-stroke-color: rgb(27, 27, 28) !important;
+  color: transparent;
+}
+
 .banner {
   position: relative;
   width: 100%;

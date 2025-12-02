@@ -12,6 +12,20 @@
         }
       ]
     },
+    "modal": [
+      {
+        "title": "Tranquillo,<br/> <span class='text-stroke3 font-bebas'>la prima mossa la facciamo noi</span>",
+        "text": "Intuiamo una potenziale affinità tra i partner. Ne valutiamo l'effetiva compatibilità, concepiamo l'idea creativa e sviluppiamo la campagna di comunicazione."
+      },
+      {
+        "title": "Crediamo <br/> nella <span class='text-stroke2 font-bebas'>parità di coppia</span>",
+        "text": "Ci assicuriamo che ciascuno si impegni nel rispetto dei propri doveri e degli altrui diritti e che i benefici siano sempre reciproci e proporzionali."
+      },
+      {
+        "title": "Le nostre <br/> sono <span class='text-stroke4 font-bebas'>unioni responsabili</span>",
+        "text": "Amiamo le storie a basso impatto ambientale: packaging riciclabili, scatole da spedizione senza uso di collanti o nastri adesivi e fustelle progettate per il riuso delle confezioni, sono alcune delle nostre passioni."
+      }
+    ],
     "marqueeLink": {
       "text1": "il nostro approccio",
       "text2": "il nostro approccio",

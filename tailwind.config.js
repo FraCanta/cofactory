@@ -65,6 +65,20 @@ module.exports = {
       trabsparent: "transparent",
       black: "#000000",
     },
+    keyframes: {
+      circleExpand: {
+        "0%": { transform: "scale(0)" },
+        "100%": { transform: "scale(25)" },
+      },
+      fadeIn: {
+        "0%": { opacity: 0 },
+        "100%": { opacity: 1 },
+      },
+    },
+    animation: {
+      circleExpand: "circleExpand 0.6s ease-out forwards",
+      fadeIn: "fadeIn 0.3s ease-out",
+    },
   },
   plugins: [],
 };

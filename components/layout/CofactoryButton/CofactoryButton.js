@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 
-function CofactoryButton({ isPlaying }) {
+function CofactoryButton() {
   return (
     <main className="main">
-      <button className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[110px] h-[110px] lg:w-[130px] lg:h-[130px] fxl:w-[160px] fxl:h-[160px] 3xl:w-[260px] 3xl:h-[200px]">
+      <div className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[110px] h-[110px] lg:w-[130px] lg:h-[130px] fxl:w-[160px] fxl:h-[160px] 3xl:w-[260px] 3xl:h-[200px]">
         <svg
           viewBox="0 0 200 200"
           preserveAspectRatio="xMidYMid meet"
@@ -72,7 +72,7 @@ function CofactoryButton({ isPlaying }) {
             className="text-white transition-all hover:scale-125 dark:text-third hover:text-white dark:hover:text-white"
           />
         </div>
-      </button>
+      </div>
     </main>
   );
 }
