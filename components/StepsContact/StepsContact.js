@@ -138,7 +138,7 @@ export default function StepsContact({ translation }) {
   };
 
   return (
-    <div className="flex items-center justify-center h-[90svh] lg:h-[90vh] bg-third dark:bg-white ">
+    <div className="flex items-center justify-center h-[100svh] sm:h-[90svh] sms:h-[100svh] md:h-[90svh] lg:h-[100vh] fxl:h-[80svh] xl bg-third dark:bg-white ">
       <div className="relative z-50 w-full h-full pt-6 lg:pt-0">
         {/* ---------------------------
                 PROGRESS BAR

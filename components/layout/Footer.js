@@ -4,13 +4,13 @@ import { Icon } from "@iconify/react";
 
 function Footer() {
   return (
-    <footer className="relative h-[400px] lg:h-[380px] bg-third dark:bg-white z-0">
-      <div className="relative h-[calc(100vh+400px)] lg:h-[calc(100vh+380px)] -top-[100vh]">
-        <div className="h-[400px] top-[calc(100vh-400px)] lg:h-[380px] sticky lg:top-[calc(100vh-380px)] mx-6">
+    <footer className="relative h-[400px] sms:h-[380px] bg-third dark:bg-white z-0">
+      <div className="relative h-[calc(100vh+400px)] sms:h-[calc(100vh+380px)] -top-[100vh]">
+        <div className="h-[400px] top-[calc(100vh-400px)] sms:h-[380px] sticky sms:top-[calc(100vh-380px)] mx-6">
           <div className="flex flex-col items-center justify-between w-full h-full ">
             {/* Posizionamento assoluto per h2, p e Cta2 */}
-            <div className="flex flex-wrap justify-center w-full gap-6 text-center lg:items-end">
-              <h3 className="text-[7rem] lg:text-[14rem] 2xl:text-[15rem] lg:-mb-[2.8rem] mt-6 font-bebas leading-none text-stroke2">
+            <div className="flex flex-wrap justify-center w-full gap-6 text-center sms:items-end">
+              <h3 className="text-[7rem] sms:text-[12rem] lg:text-[14rem] 2xl:text-[15rem] sms:-mb-[2.2rem] lg:-mb-[2.8rem] mt-6 sms:mt-20 lg:mt-6 font-bebas leading-none text-stroke2">
                 Meet us
               </h3>
               <Link
@@ -26,12 +26,12 @@ function Footer() {
             <div className="w-full h-[1px] bg-white/20 "></div>
 
             {/* Grid finale */}
-            <div className="grid items-end w-full grid-cols-1 mb-4 lg:gap-y-0 lg:grid-cols-3 text-md text-white/60 gap-y-4">
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-4">
+            <div className="grid items-end w-full grid-cols-1 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-3 text-md text-white/60 gap-y-4">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-4 ">
                 <span>&copy;2025 Cofactory srl - P.I. 10233611218 </span>
               </div>
-              <div className="lg:text-center">Cookie & Privacy Policy</div>
-              <div className="flex gap-2 lg:justify-end">
+              <div className="sms:text-center">Cookie & Privacy Policy</div>
+              <div className="flex gap-2 sms:justify-end">
                 <p>Credits:</p>
                 <a className="underline" href="https://www.thallion-dev.it">
                   Thallion dev

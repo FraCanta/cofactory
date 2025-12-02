@@ -33,7 +33,7 @@ module.exports = {
         "2xs": "375px",
         sm: "390px",
         // => @media (min-width: 640px) { ... }
-
+        sms: "500px",
         md: "768px",
         // => @media (min-width: 768px) { ... }
 
