@@ -3,7 +3,10 @@ import BlurryLights from "./BlurryLights"; // Se hai bisogno degli effetti lumin
 
 const Hero = ({ children }) => {
   return (
-    <div className="relative h-[90svh] lg:h-[100vh] w-full fxl:mb-20" id="hero">
+    <div
+      className="relative h-[100svh] lg:h-[100vh] w-full fxl:mb-20"
+      id="hero"
+    >
       <div className="flex flex-col lg:justify-center items-center absolute top-16 left-0 right-0 bottom-0 lg:inset-0 z-20 w-[90%] mx-auto mt-10 lg:mt-0">
         {children}
       </div>
