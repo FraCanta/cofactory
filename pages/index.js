@@ -103,7 +103,7 @@ const Home = ({ translation }) => {
 
           {/* Dots verticali / responsive */}
           <div
-            className={`absolute z-10 flex gap-4 flex-col left-6 top-1/2 transform -translate-y-1/2 sm:flex-row sm:bottom-16 sm:left-1/2 sm:top-auto sm:-translate-x-1/2 sm:translate-y-0`}
+            className={`absolute z-10 flex gap-4 flex-col left-6 top-1/2 transform -translate-y-1/2 xs:flex-row xs:bottom-16 xs:left-1/2 xs:top-auto xs:-translate-x-1/2 xs:translate-y-0`}
           >
             {translation.modal.map((_, index) => (
               <button
