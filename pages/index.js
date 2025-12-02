@@ -66,14 +66,14 @@ const Home = ({ translation }) => {
               <MaskText key={index}>
                 <p
                   dangerouslySetInnerHTML={{ __html: text.text }}
-                  className="text-base font-medium text-white font-raleway xl:leading-none dark:text-third md:text-2xl lg:max-w-2xl 2xl:max-w-4xl fxl:max-w-7xl 3xl:text-4xl 3xl:max-w-7xl"
+                  className="text-base font-medium text-white font-raleway xl:leading-none dark:text-third md:text-2xl lg:max-w-2xl xl:text-xl 2xl:text-2xl 2xl:max-w-4xl fxl:max-w-7xl 3xl:text-4xl 3xl:max-w-7xl"
                 ></p>
               </MaskText>
             ))}
           </div>
         </div>
 
-        <div className="absolute left-0 grid items-center w-full grid-cols-2 lg:grid-cols-3 bottom-10 md:bottom-24 lg:bottom-0">
+        <div className="absolute left-0 grid items-center w-full grid-cols-2 lg:grid-cols-3 bottom-10 md:bottom-24 lg:bottom-0 ">
           <div className="hidden lg:block"></div>
           <div className="flex lg:justify-center text-second"></div>
           <div>
