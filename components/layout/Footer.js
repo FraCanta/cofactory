@@ -4,14 +4,14 @@ import { Icon } from "@iconify/react";
 
 function Footer() {
   return (
-    <footer className="relative h-[400px] sms:h-[380px] bg-third dark:bg-white z-0 overflow-x-hidden">
+    <footer className="relative h-[400px] sms:h-[380px] bg-third dark:bg-white z-0 ">
       <div className="relative h-[calc(100vh+400px)] sms:h-[calc(100vh+380px)] -top-[100vh]">
-        <div className="h-[400px] top-[calc(100vh-400px)] sms:h-[380px] sticky sms:top-[calc(100vh-380px)] mx-6">
+        <div className="h-[400px] top-[calc(100vh-400px)] sms:h-[380px] sticky sms:top-[calc(100vh-380px)] mx-6 overflow-x-hidden">
           <div className="flex flex-col items-center justify-between w-full h-full ">
             {/* Posizionamento assoluto per h2, p e Cta2 */}
             <Link href="mailto:meetus@cofactory.it" className="">
-              <div className="flex items-center justify-center w-full mt-6 lg:mt-0 ">
-                <div className="w-[60rem] lg:w-[56rem] 2xl:w-[100rem] ">
+              <div className="flex items-center justify-center w-full mt-6 sm:mt-0 ">
+                <div className="w-[56rem] sm:w-[65rem] lg:w-[56rem] 2xl:w-[100rem] ">
                   <svg
                     viewBox="0 0 1000 200"
                     className="w-full h-auto"
