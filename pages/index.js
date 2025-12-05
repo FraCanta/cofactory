@@ -22,7 +22,13 @@ const Home = ({ translation }) => {
   const sectionsRef = useRef([]);
 
   // Gestione apertura modale
-  const handleToggleMarquee = () => setOpenModal(true);
+  const handleToggleMarquee = () => {
+    setActiveIndex(0); // reset index
+    setScrollProgress(0); // reset progress
+    sectionsRef.current = []; // reset refs
+    setOpenModal(true);
+  };
+
   const handleCloseModal = () => {
     gsap.to(modalRef.current, {
       autoAlpha: 0,
@@ -35,6 +41,7 @@ const Home = ({ translation }) => {
   // Timeline GSAP
   useEffect(() => {
     if (!openModal) return;
+
     const interval = setInterval(() => {
       if (!sectionsRef.current.length) return;
 
@@ -43,10 +50,11 @@ const Home = ({ translation }) => {
         behavior: "smooth",
         inline: "start",
       });
-    }, 6000); // cambia slide ogni 4 secondi
+      setActiveIndex(nextIndex); // aggiorna lo stato
+    }, 6000);
+
     return () => clearInterval(interval);
   }, [openModal, activeIndex]);
-
   return (
     <>
       <Head>

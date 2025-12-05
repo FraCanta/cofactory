@@ -212,6 +212,35 @@ label {
   color: transparent;
 }
 
+.text-stroke5 {
+  color: #1b1b1c;
+  background: linear-gradient(
+    90deg,
+    #bb5471,
+    #368b90,
+    #1b1b1c,
+    #ffffff,
+    #daa444,
+    #bb5471
+  );
+
+  -webkit-background-clip: text; /* gradient applicato al testo */
+  -webkit-text-stroke: 1.5px transparent;
+  animation: gradient-move 6s linear infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
 .banner {
   position: relative;
   width: 100%;

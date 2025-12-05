@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import VideoWithControls from "./VideoWithControls";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -246,7 +247,7 @@ export default function HeroLogo() {
         onMouseLeave={() => setHovering(false)}
         onClick={() => setHovering(true)}
       >
-        <video
+        {/* <video
           ref={videoRef}
           src="/assets/video/showreel.mp4"
           playsInline
@@ -261,7 +262,6 @@ export default function HeroLogo() {
           }}
         />
 
-        {/* Bottone play/pause */}
         {showControls && (
           <div
             ref={controlsRef}
@@ -298,7 +298,8 @@ export default function HeroLogo() {
               </svg>
             )}
           </div>
-        )}
+        )} */}
+        <VideoWithControls src="/assets/video/showreel.mp4" />
       </div>
 
       {/* Scroll indicator */}
