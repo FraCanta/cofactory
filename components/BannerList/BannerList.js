@@ -41,7 +41,7 @@ function HoverBanner({ item }) {
           src={item.media}
           alt={item.name}
           fill
-          className="object-cover object-top w-full h-full transition-transform duration-700 group-hover:scale-105"
+          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
         />
       )}
 

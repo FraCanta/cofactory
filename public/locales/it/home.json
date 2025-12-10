@@ -5,7 +5,7 @@
 
       "description": [
         {
-          "text": "Siamo la prima agenzia di <span class='px-1 italic text-second font-raleway'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
+          "text": "Siamo la prima agenzia di <span class='px-1 italic2 text-second font-raleway'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
         },
         {
           "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
@@ -36,7 +36,7 @@
     },
     "cases": [
       {
-        "media": "/assets/cases/santanna/SantannaPro_x_MissionImpossible.webp",
+        "media": "/assets/cases/santanna/SantannaPro_x_MissionImpossible2.webp",
         "type": "image",
         "name": "Sant'anna Pro x Mission Impossible",
         "brand1": "Sant'anna Pro",
@@ -78,14 +78,14 @@
         "brand2": "Romics 25"
       },
       {
-        "media": "/assets/cases/yummers/Yummers_cover.webp",
+        "media": "/assets/cases/yummers/Yummers_x_Ghostbusters-MinacciaGlaciale_2.webp",
         "type": "image",
         "name": "Yummer's x Ghostbusters: Minaccia Glaciale",
         "brand1": "Yummer's",
         "brand2": "Ghostbusters: Minaccia Glaciale"
       },
       {
-        "media": "/assets/video/RossoPomodoro_x_TartarugheNinja.mp4",
+        "media": "/assets/cases/rossopomodoro/Rossopomodoro_x_TartarugheNinja-CaosMutante.mp4",
         "type": "video",
         "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
         "brand1": "ROSSOPOMODORO",
@@ -113,7 +113,7 @@
         "brand2": "Aquaman: Il Regno Perduto"
       },
       {
-        "media": "/assets/cases/eathappy/BulletTrain_x_Eathappy.webp",
+        "media": "/assets/cases/eathappy/BulletTrain_x_Eathappy2.webp",
         "type": "image",
         "name": "Bullet Train x Eat Happy",
         "brand1": "Eat Happy & Wakame",

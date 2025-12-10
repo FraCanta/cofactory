@@ -8,11 +8,9 @@ function Footer() {
       <div className="relative h-[calc(100vh+400px)] sms:h-[calc(100vh+380px)] -top-[100vh]">
         <div className="h-[400px] top-[calc(100vh-400px)] sms:h-[380px] sticky sms:top-[calc(100vh-380px)]   overflow-x-hidden">
           <div className="flex flex-col items-center justify-between w-full h-full ">
-            {/* Posizionamento assoluto per h2, p e Cta2 */}
-            <Link href="mailto:meetus@cofactory.it">
+            {/* <Link href="mailto:meetus@cofactory.it">
               <div className="flex items-center justify-center w-full -mt-10 lg:mt-0">
                 <div className="w-[50rem] sm:w-[55rem] lg:w-[56rem] 2xl:w-[100rem]">
-                  {/* Desktop: testo su una riga */}
                   <svg
                     viewBox="0 0 1000 200"
                     className="hidden w-full h-auto lg:block"
@@ -65,8 +63,6 @@ function Footer() {
                     </text>
                   </svg>
 
-                  {/* Mobile: testo in due righe */}
-                  {/* Mobile: testo in due righe */}
                   <svg
                     viewBox="0 0 1000 300"
                     className="block w-full h-full lg:hidden"
@@ -97,8 +93,8 @@ function Footer() {
                       strokeWidth="3"
                       fontFamily="Bebas Neue, sans-serif"
                       fontSize="100"
-                      strokeDasharray="1000" // lunghezza totale approssimativa del testo
-                      strokeDashoffset="1000" // parte "nascosta" all'inizio
+                      strokeDasharray="1000" 
+                      strokeDashoffset="1000" 
                     >
                       <tspan x="50%" dy="0">
                         Meetus@
@@ -125,22 +121,94 @@ function Footer() {
                   </svg>
                 </div>
               </div>
+            </Link> */}
+            <Link
+              href="mailto:meetus@cofactory.it"
+              title="Scrivi a meetus@cofactory.it"
+              className="group"
+            >
+              <div className="flex items-center justify-center w-full sm:-mt-8 lg:mt-0 2xl:-mt-10">
+                <div className="w-[55rem] sm:w-[65rem] lg:w-[95rem] 2xl:w-[120rem]">
+                  <svg
+                    viewBox="0 0 1000 200"
+                    className="w-full h-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    {/* ClipPath per il riempimento */}
+                    <defs>
+                      <clipPath id="meet-clip">
+                        <text
+                          x="50%"
+                          y="50%"
+                          textAnchor="middle"
+                          dominantBaseline="middle"
+                          fontFamily="Bebas Neue, sans-serif"
+                          fontSize="140"
+                          strokeWidth="2"
+                          fill="transparent"
+                          stroke="#368b90"
+                        >
+                          Meet us
+                        </text>
+                      </clipPath>
+                    </defs>
+
+                    {/* Rettangolo riempimento animato */}
+                    <rect
+                      className="w-0 h-full fill-[#368b90] transition-all duration-700 ease-out group-hover:w-full"
+                      clipPath="url(#meet-clip)"
+                    />
+
+                    {/* Testo contorno */}
+                    <text
+                      x="50%"
+                      y="50%"
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontFamily="Bebas Neue, sans-serif"
+                      fontSize="140"
+                      stroke="#368b90"
+                      strokeWidth="2"
+                      fill="transparent"
+                    >
+                      Meet us
+                    </text>
+                  </svg>
+                </div>
+              </div>
             </Link>
 
             {/* Separator */}
-            <div className="w-full h-[1px] bg-white/20 dark:bg-third/20"></div>
+            <div className="w-full h-[1px] bg-white/20 dark:bg-third/20 -mt-10"></div>
 
             {/* Grid finale */}
-            <div className="grid items-end w-full grid-cols-1 px-4 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-3 text-md text-white/60 dark:text-third/60 gap-y-4">
+            <div className="grid items-end w-full grid-cols-1 px-4 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-4 text-md text-white/60 dark:text-third/60 gap-y-4">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-4 ">
                 <span>&copy;2025 Cofactory srl - P.I. 10233611218 </span>
               </div>
+              <div className="flex gap-2 sms:justify-center">
+                <p>Connect with us</p>
+                <Link
+                  className="underline"
+                  target="_blank"
+                  title="Connettiti con noi su Linkedin"
+                  href="https://www.linkedin.com/company/cofactorymatchingagency/posts/?feedView=all"
+                >
+                  Linkedin{" "}
+                </Link>
+              </div>{" "}
               <div className="sms:text-center">Cookie & Privacy Policy</div>
               <div className="flex gap-2 sms:justify-end">
                 <p>Credits:</p>
-                <a className="underline" href="https://www.thallion-dev.it">
+                <Link
+                  className="underline"
+                  target="_blank"
+                  title="Francesca Cantale web designer creativa"
+                  href="https://www.thallion-dev.it"
+                >
                   Thallion dev
-                </a>
+                </Link>
               </div>
             </div>
           </div>

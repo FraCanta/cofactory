@@ -102,10 +102,8 @@ const Home = ({ translation }) => {
             className="absolute z-10 text-3xl font-bold transition top-6 right-6 hover:scale-110"
           >
             <Icon
-              icon="mdi:close-box"
-              width="40px"
-              height="40px"
-              className="text-white"
+              icon="ant-design:close-square-filled"
+              className="w-8 h-8 text-white lg:w-10 lg:h-10"
             />
           </button>
 
