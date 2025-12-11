@@ -127,14 +127,15 @@ function Footer() {
               title="Scrivi a meetus@cofactory.it"
               className="group"
             >
-              <div className="flex items-center justify-center w-full sm:-mt-8 lg:mt-0 2xl:-mt-10">
-                <div className="w-[40rem] sm:w-[55rem] lg:w-[95rem] 2xl:w-[120rem] ">
+              <div className="flex items-center justify-between w-full sm:-mt-8 lg:mt-14 2xl:-mt-0">
+                <div className="w-[40rem] sm:w-[60rem] lg:w-[70rem] 2xl:w-[100rem]">
                   <svg
                     viewBox="0 0 1000 200"
-                    className="w-full h-auto"
+                    className="w-full h-auto "
                     xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="xMidYMid meet"
                   >
+                    {/* ClipPath per il riempimento */}
                     <defs>
                       <clipPath id="meet-clip">
                         <text
@@ -148,39 +149,18 @@ function Footer() {
                           fill="transparent"
                           stroke="#368b90"
                         >
-                          Meet us
+                          Meetus
                         </text>
                       </clipPath>
                     </defs>
 
-                    {/* rettangolo corretto senza classi Tailwind */}
+                    {/* Rettangolo riempimento animato */}
                     <rect
-                      x="0"
-                      y="0"
-                      width="0"
-                      height="200"
-                      fill="#368b90"
+                      className="w-0 h-full fill-[#368b90] transition-all duration-700 ease-out group-hover:w-full"
                       clipPath="url(#meet-clip)"
-                    >
-                      <animate
-                        attributeName="width"
-                        from="0"
-                        to="1000"
-                        dur="0.7s"
-                        begin="mouseover"
-                        fill="freeze"
-                      />
-                      <animate
-                        attributeName="width"
-                        from="1000"
-                        to="0"
-                        dur="0.7s"
-                        begin="mouseout"
-                        fill="freeze"
-                      />
-                    </rect>
+                    />
 
-                    {/* testo */}
+                    {/* Testo contorno */}
                     <text
                       x="50%"
                       y="50%"
@@ -192,9 +172,67 @@ function Footer() {
                       strokeWidth="2"
                       fill="transparent"
                     >
-                      Meet us
+                      Meetus
                     </text>
                   </svg>
+                  {/* <svg
+                    viewBox="0 0 1000 300"
+                    className="block w-full h-full lg:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <defs>
+                      <clipPath id="meet-clip-mobile">
+                        <text
+                          x="50%"
+                          y="35%"
+                          textAnchor="middle"
+                          dominantBaseline="middle"
+                          fontFamily="Bebas Neue, sans-serif"
+                          fontSize="100"
+                          stroke="#368b90"
+                          strokeWidth="2"
+                          fill="transparent"
+                        >
+                          <tspan x="50%" dy="0">
+                            Meetus@
+                          </tspan>
+                          <tspan x="50%" dy="1.1em">
+                            Cofactory.it
+                          </tspan>
+                        </text>
+                      </clipPath>
+                    </defs>
+
+                    <rect
+                      x="0"
+                      y="0"
+                      width="0"
+                      height="300"
+                      fill="#368b90"
+                      clipPath="url(#meet-clip-mobile)"
+                      className="transition-all duration-700 ease-out group-hover:w-full"
+                    />
+
+                    <text
+                      x="50%"
+                      y="35%"
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontFamily="Bebas Neue, sans-serif"
+                      fontSize="100"
+                      stroke="#368b90"
+                      strokeWidth="2"
+                      fill="transparent"
+                    >
+                      <tspan x="50%" dy="0">
+                        Meetus@
+                      </tspan>
+                      <tspan x="50%" dy="1.1em">
+                        Cofactory.it
+                      </tspan>
+                    </text>
+                  </svg> */}
                 </div>
               </div>
             </Link>
@@ -203,19 +241,19 @@ function Footer() {
             <div className="w-full h-[1px] bg-white/20 dark:bg-third/20 -mt-10"></div>
 
             {/* Grid finale */}
-            <div className="grid items-end w-full grid-cols-1 px-4 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-4 text-md text-white/60 dark:text-third/60 gap-y-4">
+            <div className="grid items-end w-full grid-cols-1 px-4 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-4 text-md text-white/60 dark:text-third/60 gap-y-3">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-4 ">
                 <span>&copy;2025 Cofactory srl - P.I. 10233611218 </span>
               </div>
-              <div className="flex gap-2 sms:justify-center">
+              <div className="flex items-center gap-2 sms:justify-center">
                 <p>Connect with us</p>
                 <Link
-                  className="underline"
+                  className="underline "
                   target="_blank"
                   title="Connettiti con noi su Linkedin"
                   href="https://www.linkedin.com/company/cofactorymatchingagency/posts/?feedView=all"
                 >
-                  Linkedin{" "}
+                  <Icon icon="lineicons:linkedin" width="28px" height="28px" />
                 </Link>
               </div>{" "}
               <div className="sms:text-center">Cookie & Privacy Policy</div>
