@@ -85,11 +85,11 @@
         "brand2": "Ghostbusters: Minaccia Glaciale"
       },
       {
-        "media": "/assets/cases/rossopomodoro/Rossopomodoro_x_TartarugheNinja-CaosMutante.mp4",
-        "type": "video",
-        "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
-        "brand1": "ROSSOPOMODORO",
-        "brand2": "Tartarughe Ninja: Caos Mutante"
+        "media": "/assets/cases/treccani/Treccani_x_FaoSchwarz.webp",
+        "type": "image",
+        "name": "TRECCANI x Fao Schwarz",
+        "brand1": "TRECCANI",
+        "brand2": "Fao Schwarz"
       },
       {
         "media": "/assets/cases/bobble/bobblebobble.webp",
@@ -99,12 +99,13 @@
         "brand2": "Transformers One"
       },
       {
-        "media": "/assets/cases/treccani/Treccani_x_FaoSchwarz.webp",
-        "type": "image",
-        "name": "TRECCANI x Fao Schwarz",
-        "brand1": "TRECCANI",
-        "brand2": "Fao Schwarz"
+        "media": "/assets/cases/rossopomodoro/Rossopomodoro_x_TartarugheNinja-CaosMutante.mp4",
+        "type": "video",
+        "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
+        "brand1": "ROSSOPOMODORO",
+        "brand2": "Tartarughe Ninja: Caos Mutante"
       },
+
       {
         "media": "/assets/cases/nestle/Nestle_x_Aquaman.webp",
         "type": "image",

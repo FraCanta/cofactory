@@ -13,7 +13,7 @@
         "button": "slomp-per-i-puffi",
         "brand1": "Slomp",
         "brand2": "I Puffi: Il Film",
-        "categories": [{ "name": "Box" }]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/cooltra/Cooltra_x_Sonic3_square.webp",
@@ -27,11 +27,7 @@
         "button": "carpisa-per-paddingtoninperu",
         "brand1": "Carpisa",
         "brand2": "Paddington in Perù",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }],
-        "icons": [
-          { "name": "mingcute:copyright-line", "color": "second" },
-          { "name": "mingcute:box-2-line", "color": "pink" }
-        ]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/milka/Milka_x_ToysCenter24_25_square.webp",
@@ -52,7 +48,7 @@
         "button": "yummers-per-ghostbusters-minaccia-glaciale",
         "brand1": "Yummer's",
         "brand2": "Ghostbusters: <br/>Minaccia Glaciale",
-        "categories": [{ "name": "Brand" }, { "name": "Box" }]
+        "categories": [{ "name": "Movie" }]
       },
 
       {
@@ -68,131 +64,112 @@
         "button": "bobblebobble-per-transformers-one",
         "brand1": "Bobble Bobble",
         "brand2": "Transformers One",
-        "categories": [{ "name": "Movie" }, { "name": "Box" }],
-        "icons": [
-          { "name": "mingcute:movie-line", "color": "yellow" },
-          { "name": "mingcute:box-2-line", "color": "pink" }
-        ]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/treccani/Treccani_x_FaoSchwarz_square.webp",
         "button": "treccani-per-faoschwarz",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Box" }, { "name": "Brand" }]
       },
       {
         "img": "/assets/cases/nestle/Nestle_x_Aquaman_square.webp",
         "button": "nestle-per-aquaman-il-regno-perduto",
         "brand1": "Nestlé",
         "brand2": "Aquaman: <br/> Il Regno Perduto",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/eathappy/EatHappy&Wakame_x_BulletTrain.webp",
         "button": "eathappy-wakame-per-bullet-train",
         "brand1": "Eathappy & Wakame",
         "brand2": "Bullet Train",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/orociok/OroCiok_x_ToysCenter.webp",
         "button": "orociok-toyscenter",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Box" }, { "name": "Brand" }]
       },
       {
         "img": "/assets/cases/bobble/BobbleBobble_x_Dungeons&Dragons.webp",
         "button": "bobblebobble-per-dungeons&dragons-lonore-dei-ladri",
         "brand1": "Bobble Bobble",
         "brand2": "Dungeons & Dragons: <br/> L'onore dei Ladri",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/cheerz/Cheerz_x_ABBBJ.webp",
         "button": "cheerz-per-abbbj",
         "brand1": "Cheerz",
         "brand2": "A Big Bold <br/> Beautiful Journey",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/melinda/Melinda_x_PawPatrol.webp",
         "button": "melinda-per-paw-patrol",
         "brand1": "Melinda",
         "brand2": "Paw Patrol",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/milka/Milka_x_ToysCenter23_24.webp",
         "button": "milka-per-toyscenter-2023",
         "brand1": "Milka",
         "brand2": "Toys Center 2023",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Brand" }, { "name": "Box" }]
       },
       {
         "img": "/assets/cases/rsliving/R5Living_x_IlTalentodiMrCrocodile.webp",
         "button": "r5living-per-iltalentodimrcrocodile",
         "brand1": "R5 Living",
         "brand2": "Il Talento di <br/> Mr. Crocodile",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }, { "name": "Box" }]
       },
       {
         "img": "/assets/cases/rossopomodoro/ghostbusters/Rossopomodoro_x_Ghostbusters.webp",
         "button": "rossopomodoro-per-ghostbusters-minaccia-glaciale",
         "brand1": "Rossopomodoro",
         "brand2": "Ghostbusters: <br/>Minaccia Glaciale",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/sony/SpidermanAcrossTheSpiderverse_x_RoadshowSony.webp",
         "button": "spiderman-across-the-spiderverse-roadshow-sony",
         "brand1": "Spider-Man: <br/>Across the Spider-Verse",
         "brand2": "Sony Pictures <br/>Roadshow",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }, { "name": "Box" }]
       },
       {
         "img": "/assets/cases/citrus/Citrus_x_FaoSchwarz&ToysCenter.webp",
         "button": "citrus-per-faoschwarz-toyscenter",
         "brand1": "Citrus",
         "brand2": "Fao Schwarz & <br/> Toys Center",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Brand" }]
       },
       {
         "img": "/assets/cases/ilovericcio/ILoveRiccio_x_Whitney.webp",
         "button": "ilove-riccio-per-whitney",
         "brand1": "I Love Riccio",
         "brand2": "Whitney: <br/>Una voce diventata leggenda",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }, { "name": "Box" }]
       },
       {
         "img": "/assets/cases/melanzi/Melanzi_x_Gardaland.webp",
         "button": "melanzi-per-gardaland",
         "brand1": "Melanzì",
         "brand2": "Gardaland",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Brand" }]
       },
       {
         "img": "/assets/cases/american/AmericanUncle_x_Sonic2.webp",
         "button": "american-uncle-per-sonic-2",
         "brand1": "American Uncle",
         "brand2": "Sonic 2",
-        "categories": [{ "name": "Movie" }],
-        "icons": [{ "name": "mingcute:movie-line", "color": "yellow" }]
+        "categories": [{ "name": "Movie" }, { "name": "Box" }]
       }
     ],
     "singleCase": {

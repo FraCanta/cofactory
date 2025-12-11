@@ -128,14 +128,13 @@ function Footer() {
               className="group"
             >
               <div className="flex items-center justify-center w-full sm:-mt-8 lg:mt-0 2xl:-mt-10">
-                <div className="w-[55rem] sm:w-[65rem] lg:w-[95rem] 2xl:w-[120rem]">
+                <div className="w-[40rem] sm:w-[55rem] lg:w-[95rem] 2xl:w-[120rem] ">
                   <svg
                     viewBox="0 0 1000 200"
                     className="w-full h-auto"
                     xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="xMidYMid meet"
                   >
-                    {/* ClipPath per il riempimento */}
                     <defs>
                       <clipPath id="meet-clip">
                         <text
@@ -154,13 +153,34 @@ function Footer() {
                       </clipPath>
                     </defs>
 
-                    {/* Rettangolo riempimento animato */}
+                    {/* rettangolo corretto senza classi Tailwind */}
                     <rect
-                      className="w-0 h-full fill-[#368b90] transition-all duration-700 ease-out group-hover:w-full"
+                      x="0"
+                      y="0"
+                      width="0"
+                      height="200"
+                      fill="#368b90"
                       clipPath="url(#meet-clip)"
-                    />
+                    >
+                      <animate
+                        attributeName="width"
+                        from="0"
+                        to="1000"
+                        dur="0.7s"
+                        begin="mouseover"
+                        fill="freeze"
+                      />
+                      <animate
+                        attributeName="width"
+                        from="1000"
+                        to="0"
+                        dur="0.7s"
+                        begin="mouseout"
+                        fill="freeze"
+                      />
+                    </rect>
 
-                    {/* Testo contorno */}
+                    {/* testo */}
                     <text
                       x="50%"
                       y="50%"
