@@ -128,7 +128,7 @@ function Footer() {
               className="group"
             >
               <div className="flex items-center justify-between w-full sm:-mt-8 lg:mt-14 2xl:-mt-0">
-                <div className="w-[40rem] sm:w-[60rem] lg:w-[70rem] 2xl:w-[100rem]">
+                <div className="w-[55rem] sm:w-[60rem] lg:w-[70rem] 2xl:w-[100rem]">
                   <svg
                     viewBox="0 0 1000 200"
                     className="w-full h-auto "
@@ -149,7 +149,7 @@ function Footer() {
                           fill="transparent"
                           stroke="#368b90"
                         >
-                          Meetus
+                          Meet us
                         </text>
                       </clipPath>
                     </defs>
@@ -172,7 +172,7 @@ function Footer() {
                       strokeWidth="2"
                       fill="transparent"
                     >
-                      Meetus
+                      Meet us
                     </text>
                   </svg>
                   {/* <svg
@@ -243,10 +243,19 @@ function Footer() {
             {/* Grid finale */}
             <div className="grid items-end w-full grid-cols-1 px-4 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-4 text-md text-white/60 dark:text-third/60 gap-y-3">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-4 ">
-                <span>&copy;2025 Cofactory srl - P.I. 10233611218 </span>
+                <span>
+                  &copy;2025 Cofactory srl - P.I. 10233611218 -
+                  <Link
+                    href="mailto:meetus@cofactory.it"
+                    title="Scrivi a meetus@cofactory.it"
+                    className="ml-1"
+                  >
+                    meetus@cofactory.it
+                  </Link>
+                </span>
               </div>
               <div className="flex items-center gap-2 sms:justify-center">
-                <p>Connect with us</p>
+                <p>Connect to us</p>
                 <Link
                   className="underline "
                   target="_blank"

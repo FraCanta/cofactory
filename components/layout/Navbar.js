@@ -49,10 +49,7 @@ const Navbar = ({ lang }) => {
       className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm "
     >
       <div className="w-[90%] m-auto flex justify-between items-center text-white h-[70px] md:h-[100px] 3xl:h-[200px] ">
-        <div className="flex lg:hidden">
-          <DarkModeToggle />{" "}
-        </div>
-        <Link href="/" className="z-[20]">
+        <Link href="/#hero" className="z-[20]">
           <Image
             src={Logo}
             alt="logo"
@@ -69,10 +66,7 @@ const Navbar = ({ lang }) => {
             <span className="relative z-10">cerchi un partner?</span>
             <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
           </Link>
-
-          <div className="hidden lg:flex">
-            <DarkModeToggle />{" "}
-          </div>
+          <DarkModeToggle />{" "}
         </div>
       </div>
     </motion.div>

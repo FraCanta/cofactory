@@ -20,7 +20,7 @@ function FloatingFilters({ show, selectedCategory, handleCategorySelect }) {
         initial={{ y: 100, opacity: 0 }}
         animate={show ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
         transition={{ duration: 0.35, ease: "easeOut" }}
-        className="flex items-center justify-center gap-4 px-6 py-3 border rounded-full shadow-xl  bg-white/60 dark:bg-third border-black/10 backdrop-blur-md w-max"
+        className="flex items-center justify-center gap-4 px-6 py-3 border rounded-full shadow-xl bg-white/60 dark:bg-third border-black/10 backdrop-blur-md w-max"
       >
         {categories.map((cat) => (
           <label
@@ -63,8 +63,13 @@ const Stories = ({ translation }) => {
 
   const showFloatingFilters = !hideBecauseFilter && !hideBecauseFooter;
 
-  const handleCategorySelect = (category) => setSelectedCategory(category);
+  const contentRef = useRef(null);
 
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+
+    contentRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   // Filtri originali
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -105,7 +110,7 @@ const Stories = ({ translation }) => {
           <BlurryLights />
         </div>
 
-        <div className="w-[90%] mx-auto relative">
+        <div ref={contentRef} className="w-[90%] mx-auto relative">
           <div
             ref={filtersRef}
             className="relative flex flex-wrap items-center justify-center w-full pb-10 pt-[10rem] lg:justify-between gap-y-6"

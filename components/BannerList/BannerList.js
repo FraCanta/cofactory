@@ -1,8 +1,9 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import { MaskText } from "../MaskText";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ParallaxText from "../ParallaxText";
+import { Icon } from "@iconify/react";
 
 function BannerList({ translation, id }) {
   return (
@@ -19,7 +20,33 @@ function BannerList({ translation, id }) {
 
 function HoverBanner({ item }) {
   const [hovered, setHovered] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const [volume, setVolume] = useState(0.5);
+  const [previousVolume, setPreviousVolume] = useState(0.5);
+  const videoRef = useRef(null);
 
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
+  // ---------------- VOLUME SLIDER ----------------
+  const handleVolumeChange = (e) => {
+    const v = parseFloat(e.target.value);
+    setVolume(v);
+
+    if (!videoRef.current) return;
+    videoRef.current.volume = v;
+
+    if (v === 0) {
+      setPreviousVolume(previousVolume || 0.5);
+      videoRef.current.muted = true;
+      setIsMuted(true);
+    } else {
+      videoRef.current.muted = false;
+      setIsMuted(false);
+      setPreviousVolume(v);
+    }
+  };
   return (
     <div
       className="relative z-50 w-full overflow-hidden lg:h-screen aspect-square lg:aspect-video group"
@@ -28,14 +55,48 @@ function HoverBanner({ item }) {
     >
       {/* MEDIA */}
       {item.type === "video" ? (
-        <video
-          src={item.media}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-        />
+        <>
+          <video
+            ref={videoRef} // <-- qui!
+            src={item.media}
+            autoPlay
+            loop
+            muted={isMuted}
+            playsInline
+            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+          />
+
+          <div className="absolute z-50 p-3 transform -translate-x-1/2 -translate-y-1/2 bottom-10 right-2 lg:p-2 hover:cursor-pointer">
+            <div className="relative group">
+              <div className="flex items-center w-10 h-10 overflow-hidden transition-all duration-300 rounded-full bg-white/50 backdrop-blur-lg group-hover:w-36">
+                {/* MUTE BUTTON */}
+                <button
+                  onClick={toggleMute}
+                  className="p-2 ml-[2px] rounded-full"
+                >
+                  <Icon
+                    icon={
+                      isMuted ? "mage:volume-mute" : "mage:volume-down-fill"
+                    }
+                    width="22"
+                    className="transition-all duration-500"
+                  />
+                </button>
+
+                {/* SLIDER */}
+                <input
+                  type="range"
+                  min={0}
+                  max={1}
+                  step={0.01}
+                  value={volume}
+                  onChange={handleVolumeChange}
+                  className="w-0 h-1 ml-2 transition-all duration-300 cursor-pointer group-hover:w-20 rotate-270 accent-white/20"
+                />
+              </div>
+            </div>
+          </div>
+        </>
       ) : (
         <Image
           src={item.media}

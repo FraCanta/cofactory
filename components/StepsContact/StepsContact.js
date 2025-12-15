@@ -20,7 +20,6 @@ export default function StepsContact({ translation }) {
   });
 
   const [isEmailValid, setIsEmailValid] = useState(true);
-
   const [progressWidth, setProgressWidth] = useState(0);
   const [showBar, setShowBar] = useState(false);
 
@@ -32,11 +31,7 @@ export default function StepsContact({ translation }) {
       setShowBar(true);
       const targetWidth = (step / 6) * 100;
       setProgressWidth(0);
-
-      const timeout = setTimeout(() => {
-        setProgressWidth(targetWidth);
-      }, 50);
-
+      const timeout = setTimeout(() => setProgressWidth(targetWidth), 50);
       return () => clearTimeout(timeout);
     } else {
       setShowBar(false);
@@ -49,23 +44,14 @@ export default function StepsContact({ translation }) {
   ----------------------------*/
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-
-    if (name === "email") {
-      validateEmail(value);
-    }
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "email") validateEmail(value);
   };
 
   /* ---------------------------
-      CHECKBOX HANDLER
+      RADIO HANDLER
   ----------------------------*/
-  const handleCheckboxChange = (e) => {
-    const { value, checked } = e.target;
-
+  const handleRadioChange = (value) => {
     const key =
       step === 1
         ? "goal1"
@@ -74,13 +60,7 @@ export default function StepsContact({ translation }) {
         : step === 3
         ? "goal3"
         : "goal4";
-
-    setFormData((prev) => ({
-      ...prev,
-      [key]: checked
-        ? [...prev[key], value]
-        : prev[key].filter((item) => item !== value),
-    }));
+    setFormData((prev) => ({ ...prev, [key]: [value] }));
   };
 
   /* ---------------------------
@@ -102,16 +82,14 @@ export default function StepsContact({ translation }) {
   ----------------------------*/
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const res = await fetch("/api/progetto", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
-
     if (res.ok) {
       toast.success(`Hey ${formData.name}, your message was sent successfully`);
-      nextStep(); // Vai allo step 6
+      nextStep();
     } else {
       toast.error("Invio fallito.");
     }
@@ -137,12 +115,76 @@ export default function StepsContact({ translation }) {
     }
   };
 
+  /* ---------------------------
+      RENDER STEP RADIO ITEMS
+  ----------------------------*/
+  const renderRadioStep = (
+    stepNumber,
+    stepData,
+    goalKey,
+    prevLabel,
+    nextLabel
+  ) => (
+    <div className="flex flex-col w-[90%] lg:max-w-2xl gap-4 pb-10 mx-auto text-center">
+      <h3 className="text-3xl font-bold text-center text-white lg:text-5xl dark:text-third">
+        {stepData.text}
+      </h3>
+
+      <div className="flex items-center my-5 lg:justify-center">
+        <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-4">
+          {stepData.goalItems.map((goal) => {
+            const active = formData[goalKey].includes(goal.value);
+            return (
+              <label
+                key={goal.id}
+                htmlFor={goal.id}
+                className={`cursor-pointer flex items-center justify-center w-full py-2 px-4 border ${
+                  active
+                    ? "border-second bg-second text-white text-lg"
+                    : "border-white dark:border-third text-white dark:text-third text-lg"
+                }`}
+              >
+                <input
+                  type="radio"
+                  id={goal.id}
+                  name={goalKey}
+                  value={goal.value}
+                  checked={active}
+                  onChange={() => handleRadioChange(goal.value)}
+                  className="hidden"
+                />
+                <p dangerouslySetInnerHTML={{ __html: goal.label }}></p>
+              </label>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="flex justify-between">
+        <button onClick={prevStep} className="px-4 py-2 underline text-second">
+          {prevLabel}
+        </button>
+
+        <button
+          onClick={nextStep}
+          disabled={isNextDisabled()}
+          className={`relative px-6 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third border-pink lg:px-10 ${
+            isNextDisabled() ? "opacity-40" : "opacity-100"
+          }`}
+        >
+          <span className="relative z-10 text-white dark:text-third">
+            {nextLabel}
+          </span>
+          <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
+        </button>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="flex items-center justify-center h-[100svh] sm:h-[90svh] sms:h-[100svh] md:h-[90svh] lg:h-[100vh] fxl:h-[80svh] xl bg-third dark:bg-white ">
+    <div className="flex items-center justify-center h-[100svh] sm:h-[90svh] sms:h-[100svh] md:h-[90svh] lg:h-[100vh] fxl:h-[80svh] xl bg-third dark:bg-white">
       <div className="relative z-50 w-full h-full pt-6 lg:pt-0">
-        {/* ---------------------------
-                PROGRESS BAR
-        ----------------------------*/}
+        {/* PROGRESS BAR */}
         <div
           className={`transition-opacity duration-500 flex justify-center w-[90%] mx-auto pb-10 lg:pt-20 ${
             showBar ? "opacity-100" : "opacity-0"
@@ -151,31 +193,26 @@ export default function StepsContact({ translation }) {
           {showBar && (
             <div className="w-full lg:w-[500px] dark:bg-third/20 bg-white/20 rounded-full h-2.5 mb-2 overflow-hidden">
               <div
-                className="h-full transition-all duration-700 ease-in-out rounded-full bg-pink "
+                className="h-full transition-all duration-700 ease-in-out rounded-full bg-pink"
                 style={{ width: `${progressWidth}%` }}
               />
             </div>
           )}
         </div>
 
-        {/* ---------------------------
-                STEP 0
-        ----------------------------*/}
-
+        {/* STEP 0 */}
         {step === 0 && (
           <div className="relative z-50 w-full h-full bg-third dark:bg-white">
-            <div className="flex flex-col items-start lg:items-center w-[90%]  mx-auto lg:max-w-max ">
+            <div className="flex flex-col items-start lg:items-center w-[90%] mx-auto lg:max-w-max">
               <h1
                 className="text-[14vw] lg:text-8xl text-white uppercase font-bebas leading-none dark:text-third"
                 dangerouslySetInnerHTML={{ __html: translation.step0.title }}
               />
-
               <div className="flex items-center justify-between w-full gap-4">
                 <h2
                   className="flex-1 text-[14vw] lg:text-8xl text-white dark:text-third"
                   dangerouslySetInnerHTML={{ __html: translation.step0.title2 }}
                 />
-
                 <button
                   onClick={nextStep}
                   className="relative overflow-hidden py-2 px-4 text-sm font-medium uppercase border-2 border-pink text-center transition-all duration-300 lg:text-lg lg:min-w-[240px] group"
@@ -186,264 +223,49 @@ export default function StepsContact({ translation }) {
                   <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 bg-pink group-hover:w-full"></span>
                 </button>
               </div>
-            </div>{" "}
+            </div>
             <FloatingLogos />
           </div>
         )}
         {step === 0 && <Footer />}
-        {/* ---------------------------
-                STEP 1
-        ----------------------------*/}
-        {step === 1 && (
-          <div className="flex flex-col w-[90%]  lg:w-[90%]  lg:max-w-2xl gap-4 pb-10 mx-auto ">
-            <h3 className="text-3xl font-bold text-center text-white lg:text-5xl dark:text-third">
-              {translation.step1.text}
-            </h3>
 
-            <div className="flex items-center my-5 lg:justify-center">
-              <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-4">
-                {translation.step1.goalItems.map((goal) => {
-                  const active = formData.goal1.includes(goal.value);
-                  return (
-                    <label
-                      key={goal.id}
-                      htmlFor={goal.id}
-                      className={`cursor-pointer flex items-center justify-center py-2 px-4 w-full   border ${
-                        active
-                          ? "border-second bg-second text-white text-lg"
-                          : "border-white dark:border-third text-white dark:text-third text-lg"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        id={goal.id}
-                        value={goal.value}
-                        checked={active}
-                        onChange={handleCheckboxChange}
-                        className="hidden"
-                      />
-                      <p dangerouslySetInnerHTML={{ __html: goal.label }}></p>
-                    </label>
-                  );
-                })}
-              </div>
-            </div>
+        {/* STEP 1-4 */}
+        {step === 1 &&
+          renderRadioStep(
+            1,
+            translation.step1,
+            "goal1",
+            translation.step1.prev,
+            translation.step1.next
+          )}
+        {step === 2 &&
+          renderRadioStep(
+            2,
+            translation.step2,
+            "goal2",
+            translation.step2.prev,
+            translation.step2.next
+          )}
+        {step === 3 &&
+          renderRadioStep(
+            3,
+            translation.step3,
+            "goal3",
+            translation.step3.prev,
+            translation.step3.next
+          )}
+        {step === 4 &&
+          renderRadioStep(
+            4,
+            translation.step4,
+            "goal4",
+            translation.step4.prev,
+            translation.step4.next
+          )}
 
-            <div className="flex justify-between">
-              <button
-                onClick={prevStep}
-                className="px-4 py-2 underline text-second"
-              >
-                {translation.step1.prev}
-              </button>
-
-              <button
-                onClick={nextStep}
-                disabled={isNextDisabled()}
-                className={`relative px-6 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third  border-pink lg:px-10 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group ${
-                  isNextDisabled() ? "opacity-40" : "opacity-100"
-                }`}
-              >
-                <span className="relative z-10 text-white dark:text-third">
-                  {translation.step1.next}
-                </span>
-                <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ---------------------------
-                STEP 2
-        ----------------------------*/}
-        {step === 2 && (
-          <div className="flex flex-col w-[90%]  lg:max-w-2xl gap-4 pb-10 mx-auto">
-            <h3 className="text-3xl font-bold text-center text-white lg:text-5xl dark:text-third">
-              {translation.step2.text}
-            </h3>
-
-            <div className="flex items-center my-5 lg:justify-center">
-              <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-4">
-                {translation.step2.goalItems.map((goal) => {
-                  const active = formData.goal2.includes(goal.value);
-                  return (
-                    <label
-                      key={goal.id}
-                      htmlFor={goal.id}
-                      className={`cursor-pointer flex items-center justify-center py-2 px-4 w-full   border ${
-                        active
-                          ? "border-second bg-second text-white text-lg"
-                          : "border-white dark:border-third text-white dark:text-third text-lg"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        id={goal.id}
-                        value={goal.value}
-                        checked={active}
-                        onChange={handleCheckboxChange}
-                        className="hidden"
-                      />
-                      <p dangerouslySetInnerHTML={{ __html: goal.label }}></p>
-                    </label>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="flex justify-between">
-              <button
-                onClick={prevStep}
-                className="px-4 py-2 underline text-second"
-              >
-                {translation.step2.prev}
-              </button>
-
-              <button
-                onClick={nextStep}
-                disabled={isNextDisabled()}
-                className={`relative px-6 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third  border-pink lg:px-10 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group ${
-                  isNextDisabled() ? "opacity-40" : "opacity-100"
-                }`}
-              >
-                <span className="relative z-10 text-white dark:text-third">
-                  {translation.step2.next}
-                </span>
-                <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ---------------------------
-                STEP 3
-        ----------------------------*/}
-        {step === 3 && (
-          <div className="flex flex-col w-[90%]  lg:max-w-2xl gap-4 pb-10 mx-auto">
-            <h3 className="text-3xl font-bold text-center text-white lg:text-5xl dark:text-third">
-              {translation.step3.text}
-            </h3>
-
-            <div className="flex items-center my-5 lg:justify-center">
-              <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-4">
-                {translation.step3.goalItems.map((goal) => {
-                  const active = formData.goal3.includes(goal.value);
-                  return (
-                    <label
-                      key={goal.id}
-                      htmlFor={goal.id}
-                      className={`cursor-pointer flex items-center justify-center w-full py-2 px-4  border ${
-                        active
-                          ? "border-second bg-second text-white text-lg"
-                          : "border-white dark:border-third text-white dark:text-third text-lg"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        id={goal.id}
-                        value={goal.value}
-                        checked={active}
-                        onChange={handleCheckboxChange}
-                        className="hidden"
-                      />
-                      <p dangerouslySetInnerHTML={{ __html: goal.label }}></p>
-                    </label>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="flex justify-between">
-              <button
-                onClick={prevStep}
-                className="px-4 py-2 underline text-second"
-              >
-                {translation.step3.prev}
-              </button>
-
-              <button
-                onClick={nextStep}
-                disabled={isNextDisabled()}
-                className={`relative px-6 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third  border-pink lg:px-10 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group ${
-                  isNextDisabled() ? "opacity-40" : "opacity-100"
-                }`}
-              >
-                <span className="relative z-10 text-white dark:text-third">
-                  {translation.step3.next}
-                </span>
-                <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ---------------------------
-                STEP 4
-        ----------------------------*/}
-        {step === 4 && (
-          <div className="flex flex-col w-[90%]  lg:max-w-2xl gap-4 pb-10 mx-auto lg:text-center">
-            <h3 className="text-3xl font-bold text-center text-white lg:text-5xl dark:text-third">
-              {translation.step4?.text || translation.step3.text}
-            </h3>
-
-            <div className="flex items-center my-5 lg:justify-center">
-              <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-4">
-                {translation.step4.goalItems.map((goal) => {
-                  const active = formData.goal4.includes(goal.value);
-                  return (
-                    <label
-                      key={goal.id}
-                      htmlFor={goal.id}
-                      className={`cursor-pointer flex items-center justify-center w-full py-2 px-4  border ${
-                        active
-                          ? "border-second bg-second text-white text-lg"
-                          : "border-white dark:border-third text-white dark:text-third text-lg"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        id={goal.id}
-                        value={goal.value}
-                        checked={active}
-                        onChange={handleCheckboxChange}
-                        className="hidden"
-                      />
-                      <p dangerouslySetInnerHTML={{ __html: goal.label }}></p>
-                    </label>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="flex justify-between">
-              <button
-                onClick={prevStep}
-                className="px-4 py-2 underline text-second"
-              >
-                {translation.step3.prev}
-              </button>
-
-              <button
-                onClick={nextStep}
-                disabled={isNextDisabled()}
-                className={`relative px-6 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third  border-pink lg:px-10 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group ${
-                  isNextDisabled() ? "opacity-40" : "opacity-100"
-                }`}
-              >
-                <span className="relative z-10 text-white dark:text-third">
-                  {translation.step4.next}
-                </span>
-                <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ---------------------------
-                STEP 5
-        ----------------------------*/}
+        {/* STEP 5 - EMAIL */}
         {step === 5 && (
-          <div className="flex flex-col w-[90%]  lg:max-w-2xl gap-4 mx-auto my-20 text-center">
+          <div className="flex flex-col w-[90%] lg:max-w-2xl gap-4 mx-auto my-20 text-center">
             <h4 className="text-3xl font-bold text-white dark:text-third lg:text-4xl">
               {translation.step5.title}
             </h4>
@@ -472,11 +294,10 @@ export default function StepsContact({ translation }) {
               >
                 {translation.step5.prev}
               </button>
-
               <button
                 onClick={nextStep}
                 disabled={isNextDisabled()}
-                className={`relative px-3 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third  border-pink lg:px-10 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group ${
+                className={`relative px-3 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third border-pink lg:px-10 ${
                   isNextDisabled() ? "opacity-40" : "opacity-100"
                 }`}
               >
@@ -489,22 +310,16 @@ export default function StepsContact({ translation }) {
           </div>
         )}
 
-        {/* ---------------------------
-                STEP 6 (SUCCESS)
-        ----------------------------*/}
+        {/* STEP 6 - SUCCESS */}
         {step === 6 && (
-          <div className="flex flex-col items-center w-[90%]  lg:max-w-2xl gap-4 pb-20 mx-auto text-center">
+          <div className="flex flex-col items-center w-[90%] lg:max-w-2xl gap-4 pb-20 mx-auto text-center">
             <h2 className="text-4xl font-bold lg:text-5xl text-pink">
               {translation.step6.title}
             </h2>
-
             <p
               className="text-white dark:text-third lg:text-xl"
-              dangerouslySetInnerHTML={{
-                __html: translation.step6.text,
-              }}
-            ></p>
-
+              dangerouslySetInnerHTML={{ __html: translation.step6.text }}
+            />
             <Cta link="/stories">{translation.step6.cta}</Cta>
           </div>
         )}

@@ -8,7 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function HeroLogo() {
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
-  const controlsRef = useRef(null);
+  const tlRef = useRef(null);
+  const scrollTriggerRef = useRef(null);
   const clipRefTablet = useRef(null);
 
   const clipRefDesktop = useRef(null);
@@ -51,32 +52,8 @@ export default function HeroLogo() {
 
     if (!clip) return;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: "300% top",
-        scrub: 3,
-        pin: true,
-        anticipatePin: 1,
-        onUpdate: (self) => {
-          // mostra i controlli a fine animazione
-          if (!showControls && self.progress >= 0.95) setShowControls(true);
-
-          // segna quando l’animazione è effettivamente partita
-          if (!hasStarted && self.progress > 0.05) setHasStarted(true);
-        },
-        onLeaveBack: () => {
-          if (videoRef.current) videoRef.current.muted = true;
-          setIsPlaying(false);
-          setHasStarted(false);
-        },
-      },
-    });
-
-    // valori dinamici per breakpoints
+    // calcolo dei valori dinamici
     let xInitial, xFinal, scaleFinal;
-
     if (windowWidth < 360) {
       xInitial = "-87.8%";
       xFinal = "-36%";
@@ -93,7 +70,7 @@ export default function HeroLogo() {
       xInitial = "-84%";
       xFinal = "-35.5%";
       scaleFinal = 10;
-    } else if (windowWidth >= 900 && windowWidth <= 1280) {
+    } else if (windowWidth >= 901 && windowWidth <= 1280) {
       xInitial = "-70%";
       xFinal = "36%";
       scaleFinal = 20;
@@ -102,7 +79,6 @@ export default function HeroLogo() {
       xFinal = "36%";
       scaleFinal = 20;
     } else if (windowWidth > 3999) {
-      // ✅ nuova condizione per 4K+
       xInitial = "-75%";
       xFinal = "28%";
       scaleFinal = 20;
@@ -116,26 +92,55 @@ export default function HeroLogo() {
       scaleFinal = 50;
     }
 
-    // animazioni
-    tl.to(clip, {
-      x: xInitial,
-      ease: "power1.out",
-      duration: 1,
-    });
+    // ✅ Contesto GSAP
+    const ctx = gsap.context(() => {
+      // crea la timeline solo la prima volta
+      if (!tlRef.current) {
+        tlRef.current = gsap.timeline({ paused: true });
+        tlRef.current.to(clip, {
+          x: xInitial,
+          ease: "power1.out",
+          duration: 1,
+        });
+        tlRef.current.to(
+          clip,
+          {
+            scale: scaleFinal,
+            x: xFinal,
+            transformOrigin: "right center",
+            ease: "power2.out",
+          },
+          ">0"
+        );
+        tlRef.current.progress(1); // parte dallo stato finale
+      }
 
-    tl.to(
-      clip,
-      {
-        scale: scaleFinal,
-        x: xFinal,
-        transformOrigin: "right center",
-        ease: "power2.out",
-      },
-      ">0"
-    );
+      // ScrollTrigger
+      if (!scrollTriggerRef.current) {
+        scrollTriggerRef.current = ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          end: "300% top",
+          scrub: 3,
+          pin: true,
+          anticipatePin: 1,
+          animation: tlRef.current,
+          onUpdate: (self) => {
+            if (!showControls && self.progress >= 0.95) setShowControls(true);
+            if (!hasStarted && self.progress > 0.05) setHasStarted(true);
+          },
+          onLeaveBack: () => {
+            if (videoRef.current) videoRef.current.muted = true;
+            setIsPlaying(false);
+            setHasStarted(false);
+          },
+        });
+      }
+    }, section);
 
-    return () => ScrollTrigger.killAll();
-  }, [windowWidth, showControls, hasStarted]);
+    // ✅ cleanup automatico quando il componente si smonta
+    return () => ctx.revert();
+  }, [windowWidth]);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
