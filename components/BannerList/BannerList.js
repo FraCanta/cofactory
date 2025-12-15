@@ -66,9 +66,9 @@ function HoverBanner({ item }) {
             className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
           />
 
-          <div className="absolute z-50 p-3 transform -translate-x-1/2 -translate-y-1/2 bottom-10 right-2 lg:p-2 hover:cursor-pointer">
+          <div className="absolute bottom-0 right-0 z-50 p-3 transform -translate-x-1/2 -translate-y-1/2 lg:bottom-10 lg:right-2 lg:p-2 hover:cursor-pointer">
             <div className="relative group">
-              <div className="flex items-center w-10 h-10 overflow-hidden transition-all duration-300 rounded-full bg-white/50 backdrop-blur-lg group-hover:w-36">
+              <div className="flex items-center w-10 h-10 overflow-hidden transition-all duration-300 rounded-full bg-white/50 backdrop-blur-lg ">
                 {/* MUTE BUTTON */}
                 <button
                   onClick={toggleMute}
@@ -82,17 +82,6 @@ function HoverBanner({ item }) {
                     className="transition-all duration-500"
                   />
                 </button>
-
-                {/* SLIDER */}
-                <input
-                  type="range"
-                  min={0}
-                  max={1}
-                  step={0.01}
-                  value={volume}
-                  onChange={handleVolumeChange}
-                  className="w-0 h-1 ml-2 transition-all duration-300 cursor-pointer group-hover:w-20 rotate-270 accent-white/20"
-                />
               </div>
             </div>
           </div>
