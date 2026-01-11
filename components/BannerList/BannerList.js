@@ -1,7 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import { MaskText } from "../MaskText";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import ParallaxText from "../ParallaxText";
 import { Icon } from "@iconify/react";
 
@@ -11,7 +11,7 @@ function BannerList({ translation, id }) {
       {translation.cases.map((item, index) => (
         <HoverBanner key={index} item={item} />
       ))}
-      <div className="z-50 w-full mx-auto overflow-hidden z bg-third dark:bg-white">
+      <div className="z-50 w-full mx-auto mb-20 overflow-hidden bg-third dark:bg-white">
         <ParallaxText marqueeText={translation.marqueeLink} />
       </div>
     </div>
@@ -23,10 +23,50 @@ function HoverBanner({ item }) {
   const [isMuted, setIsMuted] = useState(true);
   const [volume, setVolume] = useState(0.5);
   const [previousVolume, setPreviousVolume] = useState(0.5);
+
   const videoRef = useRef(null);
+  const containerRef = useRef(null);
+
+  // inizializza audio una sola volta
+  useEffect(() => {
+    if (!videoRef.current) return;
+    videoRef.current.volume = volume;
+    videoRef.current.muted = true;
+  }, []);
+
+  // auto-mute quando esce dalla viewport
+  useEffect(() => {
+    if (!containerRef.current || !videoRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          videoRef.current.muted = true;
+          setIsMuted(true);
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(containerRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   const toggleMute = () => {
-    setIsMuted(!isMuted);
+    if (!videoRef.current) return;
+
+    if (videoRef.current.muted || videoRef.current.volume === 0) {
+      const restoreVolume = previousVolume || 0.5;
+      videoRef.current.muted = false;
+      videoRef.current.volume = restoreVolume;
+      setVolume(restoreVolume);
+      setIsMuted(false);
+    } else {
+      setPreviousVolume(videoRef.current.volume);
+      videoRef.current.muted = true;
+      setIsMuted(true);
+    }
   };
 
   // ---------------- VOLUME SLIDER ----------------
@@ -35,6 +75,7 @@ function HoverBanner({ item }) {
     setVolume(v);
 
     if (!videoRef.current) return;
+
     videoRef.current.volume = v;
 
     if (v === 0) {
@@ -47,8 +88,10 @@ function HoverBanner({ item }) {
       setPreviousVolume(v);
     }
   };
+
   return (
     <div
+      ref={containerRef}
       className="relative z-50 w-full overflow-hidden lg:h-screen aspect-square lg:aspect-video group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -57,18 +100,17 @@ function HoverBanner({ item }) {
       {item.type === "video" ? (
         <>
           <video
-            ref={videoRef} // <-- qui!
+            ref={videoRef}
             src={item.media}
             autoPlay
             loop
-            muted={isMuted}
             playsInline
             className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
           />
 
           <div className="absolute bottom-0 right-0 z-50 p-3 transform -translate-x-1/2 -translate-y-1/2 lg:bottom-10 lg:right-2 lg:p-2 hover:cursor-pointer">
             <div className="relative group">
-              <div className="flex items-center w-10 h-10 overflow-hidden transition-all duration-300 rounded-full bg-white/50 backdrop-blur-lg ">
+              <div className="flex items-center w-10 h-10 overflow-hidden transition-all duration-300 rounded-full bg-white/50 backdrop-blur-lg">
                 {/* MUTE BUTTON */}
                 <button
                   onClick={toggleMute}
@@ -112,9 +154,7 @@ function HoverBanner({ item }) {
       >
         <h2 className="flex items-center uppercase">
           <MaskText trigger={hovered}>
-            <span
-              className={`text-raleway font-regular  text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl`}
-            >
+            <span className="text-raleway font-regular text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl">
               {item.brand1}
             </span>
           </MaskText>
@@ -129,9 +169,7 @@ function HoverBanner({ item }) {
           </span>
 
           <MaskText trigger={hovered}>
-            <span
-              className={`text-raleway font-regular leading-none text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl`}
-            >
+            <span className="text-raleway font-regular leading-none text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl">
               {item.brand2}
             </span>
           </MaskText>

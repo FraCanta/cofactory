@@ -304,7 +304,7 @@ export default function HeroLogo() {
             )}
           </div>
         )} */}
-        <VideoWithControls src="/assets/video/showreel.mp4" />
+        <VideoWithControls src="/assets/video/cofactory_showreel.mp4" />
       </div>
 
       {/* Scroll indicator */}

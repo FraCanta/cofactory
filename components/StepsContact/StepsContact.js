@@ -138,11 +138,15 @@ export default function StepsContact({ translation }) {
               <label
                 key={goal.id}
                 htmlFor={goal.id}
-                className={`cursor-pointer flex items-center justify-center w-full py-2 px-4 border ${
-                  active
-                    ? "border-second bg-second text-white text-lg"
-                    : "border-white dark:border-third text-white dark:text-third text-lg"
-                }`}
+                className={`
+    cursor-pointer flex items-center justify-center w-full py-2 px-4 border text-lg transition-colors
+
+    ${
+      active
+        ? "border-second bg-second text-white [&_strong]:text-white"
+        : "border-white dark:border-third text-white dark:text-third [&_strong]:text-second"
+    }
+  `}
               >
                 <input
                   type="radio"

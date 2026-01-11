@@ -152,46 +152,25 @@ const Phrase = ({
   return (
     <Link href="/stories">
       <div ref={sliderItems} className={`font-raleway sliderItems uppercase`}>
-        <p
-          ref={firstText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
-        >
+        <p ref={firstText} className="text-white/60 hover:text-white">
           {marqueeText.text1}
         </p>
-        <p
-          ref={secondText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
-        >
+        <p ref={secondText} className="text-white/60 hover:text-white">
           {marqueeText.text2}
         </p>
-        <p
-          ref={thirdText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
-        >
+        <p ref={thirdText} className="text-white/60 hover:text-white">
           {marqueeText.text3}
         </p>
-        <p
-          ref={fourthText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
-        >
+        <p ref={fourthText} className="text-white/60 hover:text-white">
           {marqueeText.text4}
         </p>
-        <p
-          ref={fifthText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
-        >
+        <p ref={fifthText} className="text-white/60 hover:text-white">
           {marqueeText.text5}
         </p>
-        <p
-          ref={sixthText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
-        >
+        <p ref={sixthText} className="text-white/60 hover:text-white">
           {marqueeText.text6}
         </p>
-        <p
-          ref={seventhText}
-          className="text-transparent text-stroke dark:text-stroke-dark"
-        >
+        <p ref={seventhText} className="text-white/60 hover:text-white">
           {marqueeText.text7}
         </p>
       </div>

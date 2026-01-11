@@ -20,7 +20,7 @@ function FloatingFilters({ show, selectedCategory, handleCategorySelect }) {
         initial={{ y: 100, opacity: 0 }}
         animate={show ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
         transition={{ duration: 0.35, ease: "easeOut" }}
-        className="flex items-center justify-center gap-4 px-6 py-3 border rounded-full shadow-xl bg-white/60 dark:bg-third border-black/10 backdrop-blur-md w-max"
+        className="flex items-center justify-center gap-4 px-6 py-3 border rounded-full shadow-xl bg-white/60 dark:bg-white border-black/10 dark:border-white/10 backdrop-blur-md w-max"
       >
         {categories.map((cat) => (
           <label
@@ -105,7 +105,13 @@ const Stories = ({ translation }) => {
         handleCategorySelect={handleCategorySelect}
       />
       {/* CONTENUTO */}
-      <div className="relative z-[1] pb-20 md:pb-40 lg:pb-0 bg-third dark:bg-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="relative z-[1] pb-20 md:pb-40 lg:pb-0 bg-third dark:bg-white"
+      >
         <div className="absolute inset-0 -z-10">
           <BlurryLights />
         </div>
@@ -149,7 +155,7 @@ const Stories = ({ translation }) => {
           selectedCategory={selectedCategory}
           onCategoryChange={handleCategorySelect}
         />
-      </div>
+      </motion.div>
     </>
   );
 };

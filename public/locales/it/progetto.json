@@ -136,8 +136,8 @@
 
     "step6": {
       "title": "Woo-ooh! 🎉",
-      "text": " La tua richiesta è stata inviata con successo e <br /> riceverai presto una mail di conferma. <br /> <br /> Entro <strong>72 ore</strong> ti risponderò per pianificare la tua <strong>Parlami del <br class='d-none d-sm-block' /> tuo progetto da 30 minuti</strong> e capire insieme <br class='d-none d-sm-block' /> cosa posso fare per te.",
-      "cta": "guarda le nostre stories"
+      "text": " La tua richiesta è stata inviata con successo e <br /> riceverai presto una mail di conferma. <br /> <br /> Entro <strong>72 ore</strong> ti risponderò per pianificare il nostro <strong>primo incontro <br class='d-none d-sm-block' /> da 30 minuti</strong> e capire insieme <br class='d-none d-sm-block' /> cosa possiamo fare per te.",
+      "cta": "guarda le nostre storie"
     }
   }
 }

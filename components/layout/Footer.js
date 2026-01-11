@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import BlurryLights from "./BlurryLights";
 
 function Footer() {
   return (
-    <footer className="relative h-[400px] sms:h-[380px] bg-third dark:bg-white z-0 ">
-      <div className="relative h-[calc(100vh+400px)] sms:h-[calc(100vh+380px)] -top-[100vh]">
-        <div className="h-[400px] top-[calc(100vh-400px)] sms:h-[380px] sticky sms:top-[calc(100vh-380px)]   overflow-x-hidden">
+    <footer className="relative h-[400px] sms:h-[380px] fxl:h-[450px] bg-third dark:bg-white z-0 ">
+      <div className="relative h-[calc(100vh+400px)] sms:h-[calc(100vh+380px)] fxl:h-[calc(100vh+450px)]  -top-[100vh] bg-third dark:bg-white ">
+        <div className="h-[400px] top-[calc(100vh-400px)] sms:h-[380px] sticky sms:top-[calc(100vh-380px)] fxl:h-[450px] fxl:top-[calc(100vh-450px)]   overflow-x-hidden">
           <div className="flex flex-col items-center justify-between w-full h-full ">
             {/* <Link href="mailto:meetus@cofactory.it">
               <div className="flex items-center justify-center w-full -mt-10 lg:mt-0">
@@ -127,8 +128,8 @@ function Footer() {
               title="Scrivi a meetus@cofactory.it"
               className="group"
             >
-              <div className="flex items-center justify-between w-full sm:-mt-8 lg:mt-14 2xl:-mt-0">
-                <div className="w-[55rem] sm:w-[60rem] lg:w-[70rem] 2xl:w-[100rem]">
+              <div className="flex items-center justify-between w-full sm:-mt-8 lg:mt-14 2xl:-mt-0 fxl:-mt-14">
+                <div className="w-[55rem] sm:w-[60rem] lg:w-[70rem] 2xl:w-[100rem] fxl:w-[130rem]">
                   <svg
                     viewBox="0 0 1000 200"
                     className="w-full h-auto "
