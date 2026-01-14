@@ -48,12 +48,14 @@ function FloatingLogos() {
       bubblesRef.current.innerHTML = "";
     }
 
+    const LOGO_SCALE = 0.8;
+
     class Bubble {
-      constructor(index, { x, y, s = 1 }) {
+      constructor(index, { x, y }) {
         this.index = index;
         this.x = x;
         this.y = y;
-        this.scale = s;
+        this.scale = LOGO_SCALE;
 
         this.el = document.createElement("div");
         this.el.className = `bubble logo${this.index + 1}`;
@@ -61,7 +63,6 @@ function FloatingLogos() {
       }
 
       update() {
-        // solo scorrimento orizzontale, senza "floating"
         this.x -= SCROLL_SPEED;
 
         if (this.x < -200) {
