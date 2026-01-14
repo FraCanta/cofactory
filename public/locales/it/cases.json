@@ -9,6 +9,13 @@
         "categories": [{ "name": "Movie" }]
       },
       {
+        "img": "/assets/cases/spongebob/Ogyre_x_SpongeBob.jpg",
+        "button": "santannapro-per-mission-impossible",
+        "brand1": "Sant'anna Pro",
+        "brand2": "Mission Impossible: <br/> The Final Reckoning",
+        "categories": [{ "name": "Movie" }]
+      },
+      {
         "img": "/assets/cases/slomp/Slomp_x_IPuffi_square.webp",
         "button": "slomp-per-i-puffi",
         "brand1": "Slomp",
@@ -89,7 +96,7 @@
       },
       {
         "img": "/assets/cases/orociok/OroCiok_x_ToysCenter.webp",
-        "button": "orociok-toyscenter",
+        "button": "orociok-per-toyscenter",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
         "categories": [{ "name": "Box" }, { "name": "Brand" }]
@@ -172,11 +179,20 @@
         "categories": [{ "name": "Movie" }, { "name": "Box" }]
       }
     ],
+    "marqueeLink": {
+      "text1": "scopri le nostre storie",
+      "text2": "scopri le nostre storie",
+      "text3": "scopri le nostre storie",
+      "text4": "scopri le nostre storie",
+      "text5": "scopri le nostre storie",
+      "text6": "scopri le nostre storie",
+      "text7": "scopri le nostre storie"
+    },
     "singleCase": {
-      "orocioktoys": {
+      "orociok-per-toyscenter": {
         "img": "/assets/cases/orociok/cover_orociok.jpg",
         "name": "Oro Ciok + Toys Center",
-        "title": "orocioktoys",
+        "title": "orociok-per-toyscenter",
         "brand1": "Oro Ciok",
         "brand2": "Toys Center",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",
@@ -248,11 +264,11 @@
           "text6": "tutte le storie"
         }
       },
-      "yummersghostbusters": {
+      "yummers-per-ghostbusters-minaccia-glaciale": {
         "img": "/assets/cases/yummers/cover_yummers.jpg",
         "brand1": "Yummer's",
         "brand2": "Ghostbusters",
-        "title": "yummersghostbusters",
+        "title": "yummers-per-ghostbusters-minaccia-glaciale",
 
         "name": "Yummer's + Ghostbusters: Minaccia Glaciale",
         "descrizione": "Una vera coppia da urlo! In occasione dell’uscita al cinema dell’attesissimo Ghostbusters: Minaccia Glaciale, Yummer’s lancia i nuovi cerali a cuscinetto e due gusti di zucchero filato ispirati al film.",
@@ -328,12 +344,12 @@
           "text6": "tutte le storie"
         }
       },
-      "rossopomodorotartarugheninja": {
+      "rossopomodoro-tartarugheninja-caosmutante": {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro22.jpg",
         "name": "Rossopomodoro + Tartarughe Ninja",
         "brand1": "Rossopomodoro",
         "brand2": "Tartarughe Ninja",
-        "title": "rossopomodorotartarugheninja",
+        "title": "rossopomodoro-tartarugheninja-caosmutante",
 
         "descrizione": "Durante l'estate 2023, al grido del mitico 'Cowabungaaaaa', le Tartarughe Ninja: Caos Mutante invadono i ristoranti Rossopomodoro con il nuovo Menu Bimbi Mutans Edition! Ad attendere i bimbi a tavola, tovagliette tutte da giocare, maschere da indossare e gadget da portare a casa.",
         "partner": "partner nel",
@@ -427,12 +443,12 @@
           "text6": "tutte le storie"
         }
       },
-      "treccanifaoschwarz": {
+      "treccani-per-faoschwarz": {
         "img": "/assets/cases/treccani/cover_treccani.jpg",
         "brand1": "Treccani",
         "brand2": "Fao Schwarz",
         "name": "Treccani + Fao Schwarz",
-        "title": "treccanifaoschwarz",
+        "title": "treccani-per-faoschwarz",
 
         "descrizione": "Cosa può nascere dall’incontro tra la cultura e il gioco, se non un bellissimo viaggio intorno al mondo del sapere? Ecco perchè abbiamo fatto incontrare Treccani e FAO Schwarz, che insieme hanno regalato un Natale tinto di sorpresa e curiosità a tantissimi bimbi. Un esclusivo cofanetto, in edizione limitata per il celebre negozio di giocattoli, ha racchiuso 4 volumi per bambini, firmati dal più illustre nome della storia della lingua italiana.",
         "partner": "partner nel",
@@ -489,11 +505,11 @@
           "text6": "tutte le storie"
         }
       },
-      "bobbled&d": {
+      "bobblebobble-per-dungeons&dragons-lonore-dei-ladri": {
         "img": "/assets/cases/bobble/cover_bobble.jpg",
         "brand1": "Bobble Bobble",
         "brand2": "Dangeons&Dragons",
-        "title": "bobbled&d",
+        "title": "bobblebobble-per-dungeons&dragons-lonore-dei-ladri",
 
         "name": "Bobble Bobble + Dangeouns & Dragons",
         "descrizione": "Bobble Bobble, il primo produttore di bubble tea in Europa - e l'unico in Italia - incontra un film epico: Dangeons&Dragons - L'onore dei ladri. Nato dal famoso gioco di ruolo Hasbro e distribuito nelle sale nel Marzo 2023 da Eagle Pictures. Nasce così un bubble tea in Limited Edition ispirato al film, che ha conquistato il pubblico teen di Bobble Bobble.",
@@ -611,13 +627,13 @@
           "text6": "tutte le storie"
         }
       },
-      "milkatoys": {
+      "milka-per-toyscenter-2023": {
         "img": "/assets/cases/milka/cover_milka2.jpg",
         "ogimg": "/assets/milka_og.png",
         "brand1": "Milka",
         "brand2": "Toys Center",
         "name": "Milka + Toys Center",
-        "title": "milkatoys",
+        "title": "milka-per-toyscenter-2023",
 
         "descrizione": "È un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: una box-valigetta con all’interno delle golosità Milka.",
         "partner": "partner nel",
@@ -840,11 +856,11 @@
           "text6": "tutte le storie"
         }
       },
-      "rossopomodoroghostbusters": {
+      "rossopomodoro-per-ghostbusters-minaccia-glaciale": {
         "img": "/assets/cases/rossopomodoro/cover_rossopomodoro3.jpg",
         "brand1": "Rossopomodoro",
         "brand2": "Ghostbusters",
-        "title": "rossopomodoroghostbusters",
+        "title": "rossopomodoro-per-ghostbusters-minaccia-glaciale",
 
         "name": "Rossopomodoro + Ghostbusters: Minaccia Glaciale",
         "descrizione": "E’ un Natale tenerissimo quello che Toys Center ha regalato a tutti i suoi bimbi, invitati a partire per un viaggio pieno di sorprese! Il catalogo di Natale del più grande retail di giocattoli italiano, è stato consegnato infatti in una confezione davvero speciale: un box-valigetta con all’interno delle golosità Milka.",

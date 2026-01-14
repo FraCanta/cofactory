@@ -763,9 +763,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             ) : null}
           </div>
         </section>
-        <div className="w-full mx-auto overflow-hidden">
-          <ParallaxText marqueeText={work.marqueeLink} />
-        </div>
+
         <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2  text-white text-2xl py-8 md:py-8 gap-6 ">
           {previousWork.titlePrev && (
             <Link href={`/stories/${previousWork.titlePrev}`} className="z-10">
@@ -812,9 +810,10 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
             </Link>
           )}
         </div>
-
-        <div className="w-[90%] mx-auto mt-20 h-[0.05rem] bg-white/60 dark:bg-third/60 2xl:mt-0 "></div>
       </motion.div>
+      <div className="w-full mx-auto overflow-hidden">
+        <ParallaxText marqueeText={work.marqueeLink} />
+      </div>
     </>
   );
 };

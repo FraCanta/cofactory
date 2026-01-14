@@ -32,7 +32,8 @@
       "text3": "scopri le nostre storie",
       "text4": "scopri le nostre storie",
       "text5": "scopri le nostre storie",
-      "text6": "scopri le nostre storie"
+      "text6": "scopri le nostre storie",
+      "text7": "scopri le nostre storie"
     },
     "cases": [
       {
@@ -41,6 +42,13 @@
         "name": "Sant'anna Pro x Mission Impossible",
         "brand1": "Sant'anna Pro",
         "brand2": "Mission Impossible: The Final Reckoning"
+      },
+      {
+        "media": "/assets/video/Ogyre_x_SpongeBob-unavventuradapirati.mp4",
+        "type": "video",
+        "name": "Ogyre x SpongeBob: un'avventura da pirati",
+        "brand1": "Ogyre",
+        "brand2": "SpongeBob: un'avventura da pirati"
       },
       {
         "media": "/assets/cases/slomp/Slomp_x_IPuffi.webp",

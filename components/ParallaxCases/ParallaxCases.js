@@ -76,18 +76,20 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
             }`}
           >
             {columnCases.map((el, i) => (
-              <motion.div
-                key={i}
-                style={{ y: contentY[colIndex] || 0 }}
-                className="relative block overflow-hidden group aspect-square rounded-xs"
-              >
-                <Image
-                  src={el.img}
-                  alt={el.name}
-                  fill
-                  className="object-cover"
-                />
-                {/* <div
+              <>
+                {/* <Link key={i} href={`/stories/${el.button}`}> */}
+                <motion.div
+                  key={i}
+                  style={{ y: contentY[colIndex] || 0 }}
+                  className="relative block overflow-hidden group aspect-square rounded-xs"
+                >
+                  <Image
+                    src={el.img}
+                    alt={el.name}
+                    fill
+                    className="object-cover"
+                  />
+                  {/* <div
                   className={`absolute inset-0 flex flex-col items-center justify-center gap-y-2 transition-opacity duration-500`}
                 >
                   <h2 className="flex flex-col items-center justify-center gap-2 text-center uppercase">
@@ -113,8 +115,9 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
                     </MaskText>
                   </h2>
                 </div> */}
+                </motion.div>
                 {/* </Link> */}
-              </motion.div>
+              </>
             ))}
           </div>
         ))}
