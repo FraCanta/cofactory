@@ -18,11 +18,11 @@
         "text": "Intuiamo una potenziale affinità tra i partner. Ne valutiamo l'effettiva compatibilità, concepiamo l'idea creativa e sviluppiamo la campagna di comunicazione."
       },
       {
-        "title": "Crediamo <br/> nella <span class='text-stroke2 font-bebas'>parità di coppia</span>",
+        "title": "Crediamo <br/> nella <span class='text-stroke4 font-bebas'>parità di coppia</span>",
         "text": "Ci assicuriamo che ciascuno si impegni nel rispetto dei propri doveri e degli altrui diritti e che i benefici siano sempre reciproci e proporzionali."
       },
       {
-        "title": "Le nostre <br/> sono <span class='text-stroke4 font-bebas'>unioni responsabili</span>",
+        "title": "Le nostre <br/> sono <span class='text-stroke6 font-bebas'>unioni responsabili</span>",
         "text": "Amiamo le storie a basso impatto ambientale: packaging riciclabili, scatole da spedizione senza uso di collanti o nastri adesivi e fustelle progettate per il riuso delle confezioni, sono alcune delle nostre passioni."
       }
     ],
@@ -41,77 +41,120 @@
         "type": "image",
         "name": "Sant'anna Pro x Mission Impossible",
         "brand1": "Sant'anna Pro",
-        "brand2": "Mission Impossible: The Final Reckoning"
+        "brand2": "Mission Impossible: The Final Reckoning",
+        "casesItemFeatured": [
+          "ooh",
+          "digital",
+          "meta ads",
+          "paid influencer",
+          "pop",
+          "contest"
+        ]
       },
       {
         "media": "/assets/video/Ogyre_x_SpongeBob-unavventuradapirati.mp4",
         "type": "video",
         "name": "Ogyre x SpongeBob: un'avventura da pirati",
         "brand1": "Ogyre",
-        "brand2": "SpongeBob: un'avventura da pirati"
+        "brand2": "SpongeBob: un'avventura da pirati",
+        "casesItemFeatured": [
+          "dooh",
+          "social",
+          "digital",
+          "activation",
+          "gadget",
+          "box"
+        ]
       },
       {
         "media": "/assets/cases/slomp/Slomp_x_IPuffi.webp",
         "type": "image",
         "name": "Slomp x I Puffi: Il Film",
         "brand1": "Slomp",
-        "brand2": "I Puffi: Il Film"
+        "brand2": "I Puffi: Il Film",
+        "casesItemFeatured": [
+          "pack",
+          "ooh",
+          "pop",
+          "contest",
+          "social",
+          "digital"
+        ]
       },
       {
         "media": "/assets/cases/cooltra/Cooltra_x_Sonic3.webp",
         "type": "image",
         "name": "Cooltra x Sonic 3",
         "brand1": "Cooltra",
-        "brand2": "Sonic 3"
+        "brand2": "Sonic 3",
+        "casesItemFeatured": ["scooter pop", "contest", "meta ads", "digital"]
       },
       {
         "media": "/assets/cases/carpisa/Carpisa_x_PaddingtonInPeru.mp4",
         "type": "video",
         "name": "Carpisa x Paddington in Perù",
         "brand1": "Carpisa",
-        "brand2": "Paddington in Perù"
+        "brand2": "Paddington in Perù",
+        "casesItemFeatured": ["vetrofanie", "digital", "pop"]
       },
       {
         "media": "/assets/cases/milka/Milka_x_ToysCenter24_25.webp",
         "type": "image",
         "name": "MILKA x Toys Center - Natale 2024 2025",
         "brand1": "MILKA",
-        "brand2": "Toys Center 2024"
+        "brand2": "Toys Center 2024",
+        "casesItemFeatured": ["box", "digital", "social", "pop"]
       },
       {
         "media": "/assets/video/UntilDown_x_Romics25.mp4",
         "type": "video",
         "name": "Until Dawn x Romics 25",
         "brand1": "Until Dawn: Fino all'alba",
-        "brand2": "Romics 25"
+        "brand2": "Romics 25",
+        "casesItemFeatured": [
+          "activation",
+          "stand",
+          "set-up",
+          "video",
+          "social"
+        ]
       },
       {
         "media": "/assets/cases/yummers/Yummers_x_Ghostbusters-MinacciaGlaciale_2.webp",
         "type": "image",
         "name": "Yummer's x Ghostbusters: Minaccia Glaciale",
         "brand1": "Yummer's",
-        "brand2": "Ghostbusters: Minaccia Glaciale"
+        "brand2": "Ghostbusters: Minaccia Glaciale",
+        "casesItemFeatured": [
+          "pack",
+          "dooh",
+          "influencer activation",
+          "digital"
+        ]
       },
       {
         "media": "/assets/cases/treccani/Treccani_x_FaoSchwarz.webp",
         "type": "image",
         "name": "TRECCANI x Fao Schwarz",
         "brand1": "TRECCANI",
-        "brand2": "Fao Schwarz"
+        "brand2": "Fao Schwarz",
+        "casesItemFeatured": ["pack", "pop", "event", "digital", "social"]
       },
       {
         "media": "/assets/cases/bobble/bobblebobble.webp",
         "type": "image",
         "name": "BOBBLE BOBBLE x Transformers One",
         "brand1": "BOBBLE BOBBLE",
-        "brand2": "Transformers One"
+        "brand2": "Transformers One",
+        "casesItemFeatured": ["pack", "pop", "social", "contest"]
       },
       {
         "media": "/assets/cases/rossopomodoro/Rossopomodoro_x_TartarugheNinja-CaosMutante.mp4",
         "type": "video",
         "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
         "brand1": "ROSSOPOMODORO",
-        "brand2": "Tartarughe Ninja: Caos Mutante"
+        "brand2": "Tartarughe Ninja: Caos Mutante",
+        "casesItemFeatured": ["spot", "pack", "pop", "social"]
       },
 
       {
@@ -119,14 +162,22 @@
         "type": "image",
         "name": "Nestlè x Aquaman",
         "brand1": "Nestlè",
-        "brand2": "Aquaman: Il Regno Perduto"
+        "brand2": "Aquaman: Il Regno Perduto",
+        "casesItemFeatured": ["pack", "pop", "digital"]
       },
       {
         "media": "/assets/cases/eathappy/BulletTrain_x_Eathappy2.webp",
         "type": "image",
         "name": "Bullet Train x Eat Happy",
         "brand1": "Eat Happy & Wakame",
-        "brand2": "Bullet Train"
+        "brand2": "Bullet Train",
+        "casesItemFeatured": [
+          "pack",
+          "pop",
+          "meta adv",
+          "google ads",
+          "contest"
+        ]
       }
     ]
   }

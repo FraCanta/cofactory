@@ -16,7 +16,6 @@ function ParallaxText({ marqueeText, onToggle }) {
   const fourthText = useRef(null);
   const fifthText = useRef(null);
   const sixthText = useRef(null);
-  const seventhText = useRef(null);
 
   const sliderItems = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -57,8 +56,7 @@ function ParallaxText({ marqueeText, onToggle }) {
       thirdText.current &&
       fourthText.current &&
       fifthText.current &&
-      sixthText.current &&
-      seventhText.current
+      sixthText.current
     ) {
       gsap.set(firstText.current, { xPercent: xPercent });
       gsap.set(secondText.current, { xPercent: xPercent });
@@ -66,7 +64,6 @@ function ParallaxText({ marqueeText, onToggle }) {
       gsap.set(fourthText.current, { xPercent: xPercent });
       gsap.set(fifthText.current, { xPercent: xPercent });
       gsap.set(sixthText.current, { xPercent: xPercent });
-      gsap.set(seventhText.current, { xPercent: xPercent });
     }
 
     xPercent += 0.1 * direction;
@@ -86,7 +83,6 @@ function ParallaxText({ marqueeText, onToggle }) {
         fourthText={fourthText}
         fifthText={fifthText}
         sixthText={sixthText}
-        seventhText={seventhText}
         marqueeText={marqueeText}
         onToggle={onToggle} // ✅ passaggio corretto
       />
@@ -107,7 +103,6 @@ const Slide = ({
   fourthText,
   fifthText,
   sixthText,
-  seventhText,
   marqueeText,
   onToggle, // ✅ riceve qui
 }) => {
@@ -117,7 +112,7 @@ const Slide = ({
     [
       100 * (direction === "left" ? -1 : 1),
       -100 * (direction === "left" ? -1 : 1),
-    ]
+    ],
   );
   return (
     <motion.div style={{ x: translateX, left }} className="sliderContainer">
@@ -129,7 +124,6 @@ const Slide = ({
         fourthText={fourthText}
         fifthText={fifthText}
         sixthText={sixthText}
-        seventhText={seventhText}
         marqueeText={marqueeText}
         onToggle={onToggle} // ✅ propagato anche qui
       />
@@ -145,7 +139,6 @@ const Phrase = ({
   fourthText,
   fifthText,
   sixthText,
-  seventhText,
   marqueeText,
   onToggle, // ✅ riceve infine qui
 }) => {
@@ -169,9 +162,6 @@ const Phrase = ({
         </p>
         <p ref={sixthText} className="text-white/60 hover:text-white">
           {marqueeText.text6}
-        </p>
-        <p ref={seventhText} className="text-white/60 hover:text-white">
-          {marqueeText.text7}
         </p>
       </div>
     </Link>

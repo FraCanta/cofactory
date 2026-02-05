@@ -54,8 +54,8 @@ html::-webkit-scrollbar {
 }
 
 body {
-  transition-property: background-color, color, border-color, filter, transform,
-    opacity;
+  transition-property:
+    background-color, color, border-color, filter, transform, opacity;
   transition-duration: 1.5s;
   transition-timing-function: cubic-bezier(0.13, 0.37, 0.06, 0.99);
 }
@@ -213,6 +213,12 @@ label {
 .text-stroke4 {
   -webkit-text-stroke-width: 1.5px !important;
   -webkit-text-stroke-color: rgb(27, 27, 28) !important;
+  color: transparent;
+}
+
+.text-stroke6 {
+  -webkit-text-stroke-width: 1.5px !important;
+  -webkit-text-stroke-color: rgb(255, 255, 255) !important;
   color: transparent;
 }
 

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import localFont from "next/font/local";
 import { MaskText } from "../MaskText";
 import { useRef, useState, useEffect } from "react";
 import ParallaxText from "../ParallaxText";
@@ -8,10 +7,15 @@ import { Icon } from "@iconify/react";
 function BannerList({ translation, id }) {
   return (
     <div className="flex flex-col w-full" id={id}>
+      <div className="z-50 w-full py-10 mx-auto overflow-hidden bg-third dark:bg-white">
+        <ParallaxText marqueeText={translation.marqueeLink} />
+      </div>
+
       {translation.cases.map((item, index) => (
         <HoverBanner key={index} item={item} />
       ))}
-      <div className="z-50 w-full mx-auto mb-20 overflow-hidden bg-third dark:bg-white">
+
+      <div className="z-50 w-full pt-10 mx-auto mb-20 overflow-hidden bg-third dark:bg-white">
         <ParallaxText marqueeText={translation.marqueeLink} />
       </div>
     </div>
@@ -27,14 +31,14 @@ function HoverBanner({ item }) {
   const videoRef = useRef(null);
   const containerRef = useRef(null);
 
-  // inizializza audio una sola volta
+  // init audio
   useEffect(() => {
     if (!videoRef.current) return;
     videoRef.current.volume = volume;
     videoRef.current.muted = true;
   }, []);
 
-  // auto-mute quando esce dalla viewport
+  // auto mute fuori viewport
   useEffect(() => {
     if (!containerRef.current || !videoRef.current) return;
 
@@ -45,11 +49,10 @@ function HoverBanner({ item }) {
           setIsMuted(true);
         }
       },
-      { threshold: 0.25 }
+      { threshold: 0.25 },
     );
 
     observer.observe(containerRef.current);
-
     return () => observer.disconnect();
   }, []);
 
@@ -69,30 +72,10 @@ function HoverBanner({ item }) {
     }
   };
 
-  // ---------------- VOLUME SLIDER ----------------
-  const handleVolumeChange = (e) => {
-    const v = parseFloat(e.target.value);
-    setVolume(v);
-
-    if (!videoRef.current) return;
-
-    videoRef.current.volume = v;
-
-    if (v === 0) {
-      setPreviousVolume(previousVolume || 0.5);
-      videoRef.current.muted = true;
-      setIsMuted(true);
-    } else {
-      videoRef.current.muted = false;
-      setIsMuted(false);
-      setPreviousVolume(v);
-    }
-  };
-
   return (
     <div
       ref={containerRef}
-      className="relative z-50 w-full overflow-hidden lg:h-screen aspect-square lg:aspect-video group"
+      className="relative z-50 w-full overflow-hidden h-[70vh] lg:h-screen lg:aspect-video group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -105,27 +88,20 @@ function HoverBanner({ item }) {
             autoPlay
             loop
             playsInline
-            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+            className="object-cover w-full h-full transition-transform duration-700 lg:group-hover:scale-105"
           />
 
-          <div className="absolute bottom-0 right-0 z-50 p-3 transform -translate-x-1/2 -translate-y-1/2 lg:bottom-10 lg:right-2 lg:p-2 hover:cursor-pointer">
-            <div className="relative group">
-              <div className="flex items-center w-10 h-10 overflow-hidden transition-all duration-300 rounded-full bg-white/50 backdrop-blur-lg">
-                {/* MUTE BUTTON */}
-                <button
-                  onClick={toggleMute}
-                  className="p-2 ml-[2px] rounded-full"
-                >
-                  <Icon
-                    icon={
-                      isMuted ? "mage:volume-mute" : "mage:volume-down-fill"
-                    }
-                    width="22"
-                    className="transition-all duration-500"
-                  />
-                </button>
-              </div>
-            </div>
+          {/* MUTE */}
+          <div className="absolute z-50 bottom-6 right-6 lg:bottom-10 lg:right-10">
+            <button
+              onClick={toggleMute}
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-white/50 backdrop-blur-lg"
+            >
+              <Icon
+                icon={isMuted ? "mage:volume-mute" : "mage:volume-down-fill"}
+                width="22"
+              />
+            </button>
           </div>
         </>
       ) : (
@@ -133,47 +109,70 @@ function HoverBanner({ item }) {
           src={item.media}
           alt={item.name}
           fill
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+          className="object-cover w-full h-full transition-transform duration-700 lg:group-hover:scale-105"
         />
       )}
 
-      {/* OVERLAY sempre presente */}
+      {/* OVERLAY */}
       <div
-        className={`absolute inset-0 bg-third/50 transition-opacity duration-700 ${
-          hovered ? "opacity-0" : "opacity-40"
-        }`}
+        className={`
+          absolute inset-0 bg-third/50 transition-opacity duration-700
+          lg:opacity-40 lg:${hovered ? "opacity-0" : "opacity-40"}
+        `}
       />
 
-      {/* SFONDO TESTO con blur visibile solo in hover */}
+      {/* TESTO */}
       <div
-        className={`hidden absolute bottom-0 left-0 w-full lg:flex items-center p-6 lg:p-10 transition-all duration-700 h-[20vh] ${
-          hovered
-            ? "opacity-100 bg-[linear-gradient(359.99deg,rgba(0,0,0,0.9)_15%,rgba(0,0,0,0)_75%)]"
-            : "opacity-0 backdrop-blur-none bg-transparent"
-        }`}
+        className={`
+          absolute inset-0 flex items-center justify-center
+          lg:items-end lg:justify-start
+          p-1 lg:p-10 transition-all duration-700
+          opacity-100 lg:${hovered ? "opacity-100" : "opacity-0"}
+          lg:bg-[linear-gradient(359.99deg,rgba(0,0,0,0.9)_15%,rgba(0,0,0,0)_75%)]
+        `}
       >
-        <h2 className="flex items-center uppercase">
-          <MaskText trigger={hovered}>
-            <span className="text-raleway font-regular text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl">
-              {item.brand1}
-            </span>
-          </MaskText>
+        <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+          {/* TITLE */}
+          <h2 className="flex flex-col items-center uppercase lg:flex-row lg:items-center">
+            <MaskText trigger={hovered}>
+              <span className="text-2xl text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
+                {item.brand1}
+              </span>
+            </MaskText>
 
-          <span className="relative w-2 h-4 lg:h-8 lg:w-8 2xl:w-[2rem] 2xl:h-20 3xl:w-32 3xl:h-32 fxl:w-16 fxl:h-32">
-            <Image
-              src="/assets/cofactory_nuovaX_green.svg"
-              fill
-              className="object-cover"
-              alt="logo"
-            />
-          </span>
-
-          <MaskText trigger={hovered}>
-            <span className="text-raleway font-regular leading-none text-[0.85rem] lg:text-3xl text-white fxl:text-4xl 3xl:text-6xl">
-              {item.brand2}
+            <span className="relative w-14 h-10 lg:h-8 lg:w-8 2xl:w-[4rem] 2xl:h-[3rem] 3xl:w-32 3xl:h-32 fxl:w-16 fxl:h-20">
+              {" "}
+              <Image
+                src="/assets/cofactory_nuovaX_green.svg"
+                fill
+                className="object-cover rotate-90 lg:rotate-0 lg:object-contain"
+                alt="logo"
+              />
             </span>
-          </MaskText>
-        </h2>
+
+            <MaskText trigger={hovered}>
+              <span className="text-2xl leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
+                {item.brand2}
+              </span>
+            </MaskText>
+          </h2>
+
+          {/* FEATURES */}
+          {item.casesItemFeatured && (
+            <div className="flex flex-wrap justify-center gap-2 lg:justify-start 2xl:-mt-6 fxl:-mt-10">
+              {item.casesItemFeatured.map((feature, index) => (
+                <MaskText key={index} trigger={true}>
+                  <span className="uppercase text-[10px] lg:text-xs font-raleway text-white/80">
+                    {index !== 0 && (
+                      <span className="mr-2 text-second">&gt;</span>
+                    )}
+                    {feature}
+                  </span>
+                </MaskText>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

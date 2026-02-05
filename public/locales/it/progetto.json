@@ -17,44 +17,44 @@
       "cta": "parlaci di te"
     },
     "step1": {
-      "text": "Che partner vorresti per il tuo brand?",
+      "text": "Che tipo di partner stai cercando per il tuo brand?",
       "goalItems": [
         {
           "id": "goal-1",
           "value": "movie partnership",
-          "label": "Vedo il mio brand insieme a un grande film: <strong>Movie Partnership</strong>"
+          "label": "Voglio affiancare il mio brand a un grande film: <strong>Movie Partnership</strong>"
         },
         {
           "id": "goal-2",
           "value": "Brand Match",
-          "label": "Un altro brand che condivida i miei valori: <strong>Brand Match</strong>"
+          "label": "Cerco un altro brand con cui condividere valori, pubblico e visione: <strong>Brand Match</strong>"
         },
         {
           "id": "goal-3",
           "value": "Coboxing",
-          "label": "Un sito e-commerce che mi porti in casa delle persone: <strong>Coboxing</strong>"
+          "label": "Voglio entrare nelle case delle persone con un brand e-commerce: <strong>Coboxing</strong>"
         }
       ],
       "prev": "Indietro",
       "next": "Avanti"
     },
     "step2": {
-      "text": "Che tipo di rapporto cerchi?",
+      "text": "Che tipo di relazioni cerchi?",
       "goalItems": [
         {
           "id": "goal-1",
-          "value": "Partnership che cresce nel tempo",
-          "label": "Una storia d’amore a lungo termine – <strong>Partnership che cresce nel tempo</strong>"
+          "value": "A lungo termine",
+          "label": "<strong>A lungo termine:</strong> Una relazione solida pensata per durare"
         },
         {
           "id": "goal-2",
-          "value": "Progetto breve, ma con impatto immediato",
-          "label": "Un colpo di fulmine – <strong>Progetto breve, ma con impatto immediato</strong>"
+          "value": "A breve termine",
+          "label": "<strong>A breve termine:</strong> Un progetto rapido, efficace e ad alto impatto"
         },
         {
           "id": "goal-3",
           "value": "Collaborazione mirata per obiettivi comuni",
-          "label": "Un’alleanza strategica – <strong>Collaborazione mirata per obiettivi comuni</strong>"
+          "label": "<strong>Strategica:</strong> Una partneship focalizzata su obiettivi comuni"
         }
       ],
       "prev": "Indietro",
