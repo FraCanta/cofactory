@@ -145,22 +145,40 @@ const Phrase = ({
   return (
     <Link href="/stories">
       <div ref={sliderItems} className={`font-raleway sliderItems uppercase`}>
-        <p ref={firstText} className="text-white/60 hover:text-white">
+        <p
+          ref={firstText}
+          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
+        >
           {marqueeText.text1}
         </p>
-        <p ref={secondText} className="text-white/60 hover:text-white">
+        <p
+          ref={secondText}
+          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
+        >
           {marqueeText.text2}
         </p>
-        <p ref={thirdText} className="text-white/60 hover:text-white">
+        <p
+          ref={thirdText}
+          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
+        >
           {marqueeText.text3}
         </p>
-        <p ref={fourthText} className="text-white/60 hover:text-white">
+        <p
+          ref={fourthText}
+          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
+        >
           {marqueeText.text4}
         </p>
-        <p ref={fifthText} className="text-white/60 hover:text-white">
+        <p
+          ref={fifthText}
+          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
+        >
           {marqueeText.text5}
         </p>
-        <p ref={sixthText} className="text-white/60 hover:text-white">
+        <p
+          ref={sixthText}
+          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
+        >
           {marqueeText.text6}
         </p>
       </div>
