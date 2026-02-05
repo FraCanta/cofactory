@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
-const SCROLL_SPEED = 0.3;
+const BASE_SPEED = 0.3;
+const HOVER_SPEED = 1.2;
 const CANVAS_WIDTH = 2800;
 
 const bubbleSpecs = [
@@ -42,6 +43,7 @@ const bubbleSpecs = [
 function FloatingLogos() {
   const bubblesRef = useRef(null);
   const animationFrameId = useRef(null);
+  const speedRef = useRef(BASE_SPEED);
 
   useEffect(() => {
     if (bubblesRef.current) {
@@ -63,7 +65,7 @@ function FloatingLogos() {
       }
 
       update() {
-        this.x -= SCROLL_SPEED;
+        this.x -= speedRef.current;
 
         if (this.x < -200) {
           this.x = CANVAS_WIDTH;
@@ -81,7 +83,7 @@ function FloatingLogos() {
       update() {
         this.bubbles.forEach((bubble) => bubble.update());
         animationFrameId.current = requestAnimationFrame(
-          this.update.bind(this)
+          this.update.bind(this),
         );
       }
     }
@@ -97,7 +99,11 @@ function FloatingLogos() {
   }, []);
 
   return (
-    <div className="bubble-wrap ">
+    <div
+      className="bubble-wrap"
+      onMouseEnter={() => (speedRef.current = HOVER_SPEED)}
+      onMouseLeave={() => (speedRef.current = BASE_SPEED)}
+    >
       <div className="bubbles" ref={bubblesRef}></div>
     </div>
   );
