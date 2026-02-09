@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 function BannerList({ translation, id }) {
   return (
     <div className="flex flex-col w-full" id={id}>
-      <div className="z-50 w-full py-10 mx-auto overflow-hidden bg-third dark:bg-white">
+      <div className="z-50 w-full py-10 mx-auto overflow-hidden ">
         <ParallaxText marqueeText={translation.marqueeLink} />
       </div>
 
@@ -135,7 +135,7 @@ function HoverBanner({ item }) {
           {/* TITLE */}
           <h2 className="flex flex-col items-center uppercase lg:flex-row lg:items-center">
             <MaskText trigger={hovered}>
-              <span className="text-2xl text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
+              <span className="text-[1.83rem] text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
                 {item.brand1}
               </span>
             </MaskText>
@@ -151,7 +151,7 @@ function HoverBanner({ item }) {
             </span>
 
             <MaskText trigger={hovered}>
-              <span className="text-2xl leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
+              <span className="text-[1.83rem] leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
                 {item.brand2}
               </span>
             </MaskText>
@@ -162,9 +162,9 @@ function HoverBanner({ item }) {
             <div className="flex flex-wrap justify-center gap-2 lg:justify-start 2xl:-mt-6 fxl:-mt-10">
               {item.casesItemFeatured.map((feature, index) => (
                 <MaskText key={index} trigger={true}>
-                  <span className="uppercase text-[10px] lg:text-xs font-raleway text-white/80">
+                  <span className="uppercase text-[10.5px] lg:text-xs font-raleway text-white/80 flex items-center ">
                     {index !== 0 && (
-                      <span className="mr-2 text-second">&gt;</span>
+                      <span className="mb-[0.2rem] mr-2 text-second">&gt;</span>
                     )}
                     {feature}
                   </span>

@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="relative h-[400px] sms:h-[380px] fxl:h-[450px] bg-third dark:bg-white z-0 ">
       <div className="relative h-[calc(100vh+400px)] sms:h-[calc(100vh+380px)] fxl:h-[calc(100vh+450px)]  -top-[100vh] bg-third dark:bg-white ">
-        <div className="h-[400px] top-[calc(100vh-400px)] sms:h-[380px] sticky sms:top-[calc(100vh-380px)] fxl:h-[450px] fxl:top-[calc(100vh-450px)]   overflow-x-hidden">
+        <div className="h-[400px] top-[calc(100vh-400px)]  sms:h-[380px] sticky sms:top-[calc(100vh-380px)] fxl:h-[450px] fxl:top-[calc(100vh-450px)]   overflow-x-hidden">
           <div className="flex flex-col items-center justify-between w-full h-full ">
             {/* <Link href="mailto:meetus@cofactory.it">
               <div className="flex items-center justify-center w-full -mt-10 lg:mt-0">
@@ -256,7 +256,6 @@ function Footer() {
                 </span>
               </div>
               <div className="flex items-center gap-2 sms:justify-center">
-                <p>Connect to us</p>
                 <Link
                   className="underline "
                   target="_blank"
@@ -265,6 +264,19 @@ function Footer() {
                 >
                   <Icon icon="lineicons:linkedin" width="28px" height="28px" />
                 </Link>
+                {/* <Link
+                  className="underline "
+                  target="_blank"
+                  title="Connettiti con noi su Instagram"
+                  href="https://www.instagram.com/cofactorymatchingagency/"
+                > */}
+                <Icon
+                  icon="lineicons:instagram"
+                  width="28px"
+                  height="28px"
+                  className="text-white/40"
+                />
+                {/* </Link> */}
               </div>{" "}
               <div className="sms:text-right">Cookie & Privacy Policy</div>
             </div>
