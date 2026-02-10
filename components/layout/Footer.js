@@ -164,7 +164,7 @@ function Footer() {
                   icon="lineicons:instagram"
                   width="28px"
                   height="28px"
-                  className="text-white/40"
+                  className="text-white/40 dark:text-third/40"
                 />
                 {/* </Link> */}
               </div>{" "}
