@@ -3,6 +3,7 @@ import { MaskText } from "../MaskText";
 import { useRef, useState, useEffect } from "react";
 import ParallaxText from "../ParallaxText";
 import { Icon } from "@iconify/react";
+import CtaMarquee from "../Cta/CtaMarquee";
 
 function BannerList({ translation, id }) {
   return (
@@ -14,9 +15,8 @@ function BannerList({ translation, id }) {
       {translation.cases.map((item, index) => (
         <HoverBanner key={index} item={item} />
       ))}
-
-      <div className="z-50 w-full pt-10 mx-auto mb-20 overflow-hidden bg-third dark:bg-white">
-        <ParallaxText marqueeText={translation.marqueeLink} />
+      <div className="z-50 flex justify-center w-full py-10 bg-third dark:bg-white">
+        <CtaMarquee link="/stories">{translation.ctaMarquee.text1}</CtaMarquee>
       </div>
     </div>
   );

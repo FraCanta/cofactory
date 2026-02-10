@@ -8,6 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 6s linear infinite",
+      },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],

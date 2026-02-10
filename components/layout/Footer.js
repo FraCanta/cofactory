@@ -6,129 +6,19 @@ import BlurryLights from "./BlurryLights";
 function Footer() {
   return (
     <footer className="relative h-[400px] sms:h-[380px] fxl:h-[450px] bg-third dark:bg-white z-0 ">
+      <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
+        <BlurryLights />
+      </div>
+
       <div className="relative h-[calc(100vh+400px)] sms:h-[calc(100vh+380px)] fxl:h-[calc(100vh+450px)]  -top-[100vh] bg-third dark:bg-white ">
         <div className="h-[400px] top-[calc(100vh-400px)]  sms:h-[380px] sticky sms:top-[calc(100vh-380px)] fxl:h-[450px] fxl:top-[calc(100vh-450px)]   overflow-x-hidden">
           <div className="flex flex-col items-center justify-between w-full h-full ">
-            {/* <Link href="mailto:meetus@cofactory.it">
-              <div className="flex items-center justify-center w-full -mt-10 lg:mt-0">
-                <div className="w-[50rem] sm:w-[55rem] lg:w-[56rem] 2xl:w-[100rem]">
-                  <svg
-                    viewBox="0 0 1000 200"
-                    className="hidden w-full h-auto lg:block"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="xMidYMid meet"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="grad"
-                        x1="0%"
-                        y1="0%"
-                        x2="100%"
-                        y2="0%"
-                      >
-                        <stop offset="0%" stopColor="#bb5471" />
-                        <stop offset="50%" stopColor="#368b90" />
-                        <stop offset="100%" stopColor="#daa444" />
-                      </linearGradient>
-                    </defs>
-
-                    <text
-                      x="50%"
-                      y="50%"
-                      textAnchor="middle"
-                      dominantBaseline="middle"
-                      fill="none"
-                      stroke="url(#grad)"
-                      strokeWidth="3"
-                      fontFamily="Bebas Neue, sans-serif"
-                      fontSize="140"
-                      strokeDasharray="1200"
-                      strokeDashoffset="1200"
-                      className="transition-transform duration-300 ease-in-out group-hover:scale-105"
-                    >
-                      Meetus@cofactory.it
-                      <animate
-                        attributeName="stroke-dashoffset"
-                        values="1200;0;0;1200"
-                        keyTimes="0;0.5;0.75;1"
-                        dur="5s"
-                        repeatCount="indefinite"
-                      />
-                      <animate
-                        attributeName="stroke-opacity"
-                        values="0;0.8;0.5;0.8;0"
-                        keyTimes="0;0.5;0.65;0.8;1"
-                        dur="8s"
-                        repeatCount="indefinite"
-                      />
-                    </text>
-                  </svg>
-
-                  <svg
-                    viewBox="0 0 1000 300"
-                    className="block w-full h-full lg:hidden"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="xMidYMid meet"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="grad-mobile"
-                        x1="0%"
-                        y1="0%"
-                        x2="100%"
-                        y2="0%"
-                      >
-                        <stop offset="0%" stopColor="#bb5471" />
-                        <stop offset="50%" stopColor="#368b90" />
-                        <stop offset="100%" stopColor="#daa444" />
-                      </linearGradient>
-                    </defs>
-
-                    <text
-                      x="50%"
-                      y="45%"
-                      textAnchor="middle"
-                      dominantBaseline="middle"
-                      fill="none"
-                      stroke="url(#grad-mobile)"
-                      strokeWidth="3"
-                      fontFamily="Bebas Neue, sans-serif"
-                      fontSize="100"
-                      strokeDasharray="1000" 
-                      strokeDashoffset="1000" 
-                    >
-                      <tspan x="50%" dy="0">
-                        Meetus@
-                      </tspan>
-                      <tspan x="50%" dy="0.9em">
-                        Cofactory.it
-                      </tspan>
-
-                      <animate
-                        attributeName="stroke-dashoffset"
-                        values="1000;0;0;1000"
-                        keyTimes="0;0.5;0.75;1"
-                        dur="5s"
-                        repeatCount="indefinite"
-                      />
-                      <animate
-                        attributeName="stroke-opacity"
-                        values="0;0.8;0.5;0.8;0"
-                        keyTimes="0;0.5;0.65;0.8;1"
-                        dur="8s"
-                        repeatCount="indefinite"
-                      />
-                    </text>
-                  </svg>
-                </div>
-              </div>
-            </Link> */}
             <Link
               href="mailto:meetus@cofactory.it"
               title="Scrivi a meetus@cofactory.it"
               className="group"
             >
-              <div className="flex items-center justify-between w-full sm:-mt-8 lg:mt-14 2xl:-mt-0 fxl:-mt-14">
+              <div className="flex items-center justify-between w-full sm:mt-6 lg:mt-14 2xl:-mt-0 fxl:-mt-14">
                 <div className="w-[55rem] sm:w-[60rem] lg:w-[70rem] 2xl:w-[100rem] fxl:w-[130rem]">
                   <svg
                     viewBox="0 0 1000 200"
