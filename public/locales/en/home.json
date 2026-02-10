@@ -5,7 +5,7 @@
 
       "description": [
         {
-          "text": "Siamo la prima agenzia di <span class='px-1 italic2 text-second font-raleway'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
+          "text": "Siamo la prima agenzia di <span class='px-1 font-bold italic2 text-second font-raleway'>matchmaking</span> per brand: ideiamo e realizziamo campagne di comunicazione congiunta. "
         },
         {
           "text": "A volte creiamo legami duraturi. Altre volte, invece, facciamo scoccare dei colpi di fulmine, brevi ma intensi, elettrizzanti e memorabili."
@@ -27,14 +27,15 @@
       }
     ],
     "marqueeLink": {
-      "text1": "scopri le nostre storie",
-      "text2": "scopri le nostre storie",
-      "text3": "scopri le nostre storie",
-      "text4": "scopri le nostre storie",
-      "text5": "scopri le nostre storie",
-      "text6": "scopri le nostre storie",
-      "text7": "scopri le nostre storie"
+      "text1": "le nostre storie",
+      "text2": "le nostre storie",
+      "text3": "le nostre storie",
+      "text4": "le nostre storie",
+      "text5": "le nostre storie",
+      "text6": "le nostre storie",
+      "text7": "le nostre storie"
     },
+    "ctaMarquee": { "text1": "scopri le nostre storie" },
     "cases": [
       {
         "media": "/assets/cases/santanna/SantannaPro_x_MissionImpossible2.webp",
