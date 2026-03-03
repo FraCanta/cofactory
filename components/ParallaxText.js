@@ -1,11 +1,12 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import localFont from "next/font/local";
 import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
 
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Icon } from "@iconify/react";
 gsap.registerPlugin(ScrollTrigger);
 
 function ParallaxText({ marqueeText, onToggle }) {
@@ -20,7 +21,7 @@ function ParallaxText({ marqueeText, onToggle }) {
   const sliderItems = useRef(null);
   const { scrollYProgress } = useScroll({
     target: parallaxContainer,
-    offset: ["start end", "end start"],
+    offset: ["start 0.9", "end 0.1"],
   });
 
   let xPercent = 0;
@@ -140,47 +141,67 @@ const Phrase = ({
   fifthText,
   sixthText,
   marqueeText,
-  onToggle, // ✅ riceve infine qui
 }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // alternanza automatica
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % 6);
+    }, 400);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const texts = [
+    { ref: firstText, value: marqueeText.text1 },
+    { ref: secondText, value: marqueeText.text2 },
+    { ref: thirdText, value: marqueeText.text3 },
+    { ref: fourthText, value: marqueeText.text4 },
+    { ref: fifthText, value: marqueeText.text5 },
+    { ref: sixthText, value: marqueeText.text6 },
+  ];
+
   return (
     <Link href="/stories">
-      <div ref={sliderItems} className={`font-raleway sliderItems uppercase`}>
-        <p
-          ref={firstText}
-          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
-        >
-          {marqueeText.text1}
-        </p>
-        <p
-          ref={secondText}
-          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
-        >
-          {marqueeText.text2}
-        </p>
-        <p
-          ref={thirdText}
-          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
-        >
-          {marqueeText.text3}
-        </p>
-        <p
-          ref={fourthText}
-          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
-        >
-          {marqueeText.text4}
-        </p>
-        <p
-          ref={fifthText}
-          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
-        >
-          {marqueeText.text5}
-        </p>
-        <p
-          ref={sixthText}
-          className="transition-colors duration-300 text-white/60 dark:text-black/60 dark:hover:text-black hover:text-white"
-        >
-          {marqueeText.text6}
-        </p>
+      <div ref={sliderItems} className="uppercase font-raleway sliderItems">
+        {texts.map((item, index) => (
+          <motion.p
+            key={index}
+            ref={item.ref}
+            className="cursor-pointer"
+            animate={{
+              opacity: activeIndex === index ? 1 : 0.35,
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "easeInOut",
+            }}
+          >
+            <span
+              className={`flex items-center gap-4 transition-colors duration-500 ${
+                activeIndex === index
+                  ? "text-white dark:text-black"
+                  : "text-white/90 dark:text-black/90"
+              }`}
+            >
+              {item.value}
+
+              <motion.span
+                animate={{
+                  x: activeIndex === index ? 4 : 0,
+                  y: activeIndex === index ? -4 : 0,
+                }}
+                transition={{
+                  duration: 0.4,
+                  ease: "easeInOut",
+                }}
+              >
+                <Icon icon="ph:arrow-up-right-light" />
+              </motion.span>
+            </span>
+          </motion.p>
+        ))}
       </div>
     </Link>
   );

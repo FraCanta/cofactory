@@ -30,7 +30,7 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
   const filteredCases = cases.filter(
     (el) =>
       selectedCategory === "All" ||
-      el.categories.some((cat) => cat.name === selectedCategory)
+      el.categories.some((cat) => cat.name === selectedCategory),
   );
 
   const numberOfColumns = isMobile ? 2 : selectedCategory === "All" ? 3 : 2;
@@ -41,7 +41,7 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
   filteredCases.forEach((item) => {
     const itemHeight = 1;
     const shortestColumnIndex = columnHeights.indexOf(
-      Math.min(...columnHeights)
+      Math.min(...columnHeights),
     );
     columns[shortestColumnIndex].push(item);
     columnHeights[shortestColumnIndex] += itemHeight;
@@ -65,7 +65,7 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
   return (
     <div
       ref={galleryRef}
-      className="w-full mt-0 mb-0 overflow-hidden lg:mb-20 lg:mt-10 2xla:mt-0 z-[999999]"
+      className="w-full mt-0 mb-0 overflow-hidden lg:mb-0 lg:mt-10 2xla:mt-0 z-[999999]"
     >
       <div className="flex items-start justify-center gap-3 md:gap-4">
         {columns.map((columnCases, colIndex) => (

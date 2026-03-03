@@ -8,15 +8,17 @@ import CtaMarquee from "../Cta/CtaMarquee";
 function BannerList({ translation, id }) {
   return (
     <div className="flex flex-col w-full" id={id}>
-      <div className="z-50 w-full py-10 mx-auto overflow-hidden ">
+      <div className="z-50 w-full py-10 mx-auto overflow-hidden bg-third dark:bg-white">
+        {" "}
         <ParallaxText marqueeText={translation.marqueeLink} />
       </div>
 
       {translation.cases.map((item, index) => (
         <HoverBanner key={index} item={item} />
       ))}
-      <div className="z-50 flex justify-center w-full py-10 bg-third dark:bg-white">
-        <CtaMarquee link="/stories">{translation.ctaMarquee.text1}</CtaMarquee>
+      <div className="z-50 w-full py-10 mx-auto overflow-hidden bg-third dark:bg-white">
+        {" "}
+        <ParallaxText marqueeText={translation.marqueeLink} />
       </div>
     </div>
   );
@@ -116,7 +118,7 @@ function HoverBanner({ item }) {
       {/* OVERLAY */}
       <div
         className={`
-          absolute inset-0 bg-third/50 transition-opacity duration-700
+          absolute inset-0 bg-third/30 transition-opacity duration-700
           lg:opacity-40 lg:${hovered ? "opacity-0" : "opacity-40"}
         `}
       />
@@ -135,7 +137,7 @@ function HoverBanner({ item }) {
           {/* TITLE */}
           <h2 className="flex flex-col items-center uppercase lg:flex-row lg:items-center">
             <MaskText trigger={hovered}>
-              <span className="text-[1.83rem] text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
+              <span className="text-[1.5rem] text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
                 {item.brand1}
               </span>
             </MaskText>
@@ -151,7 +153,7 @@ function HoverBanner({ item }) {
             </span>
 
             <MaskText trigger={hovered}>
-              <span className="text-[1.83rem] leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
+              <span className="text-[1.5rem] leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
                 {item.brand2}
               </span>
             </MaskText>
