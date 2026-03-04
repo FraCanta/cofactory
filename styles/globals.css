@@ -31,8 +31,8 @@
 }
 
 @font-face {
-  font-family: "Raleway-ExtraBoldItalic";
-  src: url("/fonts/Raleway-ExtraBoldItalic.ttf") format("truetype");
+  font-family: "Raleway-BoldItalic";
+  src: url("/fonts/Raleway-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
@@ -82,7 +82,7 @@ label {
 }
 
 .italic2 {
-  font-family: "Raleway-ExtraBoldItalic", sans-serif;
+  font-family: "Raleway-BoldItalic", sans-serif;
 }
 
 .fill_cta:hover,
