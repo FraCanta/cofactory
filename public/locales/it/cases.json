@@ -58,7 +58,7 @@
         "categories": [{ "name": "Box" }, { "name": "Brand" }]
       },
       {
-        "img": "/assets/cases/footlocker/footLocker_X_goat_square.webp",
+        "img": "/assets/cases/footlocker/footLocker_x_goat_square.webp",
         "button": "footlocker-per-goat",
         "brand1": "FootLocker",
         "brand2": "Goat",
@@ -79,7 +79,7 @@
         "categories": [{ "name": "Movie" }]
       },
       {
-        "img": "/assets/cases/pupa/pupa_X_cimetempestose_square.webp",
+        "img": "/assets/cases/pupa/pupa_x_cimetempestose_square.webp",
         "button": "pupa-per-cime-tempestose",
         "brand1": "Pupa",
         "brand2": "Cime Tempestose",
@@ -101,7 +101,7 @@
         "categories": [{ "name": "Movie" }]
       },
       {
-        "img": "/assets/cases/spongebob/bestWestern_X_spongeBob_square.webp",
+        "img": "/assets/cases/spongebob/bestWestern_x_spongeBob_square.webp",
         "button": "bestwestern-per-spongebob",
         "brand1": "Best Western",
         "brand2": "SpongeBob",
