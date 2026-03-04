@@ -37,7 +37,7 @@
         "categories": [{ "name": "Movie" }]
       },
       {
-        "img": "/assets/cases/carpisa/CARPISA_X_ANACONDA_square.webp",
+        "img": "/assets/cases/carpisa/carpisa_x_anaconda_square.webp",
         "button": "carpisa-per-anacconda",
         "brand1": "Carpisa",
         "brand2": "Anacconda",
@@ -58,7 +58,7 @@
         "categories": [{ "name": "Box" }, { "name": "Brand" }]
       },
       {
-        "img": "/assets/cases/footlocker/FootLocker_X_Goat_square.webp",
+        "img": "/assets/cases/footlocker/footLocker_X_goat_square.webp",
         "button": "footlocker-per-goat",
         "brand1": "FootLocker",
         "brand2": "Goat",
@@ -79,7 +79,7 @@
         "categories": [{ "name": "Movie" }]
       },
       {
-        "img": "/assets/cases/pupa/Pupa_X_CT_square.webp",
+        "img": "/assets/cases/pupa/pupa_X_cimetempestose_square.webp",
         "button": "pupa-per-cime-tempestose",
         "brand1": "Pupa",
         "brand2": "Cime Tempestose",
@@ -101,7 +101,7 @@
         "categories": [{ "name": "Movie" }]
       },
       {
-        "img": "/assets/cases/spongebob/BestWestern_X_SpongeBob_square.webp",
+        "img": "/assets/cases/spongebob/bestWestern_X_spongeBob_square.webp",
         "button": "bestwestern-per-spongebob",
         "brand1": "Best Western",
         "brand2": "SpongeBob",
