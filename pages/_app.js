@@ -9,7 +9,6 @@ import "@/styles/sliding.css";
 import "@/styles/cofactorybutton.css";
 import "@/styles/floating.css";
 import "@/styles/herologo.css";
-import "@/styles/chat.css";
 
 import { useEffect } from "react";
 
