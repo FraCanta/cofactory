@@ -138,10 +138,10 @@ function HoverBanner({ item }) {
       isMobile
         ? mobileActive
           ? "opacity-0"
-          : "opacity-40"
+          : "opacity-100"
         : hovered
           ? "opacity-0"
-          : "opacity-40"
+          : "opacity-100"
     }
   `}
       />
@@ -159,12 +159,12 @@ function HoverBanner({ item }) {
           : "opacity-100"
         : hovered
           ? "lg:opacity-100"
-          : "lg:opacity-0"
+          : "lg:opacity-100"
     }
     lg:bg-[linear-gradient(359.99deg,rgba(0,0,0,0.9)_15%,rgba(0,0,0,0)_75%)]
   `}
       >
-        <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+        <div className="flex flex-col items-center gap-10 text-center lg:items-start lg:text-left">
           {/* TITLE */}
           <h2 className="flex flex-col items-center uppercase lg:flex-row lg:items-center">
             <MaskText trigger={hovered}>
@@ -181,12 +181,21 @@ function HoverBanner({ item }) {
               </span>
             </MaskText>
 
-            <span className="relative w-14 h-10 lg:h-8 lg:w-8 2xl:w-[4rem] 2xl:h-[3rem] 3xl:w-32 3xl:h-32 fxl:w-16 fxl:h-20">
+            <span className="hidden lg:block relative w-14 h-10 lg:h-8 lg:w-8 2xl:w-[4rem] 2xl:h-[3rem] 3xl:w-32 3xl:h-32 fxl:w-16 fxl:h-20">
               {" "}
               <Image
                 src="/assets/cofactory_nuovaX_green.svg"
                 fill
                 className="object-cover rotate-90 lg:rotate-0 lg:object-contain"
+                alt="logo"
+              />
+            </span>
+            <span className="relative block w-8 h-6 my-4 lg:hidden">
+              {" "}
+              <Image
+                src="/assets/cofactory_nuovaX_green_bold.png"
+                fill
+                className="object-contain "
                 alt="logo"
               />
             </span>
