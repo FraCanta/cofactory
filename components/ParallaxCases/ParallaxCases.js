@@ -14,7 +14,7 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
     const handleResize = () => {
       const width = window.innerWidth;
       setDimension({ width, height: window.innerHeight });
-      setIsMobile(width < 768);
+      setIsMobile(width < 900);
     };
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -33,8 +33,7 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
       el.categories.some((cat) => cat.name === selectedCategory),
   );
 
-  const numberOfColumns = isMobile ? 2 : selectedCategory === "All" ? 3 : 2;
-
+  const numberOfColumns = isMobile ? 1 : selectedCategory === "All" ? 3 : 2;
   const columns = Array.from({ length: numberOfColumns }, () => []);
   const columnHeights = Array.from({ length: numberOfColumns }, () => 0);
 
@@ -72,7 +71,11 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
           <div
             key={colIndex}
             className={`flex flex-col gap-y-3 lg:gap-y-8 ${
-              numberOfColumns === 3 ? "w-1/2 md:w-1/3" : "w-1/2 md:w-1/2"
+              numberOfColumns === 3
+                ? "w-full md:w-1/3"
+                : numberOfColumns === 2
+                  ? "w-full md:w-1/2"
+                  : "w-full"
             }`}
           >
             {columnCases.map((el, i) => (

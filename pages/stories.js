@@ -38,7 +38,7 @@ function FloatingFilters({ show, selectedCategory, handleCategorySelect }) {
               <div
                 className={cx(
                   "col-start-1 row-start-1 w-full h-full rounded-full border  border-third",
-                  "peer-checked:bg-third"
+                  "peer-checked:bg-third",
                 )}
               />
             </div>
@@ -74,7 +74,7 @@ const Stories = ({ translation }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setHideBecauseFilter(entry.isIntersecting),
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     filtersRef.current && observer.observe(filtersRef.current);
     return () => filtersRef.current && observer.unobserve(filtersRef.current);
@@ -87,7 +87,7 @@ const Stories = ({ translation }) => {
 
     const observer = new IntersectionObserver(
       ([entry]) => setHideBecauseFooter(entry.isIntersecting),
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     observer.observe(footer);
     return () => observer.unobserve(footer);
@@ -110,7 +110,7 @@ const Stories = ({ translation }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="relative z-[1] pb-20 md:pb-40 lg:pb-0 bg-third dark:bg-white"
+        className="relative z-[1]  bg-third dark:bg-white"
       >
         <div className="absolute inset-0 -z-10">
           <BlurryLights />
@@ -139,7 +139,7 @@ const Stories = ({ translation }) => {
                     />
                     <div
                       className={cx(
-                        "col-start-1 row-start-1 w-full h-full rounded-full peer-checked:bg-white dark:peer-checked:bg-third"
+                        "col-start-1 row-start-1 w-full h-full rounded-full peer-checked:bg-white dark:peer-checked:bg-third",
                       )}
                     />
                   </div>

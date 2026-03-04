@@ -30,6 +30,20 @@
         "categories": [{ "name": "Movie" }]
       },
       {
+        "img": "/assets/cases/calzedonia/Calzedonia_x_CT_square.webp",
+        "button": "calzedonia-per-cime-tempestose",
+        "brand1": "Calzedonia",
+        "brand2": "Cime Tempestose",
+        "categories": [{ "name": "Movie" }]
+      },
+      {
+        "img": "/assets/cases/carpisa/CARPISA_X_ANACONDA_square.webp",
+        "button": "carpisa-per-anacconda",
+        "brand1": "Carpisa",
+        "brand2": "Anacconda",
+        "categories": [{ "name": "Movie" }]
+      },
+      {
         "img": "/assets/cases/carpisa/Carpisa_x_PaddingtonInPeru.webp",
         "button": "carpisa-per-paddingtoninperu",
         "brand1": "Carpisa",
@@ -42,6 +56,13 @@
         "brand1": "Milka",
         "brand2": "Toys Center 2024",
         "categories": [{ "name": "Box" }, { "name": "Brand" }]
+      },
+      {
+        "img": "/assets/cases/footlocker/FootLocker_X_Goat_square.webp",
+        "button": "footlocker-per-goat",
+        "brand1": "FootLocker",
+        "brand2": "Goat",
+        "categories": [{ "name": "Movie" }]
       },
       {
         "img": "/assets/cases/untildown/UntilDawn_x_Romics2025.webp",
@@ -57,7 +78,13 @@
         "brand2": "Ghostbusters: <br/>Minaccia Glaciale",
         "categories": [{ "name": "Movie" }]
       },
-
+      {
+        "img": "/assets/cases/pupa/Pupa_X_CT_square.webp",
+        "button": "pupa-per-cime-tempestose",
+        "brand1": "Pupa",
+        "brand2": "Cime Tempestose",
+        "categories": [{ "name": "Movie" }]
+      },
       {
         "img": "/assets/cases/rossopomodoro/tartarughenija/Rossopomodoro_x_TartarugheNinja.webp",
         "button": "rossopomodoro-tartarugheninja-caosmutante",
@@ -71,6 +98,13 @@
         "button": "bobblebobble-per-transformers-one",
         "brand1": "Bobble Bobble",
         "brand2": "Transformers One",
+        "categories": [{ "name": "Movie" }]
+      },
+      {
+        "img": "/assets/cases/spongebob/BestWestern_X_SpongeBob_square.webp",
+        "button": "bestwestern-per-spongebob",
+        "brand1": "Best Western",
+        "brand2": "SpongeBob",
         "categories": [{ "name": "Movie" }]
       },
       {

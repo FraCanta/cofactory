@@ -4,7 +4,7 @@ import React from "react";
 function CofactoryButton() {
   return (
     <main className="main">
-      <div className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[110px] h-[110px] lg:w-[130px] lg:h-[130px] fxl:w-[160px] fxl:h-[160px] 3xl:w-[260px] 3xl:h-[200px]">
+      <div className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[110px] h-[110px] md:w-[150px] md:h-[150px] lg:w-[130px] lg:h-[130px] fxl:w-[160px] fxl:h-[160px] 3xl:w-[260px] 3xl:h-[200px]">
         <svg
           viewBox="0 0 200 200"
           preserveAspectRatio="xMidYMid meet"

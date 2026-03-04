@@ -29,9 +29,21 @@ function HoverBanner({ item }) {
   const [isMuted, setIsMuted] = useState(true);
   const [volume, setVolume] = useState(0.5);
   const [previousVolume, setPreviousVolume] = useState(0.5);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mobileActive, setMobileActive] = useState(false);
 
   const videoRef = useRef(null);
   const containerRef = useRef(null);
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024); // sotto lg
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // init audio
   useEffect(() => {
@@ -78,8 +90,11 @@ function HoverBanner({ item }) {
     <div
       ref={containerRef}
       className="relative z-50 w-full overflow-hidden h-[70vh] lg:h-screen lg:aspect-video group"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => !isMobile && setHovered(true)}
+      onMouseLeave={() => !isMobile && setHovered(false)}
+      onClick={() => {
+        if (isMobile) setMobileActive((prev) => !prev);
+      }}
     >
       {/* MEDIA */}
       {item.type === "video" ? (
@@ -118,27 +133,51 @@ function HoverBanner({ item }) {
       {/* OVERLAY */}
       <div
         className={`
-          absolute inset-0 bg-third/30 transition-opacity duration-700
-          lg:opacity-40 lg:${hovered ? "opacity-0" : "opacity-40"}
-        `}
+    absolute inset-0 bg-third/40 transition-opacity duration-700
+    ${
+      isMobile
+        ? mobileActive
+          ? "opacity-0"
+          : "opacity-40"
+        : hovered
+          ? "opacity-0"
+          : "opacity-40"
+    }
+  `}
       />
 
       {/* TESTO */}
       <div
         className={`
-          absolute inset-0 flex items-center justify-center
-          lg:items-end lg:justify-start
-          p-1 lg:p-10 transition-all duration-700
-          opacity-100 lg:${hovered ? "opacity-100" : "opacity-0"}
-          lg:bg-[linear-gradient(359.99deg,rgba(0,0,0,0.9)_15%,rgba(0,0,0,0)_75%)]
-        `}
+    absolute inset-0 flex items-center justify-center
+    lg:items-end lg:justify-start
+    p-1 lg:p-10 transition-all duration-700
+    ${
+      isMobile
+        ? mobileActive
+          ? "opacity-0"
+          : "opacity-100"
+        : hovered
+          ? "lg:opacity-100"
+          : "lg:opacity-0"
+    }
+    lg:bg-[linear-gradient(359.99deg,rgba(0,0,0,0.9)_15%,rgba(0,0,0,0)_75%)]
+  `}
       >
         <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
           {/* TITLE */}
           <h2 className="flex flex-col items-center uppercase lg:flex-row lg:items-center">
             <MaskText trigger={hovered}>
-              <span className="text-[1.5rem] text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
-                {item.brand1}
+              <span className="text-[1.5rem] leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
+                {item.brand1.includes(":") ? (
+                  <>
+                    {item.brand1.split(":")[0]}:{/* mantiene i due punti */}
+                    <br className="lg:hidden" />
+                    {item.brand1.split(":")[1].trim()}
+                  </>
+                ) : (
+                  item.brand1
+                )}
               </span>
             </MaskText>
 
@@ -154,7 +193,17 @@ function HoverBanner({ item }) {
 
             <MaskText trigger={hovered}>
               <span className="text-[1.5rem] leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
-                {item.brand2}
+                {item.brand2 === "I Puffi: Il Film" ? (
+                  item.brand2
+                ) : item.brand2.includes(":") ? (
+                  <>
+                    {item.brand2.split(":")[0]}:{/* mantiene i due punti */}
+                    <br className="lg:hidden" />
+                    {item.brand2.split(":")[1].trim()}
+                  </>
+                ) : (
+                  item.brand2
+                )}
               </span>
             </MaskText>
           </h2>
