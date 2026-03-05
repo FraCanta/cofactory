@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 
-function CofactoryButton() {
+function CofactoryButtonEn() {
   return (
     <main className="main">
       <div className="roundButton bg-third/90 dark:bg-white/80 border border-white dark:border-third w-[110px] h-[110px] md:w-[150px] md:h-[150px] lg:w-[130px] lg:h-[130px] fxl:w-[160px] fxl:h-[160px] 3xl:w-[260px] 3xl:h-[200px]">
@@ -27,37 +27,37 @@ function CofactoryButton() {
             />
           </defs>
 
-          <text fontSize="43" fill="currentColor" textAnchor="middle">
+          <text fontSize="38" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="26%"
               className={`font-bebas fill-white dark:fill-third `}
             >
-              IL NOSTRO
+              FIND OUT
             </textPath>
           </text>
-          <text fontSize="40" fill="currentColor" textAnchor="middle">
+          <text fontSize="38" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
-              startOffset="50%"
+              startOffset="45%"
               className={`font-raleway fill-second`}
             >
               <tspan>&bull;</tspan>
             </textPath>
           </text>
-          <text fontSize="43" fill="currentColor" textAnchor="middle">
+          <text fontSize="38" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
               startOffset="76%"
               className={`font-bebas  fill-pink  `}
             >
-              APPROCCIO
+              OUR APPROACH
             </textPath>
           </text>
           <text fontSize="40" fill="currentColor" textAnchor="middle">
             <textPath
               xlinkHref="#innerCirclePath"
-              startOffset="2%"
+              startOffset="5%"
               className={`font-raleway fill-second `}
             >
               <tspan>&bull;</tspan>
@@ -77,4 +77,4 @@ function CofactoryButton() {
   );
 }
 
-export default CofactoryButton;
+export default CofactoryButtonEn;

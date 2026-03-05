@@ -12,6 +12,7 @@
         }
       ]
     },
+
     "modal": [
       {
         "title": "Tranquillo,<br/> <span class='text-stroke3 font-bebas'>la prima mossa la facciamo noi</span>",
@@ -111,7 +112,7 @@
         "type": "image",
         "name": "MILKA x Toys Center - Natale 2024 2025",
         "brand1": "MILKA",
-        "brand2": "Toys Center 2024",
+        "brand2": "Toys Center",
         "casesItemFeatured": ["box", "digital", "social", "pop"]
       },
       {
@@ -171,7 +172,7 @@
         "type": "image",
         "name": "Nestlè x Aquaman",
         "brand1": "Nestlè",
-        "brand2": "Aquaman: Il Regno Perduto",
+        "brand2": "Aquaman e Il Regno Perduto",
         "casesItemFeatured": ["pack", "pop", "digital"]
       },
       {

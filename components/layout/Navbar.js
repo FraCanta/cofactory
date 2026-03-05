@@ -12,21 +12,13 @@ const Navbar = ({ lang }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = window.scrollY;
-
-      // Controllo se la sezione pinnata è presente
       const pinnedSection = document.querySelector(".video-mask-section");
       const sectionBottom = pinnedSection?.getBoundingClientRect().bottom ?? 0;
 
       if (sectionBottom > 0) {
-        // Siamo nella sezione pinnata → menu sempre visibile
         setIsVisible(true);
       } else {
-        // Logica normale scroll up/down
-        if (currentScrollTop > lastScrollTop) {
-          setIsVisible(false);
-        } else {
-          setIsVisible(true);
-        }
+        setIsVisible(currentScrollTop <= lastScrollTop ? true : false);
       }
 
       setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
@@ -35,6 +27,12 @@ const Navbar = ({ lang }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollTop]);
+
+  // gestione dinamica del link e del testo del bottone
+  const partnerLink =
+    lang === "en" ? "/en/cerchi-un-partner" : "/cerchi-un-partner";
+  const partnerText =
+    lang === "en" ? "Looking for a partner?" : "Cerchi un partner?";
 
   return (
     <motion.div
@@ -46,9 +44,9 @@ const Navbar = ({ lang }) => {
           delay: isVisible ? 0 : 0.8,
         },
       }}
-      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm "
+      className="fixed left-0 top-0 w-full z-[9999] ease-in duration-300 backdrop-blur-sm"
     >
-      <div className="w-[90%] m-auto flex justify-between items-center text-white h-[70px] md:h-[100px] 3xl:h-[200px] ">
+      <div className="w-[90%] m-auto flex justify-between items-center text-white h-[70px] md:h-[100px] 3xl:h-[200px]">
         <Link href="/#hero" className="z-[20]">
           <Image
             src={Logo}
@@ -60,13 +58,13 @@ const Navbar = ({ lang }) => {
         </Link>
         <div className="relative flex items-center gap-3 lg:gap-8">
           <Link
-            href="/cerchi-un-partner"
+            href={partnerLink}
             className="relative px-2 py-2 overflow-hidden text-xs font-medium uppercase transition-all duration-300 border-2 text-whitedark:text-third dark:text-third sm:px-4 border-pink lg:px-5 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group"
           >
-            <span className="relative z-10">cerchi un partner?</span>
+            <span className="relative z-10">{partnerText}</span>
             <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-pink group-hover:w-full"></span>
           </Link>
-          <DarkModeToggle />{" "}
+          <DarkModeToggle />
         </div>
       </div>
     </motion.div>

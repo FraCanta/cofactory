@@ -85,7 +85,10 @@ const Home = ({ translation }) => {
           <div className="hidden lg:block"></div>
           <div className="flex lg:justify-center text-second"></div>
           <div>
-            <TimbroMarquee onClick={handleToggleMarquee} />
+            <TimbroMarquee
+              onClick={handleToggleMarquee}
+              translation={translation.hero.timbro}
+            />
           </div>
         </div>
       </Hero>
@@ -136,7 +139,7 @@ const Home = ({ translation }) => {
               const index = Math.round(el.scrollLeft / sectionWidth);
               setActiveIndex(index);
               setScrollProgress(
-                el.scrollLeft / (el.scrollWidth - el.clientWidth)
+                el.scrollLeft / (el.scrollWidth - el.clientWidth),
               );
             }}
           >

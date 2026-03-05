@@ -34,7 +34,7 @@ const Contatti = ({ translation }) => {
                 href="/#hero"
                 className="relative px-2 py-2 overflow-hidden text-xs font-medium uppercase transition-all duration-300 border-2 text-whitedark:text-third dark:text-third sm:px-4 border-second lg:px-5 4xl:px-10 4xl:py-8 lg:text-base 3xl:text-2xl 4xl:text-3xl group"
               >
-                <span className="relative z-10">torni indietro?</span>
+                <span className="relative z-10">{translation.nav.cta}</span>
                 <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 ease-out bg-second group-hover:w-full"></span>
               </Link>
               <DarkModeToggle />{" "}

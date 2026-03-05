@@ -181,7 +181,7 @@ function HoverBanner({ item }) {
               </span>
             </MaskText>
 
-            <span className="hidden lg:block relative w-14 h-10 lg:h-8 lg:w-8 2xl:w-[4rem] 2xl:h-[3rem] 3xl:w-32 3xl:h-32 fxl:w-16 fxl:h-20">
+            <span className="hidden lg:block relative w-14 h-10 lg:h-8 lg:w-8 2xl:w-[4.2rem] 2xl:h-[4.2rem] 3xl:w-32 3xl:h-32 fxl:w-16 fxl:h-20">
               {" "}
               <Image
                 src="/assets/cofactory_nuovaX_green.svg"
@@ -202,12 +202,16 @@ function HoverBanner({ item }) {
 
             <MaskText trigger={hovered}>
               <span className="text-[1.5rem] leading-none text-white text-raleway font-regular lg:text-3xl fxl:text-4xl 3xl:text-6xl">
-                {item.brand2 === "I Puffi: Il Film" ? (
+                {item.brand2 === "Aquaman e Il Regno Perduto" ? (
+                  <>
+                    Aquaman e <br className="lg:hidden" />
+                    Il Regno Perduto
+                  </>
+                ) : item.brand2 === "I Puffi: Il Film" ? (
                   item.brand2
                 ) : item.brand2.includes(":") ? (
                   <>
-                    {item.brand2.split(":")[0]}:{/* mantiene i due punti */}
-                    <br className="lg:hidden" />
+                    {item.brand2.split(":")[0]}: <br className="lg:hidden" />
                     {item.brand2.split(":")[1].trim()}
                   </>
                 ) : (

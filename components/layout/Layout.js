@@ -17,11 +17,11 @@ const Layout = (props) => {
 
   const noLayoutPages = ["/cerchi-un-partner"];
   const showLayout = !noLayoutPages.includes(router.pathname);
-
+  const lang = router.locale; // "en" o "it"
   return (
     <>
       <LenisScroll />
-      {showLayout && <Navbar />}
+      {showLayout && <Navbar lang={lang} />}
       <main>{props.children}</main>
       {showLayout && <Footer />}
     </>

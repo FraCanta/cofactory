@@ -25,6 +25,7 @@
     "next": "14.2.35",
     "next-compose-plugins": "^2.2.1",
     "next-themes": "^0.2.1",
+    "nodemailer": "^8.0.1",
     "noisejs": "^2.1.0",
     "postcss-import": "^16.1.0",
     "postcss-nested": "^6.0.1",

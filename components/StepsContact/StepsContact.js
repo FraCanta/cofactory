@@ -59,10 +59,10 @@ export default function StepsContact({ translation }) {
       step === 1
         ? "goal1"
         : step === 2
-        ? "goal2"
-        : step === 3
-        ? "goal3"
-        : "goal4";
+          ? "goal2"
+          : step === 3
+            ? "goal3"
+            : "goal4";
     setFormData((prev) => ({ ...prev, [key]: [value] }));
   };
 
@@ -206,11 +206,11 @@ export default function StepsContact({ translation }) {
   );
 
   return (
-    <div className="flex items-center justify-center h-[100svh] sm:h-[90svh] bg-third dark:bg-white">
+    <div className="flex items-center justify-center h-[100svh] sm:h-[100svh] fxl:h-[80svh] bg-third dark:bg-white">
       <div className="relative z-50 w-full h-full pt-6 lg:pt-0">
         {/* PROGRESS BAR */}
         <div
-          className={`transition-opacity duration-500 flex justify-center w-[90%] mx-auto pb-10 lg:pt-20 ${
+          className={`transition-opacity duration-500 flex justify-center w-[90%] mx-auto mt-12 fxl:mt-20 ${
             showBar ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -271,35 +271,35 @@ export default function StepsContact({ translation }) {
                 duration: 0.8, // più lunga = più morbida
                 ease: [0.4, 0, 0.2, 1], // cubic-bezier morbida e naturale
               }}
-              className="relative flex flex-col items-center justify-start w-full h-full mt-10 lg:mt-20"
+              className="relative flex flex-col items-center justify-start w-full h-full mt-10"
             >
               {step === 1 &&
                 renderRadioStep(
                   translation.step1,
                   "goal1",
                   translation.step1.prev,
-                  translation.step1.next
+                  translation.step1.next,
                 )}
               {step === 2 &&
                 renderRadioStep(
                   translation.step2,
                   "goal2",
                   translation.step2.prev,
-                  translation.step2.next
+                  translation.step2.next,
                 )}
               {step === 3 &&
                 renderRadioStep(
                   translation.step3,
                   "goal3",
                   translation.step3.prev,
-                  translation.step3.next
+                  translation.step3.next,
                 )}
               {step === 4 &&
                 renderRadioStep(
                   translation.step4,
                   "goal4",
                   translation.step4.prev,
-                  translation.step4.next
+                  translation.step4.next,
                 )}
 
               {step === 5 && (
@@ -333,7 +333,7 @@ export default function StepsContact({ translation }) {
                       {translation.step5.prev}
                     </button>
                     <button
-                      onClick={nextStep}
+                      onClick={handleSubmit}
                       disabled={isNextDisabled()}
                       className={`relative px-6 py-3 overflow-hidden text-sm font-medium text-white uppercase transition-all duration-300 border-2 max-w-max dark:text-third border-pink lg:px-10 ${
                         isNextDisabled() ? "opacity-40" : "opacity-100"
