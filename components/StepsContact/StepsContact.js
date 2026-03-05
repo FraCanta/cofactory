@@ -230,21 +230,21 @@ export default function StepsContact({ translation }) {
             <div className="relative z-50 w-full h-full bg-third dark:bg-white">
               <div className="flex flex-col items-start lg:items-center w-[90%] mx-auto lg:max-w-max">
                 <h1
-                  className="text-[14vw] lg:text-8xl text-white uppercase font-bebas leading-none dark:text-third"
+                  className="text-[13vw] lg:text-8xl text-white uppercase font-bebas leading-none dark:text-third"
                   dangerouslySetInnerHTML={{ __html: translation.step0.title }}
                 />
-                <div className="flex items-center justify-between w-full gap-4">
+                <div className="flex flex-wrap items-center justify-between w-full gap-2">
                   <h2
-                    className="flex-1 text-[14vw] lg:text-8xl text-white dark:text-third"
+                    className="flex-1 text-[13vw] lg:text-8xl text-white dark:text-third"
                     dangerouslySetInnerHTML={{
                       __html: translation.step0.title2,
                     }}
                   />
                   <button
                     onClick={nextStep}
-                    className="relative overflow-hidden py-2 px-4 text-sm font-medium uppercase border-2 border-pink text-center transition-all duration-300 lg:text-lg lg:min-w-[240px] group"
+                    className="relative overflow-hidden py-2 px-4 text-sm font-medium uppercase border-2 border-pink text-center transition-all duration-300 lg:text-lg lg:min-w-[240px] flex-shrink-0 group mt-2 lg:mt-0"
                   >
-                    <span className="relative z-10 px-2 text-white dark:text-third group-hover:text-white">
+                    <span className="relative z-10 text-white dark:text-third group-hover:text-white">
                       {translation.step0.cta}
                     </span>
                     <span className="absolute top-0 left-0 w-0 h-full transition-all duration-500 bg-pink group-hover:w-full"></span>
