@@ -242,7 +242,7 @@ export default function StepsContact({ translation }) {
                   />
                   <button
                     onClick={nextStep}
-                    className="relative overflow-hidden py-2 px-4 text-sm font-medium uppercase border-2 border-pink text-center transition-all duration-300 lg:text-lg lg:min-w-[240px] flex-shrink-0 group mt-2 lg:mt-0"
+                    className="relative overflow-hidden mb-3 lg:mb-0 py-2 px-4 text-sm font-medium uppercase border-2 border-pink text-center transition-all duration-300 lg:text-lg lg:min-w-[240px] flex-shrink-0 group mt-2 lg:mt-0"
                   >
                     <span className="relative z-10 text-white dark:text-third group-hover:text-white">
                       {translation.step0.cta}
