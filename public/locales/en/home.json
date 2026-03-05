@@ -105,14 +105,14 @@
         "name": "Carpisa x Paddington in Perù",
         "brand1": "Carpisa",
         "brand2": "Paddington in Perù",
-        "casesItemFeatured": ["vetrofanie", "digital", "pop"]
+        "casesItemFeatured": ["window sticker", "digital", "pop"]
       },
       {
         "media": "/assets/cases/milka/Milka_x_ToysCenter24_25.webp",
         "type": "image",
         "name": "MILKA x Toys Center - Natale 2024 2025",
         "brand1": "MILKA",
-        "brand2": "Toys Center 2024",
+        "brand2": "Toys Center ",
         "casesItemFeatured": ["box", "digital", "social", "pop"]
       },
       {
@@ -172,7 +172,7 @@
         "type": "image",
         "name": "Nestlè x Aquaman",
         "brand1": "Nestlè",
-        "brand2": "Aquaman: Il Regno Perduto",
+        "brand2": "Aquaman e Il Regno Perduto",
         "casesItemFeatured": ["pack", "pop", "digital"]
       },
       {
