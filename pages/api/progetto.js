@@ -27,8 +27,8 @@ export default async function handler(req, res) {
       port: 465,
       secure: true,
       auth: {
-        user: "7fe4df435c4be7b3a969",
-        pass: "k3v7ReZPTWKqudOi5DwH",
+        user: process.env.NODEMAILER_USER,
+        pass: process.env.NODEMAILER_PASS,
       },
     });
 
