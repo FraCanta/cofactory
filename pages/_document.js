@@ -30,6 +30,11 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
           rel="stylesheet"
         />
+
+        <meta
+          name="google-site-verification"
+          content="lQrztSTaeXqzKFuGLlgiuRg1Jh3zYZNgajsISrA3Vmw"
+        />
       </Head>
       <body>
         <Main />
