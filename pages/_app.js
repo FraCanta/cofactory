@@ -49,6 +49,12 @@ export default function App({ Component, pageProps }) {
           gtag('config', 'G-YJVD0ZF7LT', { 'debug_mode': true });
         `}
       </Script>
+
+      {/* Configurazione Iubenda */}
+      <Script
+        type="text/javascript"
+        src="https://embeds.iubenda.com/widgets/3af2fbdf-63ef-42b7-b936-f42a91ee04b9.js"
+      ></Script>
     </>
   );
 }

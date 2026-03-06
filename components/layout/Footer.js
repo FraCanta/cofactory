@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import BlurryLights from "./BlurryLights";
+import Script from "next/script";
 
 function Footer() {
   return (
@@ -168,7 +169,54 @@ function Footer() {
                 />
                 {/* </Link> */}
               </div>{" "}
-              <div className="sms:text-right">Cookie & Privacy Policy</div>
+              <div className="flex flex-wrap items-center justify-end sms:text-right gap-x-2 gap-y-4 ">
+                <Link
+                  href="https://www.iubenda.com/privacy-policy/14223456"
+                  title="Leggi la nostra Privacy Policy"
+                >
+                  Privacy Policy
+                </Link>
+                <Script type="text/javascript">
+                  {`
+                    (function (w,d) {
+                      var loader = function () {
+                        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+                        s.src="https://cdn.iubenda.com/iubenda.js";
+                        tag.parentNode.insertBefore(s,tag);
+                      };
+                      if(w.addEventListener){
+                        w.addEventListener("load", loader, false);
+                      }else if(w.attachEvent){
+                        w.attachEvent("onload", loader);
+                      }else{
+                        w.onload = loader;
+                      }
+                    })(window, document);
+                  `}
+                </Script>
+
+                <Link href="https://www.iubenda.com/privacy-policy/14223456/cookie-policy">
+                  Cookie Policy
+                </Link>
+                <Script type="text/javascript">
+                  {`
+                    (function (w,d) {
+                      var loader = function () {
+                        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+                        s.src="https://cdn.iubenda.com/iubenda.js";
+                        tag.parentNode.insertBefore(s,tag);
+                      };
+                      if(w.addEventListener){
+                        w.addEventListener("load", loader, false);
+                      }else if(w.attachEvent){
+                        w.attachEvent("onload", loader);
+                      }else{
+                        w.onload = loader;
+                      }
+                    })(window, document);
+                  `}
+                </Script>
+              </div>
             </div>
           </div>
         </div>
