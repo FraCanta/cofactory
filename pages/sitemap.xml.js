@@ -1,56 +1,52 @@
-const BASE_URL = "https://cofactory.it";
+// pages/sitemap.xml.js
 
-const pages = [
-  {
-    it: "/",
-    en: "/en",
-  },
-  {
-    it: "/cerchi-un-partner",
-    en: "/en/find-a-partner",
-  },
-  {
-    it: "/stories",
-    en: "/en/stories",
-  },
-];
+const site = "https://cofactory.it";
 
-const generateSiteMap = () => {
+function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  >
-    ${pages
-      .map((page) => {
-        return `
-          <url>
-            <loc>${BASE_URL}${page.it}</loc>
+     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">       
 
-            <xhtml:link
-              rel="alternate"
-              hreflang="it"
-              href="${BASE_URL}${page.it}"
-            />
+       <url>
+         <loc>${site}</loc>
+         <changefreq>weekly</changefreq>
+         <priority>1</priority>
+       </url>
 
-            <xhtml:link
-              rel="alternate"
-              hreflang="en"
-              href="${BASE_URL}${page.en}"
-            />
+       <url>
+         <loc>${site}/cerchi-un-partner</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.9</priority>
+       </url>
 
-            <xhtml:link
-              rel="alternate"
-              hreflang="x-default"
-              href="${BASE_URL}${page.it}"
-            />
-          </url>
-        `;
-      })
-      .join("")}
-  </urlset>
-  `;
-};
+       <url>
+         <loc>${site}/stories</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.8</priority>
+       </url>
+
+       <url>
+         <loc>${site}/en</loc>
+         <changefreq>weekly</changefreq>
+         <priority>1</priority>
+       </url>
+
+       <url>
+         <loc>${site}/en/cerchi-un-partner</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.9</priority>
+       </url>
+
+       <url>
+         <loc>${site}/en/stories</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.8</priority>
+       </url>
+
+     </urlset>
+   `;
+}
+
+function SiteMap() {}
 
 export async function getServerSideProps({ res }) {
   const sitemap = generateSiteMap();
@@ -64,4 +60,4 @@ export async function getServerSideProps({ res }) {
   };
 }
 
-export default function SiteMap() {}
+export default SiteMap;
