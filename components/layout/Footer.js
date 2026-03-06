@@ -136,7 +136,7 @@ function Footer() {
             <div className="grid items-end w-full grid-cols-1 px-4 mb-4 lg:gap-y-0 sms:text-xs md:text-base sms:grid-cols-3 text-md text-white/60 dark:text-third/60 gap-y-3">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-4 ">
                 <span>
-                  &copy;2025 Cofactory srl -
+                  © {new Date().getFullYear()} Cofactory srl -
                   <Link
                     href="mailto:meetus@cofactory.it"
                     title="Scrivi a meetus@cofactory.it"
