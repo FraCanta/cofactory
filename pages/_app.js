@@ -16,6 +16,7 @@ import { ThemeProvider } from "next-themes";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -30,10 +31,24 @@ export default function App({ Component, pageProps }) {
   }, [router.pathname]);
 
   return (
-    <ThemeProvider attribute="class">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <>
+      <ThemeProvider attribute="class">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-YJVD0ZF7LT"
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YJVD0ZF7LT', { 'debug_mode': true });
+        `}
+      </Script>
+    </>
   );
 }
