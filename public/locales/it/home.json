@@ -1,5 +1,45 @@
 {
   "home": {
+    "head": {
+      "title": "Cofactory | Matchmaking tra Brand e Collaborazioni Strategiche ",
+      "description": "Cofactory è l’agenzia di matchmaking per brand che crea partnership e campagne di comunicazione congiunta tra aziende, generando collaborazioni memorabili.",
+      "keywords": "matchmaking brand, collaborazioni tra brand, partnership tra brand, brand collaboration, campagne di comunicazione congiunta",
+      "robots": "index, follow",
+      "canonical": "https://cofactory.it",
+
+      "og": {
+        "title": "Cofactory | Matchmaking tra Brand e Collaborazioni Strategiche ",
+        "description": "Cofactory crea connessioni tra brand ideando collaborazioni strategiche e campagne di comunicazione congiunta.",
+        "type": "website",
+        "url": "https://cofactory.it",
+        "image": "https://cofactory.it/og-image.jpg",
+        "site_name": "Cofactory"
+      },
+
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Cofactory | Matchmaking tra Brand e Collaborazioni Strategiche ",
+        "description": "L'agenzia che crea partnership e collaborazioni strategiche tra brand.",
+        "image": "https://cofactory.it/og-image.jpg"
+      },
+
+      "schema": {
+        "organization": {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Cofactory",
+          "url": "https://cofactory.it",
+          "logo": "https://cofactory.it/logo.png",
+          "description": "Agenzia di matchmaking per brand che crea collaborazioni strategiche e campagne di comunicazione congiunta tra aziende."
+        },
+        "website": {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cofactory",
+          "url": "https://cofactory.it"
+        }
+      }
+    },
     "hero": {
       "title": "<div class='block mb-2'>SI. SIAMO UN'AGENZIA</div><div class='flex gap-4 '>di <div class=' text-stroke2'>INCONTRI.</div></div>",
 

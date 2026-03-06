@@ -1,5 +1,45 @@
 {
   "home": {
+    "head": {
+      "title": "Cofactory | Brand Matchmaking & Strategic Brand Collaborations",
+      "description": "Cofactory is a brand matchmaking agency that creates partnerships and joint communication campaigns between companies, generating memorable collaborations.",
+      "keywords": "brand matchmaking, brand collaborations, brand partnerships, brand collaboration agency, joint marketing campaigns",
+      "robots": "index, follow",
+      "canonical": "https://cofactory.it",
+
+      "og": {
+        "title": "Cofactory | Brand Matchmaking & Strategic Brand Collaborations",
+        "description": "Cofactory connects brands by creating strategic collaborations and joint communication campaigns.",
+        "type": "website",
+        "url": "https://cofactory.it",
+        "image": "https://cofactory.it/og-image.jpg",
+        "site_name": "Cofactory"
+      },
+
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Cofactory | Brand Matchmaking & Strategic Brand Collaborations",
+        "description": "The agency that creates strategic partnerships and collaborations between brands.",
+        "image": "https://cofactory.it/og-image.jpg"
+      },
+
+      "schema": {
+        "organization": {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Cofactory",
+          "url": "https://cofactory.it",
+          "logo": "https://cofactory.it/logo.png",
+          "description": "Brand matchmaking agency that creates strategic collaborations and joint communication campaigns between companies."
+        },
+        "website": {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cofactory",
+          "url": "https://cofactory.it"
+        }
+      }
+    },
     "hero": {
       "title": "<div class='block mb-2'>YES. WE ARE A<BR/>  <span class=' text-stroke2'>MATCHMAKING</span> AGENCY.</div>",
 
