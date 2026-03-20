@@ -44,10 +44,10 @@
         "categories": [{ "name": "Movie" }]
       },
       {
-        "img": "/assets/cases/carpisa/Carpisa_x_PaddingtonInPeru.webp",
-        "button": "carpisa-per-paddingtoninperu",
-        "brand1": "Carpisa",
-        "brand2": "Paddington in Perù",
+        "img": "/assets/cases/pupa/pupa_x_cimetempestose_square.webp",
+        "button": "pupa-per-cime-tempestose",
+        "brand1": "Pupa",
+        "brand2": "Cime Tempestose",
         "categories": [{ "name": "Movie" }]
       },
       {
@@ -78,11 +78,12 @@
         "brand2": "Ghostbusters: <br/>Minaccia Glaciale",
         "categories": [{ "name": "Movie" }]
       },
+
       {
-        "img": "/assets/cases/pupa/pupa_x_cimetempestose_square.webp",
-        "button": "pupa-per-cime-tempestose",
-        "brand1": "Pupa",
-        "brand2": "Cime Tempestose",
+        "img": "/assets/cases/carpisa/Carpisa_x_PaddingtonInPeru.webp",
+        "button": "carpisa-per-paddingtoninperu",
+        "brand1": "Carpisa",
+        "brand2": "Paddington in Perù",
         "categories": [{ "name": "Movie" }]
       },
       {
