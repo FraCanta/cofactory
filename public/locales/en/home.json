@@ -1,25 +1,25 @@
 {
   "home": {
     "head": {
-      "title": "Cofactory | Matchmaking Creative Agency",
-      "description": "Cofactory is a brand matchmaking agency that creates partnerships and joint communication campaigns between companies, generating memorable collaborations.",
+      "title": "Cofactory | Creative matchmaking agency for brands",
+      "description": "We are the first matchmaking agency for brands: we design and deliver joint communication campaigns. Sometimes we create long-lasting relationships. Other times, we spark love at first sight — brief but intense, electrifying and memorable.",
       "keywords": "brand matchmaking, brand collaborations, brand partnerships, brand collaboration agency, joint marketing campaigns",
       "robots": "index, follow",
       "canonical": "https://cofactory.it/en",
 
       "og": {
-        "title": "Cofactory | Matchmaking Creative Agency",
-        "description": "Cofactory connects brands by creating strategic partnerships and joint communication campaigns.",
+        "title": "Cofactory | Creative matchmaking agency for brands",
+        "description": "We are the first matchmaking agency for brands: we design and deliver joint communication campaigns. Sometimes we create long-lasting relationships. Other times, we spark love at first sight — brief but intense, electrifying and memorable.",
         "type": "website",
-        "url": "https://cofactory.it",
+        "url": "https://cofactory.it/en",
         "image": "https://cofactory.it/og-image.jpg",
         "site_name": "Cofactory"
       },
 
       "twitter": {
         "card": "summary_large_image",
-        "title": "Cofactory | Matchmaking Creative Agency",
-        "description": "The agency that creates strategic partnerships and collaborations between brands.",
+        "title": "Cofactory | Creative matchmaking agency for brands",
+        "description": "We are the first matchmaking agency for brands: we design and deliver joint communication campaigns. Sometimes we create long-lasting relationships. Other times, we spark love at first sight — brief but intense, electrifying and memorable.",
         "image": "https://cofactory.it/og-image.jpg"
       },
 
@@ -28,15 +28,15 @@
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Cofactory",
-          "url": "https://cofactory.it",
+          "url": "https://cofactory.it/en",
           "logo": "https://cofactory.it/logo.png",
-          "description": "Brand matchmaking agency that creates strategic collaborations and joint communication campaigns between companies."
+          "description": "We are the first matchmaking agency for brands: we design and deliver joint communication campaigns. Sometimes we create long-lasting relationships. Other times, we spark love at first sight — brief but intense, electrifying and memorable."
         },
         "website": {
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Cofactory",
-          "url": "https://cofactory.it"
+          "url": "https://cofactory.it/en"
         }
       }
     },

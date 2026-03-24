@@ -1,5 +1,38 @@
 {
   "progetto": {
+    "head": {
+      "title": "Cofactory | Cerchi un partner?",
+      "description": "Tranquillo la prima mossa la facciamo noi",
+      "keywords": "matchmaking brand, collaborazioni tra brand, partnership tra brand, brand collaboration, campagne di comunicazione congiunta",
+      "robots": "index, follow",
+      "canonical": "https://cofactory.it/cerchi-un-partner",
+
+      "og": {
+        "title": "Cofactory | Cerchi un partner?",
+        "description": "Tranquillo la prima mossa la facciamo noi",
+        "type": "website",
+        "url": "https://cofactory.it/cerchi-un-partner",
+        "image": "https://cofactory.it/og-image.jpg",
+        "site_name": "Cofactory"
+      },
+
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Cofactory | Cerchi un partner?",
+        "description": "Tranquillo la prima mossa la facciamo noi",
+        "image": "https://cofactory.it/og-image.jpg"
+      },
+
+      "schema": {
+        "webpage": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Cofactory | Cerchi un partner?",
+          "url": "https://cofactory.it/cerchi-un-partner",
+          "description": "Tranquillo la prima mossa la facciamo noi"
+        }
+      }
+    },
     "nav": {
       "cta": "Torni indietro?"
     },

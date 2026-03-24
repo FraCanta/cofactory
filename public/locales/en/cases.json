@@ -1,5 +1,38 @@
 {
   "works": {
+    "head": {
+      "title": "Cofactory | Stories",
+      "description": "Discover all the love stories that started with us.",
+      "keywords": "matchmaking brand, collaborazioni tra brand, partnership tra brand, brand collaboration, campagne di comunicazione congiunta",
+      "robots": "index, follow",
+      "canonical": "https://cofactory.it/en/stories",
+
+      "og": {
+        "title": "Cofactory | Stories",
+        "description": "Discover all the love stories that started with us.",
+        "type": "website",
+        "url": "https://cofactory.it/en/stories",
+        "image": "https://cofactory.it/og-image.jpg",
+        "site_name": "Cofactory"
+      },
+
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Cofactory | Stories",
+        "description": "Discover all the love stories that started with us.",
+        "image": "https://cofactory.it/og-image.jpg"
+      },
+
+      "schema": {
+        "webpage": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Cofactory | Stories",
+          "url": "https://cofactory.it/en/stories",
+          "description": "Discover all the love stories that started with us."
+        }
+      }
+    },
     "cards": [
       {
         "img": "/assets/cases/santanna/SantannaPro_x_MissionImpossible_square.webp",
