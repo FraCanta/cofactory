@@ -2,14 +2,14 @@
   "progetto": {
     "head": {
       "title": "Cofactory | Looking for a partner?",
-      "description": "Don’t worry, we’ll make the first move.",
+      "description": "Relax, we’ll make the first move",
       "keywords": "matchmaking brand, collaborazioni tra brand, partnership tra brand, brand collaboration, campagne di comunicazione congiunta",
       "robots": "index, follow",
       "canonical": "https://cofactory.it/cerchi-un-partner",
 
       "og": {
         "title": "Cofactory | Looking for a partner?",
-        "description": "Don’t worry, we’ll make the first move.",
+        "description": "Relax, we’ll make the first move",
         "type": "website",
         "url": "https://cofactory.it/cerchi-un-partner",
         "image": "https://cofactory.it/og-image.jpeg",
@@ -19,7 +19,7 @@
       "twitter": {
         "card": "summary_large_image",
         "title": "Cofactory | Looking for a partner?",
-        "description": "Don’t worry, we’ll make the first move.",
+        "description": "Relax, we’ll make the first move",
         "image": "https://cofactory.it/og-image.jpeg"
       },
 
@@ -29,7 +29,7 @@
           "@type": "WebPage",
           "name": "Cofactory | Looking for a partner?",
           "url": "https://cofactory.it/cerchi-un-partner",
-          "description": "Don’t worry, we’ll make the first move."
+          "description": "Relax, we’ll make the first move"
         }
       }
     },
