@@ -169,7 +169,7 @@ function Footer() {
                 />
                 {/* </Link> */}
               </div>{" "}
-              <div className="flex flex-wrap items-center justify-end sms:text-right gap-x-2 gap-y-4 ">
+              <div className="flex flex-wrap items-center lg:justify-end sms:text-right gap-x-2 gap-y-4 ">
                 <Link
                   href="https://www.iubenda.com/privacy-policy/14223456"
                   title="Leggi la nostra Privacy Policy"
