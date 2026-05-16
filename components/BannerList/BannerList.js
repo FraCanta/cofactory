@@ -49,6 +49,7 @@ function HoverBanner({ item }) {
   useEffect(() => {
     if (!videoRef.current) return;
     videoRef.current.volume = volume;
+    videoRef.current.defaultMuted = true;
     videoRef.current.muted = true;
   }, []);
 
@@ -103,6 +104,8 @@ function HoverBanner({ item }) {
             ref={videoRef}
             src={item.media}
             autoPlay
+            muted={isMuted}
+            defaultMuted
             loop
             playsInline
             className="object-cover w-full h-full transition-transform duration-700 lg:group-hover:scale-105"

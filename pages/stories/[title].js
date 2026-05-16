@@ -38,17 +38,18 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
       <Head>
         <title>{`${work.name}`}</title>
         <meta name="description" content={`${work.descrizione}`} />
+        <meta name="robots" content="noindex, nofollow" />
 
         <meta
           property="og:url"
-          content={`https://cofactory-eight.vercel.app/cases/${work.title}`}
+          content={`https://cofactory.it/stories/${work.title}`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${work.name}`} />
         <meta property="og:description" content={`${work.descrizione}`} />
         <meta
           property="og:image"
-          content={`https://cofactory-eight.vercel.app${work.img}`}
+          content={`https://cofactory.it${work.ogimg || work.img}`}
         />
       </Head>
       <motion.div
@@ -277,6 +278,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       autoPlay
                       loop
                       muted
+                      defaultMuted
                       playsInline
                     >
                       <source src={work.row2.video} type="video/mp4" />
@@ -390,6 +392,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   autoPlay
                   loop
                   muted
+                  defaultMuted
                   playsInline
                 >
                   <source src={work.row5bis.video} type="video/mp4" />
@@ -408,6 +411,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   autoPlay
                   loop
                   muted
+                  defaultMuted
                   playsInline
                 >
                   <source src={work.row6.video} type="video/mp4" />
@@ -440,6 +444,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     autoPlay
                     loop
                     muted
+                    defaultMuted
                     playsInline
                   >
                     <source src={work.row8.video3} type="video/mp4" />
@@ -487,6 +492,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       autoPlay
                       loop
                       muted
+                      defaultMuted
                       playsInline
                     >
                       <source src={work.row8.video} type="video/webm" />
@@ -615,6 +621,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                   autoPlay
                   loop
                   muted
+                  defaultMuted
                   playsInline
                 >
                   <source src={work.row7bis.video} type="video/mp4" />
@@ -631,6 +638,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     autoPlay
                     loop
                     muted
+                    defaultMuted
                     playsInline
                   >
                     <source src={work.row8bis.video3} type="video/mp4" />
@@ -691,6 +699,7 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                       autoPlay
                       loop
                       muted
+                      defaultMuted
                       playsInline
                       poster={work.row8bis.video}
                     >

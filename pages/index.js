@@ -10,8 +10,11 @@ import HeroLogo from "@/components/layout/HeroLogo";
 import ModalSection from "@/components/layout/ModalSection";
 import { gsap } from "gsap/dist/gsap";
 import { Icon } from "@iconify/react";
+import { useRouter } from "next/router";
+import SeoAlternates from "@/components/SeoAlternates";
 
 const Home = ({ translation }) => {
+  const router = useRouter();
   const [openModal, setOpenModal] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const colors = ["#1b1b1c", "#80c0c0", "#bb5471"]; // colori diversi per le sezioni
@@ -62,7 +65,7 @@ const Home = ({ translation }) => {
         <meta name="description" content={translation.head.description} />
         <meta name="keywords" content={translation.head.keywords} />
         <meta name="robots" content={translation.head.robots} />
-        <link rel="canonical" href={translation.head.canonical} />
+        <SeoAlternates page="home" locale={router.locale} />
 
         {/* Open Graph */}
         <meta property="og:title" content={translation.head.og.title} />
@@ -71,7 +74,6 @@ const Home = ({ translation }) => {
           content={translation.head.og.description}
         />
         <meta property="og:type" content={translation.head.og.type} />
-        <meta property="og:url" content={translation.head.og.url} />
         <meta property="og:image" content={translation.head.og.image} />
         <meta property="og:site_name" content={translation.head.og.site_name} />
 
@@ -88,7 +90,10 @@ const Home = ({ translation }) => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(translation.head.schema.organization),
+            __html: JSON.stringify({
+              ...translation.head.schema.organization,
+              logo: "https://cofactory.it/assets/logo/logo_intero.png",
+            }),
           }}
         />
         <script

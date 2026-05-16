@@ -13,21 +13,30 @@ import "@/styles/herologo.css";
 import { useEffect } from "react";
 
 import { ThemeProvider } from "next-themes";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
-import Script from "next/script";
+import CookieConsent from "@/components/CookieConsent";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 500,
-      easing: "ease-in-out",
-      once: true,
+    let mounted = true;
+
+    import("aos").then(({ default: AOS }) => {
+      if (!mounted) return;
+
+      AOS.init({
+        offset: 200,
+        duration: 500,
+        easing: "ease-in-out",
+        once: true,
+      });
     });
+
+    return () => {
+      mounted = false;
+    };
   }, [router.pathname]);
 
   return (
@@ -36,25 +45,8 @@ export default function App({ Component, pageProps }) {
         <Layout>
           <Component {...pageProps} />
         </Layout>
+        <CookieConsent />
       </ThemeProvider>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-YJVD0ZF7LT"
-      ></Script>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-YJVD0ZF7LT', { 'debug_mode': true });
-        `}
-      </Script>
-
-      {/* Configurazione Iubenda */}
-      <Script
-        type="text/javascript"
-        src="https://embeds.iubenda.com/widgets/3af2fbdf-63ef-42b7-b936-f42a91ee04b9.js"
-      ></Script>
     </>
   );
 }

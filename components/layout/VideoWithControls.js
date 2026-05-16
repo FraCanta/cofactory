@@ -17,14 +17,19 @@ export default function VideoWithControls({ src }) {
 
   const [hasStarted, setHasStarted] = useState(false);
 
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    videoRef.current.defaultMuted = true;
+    videoRef.current.muted = true;
+  }, []);
+
   // ---------------- PLAY / PAUSE ----------------
   const togglePlay = () => {
     if (!videoRef.current) return;
 
     if (!hasStarted) {
       videoRef.current.currentTime = 0;
-      videoRef.current.muted = false;
-      setMuted(false);
       videoRef.current.play();
       setIsPlaying(true);
       setHasStarted(true);
@@ -126,6 +131,7 @@ export default function VideoWithControls({ src }) {
         ref={videoRef}
         src={src}
         muted={muted}
+        defaultMuted
         playsInline
         loop
         autoPlay

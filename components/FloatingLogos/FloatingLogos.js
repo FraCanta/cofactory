@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const BASE_SPEED = 0.3;
 const HOVER_SPEED = 1.2;
@@ -40,31 +41,28 @@ const bubbleSpecs = [
   { x: 1990, y: 75 },
 ];
 
+const initialVisibleLogoIndexes = new Set([7, 14, 15, 29]);
+
 function FloatingLogos() {
-  const bubblesRef = useRef(null);
+  const bubbleRefs = useRef([]);
   const animationFrameId = useRef(null);
   const speedRef = useRef(BASE_SPEED);
 
   useEffect(() => {
-    if (bubblesRef.current) {
-      bubblesRef.current.innerHTML = "";
-    }
-
     const LOGO_SCALE = 0.8;
 
     class Bubble {
-      constructor(index, { x, y }) {
+      constructor(index, { x, y }, el) {
         this.index = index;
         this.x = x;
         this.y = y;
         this.scale = LOGO_SCALE;
-
-        this.el = document.createElement("div");
-        this.el.className = `bubble logo${this.index + 1}`;
-        bubblesRef.current.appendChild(this.el);
+        this.el = el;
       }
 
       update() {
+        if (!this.el) return;
+
         this.x -= speedRef.current;
 
         if (this.x < -200) {
@@ -77,7 +75,9 @@ function FloatingLogos() {
 
     class Bubbles {
       constructor(specs) {
-        this.bubbles = specs.map((spec, i) => new Bubble(i, spec));
+        this.bubbles = specs.map(
+          (spec, i) => new Bubble(i, spec, bubbleRefs.current[i]),
+        );
       }
 
       update() {
@@ -94,7 +94,6 @@ function FloatingLogos() {
     return () => {
       if (animationFrameId.current)
         cancelAnimationFrame(animationFrameId.current);
-      if (bubblesRef.current) bubblesRef.current.innerHTML = "";
     };
   }, []);
 
@@ -104,7 +103,33 @@ function FloatingLogos() {
       onMouseEnter={() => (speedRef.current = HOVER_SPEED)}
       onMouseLeave={() => (speedRef.current = BASE_SPEED)}
     >
-      <div className="bubbles" ref={bubblesRef}></div>
+      <div className="bubbles" aria-hidden="true">
+        {bubbleSpecs.map((spec, index) => {
+          const priority = initialVisibleLogoIndexes.has(index);
+
+          return (
+            <div
+              className="bubble"
+              key={index}
+              style={{
+                transform: `translate(${spec.x}px, ${spec.y}px) scale(0.8)`,
+              }}
+              ref={(el) => {
+                bubbleRefs.current[index] = el;
+              }}
+            >
+              <Image
+                src={`/assets/logos/logo_${index + 1}.png`}
+                alt=""
+                fill
+                priority={priority}
+                sizes="150px"
+                className="bubble-image"
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -7,6 +7,8 @@ import casesEN from "../public/locales/en/cases.json";
 import cx from "clsx";
 import ParallaxCases from "@/components/ParallaxCases/ParallaxCases";
 import BlurryLights from "@/components/layout/BlurryLights";
+import { useRouter } from "next/router";
+import SeoAlternates from "@/components/SeoAlternates";
 
 // ------------------------------
 // Floating Filters Component
@@ -54,6 +56,7 @@ function FloatingFilters({ show, selectedCategory, handleCategorySelect }) {
 // PAGE
 // ------------------------------
 const Stories = ({ translation }) => {
+  const router = useRouter();
   const cases = translation.cards;
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -100,7 +103,7 @@ const Stories = ({ translation }) => {
         <meta name="description" content={translation.head.description} />
         <meta name="keywords" content={translation.head.keywords} />
         <meta name="robots" content={translation.head.robots} />
-        <link rel="canonical" href={translation.head.canonical} />
+        <SeoAlternates page="stories" locale={router.locale} />
 
         {/* Open Graph */}
         <meta property="og:title" content={translation.head.og.title} />
@@ -109,7 +112,6 @@ const Stories = ({ translation }) => {
           content={translation.head.og.description}
         />
         <meta property="og:type" content={translation.head.og.type} />
-        <meta property="og:url" content={translation.head.og.url} />
         <meta property="og:image" content={translation.head.og.image} />
         <meta property="og:site_name" content={translation.head.og.site_name} />
 

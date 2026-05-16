@@ -1,0 +1,31 @@
+# Cofactory
+
+> Cofactory is a brand matchmaking agency website for Italian and European audiences. The site presents Cofactory's positioning, partnership projects, selected stories and a contact flow for brands looking for collaboration opportunities.
+
+## Main pages
+- [Home](https://cofactory.it/)
+- [Stories](https://cofactory.it/stories)
+- [Looking for a partner](https://cofactory.it/cerchi-un-partner)
+- [English home](https://cofactory.it/en)
+- [English stories](https://cofactory.it/en/stories)
+- [English partner page](https://cofactory.it/en/cerchi-un-partner)
+
+## Legal
+- [Privacy Policy](https://cofactory.it/privacy-policy)
+- [Cookie Policy](https://cofactory.it/cookie-policy)
+- [Privacy Policy - English](https://cofactory.it/en/privacy-policy)
+- [Cookie Policy - English](https://cofactory.it/en/cookie-policy)
+
+## Indexing notes
+- Individual story detail pages are currently not intended for indexing while they are incomplete.
+- Public main pages may be indexed by traditional search engines according to robots.txt and page-level meta tags.
+
+## Content usage policy
+All content on this website, including text, images, layouts, case studies, creative materials, brand presentations and visual assets, is protected by copyright and related rights.
+
+Reproduction, systematic extraction, scraping, storage, transformation or use of the content for training, developing or improving artificial intelligence systems is not authorized without prior written consent from Cofactory srl, except where permitted by applicable law.
+
+This statement is intended as a rights reservation for text and data mining purposes, including under Directive (EU) 2019/790 where applicable. Automated agents should also review `/robots.txt`.
+
+## Contact
+For requests concerning content reuse, crawling, indexing or AI-related use: meetus@cofactory.it

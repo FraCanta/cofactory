@@ -7,26 +7,56 @@ import DarkModeToggle from "../DarkModeToggle";
 
 const Navbar = ({ lang }) => {
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let lastScrollTop = 0;
+    let ticking = false;
+    let videoSectionIsVisible = true;
+
+    const updateVisibility = () => {
       const currentScrollTop = window.scrollY;
-      const pinnedSection = document.querySelector(".video-mask-section");
-      const sectionBottom = pinnedSection?.getBoundingClientRect().bottom ?? 0;
 
-      if (sectionBottom > 0) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(currentScrollTop <= lastScrollTop ? true : false);
-      }
+      setIsVisible((current) => {
+        const next = videoSectionIsVisible
+          ? true
+          : currentScrollTop <= lastScrollTop;
 
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+        return current === next ? current : next;
+      });
+
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+      ticking = false;
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollTop]);
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateVisibility);
+        ticking = true;
+      }
+    };
+
+    const pinnedSection = document.querySelector(".video-mask-section");
+    const observer =
+      pinnedSection && "IntersectionObserver" in window
+        ? new IntersectionObserver(([entry]) => {
+            videoSectionIsVisible = entry.isIntersecting;
+            updateVisibility();
+          })
+        : null;
+
+    if (observer) {
+      observer.observe(pinnedSection);
+    } else {
+      videoSectionIsVisible = false;
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer?.disconnect();
+    };
+  }, []);
 
   // gestione dinamica del link e del testo del bottone
   const partnerLink =

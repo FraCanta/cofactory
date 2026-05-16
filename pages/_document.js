@@ -1,8 +1,10 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
+export default function Document(props) {
+  const lang = props.__NEXT_DATA__?.locale === "en" ? "en" : "it";
+
   return (
-    <Html lang="it">
+    <Html lang={lang}>
       <Head>
         <link
           rel="apple-touch-icon"
@@ -24,12 +26,6 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#1b1b1c" />
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-          rel="stylesheet"
-        />
-
         <meta
           name="google-site-verification"
           content="lQrztSTaeXqzKFuGLlgiuRg1Jh3zYZNgajsISrA3Vmw"

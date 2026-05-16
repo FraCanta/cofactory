@@ -8,7 +8,11 @@ import Image from "next/image";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import StepsContact from "@/components/StepsContact/StepsContact";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import SeoAlternates from "@/components/SeoAlternates";
 const Contatti = ({ translation }) => {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -16,7 +20,7 @@ const Contatti = ({ translation }) => {
         <meta name="description" content={translation.head.description} />
         <meta name="keywords" content={translation.head.keywords} />
         <meta name="robots" content={translation.head.robots} />
-        <link rel="canonical" href={translation.head.canonical} />
+        <SeoAlternates page="partner" locale={router.locale} />
 
         {/* Open Graph */}
         <meta property="og:title" content={translation.head.og.title} />
@@ -25,7 +29,6 @@ const Contatti = ({ translation }) => {
           content={translation.head.og.description}
         />
         <meta property="og:type" content={translation.head.og.type} />
-        <meta property="og:url" content={translation.head.og.url} />
         <meta property="og:image" content={translation.head.og.image} />
         <meta property="og:site_name" content={translation.head.og.site_name} />
 
@@ -42,13 +45,13 @@ const Contatti = ({ translation }) => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(translation.head.schema.organization),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(translation.head.schema.website),
+            __html: JSON.stringify({
+              ...translation.head.schema.webpage,
+              url:
+                router.locale === "en"
+                  ? "https://cofactory.it/en/cerchi-un-partner"
+                  : "https://cofactory.it/cerchi-un-partner",
+            }),
           }}
         />
       </Head>

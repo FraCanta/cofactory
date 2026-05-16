@@ -1,6 +1,7 @@
 .sliderContainer {
   display: flex;
-  height: 15vh;
+  min-height: clamp(82px, 9vh, 120px);
+  padding-block: clamp(18px, 2.2vh, 32px);
   overflow: hidden;
   align-items: center;
   width: 120vw;
@@ -69,7 +70,8 @@
 
 @media screen and (max-width: 768px) {
   .sliderContainer {
-    height: 15vh;
+    min-height: 76px;
+    padding-block: 14px;
   }
   .sliderItems p {
     font-size: 40px;

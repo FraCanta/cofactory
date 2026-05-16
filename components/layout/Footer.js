@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 import BlurryLights from "./BlurryLights";
-import Script from "next/script";
 
 function Footer() {
+  const router = useRouter();
+  const policyBase = router.locale === "en" ? "/en" : "";
+
   return (
     <footer className="relative h-[400px] sms:h-[380px] fxl:h-[450px] bg-third dark:bg-white z-0 ">
       <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
@@ -171,51 +174,15 @@ function Footer() {
               </div>{" "}
               <div className="flex flex-wrap items-center lg:justify-end sms:text-right gap-x-2 gap-y-4 ">
                 <Link
-                  href="https://www.iubenda.com/privacy-policy/14223456"
+                  href={`${policyBase}/privacy-policy`}
                   title="Leggi la nostra Privacy Policy"
                 >
                   Privacy Policy
                 </Link>
-                <Script type="text/javascript">
-                  {`
-                    (function (w,d) {
-                      var loader = function () {
-                        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-                        s.src="https://cdn.iubenda.com/iubenda.js";
-                        tag.parentNode.insertBefore(s,tag);
-                      };
-                      if(w.addEventListener){
-                        w.addEventListener("load", loader, false);
-                      }else if(w.attachEvent){
-                        w.attachEvent("onload", loader);
-                      }else{
-                        w.onload = loader;
-                      }
-                    })(window, document);
-                  `}
-                </Script>
 
-                <Link href="https://www.iubenda.com/privacy-policy/14223456/cookie-policy">
+                <Link href={`${policyBase}/cookie-policy`}>
                   Cookie Policy
                 </Link>
-                <Script type="text/javascript">
-                  {`
-                    (function (w,d) {
-                      var loader = function () {
-                        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-                        s.src="https://cdn.iubenda.com/iubenda.js";
-                        tag.parentNode.insertBefore(s,tag);
-                      };
-                      if(w.addEventListener){
-                        w.addEventListener("load", loader, false);
-                      }else if(w.attachEvent){
-                        w.attachEvent("onload", loader);
-                      }else{
-                        w.onload = loader;
-                      }
-                    })(window, document);
-                  `}
-                </Script>
               </div>
             </div>
           </div>

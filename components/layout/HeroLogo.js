@@ -41,14 +41,14 @@ export default function HeroLogo() {
       windowWidth <= 441
         ? clipRefMid.current
         : windowWidth >= 800 && windowWidth <= 900
-        ? clipRefTablet.current
-        : windowWidth >= 901 && windowWidth <= 1700
-        ? clipRefMid.current
-        : windowWidth > 3999
-        ? clipRefLarge.current
-        : windowWidth > 2559
-        ? clipRefExtra.current
-        : clipRefDesktop.current;
+          ? clipRefTablet.current
+          : windowWidth >= 901 && windowWidth <= 1700
+            ? clipRefMid.current
+            : windowWidth > 3999
+              ? clipRefLarge.current
+              : windowWidth > 2559
+                ? clipRefExtra.current
+                : clipRefDesktop.current;
 
     if (!clip) return;
 
@@ -110,7 +110,7 @@ export default function HeroLogo() {
             transformOrigin: "right center",
             ease: "power2.out",
           },
-          ">0"
+          ">0",
         );
         tlRef.current.progress(1); // parte dallo stato finale
       }
@@ -167,14 +167,14 @@ export default function HeroLogo() {
     windowWidth <= 440
       ? "myMaskMid"
       : windowWidth >= 800 && windowWidth <= 900
-      ? "myMaskTablet"
-      : windowWidth >= 901 && windowWidth <= 1700
-      ? "myMaskMid"
-      : windowWidth > 3999
-      ? "myMaskLarge"
-      : windowWidth > 2559
-      ? "myMaskExtra"
-      : "myMask";
+        ? "myMaskTablet"
+        : windowWidth >= 901 && windowWidth <= 1700
+          ? "myMaskMid"
+          : windowWidth > 3999
+            ? "myMaskLarge"
+            : windowWidth > 2559
+              ? "myMaskExtra"
+              : "myMask";
 
   return (
     <section
@@ -189,12 +189,12 @@ export default function HeroLogo() {
             currentClipId === "myMaskMid"
               ? "0 0 2620 525"
               : currentClipId === "myMaskExtra"
-              ? "0 0 5002.5 1000"
-              : currentClipId === "myMaskLarge"
-              ? "0 0 11468.32 2300"
-              : currentClipId === "myMaskTablet"
-              ? "0 0 3981.96 800"
-              : "0 0 3493.15 700"
+                ? "0 0 5002.5 1000"
+                : currentClipId === "myMaskLarge"
+                  ? "0 0 11468.32 2300"
+                  : currentClipId === "myMaskTablet"
+                    ? "0 0 3981.96 800"
+                    : "0 0 3493.15 700"
           }
           fill="white"
           stroke="#b2b2b2"

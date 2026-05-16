@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /area-riservata/
+
+Sitemap: https://cofactory.it/sitemap.xml

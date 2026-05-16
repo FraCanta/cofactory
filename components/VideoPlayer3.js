@@ -1,19 +1,35 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const VideoPlayer3 = ({ video, poster }) => {
+  const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
 
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    videoRef.current.defaultMuted = true;
+    videoRef.current.muted = true;
+    videoRef.current.volume = 0;
+  }, []);
+
   const toggleMute = () => {
-    setIsMuted(!isMuted);
+    if (!videoRef.current) return;
+
+    const nextMuted = !isMuted;
+    videoRef.current.muted = nextMuted;
+    videoRef.current.volume = nextMuted ? 0 : 0.5;
+    setIsMuted(nextMuted);
   };
 
   return (
     <div className="relative aspect-square w-full">
       <video
+        ref={videoRef}
         id="videoPlayer"
         className="h-full w-full object-cover rounded-lg"
         autoPlay
         muted={isMuted}
+        defaultMuted
         playsInline
       >
         <source src={video} type="video/mp4" />
