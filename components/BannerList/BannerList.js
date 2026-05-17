@@ -2,8 +2,8 @@ import Image from "next/image";
 import { MaskText } from "../MaskText";
 import { useRef, useState, useEffect } from "react";
 import ParallaxText from "../ParallaxText";
-import { Icon } from "@iconify/react";
 import CtaMarquee from "../Cta/CtaMarquee";
+import { PiSpeakerHighFill, PiSpeakerSlashFill } from "react-icons/pi";
 
 function BannerList({ translation, id }) {
   return (
@@ -31,6 +31,8 @@ function HoverBanner({ item }) {
   const [previousVolume, setPreviousVolume] = useState(0.5);
   const [isMobile, setIsMobile] = useState(false);
   const [mobileActive, setMobileActive] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(item.type !== "video");
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
 
   const videoRef = useRef(null);
   const containerRef = useRef(null);
@@ -53,23 +55,40 @@ function HoverBanner({ item }) {
     videoRef.current.muted = true;
   }, []);
 
-  // auto mute fuori viewport
+  // Carica il video poco prima che entri in viewport e mettilo in pausa fuori schermo.
   useEffect(() => {
-    if (!containerRef.current || !videoRef.current) return;
+    if (!containerRef.current || item.type !== "video") return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) {
-          videoRef.current.muted = true;
+        if (entry.isIntersecting) {
+          setShouldLoadVideo(true);
+          setIsVideoVisible(true);
+        } else {
+          setIsVideoVisible(false);
+          if (videoRef.current) {
+            videoRef.current.pause();
+            videoRef.current.muted = true;
+          }
           setIsMuted(true);
         }
       },
-      { threshold: 0.25 },
+      { rootMargin: "600px 0px", threshold: 0.2 },
     );
 
     observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [item.type]);
+
+  useEffect(() => {
+    if (!videoRef.current || !shouldLoadVideo) return;
+
+    if (isVideoVisible) {
+      videoRef.current.play().catch(() => {});
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isVideoVisible, shouldLoadVideo]);
 
   const toggleMute = () => {
     if (!videoRef.current) return;
@@ -102,12 +121,13 @@ function HoverBanner({ item }) {
         <>
           <video
             ref={videoRef}
-            src={item.media}
-            autoPlay
+            src={shouldLoadVideo ? item.media : undefined}
+            autoPlay={isVideoVisible}
             muted={isMuted}
             defaultMuted
             loop
             playsInline
+            preload="metadata"
             className="object-cover w-full h-full transition-transform duration-700 lg:group-hover:scale-105"
           />
 
@@ -117,10 +137,7 @@ function HoverBanner({ item }) {
               onClick={toggleMute}
               className="flex items-center justify-center w-10 h-10 rounded-full bg-white/50 backdrop-blur-lg"
             >
-              <Icon
-                icon={isMuted ? "mage:volume-mute" : "mage:volume-down-fill"}
-                width="22"
-              />
+              {isMuted ? <PiSpeakerSlashFill size={22} /> : <PiSpeakerHighFill size={22} />}
             </button>
           </div>
         </>

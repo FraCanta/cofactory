@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
-import { Icon } from "@iconify/react";
 import { FaCookieBite } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 const CONSENT_KEY = "cofactory_cookie_consent";
 const GA_ID = "G-YJVD0ZF7LT";
@@ -200,7 +200,7 @@ export default function CookieConsent() {
                 aria-label={t.reject}
                 onClick={() => commit(false)}
               >
-                <Icon icon="lucide:x" aria-hidden="true" />
+                <IoClose aria-hidden="true" />
               </button>
             </div>
 

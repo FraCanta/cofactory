@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Icon } from "@iconify/react";
 import BlurryLights from "./BlurryLights";
+import { RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 
 function Footer() {
   const router = useRouter();
@@ -156,7 +156,7 @@ function Footer() {
                   title="Connettiti con noi su Linkedin"
                   href="https://www.linkedin.com/company/cofactorymatchingagency/posts/?feedView=all"
                 >
-                  <Icon icon="lineicons:linkedin" width="28px" height="28px" />
+                  <RiLinkedinFill size={28} />
                 </Link>
                 {/* <Link
                   className="underline "
@@ -164,10 +164,8 @@ function Footer() {
                   title="Connettiti con noi su Instagram"
                   href="https://www.instagram.com/cofactorymatchingagency/"
                 > */}
-                <Icon
-                  icon="lineicons:instagram"
-                  width="28px"
-                  height="28px"
+                <RiInstagramLine
+                  size={28}
                   className="text-white/40 dark:text-third/40"
                 />
                 {/* </Link> */}

@@ -12,27 +12,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { Icon } from "@iconify/react";
 import Link from "next/link";
 import SlidingCard from "@/components/SlidingCard/SlidingCard";
 import VideoPlayer3 from "@/components/VideoPlayer3";
 import ParallaxText from "@/components/ParallaxText";
-import Lenis from "@studio-freight/lenis";
-import { useEffect } from "react";
+import { BiLeftArrowCircle, BiRightArrowCircle } from "react-icons/bi";
 const SingleCases = ({ work, previousWork, nextWork }) => {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy(); // Pulizia per prevenire eventuali perdite di memoria
-    };
-  }, []);
   return (
     <>
       <Head>
@@ -576,18 +561,10 @@ const SingleCases = ({ work, previousWork, nextWork }) => {
                     </Swiper>
                     <div className="arrow">
                       <div className="prev">
-                        <Icon
-                          icon="bi:arrow-left-circle-fill"
-                          color="white"
-                          width="40"
-                        />
+                        <BiLeftArrowCircle color="white" size={40} />
                       </div>
                       <div className="next">
-                        <Icon
-                          icon="bi:arrow-right-circle-fill"
-                          color="white"
-                          width="40"
-                        />
+                        <BiRightArrowCircle color="white" size={40} />
                       </div>
                     </div>
                   </>

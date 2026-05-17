@@ -6,7 +6,7 @@ import useLayoutEffect from "../utils/use-isomorphic-layout-effect";
 
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Icon } from "@iconify/react";
+import { FiArrowUpRight } from "react-icons/fi";
 gsap.registerPlugin(ScrollTrigger);
 
 function ParallaxText({ marqueeText, onToggle }) {
@@ -197,7 +197,7 @@ const Phrase = ({
                   ease: "easeInOut",
                 }}
               >
-                <Icon icon="ph:arrow-up-right-light" />
+                <FiArrowUpRight />
               </motion.span>
             </span>
           </motion.p>

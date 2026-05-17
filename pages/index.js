@@ -9,9 +9,9 @@ import BannerList from "@/components/BannerList/BannerList";
 import HeroLogo from "@/components/layout/HeroLogo";
 import ModalSection from "@/components/layout/ModalSection";
 import { gsap } from "gsap/dist/gsap";
-import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import SeoAlternates from "@/components/SeoAlternates";
+import { AiFillCloseSquare } from "react-icons/ai";
 
 const Home = ({ translation }) => {
   const router = useRouter();
@@ -147,10 +147,7 @@ const Home = ({ translation }) => {
             onClick={handleCloseModal}
             className="absolute z-10 text-3xl font-bold transition top-6 right-6 hover:scale-110"
           >
-            <Icon
-              icon="ant-design:close-square-filled"
-              className="w-8 h-8 text-white lg:w-10 lg:h-10"
-            />
+            <AiFillCloseSquare className="w-8 h-8 text-white lg:w-10 lg:h-10" />
           </button>
 
           {/* Dots verticali / responsive */}

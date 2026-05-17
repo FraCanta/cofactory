@@ -1,0 +1,660 @@
+{
+  "settingsHash": "e6adff7d7dfde5765d2eee01dcfbd8c8aba20f89f2094f378dbb3fc7ee6f0ff4",
+  "generatedAt": "2026-05-17T14:19:24.514Z",
+  "files": {
+    "public\\android-chrome-192x192.png": {
+      "hash": "a7e3d9f1001858e057d5114a3cca6cf7ab83593c0260f125de6702db6208bddd"
+    },
+    "public\\android-chrome-512x512.png": {
+      "hash": "b0c7349c6e4ead78ac7803c6299cb2a1ed65d8532821b4a3d5cdbef845537273"
+    },
+    "public\\apple-touch-icon.png": {
+      "hash": "cfe15ee1415804b0b2acf0dac703751ef157f58121b06e067a20de93303a7bba"
+    },
+    "public\\assets\\bollino_lovers.png": {
+      "hash": "653bc8266295b1dfdda7bede888d077a2aff8b13823593e2b403de53eb91e80b"
+    },
+    "public\\assets\\cases\\american\\AmericanUncle_x_Sonic2.webp": {
+      "hash": "e2bc78f3bc75bf3e8e9bc3854af43023500726d3295a0b4f57036334a9239dd6"
+    },
+    "public\\assets\\cases\\american\\cover_american_new.jpg": {
+      "hash": "945cdce58dfc73829db895cf7683b4a400c63aa0a012f5a832a75d7877f3c620"
+    },
+    "public\\assets\\cases\\american\\sonic.jpg": {
+      "hash": "ce45764d832cfdddaec238707bd86c2ab5b86a801a95e1deb1070b8a8417babb"
+    },
+    "public\\assets\\cases\\american\\sonic2.jpg": {
+      "hash": "6fd7da70d0431e6564da89088adccfb780779cda7c7e42ca6a607cb26896b140"
+    },
+    "public\\assets\\cases\\bobble\\bobble_mockup.jpg": {
+      "hash": "f1f70aa6a0798d381e5f3a4c019815e27ba87bb24eb4ebbf29f34698827839a1"
+    },
+    "public\\assets\\cases\\bobble\\bobble1.jpg": {
+      "hash": "9ddf713dfab284cb8ba3cdb85b0379c03c3ada36611ce2c7fd2966707b4b2585"
+    },
+    "public\\assets\\cases\\bobble\\bobble5.jpg": {
+      "hash": "8af055edac3fee8b41b11996f366d0baac51db77b8b5490e3ff8bc722a48e4dd"
+    },
+    "public\\assets\\cases\\bobble\\bobble6.jpg": {
+      "hash": "b995ff6afdf3a011158746377352f333595a4abbb923b5aaaf9b51f938230385"
+    },
+    "public\\assets\\cases\\bobble\\BobbleBobble_x_Dungeons&Dragons.webp": {
+      "hash": "f26d72d1eb16bc188cb3d6a2635d36278f9705d1d8355613fef5e45f88b2c63e"
+    },
+    "public\\assets\\cases\\bobble\\BobbleBobble_x_TransformersOne.webp": {
+      "hash": "e7e96fe769d62d95fda98bcc8ef60e3513efcf37b225bb3a72ea8f63977f4809"
+    },
+    "public\\assets\\cases\\bobble\\bobblebobble.webp": {
+      "hash": "69dbe81526daa45e11056bb34c90f118ec72e4c6dfd6bc587b2884d415cc695b"
+    },
+    "public\\assets\\cases\\bobble\\cover_bobble_new.jpg": {
+      "hash": "a418f6414a3551a4d7f12ebfa3fb3f497de670124e4112b88a95546d63907773"
+    },
+    "public\\assets\\cases\\bobble\\cover_bobble.jpg": {
+      "hash": "7f0a16f192958824e77b0945d0fda5c601ea9492c19c8a7dfee9c7a5c553caee"
+    },
+    "public\\assets\\cases\\bobble\\img3_rett.jpg": {
+      "hash": "50cfadc5cb88db49840d480ae3b3185d849bd5afd4b1c95f917e2d7d43eba815"
+    },
+    "public\\assets\\cases\\bobble\\sliding\\sliding1.jpg": {
+      "hash": "7afb52c7f3f178cb76c61f6c9a6688f9a49d8e704abda20b299bc4017ef8060e"
+    },
+    "public\\assets\\cases\\bobble\\sliding\\sliding2.jpg": {
+      "hash": "aca497fc3ec146f0ce5c99bf829084f526ff5798160b722720cbe124e4584c32"
+    },
+    "public\\assets\\cases\\calzedonia\\Calzedonia_x_CT_square.webp": {
+      "hash": "e591537067f447dd4a14c1341facdb46223481d5b006353de3d8cd873f59d312"
+    },
+    "public\\assets\\cases\\calzedonia\\Calzedonia_x_CT.webp": {
+      "hash": "5f41fb471671aaef9e3e493a0354feb71b8c7bf08e83519a6d77166796930154"
+    },
+    "public\\assets\\cases\\calzedonia\\Calzedonia_x_CT2.webp": {
+      "hash": "652981b2a176a958c8b32b0cdd8cc03f1d8aa37b084fd3bef168c99bcfcc003d"
+    },
+    "public\\assets\\cases\\carpisa\\CARPISA_x_ANACONDA_1000x1000.jpg": {
+      "hash": "4e2cb5cc355df22a04aa6a300e10bdecbc3a72315f858966c0dec7db2e47ad27"
+    },
+    "public\\assets\\cases\\carpisa\\Carpisa_x_PaddingtonInPeru.webp": {
+      "hash": "44212efb9909b740561a002c2126b91c10b49fe0ce13a8be318c1cafddd29abc"
+    },
+    "public\\assets\\cases\\carpisa\\cover_carpisa_paddington.png": {
+      "hash": "61d27967f0037353338f22188c79719e738537d035a57ed67ccc4e5c1a98b6c9"
+    },
+    "public\\assets\\cases\\cheerz\\Cheerz_x_ABBBJ.webp": {
+      "hash": "1ae85ebb8482e0539e3b1f7753a342081fc76c2e825cfcfb07403805efcc328e"
+    },
+    "public\\assets\\cases\\citrus\\Citrus_x_FaoSchwarz&ToysCenter.webp": {
+      "hash": "ab08792f279de926197b64dfb8197ff3ebbaf42775b59c8605f15995f85083bc"
+    },
+    "public\\assets\\cases\\citrus\\citrus.jpeg": {
+      "hash": "68a767f82599b60d1e51cf1e75f2cc62dd7bd58b74394201d3ea5f8ea93a443d"
+    },
+    "public\\assets\\cases\\cooltra\\Cooltra_x_Sonic3_square.webp": {
+      "hash": "e845bbe4cb58b3ae75d9c5087a61afcc50a159e23bde7cbbcb0534d4feb2d8c2"
+    },
+    "public\\assets\\cases\\cooltra\\Cooltra_x_Sonic3.webp": {
+      "hash": "e7b8dc7ee48bc7fbefbc10aee5db1b19ce4aaa017049b00ca05aa8bd59a4f28a"
+    },
+    "public\\assets\\cases\\eathappy\\BulletTrain_x_Eathappy.webp": {
+      "hash": "692161f985e8bc2fd69dfab026df1b6579ecd69287ce67d157781ef1ba0735bc"
+    },
+    "public\\assets\\cases\\eathappy\\BulletTrain_x_Eathappy2.webp": {
+      "hash": "936f506d42d1de4ed1d2bbf98b7138b0cf832574ccc0175b1447144a6b600229"
+    },
+    "public\\assets\\cases\\eathappy\\EatHappy&Wakame_x_BulletTrain.webp": {
+      "hash": "4461a77fd8c828377fc7e03d477d8ef5701de9cfa9af8e2ae6554fba20423ef1"
+    },
+    "public\\assets\\cases\\footlocker\\footLocker_x_goat_square.webp": {
+      "hash": "f536a1b6756279120f1bfab049311ba26b35e99747dfa80b4cc996fefe87a1ce"
+    },
+    "public\\assets\\cases\\ilovericcio\\ILoveRiccio_x_Whitney.webp": {
+      "hash": "ac4fb65d0a5cd8a46204de9dedbac2696c8585172fa0edb4c8809fbafd2da01d"
+    },
+    "public\\assets\\cases\\melanzi\\Melanzi_x_Gardaland.webp": {
+      "hash": "e8a415d0f3f6723742eb5c4d0e8288187d1f983de10447f9f275f22e8f9a23d8"
+    },
+    "public\\assets\\cases\\melinda\\Melinda_x_PawPatrol.webp": {
+      "hash": "6dffa915f0ca7e23bab6cd558becb0c5b3d7c822fff997483aa3a8be2488781f"
+    },
+    "public\\assets\\cases\\milka\\cover_milka.jpg": {
+      "hash": "32dd3112901a13fff89a9d1b9b90664529528fe6392481a85db90223c66b4fc4"
+    },
+    "public\\assets\\cases\\milka\\cover_milka2.jpg": {
+      "hash": "8648b194fbe9dd158484c2d297de3b9844e4e3f1c17b75b82fa4c7391723a8b4"
+    },
+    "public\\assets\\cases\\milka\\galleria\\milka1.jpg": {
+      "hash": "cfcfb88a4c4c3682362e542716544e662288e774297f1f3fe58f998fc0254422"
+    },
+    "public\\assets\\cases\\milka\\galleria\\milka2.jpg": {
+      "hash": "2f8cc6d6d30530866c82aa1e1d33058846fcc3324c707534babbe384ab8c4088"
+    },
+    "public\\assets\\cases\\milka\\galleria\\milka4.jpg": {
+      "hash": "063d5ac58fee5efad4b7ad7cf4f178173278d6dc5bacc5cf7ec42aadf3e65d93"
+    },
+    "public\\assets\\cases\\milka\\galleria\\tour_1.jpg": {
+      "hash": "b46da48684826d09efafe8797a4ca0eebf0814fdaf53244ee49fddc3cb06a62a"
+    },
+    "public\\assets\\cases\\milka\\galleria\\tour_2.jpg": {
+      "hash": "dde95ee06dd0c283452e2b07636151775e1b371f0b95093358ce6fc6dbfa74c7"
+    },
+    "public\\assets\\cases\\milka\\galleria\\tour_3.jpg": {
+      "hash": "2e4b52ceda763ecad3cc1071f971bfd81c8d7d7fcdecac454e273f28e305ed76"
+    },
+    "public\\assets\\cases\\milka\\Milka_x_ToysCenter23_24.webp": {
+      "hash": "a72973004632625d2d0cd7777742f6bb213ca9ed3f52f0ca23e0b15f44354591"
+    },
+    "public\\assets\\cases\\milka\\Milka_x_ToysCenter24_25_square.webp": {
+      "hash": "ad916d1c390fc083572da7d207b559f11502084b798e3077e1d2017423379f19"
+    },
+    "public\\assets\\cases\\milka\\Milka_x_ToysCenter24_25.webp": {
+      "hash": "f213c46b6c46307f75eb7812bf8289f5430ba7ab65aa6f38d5f3c5c0dff380ec"
+    },
+    "public\\assets\\cases\\milka\\milka1.jpg": {
+      "hash": "a1bafb0f905240ff493dc610c95eeac0b01ecd9601c80565b1429494d39086d6"
+    },
+    "public\\assets\\cases\\milka\\milka12.jpg": {
+      "hash": "7d7024227dc8d53c5ec2c7e84b2f58915576fc0f582d34d0cb5da0db92450060"
+    },
+    "public\\assets\\cases\\milka\\milka2.jpg": {
+      "hash": "d36433a0b9ea074f6633a6adf614fcfe3a06e5bb0c554736b29db59a7fad4a8d"
+    },
+    "public\\assets\\cases\\milka\\milka2.png": {
+      "hash": "081415e87f6921a64b6cf7fd15be9c8dfdcf1cfcaadef3cf201de3aac00dfbd0"
+    },
+    "public\\assets\\cases\\milka\\milka22.jpg": {
+      "hash": "74b423f99685b531082be7ab6364f9efbb4a57ab05e16b533eb6c13076f361f3"
+    },
+    "public\\assets\\cases\\milka\\milka3.jpg": {
+      "hash": "ca37f83087c10a55925aef2d6255f6e5934fcb2b216e3c2550689d4bbc14b2b2"
+    },
+    "public\\assets\\cases\\milka\\milka32.jpg": {
+      "hash": "78ebfa410f26a72471f3f58a48b3e7c6aeb91e70657a3e4b90a63ff1abac4bbf"
+    },
+    "public\\assets\\cases\\milka\\spot_milka-2.jpg": {
+      "hash": "350e3bff52cf11675e7a6ea6f7e44e15e91e4ab96440359143730f306acd86dd"
+    },
+    "public\\assets\\cases\\milka\\valigette.jpg": {
+      "hash": "944fcd1b7cb800c6d965d09985c1bf777ae2310636a00341cfe74ac6167109e4"
+    },
+    "public\\assets\\cases\\milka\\valigette2.jpg": {
+      "hash": "d3d23dd31031441b9d7170796e5d0e5f5bc822bf44023632710e95657747d7b4"
+    },
+    "public\\assets\\cases\\nestle\\Nestle_x_Aquaman_square.webp": {
+      "hash": "a3d4231c4494d53e74dae6be11bf5868ef665374aa5bdfd6f8beccba1f413c22"
+    },
+    "public\\assets\\cases\\nestle\\Nestle_x_Aquaman.webp": {
+      "hash": "dca38066eda535afd5053bd5c18bcb410fed6e774bfa1c43b13e3863e7edc153"
+    },
+    "public\\assets\\cases\\nestle\\nestle.jpg": {
+      "hash": "0501031b403a3689a856a44441ecbb169e26fcfa961749d9b9ddfd4f44b3ce13"
+    },
+    "public\\assets\\cases\\orociok\\cover_orociok.jpg": {
+      "hash": "3e49e186547e2b8df217e1c948acff2fb3e5a89b1cd2e1ce18ed5e8782f8ef64"
+    },
+    "public\\assets\\cases\\orociok\\OroCiok_x_ToysCenter.webp": {
+      "hash": "6db113d79834d6f597cf192b9b818c12104b8a9f6ca313ee1abb68c44ff6d7ef"
+    },
+    "public\\assets\\cases\\orociok\\orociok.jpeg": {
+      "hash": "a1001a06cd9f89b7cf73f4a279ed554c327d5c69f080ea49cb37fe974c477e01"
+    },
+    "public\\assets\\cases\\pupa\\pupa_x_cimetempestose_square.webp": {
+      "hash": "98208432dfbc7f1df161b092c04d10ec4cb91b95358b89f8e0e2e1fabc7581f9"
+    },
+    "public\\assets\\cases\\rossopomodoro\\cover_rossopomodoro_new.jpg": {
+      "hash": "56be79d85464082d1611326bc489889f990492e8e02978db1e2931b75cf5e30f"
+    },
+    "public\\assets\\cases\\rossopomodoro\\cover_rossopomodoro2.jpg": {
+      "hash": "0b0a84c4903ab1eafc9f182ff225a437fca88e1d6bebf8b971a09245d329ed67"
+    },
+    "public\\assets\\cases\\rossopomodoro\\cover_rossopomodoro22.jpg": {
+      "hash": "e6e8ca7bd2a27933dcf198728cb56300f02888f4d911d4ea92a17aaf39362d36"
+    },
+    "public\\assets\\cases\\rossopomodoro\\cover_rossopomodoro3.jpg": {
+      "hash": "8880210eb8963700061f2ccfd20ed58a509d9de861ae9921a543f285c3c7e969"
+    },
+    "public\\assets\\cases\\rossopomodoro\\ghostbusters\\Rossopomodoro_x_Ghostbusters.webp": {
+      "hash": "b320107ab23bdff8c608f41f09b55120633de4e2edc23a28d29ef874053eed1c"
+    },
+    "public\\assets\\cases\\rossopomodoro\\rossopomodoro_2.jpg": {
+      "hash": "0b0a84c4903ab1eafc9f182ff225a437fca88e1d6bebf8b971a09245d329ed67"
+    },
+    "public\\assets\\cases\\rossopomodoro\\rossopomodoro_3.jpg": {
+      "hash": "b22d754685ad909e745dc3cd509a74aab459175c3e15c506d0e93b18468b2286"
+    },
+    "public\\assets\\cases\\rossopomodoro\\rossopomodoro.jpeg": {
+      "hash": "c473dda0814fb63110513d639ac12072d6bd66e42e28db4b91ff19d99f1a925b"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_01.JPG": {
+      "hash": "7ca74985f24840f5f0c70cf93904a9650ca0053267cdd6ef7a36c0bb2f8936ea"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_02.JPG": {
+      "hash": "1b0af2b08ff3a3719016aaa6d839a0eea98e995143b297a50ead06e79c75727b"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_03.JPG": {
+      "hash": "834833e6d0ab9d5a597a61d46623bc93cff7a29ae6f236d73d60ee401030d5ed"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_04.jpg": {
+      "hash": "b5eddc3b9166a4a6a4f80858f7bf91cbcc2c945a66558c3307057e7f8e9a09e6"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_05.jpg": {
+      "hash": "1d8f409a5eae47bd5edd8954aedd555912635666351ffa14df5ec5e6ebdc5b2e"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_06.jpg": {
+      "hash": "77e2c32a0fdc39cfa99807a2625ad7cf6033bcd84dd395a035be671c96ca8aa9"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_07.jpg": {
+      "hash": "0f48b4ca9583a72de69439de93031bb40c8e49b0cb228aaa75ebf3223d5f529b"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_09.jpg": {
+      "hash": "e936ae1e4bb8cc2f5f27a6ce3e272728011951309af179219be8884a4bf5b530"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_10.jpg": {
+      "hash": "0f2690f1a16d96a7b55916f15bb7e26d2615aa37fc71e7b05d82862a0b1d6a1e"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_11.jpg": {
+      "hash": "7dae3d0be7f5e5a87f17c13e47aae22f15c928bb1994df40abca7b4c1462056b"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_12.jpg": {
+      "hash": "597fbe009fbe7ef614e5f02b042981cf00d389e6f4a4b33e2441dd43ccec5982"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_13.jpg": {
+      "hash": "a3b4a4daeaf3581cb2160d0ad3a234cbcb3e0c33cb10b7cd86fa676e83db22ac"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_14.jpg": {
+      "hash": "3ab8e31c415ab575e4ffd0c358b0aa11e51c234531f09181100574cd764f54f6"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\galleria_15.jpg": {
+      "hash": "ff46c03c751f550fc74fab9ddeabdd97a60ad8c1db3ec030b5cf2d530c585317"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\giffoni.jpg": {
+      "hash": "e8c65ae15d657b7f303c7a2911c25a4b50fbfee1481da9a50603548f40a7334e"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\img1.jpg": {
+      "hash": "1f4134a2387b2d3dad23f11c2cfc1908c82efbf488b091dfebdebec8dbd12c41"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\img2.jpg": {
+      "hash": "57000ee25af7e3cd11db5d41af48059e05b7150e75e851c3cba191cbf5780674"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\img3.jpg": {
+      "hash": "49a167d773e12586da951f9d627ab1a225d178d047dbf0f84589b68f131012ee"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\Rossopomodoro_x_TartarugheNinja.webp": {
+      "hash": "e5fa5786e5e9e83fefc052e089225149db79db3f2745267689763f82e40e132b"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\spot-0.jpg": {
+      "hash": "3c29fd7809e656f9cb5d6113105ffccc6b75ca20c736348844ae247850efd8e3"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\spot-1.jpg": {
+      "hash": "5011fc628c31547c1e1d27c90288b9d33ed7da7cf68bbca4bd72897a84d214fa"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\spot-2.jpg": {
+      "hash": "464a64187b1f9be500ecd134809134374f00f955b794e7f9f2b028b0700610e8"
+    },
+    "public\\assets\\cases\\rossopomodoro\\tartarughenija\\spot-3.jpg": {
+      "hash": "a1b0cf4f148e9aff5aebc70951452cee34ef9ecd601627f043342573cdd1fa52"
+    },
+    "public\\assets\\cases\\rsliving\\R5Living_x_IlTalentodiMrCrocodile.webp": {
+      "hash": "55b6c5c2a5b83c5c0b313d9ad1385045f79868823e812142b8691b8d6e577d2f"
+    },
+    "public\\assets\\cases\\santanna\\SantannaPro_x_MissionImpossible_square.webp": {
+      "hash": "6f1b78a51bfe0bc5c81ac232d7bf72c5950e9f1361fa2a45ba7179b1f411f6cc"
+    },
+    "public\\assets\\cases\\santanna\\SantannaPro_x_MissionImpossible.webp": {
+      "hash": "ba07a76fc6c316ca8f5e0edbab53dba74242ac4ff8aec6747da36fd7466bc458"
+    },
+    "public\\assets\\cases\\santanna\\SantannaPro_x_MissionImpossible2.webp": {
+      "hash": "83f1079146be0ccf3a34ba2f2fd58b7c07081353f5296996faff9a15a090aced"
+    },
+    "public\\assets\\cases\\slomp\\Slomp_x_IPuffi_square.webp": {
+      "hash": "7a9290ffaffc9497d6b109fcc5bea38d731dfca1cfad1603fead43bacb37f568"
+    },
+    "public\\assets\\cases\\slomp\\Slomp_x_IPuffi.webp": {
+      "hash": "4e9ced972c6c3c6e708ddd805f15ce59406ed0a2f95b6a5cb8d1e8531423c88c"
+    },
+    "public\\assets\\cases\\sony\\SpidermanAcrossTheSpiderverse_x_RoadshowSony.webp": {
+      "hash": "555ccd97c8c8cb7f9069c95c9b6b981830db1ae839421a029c3b7b2496da7af3"
+    },
+    "public\\assets\\cases\\spongebob\\BestWestern_x_SpongeBob_2500x2500.jpg": {
+      "hash": "60759978c0b527dfda04375b9028420a2dfedd419e929274f963848573b3c32d"
+    },
+    "public\\assets\\cases\\spongebob\\Ogyre_x_SpongeBob.jpg": {
+      "hash": "1eb7bb3f485b51b3b1fdfb81f2b63616f93d9b0068852ab56a90f769de082692"
+    },
+    "public\\assets\\cases\\treccani\\cover_treccani_new.jpg": {
+      "hash": "6507c4fcf3c76cfd409b8f9c7a1e6153bb2771a2e232ff4e90c77cefb47f549a"
+    },
+    "public\\assets\\cases\\treccani\\cover_treccani.jpg": {
+      "hash": "e40c5fc0105be3d1a3c99ba6885ddec4f879458f111be90854c924b0e3e1af3f"
+    },
+    "public\\assets\\cases\\treccani\\Treccani_x_FaoSchwarz_square.webp": {
+      "hash": "3ff7ad78ac25df5e4f4dc276673faa9262b3b23638778ff0126183b9d78a4992"
+    },
+    "public\\assets\\cases\\treccani\\Treccani_x_FaoSchwarz.webp": {
+      "hash": "2129b4d282c8be3847b02bb1696e03ca45c2b68359dc5073d85518ff5af55154"
+    },
+    "public\\assets\\cases\\treccani\\treccani1.jpg": {
+      "hash": "2dc896a54130ef02c2e2a9c26ca192c80de02d2d03d6e6903e9d80f414c9caa7"
+    },
+    "public\\assets\\cases\\treccani\\treccani10.jpg": {
+      "hash": "4e5852fa94e033a05f39b44d5bf805304122335248c98dfe809dab61cf76d2b2"
+    },
+    "public\\assets\\cases\\treccani\\treccani2.jpg": {
+      "hash": "8b477fb914dc26d45ab7fec1d331fe8c7f671a0e8d22fb84446614f0f24746a2"
+    },
+    "public\\assets\\cases\\treccani\\treccani3.jpg": {
+      "hash": "8abdeb3083f4cdbce286fe82b0866d58e9633dbff222f52cf479a279e35b67a6"
+    },
+    "public\\assets\\cases\\treccani\\treccani5.jpg": {
+      "hash": "160f153011cae3959e03f2cbb492cb5793ebf697a691a088d89a52153f20c2e9"
+    },
+    "public\\assets\\cases\\treccani\\treccani7.jpg": {
+      "hash": "6f073e112169cfc5788b5112db718f619631d6fdb083d89c3f058b0968c7db5b"
+    },
+    "public\\assets\\cases\\treccani\\treccani8.jpg": {
+      "hash": "85f1a80feb0d4d9324b625ffaab16edfadb5dce25054325210037f41715cecec"
+    },
+    "public\\assets\\cases\\treccani\\treccani9.jpg": {
+      "hash": "958bc3c1928d03d3a816b6e6ceda0152c7df149644d7c28ac0836154ec47e0e2"
+    },
+    "public\\assets\\cases\\untildown\\cover_untildown_romics.png": {
+      "hash": "c84b626ea8aa94fdf5f91918633841d1ea21e88040d2fec0a3f3f762ab98f4ec"
+    },
+    "public\\assets\\cases\\untildown\\UntilDawn_x_Romics2025.webp": {
+      "hash": "a7707510b5db5f354f49852a67a918038d78c78ed09ccc1fa1d2db1c5e0c8796"
+    },
+    "public\\assets\\cases\\yummers\\arrampicata.jpg": {
+      "hash": "a8539597b4812c9d92093bd42a478a7cae2f68c3f7bd6af12fbde25b52dc54f2"
+    },
+    "public\\assets\\cases\\yummers\\cover_yummers.jpg": {
+      "hash": "e4a2fb67733277eaca1eccae83eebe716b786e7cc0560ab9242871b4f5f98f68"
+    },
+    "public\\assets\\cases\\yummers\\gallery\\gallery1.jpg": {
+      "hash": "572f399cd0b7b002a78cbe62cfc0977e346aae1e4a1263de2aedb25acf1414e1"
+    },
+    "public\\assets\\cases\\yummers\\gallery\\gallery2.jpg": {
+      "hash": "aae1bd4ce7cda160b300ff4791df22a7c8f47d0b84e9775b1f7befaff86aeed0"
+    },
+    "public\\assets\\cases\\yummers\\gallery\\gallery3.jpg": {
+      "hash": "9eae442611c23039b9fffe0ea8111f312d0aa2f127695d626781c5d6f02c40e1"
+    },
+    "public\\assets\\cases\\yummers\\gallery\\gallery4.jpg": {
+      "hash": "aa9d23401b0c7e3e0d6c7f4285d28e6607cda0a1b9b070433d0b912c4df62fc1"
+    },
+    "public\\assets\\cases\\yummers\\gallery\\gallery5.jpg": {
+      "hash": "32848a68a6eac5fc9a52d3a05579ddded937b143b6440e8f68157063c0a47c3a"
+    },
+    "public\\assets\\cases\\yummers\\gallery\\gallery6.jpg": {
+      "hash": "661b9dd6074f899b72a990d3802563b07f779ca8c478ec659b3ef66f51bd4eb5"
+    },
+    "public\\assets\\cases\\yummers\\img1.jpg": {
+      "hash": "ee53dbbeee6416dc6f706a90d11b73045f335ef5e43074d3e87554902f4dddab"
+    },
+    "public\\assets\\cases\\yummers\\img2.jpg": {
+      "hash": "eed660217e707db6562dc0c5c16fb527858e40592aefa4ff926931f10856cca2"
+    },
+    "public\\assets\\cases\\yummers\\img3.jpg": {
+      "hash": "f9b069765dccd4cf06e86bab720f3ded0dd1756829d87990fd92406f793db452"
+    },
+    "public\\assets\\cases\\yummers\\reel.jpg": {
+      "hash": "9e2accb2e156b483569fdfe6a80b9328e4aa160340c58e9c6e3a4685dc3843c2"
+    },
+    "public\\assets\\cases\\yummers\\Yummers_cover.webp": {
+      "hash": "47167566c93494ac194718f1dc855b7f189074460f5b32c0757d9cd9146e0f4e"
+    },
+    "public\\assets\\cases\\yummers\\Yummers_x_Ghostbusters-MinacciaGlaciale_2.webp": {
+      "hash": "47167566c93494ac194718f1dc855b7f189074460f5b32c0757d9cd9146e0f4e"
+    },
+    "public\\assets\\cases\\yummers\\Yummers_x_Ghostbusters.webp": {
+      "hash": "7eac3464e13268ffce92ace9fb53316e1c900f7775e7261dac446fa4e367d706"
+    },
+    "public\\assets\\cases\\yummers\\yummers.jpeg": {
+      "hash": "272d092d8c0a532c772c3bd836e94f8fe384b8945a0766c9978b72c8678606d5"
+    },
+    "public\\assets\\cofactory_nuovaX_green_bold.png": {
+      "hash": "6bad0210bead5af03d821b2056cab61ff69e8c69ae53e94a57f3251016f4a731"
+    },
+    "public\\assets\\icona_cuore_grigio.png": {
+      "hash": "9329227d6e26f35a18485ad9f79391be4355e0e56f9632be6cee849a7f556549"
+    },
+    "public\\assets\\icona_cuore_rosa.png": {
+      "hash": "480cd9c6505f6f859524d8634e8368f8b82e29260375eebd632c6124648c849c"
+    },
+    "public\\assets\\icona_cuore_rosascuro.png": {
+      "hash": "87ca97949b6f1b7f9f8f036e1dc72236edd4007fc3e2a5c59cb06c90b76a0afb"
+    },
+    "public\\assets\\icona_cuore_verde.png": {
+      "hash": "4a8aef765459760ef06b9ef4a81a5793aeeda1a07c13e89951b154ed6d6d75d7"
+    },
+    "public\\assets\\logo_payoff_sito25.png": {
+      "hash": "ce8ea89bb822d7d9cfd887e2507fe7212e030de91eb53f08ca0812eec27395e0"
+    },
+    "public\\assets\\logo_pieno.png": {
+      "hash": "9964ac34ed0673d9cf10881911c0abb2e1093b2ebb5e90b48e452fbdff92ac62"
+    },
+    "public\\assets\\logo_tracciatoVUOTO.png": {
+      "hash": "925439e8fbfb36e1ba30b6121840101f3a64a903d2f8f8b20074d7bd05f7befc"
+    },
+    "public\\assets\\logo\\iconabg.png": {
+      "hash": "80e61bd7512a29f60ab212410490d4298b82f2a4224c20bbb04930f20be664e7"
+    },
+    "public\\assets\\logo\\logo_intero.png": {
+      "hash": "c8732238c656b4b798bbf05b3094692475412f6793a157b2b7639b8d9aa1521e"
+    },
+    "public\\assets\\logo\\new_logo_grey.png": {
+      "hash": "030f1812f7ea513bb2f14ca12c60289261b8bb0184ab1643eec708c577b521c4"
+    },
+    "public\\assets\\logos\\logo_1.png": {
+      "hash": "faf080dab5b2574a18f8c9608860c177721f8e7ce2645518daf358faf4870e5d"
+    },
+    "public\\assets\\logos\\logo_10.png": {
+      "hash": "bd971d60373b1bd2dacdb5353d38646eb93997bccc26be3d70029a463cb3810c"
+    },
+    "public\\assets\\logos\\logo_11.png": {
+      "hash": "a34383f3e1cd34804c9233eb79052b61bf04116b00ee66ee8db430a00367035e"
+    },
+    "public\\assets\\logos\\logo_12.png": {
+      "hash": "78523c4d2ecb4b2e47ddbb187f880d3836c940cb26b026f746fbef722dbb5005"
+    },
+    "public\\assets\\logos\\logo_13.png": {
+      "hash": "776169185cd254b4c8e2fbf0a7d9750f12e00f70db3b8ce7d2c7e62595eb32ff"
+    },
+    "public\\assets\\logos\\logo_14.png": {
+      "hash": "2cf40d6923f03f0a3e59f1c33e57075d3257a75dae16b21b5e1cdbb84bf59834"
+    },
+    "public\\assets\\logos\\logo_15.png": {
+      "hash": "ddc12eee25d9b14d560ac7b474468cd36817fcbee07e80e24177ce4fd60a279a"
+    },
+    "public\\assets\\logos\\logo_16.png": {
+      "hash": "a15bd4ea4eaa115d7768be25a798d3edf156174b992c4285a0ab0b4146a1e127"
+    },
+    "public\\assets\\logos\\logo_17.png": {
+      "hash": "3d2206b3a387d2d5241a1cff0bbb3872bd4b17cf6c35b1bbe7cbfb7d8501134c"
+    },
+    "public\\assets\\logos\\logo_18.png": {
+      "hash": "601eb0e6b744210db532a89979ddb7fa46c2ea8b52b7af3dfd54ae05be6e3661"
+    },
+    "public\\assets\\logos\\logo_19.png": {
+      "hash": "73b8a68658904e851390b9c96634b0e294cd9475df8775625e47a235c2755488"
+    },
+    "public\\assets\\logos\\logo_2.png": {
+      "hash": "95b9ebd1afce285d4a24aee8500d4a2849a97b7d1c70e0ff80145e9fd5c44408"
+    },
+    "public\\assets\\logos\\logo_20.png": {
+      "hash": "ff6bf82b08aac5e96954f2ac56b99c74454e26f4cd40a845e0ebcd9f856e4c9f"
+    },
+    "public\\assets\\logos\\logo_21.png": {
+      "hash": "48b1b13c34a83bfce9968d8f8095973cb770ff1813fee1cc2a39b2246677d50a"
+    },
+    "public\\assets\\logos\\logo_22.png": {
+      "hash": "52b77023fbc620ff0efe244e082317a76208d55b773211ea24a906c42681501d"
+    },
+    "public\\assets\\logos\\logo_23.png": {
+      "hash": "03f3fabd619162e810b015f67cb1057dedbdf782487012648909dd20406f6af7"
+    },
+    "public\\assets\\logos\\logo_24.png": {
+      "hash": "464a6e1846e881d76d8fba8711437226ad1ee626875499f9d36f6b755091939a"
+    },
+    "public\\assets\\logos\\logo_25.png": {
+      "hash": "74e1541a3060734552ab8e848e8ef3358b7296cf3be6c19069d9d269b5375114"
+    },
+    "public\\assets\\logos\\logo_26.png": {
+      "hash": "d2d252bb3811f23a7c73013d7ad13644d36b2ad59907f9469ea126d47e9cebd5"
+    },
+    "public\\assets\\logos\\logo_27.png": {
+      "hash": "103151b2fab409027f212054e8bbef8f41e5b8bc5f5c2756a68177034071b247"
+    },
+    "public\\assets\\logos\\logo_28.png": {
+      "hash": "8456bddc115c6958df02bd0bc98ecaef361f793df313689b1dd93774e2406ce2"
+    },
+    "public\\assets\\logos\\logo_29.png": {
+      "hash": "95c29f8c0e8c46446ea1d1c1a5eb2b2a16b1527f7e2f26ac2029c9b0a55c3bd7"
+    },
+    "public\\assets\\logos\\logo_3.png": {
+      "hash": "755d6a6dfa8891f6e1083ae380fb4dcb6c04d8cdfe274e28afa3391580871de0"
+    },
+    "public\\assets\\logos\\logo_30.png": {
+      "hash": "d0dd0ef06444131a2907b3aa60e1d5e2bc9c3d4d6f129b5e55998212896e77cf"
+    },
+    "public\\assets\\logos\\logo_31.png": {
+      "hash": "31c064f298ad3a74a51fbe3ee90a101ad3c52f1ecb1290d0de75cad46c5c8d41"
+    },
+    "public\\assets\\logos\\logo_32.png": {
+      "hash": "358ab35ba4f1fdb7148095459e6696a4bb0fdcdf3bfdc4f4bad29a80cea82f94"
+    },
+    "public\\assets\\logos\\logo_33.png": {
+      "hash": "78ddaa4c941edf8f1fdf7e879f368197b844695dc64937b3f873542a1a3bd3bb"
+    },
+    "public\\assets\\logos\\logo_34.png": {
+      "hash": "4751e183c5283b8ccaa2926d0452e275a9d79e75d49461d858f035b8ceba3c70"
+    },
+    "public\\assets\\logos\\logo_35.png": {
+      "hash": "707e0587e50ff1fe3bf0da85760d743b7c957d1dc5d2c15dceb16756b57096a4"
+    },
+    "public\\assets\\logos\\logo_36.png": {
+      "hash": "f371aa28b802d5608e14be8dad8648f50c1a9e6c6793fb5b08c6b5bf9234868d"
+    },
+    "public\\assets\\logos\\logo_37.png": {
+      "hash": "d0b3d20e81f90a4ef77230d4804087d31e5731f2bf42a1eec814096a0c6a0541"
+    },
+    "public\\assets\\logos\\logo_38.png": {
+      "hash": "5398a510fb8eca5e426f286c6ac09bc09b9d8af0f4b9f987b499f9e9044771ef"
+    },
+    "public\\assets\\logos\\logo_39.png": {
+      "hash": "844c82a764e83fba339827731fc59bd6631b62e1ad4a827bee882a062a20bb88"
+    },
+    "public\\assets\\logos\\logo_4.png": {
+      "hash": "2a9bedf675c27915728c67db58d40fa99bf2125056338f3b0af8bf8f162edb5d"
+    },
+    "public\\assets\\logos\\logo_40.png": {
+      "hash": "e5c825c17ef2ca3e43498893bf91b15bc0478296287bd95342514e088aa2a1a4"
+    },
+    "public\\assets\\logos\\logo_41.png": {
+      "hash": "33957cfd8fcc0c78cb94669dc1cd1c1d85358e1decc1467139db98232df59136"
+    },
+    "public\\assets\\logos\\logo_42.png": {
+      "hash": "25844ba9fa08ec2af70d99ec2ec3974d8f74a623e0d364cec04b4d56df576b92"
+    },
+    "public\\assets\\logos\\logo_43.png": {
+      "hash": "3a83815a33c82d74873f1b7e409c4d4f8fff7f03197e71a0a5de740bc5363ac4"
+    },
+    "public\\assets\\logos\\logo_44.png": {
+      "hash": "9f26a6e8db8bd3eeee08d7e52f0e5887739beb38ecf0df19fc52c00a648ddd4c"
+    },
+    "public\\assets\\logos\\logo_45.png": {
+      "hash": "6a628c4e617d61c9c523abab6eeeb069b5fbcf52e7339e4f8e596a0abc9922f3"
+    },
+    "public\\assets\\logos\\logo_46.png": {
+      "hash": "8bdbed67b107847f73f3143fc46eeb71b6edc3b76db9a493c15fc18cf1dc5c71"
+    },
+    "public\\assets\\logos\\logo_47.png": {
+      "hash": "a66271b94bea0d1d12f0c0481450591dd8efcda6ce662651a3341ae73cd4534f"
+    },
+    "public\\assets\\logos\\logo_48.png": {
+      "hash": "446bc37171af49e93cc62976b970f0678427c9757c118ea5ba4731398687b559"
+    },
+    "public\\assets\\logos\\logo_5.png": {
+      "hash": "ec3e260165ff7bc769590151e1c4808df619afb5fe7371c85c65c0cf16cf8587"
+    },
+    "public\\assets\\logos\\logo_6.png": {
+      "hash": "bf5c3f55bcddfa239521c0a8d1042e56fb255d9dffa3d660e2ac51c1119a820d"
+    },
+    "public\\assets\\logos\\logo_7.png": {
+      "hash": "00ed601f2e12347cc8ccfb6fa3c331f10ede8524f2d7009da108085d472b4715"
+    },
+    "public\\assets\\logos\\logo_8.png": {
+      "hash": "199fa659f878cf2447490ba2a8c0763f8f7461edb7fb17a59465f64577e43527"
+    },
+    "public\\assets\\logos\\logo_9.png": {
+      "hash": "481d6f9b2591f5fc5491551d4adea10f36541527f8f034f67a7c4df6a25ba3e4"
+    },
+    "public\\assets\\milka_og.png": {
+      "hash": "f1549c8a0f8e36180257fd8cd4c09eb71b8557ab1dfa3f73ad8eecf5c429430f"
+    },
+    "public\\assets\\placeholder.png": {
+      "hash": "1245f90fa5830d1dcbf24edb415c65d0e10818f2c23d63a2020d2aa3d7fce346"
+    },
+    "public\\assets\\sprites.png": {
+      "hash": "075ca922d47e9b76a6b25734a08c76ae897ea55ed3a9a8f116ef874958eee062"
+    },
+    "public\\assets\\works\\2.jpg": {
+      "hash": "0e4536cc84bd5333765ffdfa145c366af1fb5517659052ad92a194bf9e6a38cc"
+    },
+    "public\\assets\\works\\3.jpg": {
+      "hash": "9bb50f269e40f14bb0af487e7ce95389391422500e695d2c951509230d7880aa"
+    },
+    "public\\assets\\works\\4.jpg": {
+      "hash": "10d70d3dba6be68110e956fc731ff50730d2b25d43da6ce01e0b808b0a11b80a"
+    },
+    "public\\assets\\works\\5.jpg": {
+      "hash": "bcaf6fcadc245826cb93a56e6fbaa030d8ef9aa6afdce81457988ce740f3d815"
+    },
+    "public\\assets\\works\\6.jpg": {
+      "hash": "16c5939215013120dd9488c321aa3cf053785ed15762c0559e5082a20cc5ac3e"
+    },
+    "public\\assets\\works\\7.jpg": {
+      "hash": "0218ada79ce5f686017bf459250b012e43cf8c23cbf1e6ac6b4c937a084c758c"
+    },
+    "public\\assets\\works\\8.jpg": {
+      "hash": "1356a5a88886c8a547f1185e6517df49099689c77a5165d6e57d391ac70647a0"
+    },
+    "public\\assets\\works\\9.jpg": {
+      "hash": "bcaf6fcadc245826cb93a56e6fbaa030d8ef9aa6afdce81457988ce740f3d815"
+    },
+    "public\\assets\\works\\bobble.png": {
+      "hash": "54e87e26e36229cd9ac465215c8b2d8c222bf5e4c65eb895c02917d069c1382f"
+    },
+    "public\\assets\\works\\bobble1.png": {
+      "hash": "7eab6505e2fb9405242f83508c47fb31545079a5f95e70d47bcd1e3871e66209"
+    },
+    "public\\assets\\works\\bobble2.png": {
+      "hash": "c54868abf023de6d6a9e0295220ee0e749925becf766f95ddab484f26fea6b07"
+    },
+    "public\\assets\\works\\brand1.png": {
+      "hash": "31ab61d5158ad9d4331ddf43cb50cd1cbaf965d49aef86135996783e72d94d50"
+    },
+    "public\\assets\\works\\brand2.png": {
+      "hash": "3f271843b06f032beb793e6900c4c91eb68f84e013b32f5123ff032119831557"
+    },
+    "public\\assets\\works\\citrus.png": {
+      "hash": "990db378aa26ea0b11808a8abe2b4ab0c9892e6f89bb4b5d87ca6b6407c94e68"
+    },
+    "public\\assets\\works\\milka.png": {
+      "hash": "9d218f50dca492ed98a9c3f73c02f83a7a82ca32becc35072bede38c61b634fe"
+    },
+    "public\\assets\\works\\milka1.png": {
+      "hash": "656a0dedaede8cf2fe683c3e8afddd3002f60777410213eb74ce21065fdc759d"
+    },
+    "public\\favicon-16x16.png": {
+      "hash": "e1ed2118ac8b1c4985e4a3d5803b351f154740eeed71c6609e2ff34e63a6679f"
+    },
+    "public\\favicon-32x32.png": {
+      "hash": "b911117f113a6ecd367ec06bcf9fe5f563dbbd1dcd90bd721b27ce1d7a6ff85d"
+    },
+    "public\\mstile-150x150.png": {
+      "hash": "8b5be01faf9dc2170e26be928cccff56aa71e84b681daeef42b49328b0dbe495"
+    },
+    "public\\og-image.jpeg": {
+      "hash": "2863f4b66fae7c95f28ce27a0daa9a962720af17d5b6dba88f3152dcbb6aaa8b"
+    }
+  }
+}

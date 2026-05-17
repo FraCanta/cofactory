@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function LenisScroll() {
   useEffect(() => {
@@ -10,6 +11,8 @@ export default function LenisScroll() {
     const lenis = new Lenis();
     let frameId;
 
+    lenis.on("scroll", ScrollTrigger.update);
+
     function raf(time) {
       lenis.raf(time);
       frameId = requestAnimationFrame(raf);
@@ -19,6 +22,7 @@ export default function LenisScroll() {
 
     return () => {
       cancelAnimationFrame(frameId);
+      lenis.off("scroll", ScrollTrigger.update);
       lenis.destroy();
     };
   }, []);

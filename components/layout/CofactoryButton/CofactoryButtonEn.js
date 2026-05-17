@@ -1,5 +1,5 @@
-import { Icon } from "@iconify/react";
 import React from "react";
+import { FiArrowRight } from "react-icons/fi";
 
 function CofactoryButtonEn() {
   return (
@@ -65,10 +65,8 @@ function CofactoryButtonEn() {
           </text>
         </svg>
         <div className="innerCircle w-[40px] h-[40px] fxl:w-[60px] fxl:h-[60px] flex items-center justify-center border border-white dark:border-third hover:bg-second dark:hover:bg-second">
-          <Icon
-            icon="akar-icons:arrow-right"
-            width="22"
-            height="22"
+          <FiArrowRight
+            size={22}
             className="text-white transition-all hover:scale-125 dark:text-third hover:text-white dark:hover:text-white"
           />
         </div>

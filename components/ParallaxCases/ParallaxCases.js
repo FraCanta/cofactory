@@ -1,11 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { MaskText } from "../MaskText";
-import BlurryLights from "../layout/BlurryLights";
 
-const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
+const ParallaxCases = ({ cases = [], selectedCategory }) => {
   const galleryRef = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   const [isMobile, setIsMobile] = useState(false);
@@ -26,25 +23,28 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
     offset: ["start end", "end start"],
   });
 
-  // Filtra i cases
-  const filteredCases = cases.filter(
-    (el) =>
-      selectedCategory === "All" ||
-      el.categories.some((cat) => cat.name === selectedCategory),
-  );
-
   const numberOfColumns = isMobile ? 1 : selectedCategory === "All" ? 3 : 2;
-  const columns = Array.from({ length: numberOfColumns }, () => []);
-  const columnHeights = Array.from({ length: numberOfColumns }, () => 0);
 
-  filteredCases.forEach((item) => {
-    const itemHeight = 1;
-    const shortestColumnIndex = columnHeights.indexOf(
-      Math.min(...columnHeights),
+  const columns = useMemo(() => {
+    const filteredCases = cases.filter(
+      (el) =>
+        selectedCategory === "All" ||
+        el.categories.some((cat) => cat.name === selectedCategory),
     );
-    columns[shortestColumnIndex].push(item);
-    columnHeights[shortestColumnIndex] += itemHeight;
-  });
+
+    const nextColumns = Array.from({ length: numberOfColumns }, () => []);
+    const columnHeights = Array.from({ length: numberOfColumns }, () => 0);
+
+    filteredCases.forEach((item) => {
+      const shortestColumnIndex = columnHeights.indexOf(
+        Math.min(...columnHeights),
+      );
+      nextColumns[shortestColumnIndex].push(item);
+      columnHeights[shortestColumnIndex] += 1;
+    });
+
+    return nextColumns;
+  }, [cases, numberOfColumns, selectedCategory]);
 
   // Calcolo trasformazioni di parallax per il contenuto interno
   const getParallax = (baseStart, baseEnd) =>
@@ -56,11 +56,6 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
     getParallax(isMobile ? 0 : -150, isMobile ? 0 : dimension.height * 1.5),
   ];
 
-  const allCategories = [
-    "All",
-    ...new Set(cases.flatMap((c) => c.categories.map((cat) => cat.name))),
-  ];
-
   return (
     <div
       ref={galleryRef}
@@ -68,61 +63,38 @@ const ParallaxCases = ({ cases = [], selectedCategory, onCategoryChange }) => {
     >
       <div className="flex items-start justify-center gap-3 md:gap-4">
         {columns.map((columnCases, colIndex) => (
-          <div
+          <motion.div
             key={colIndex}
+            style={{ y: contentY[colIndex] || 0 }}
             className={`flex flex-col gap-y-3 lg:gap-y-8 ${
               numberOfColumns === 3
                 ? "w-full md:w-1/3"
                 : numberOfColumns === 2
                   ? "w-full md:w-1/2"
                   : "w-full"
-            }`}
+            } will-change-transform`}
           >
             {columnCases.map((el, i) => (
-              <>
-                {/* <Link key={i} href={`/stories/${el.button}`}> */}
-                <motion.div
-                  key={i}
-                  style={{ y: contentY[colIndex] || 0 }}
-                  className="relative block overflow-hidden group aspect-square rounded-xs"
-                >
-                  <Image
-                    src={el.img}
-                    alt={el.name}
-                    fill
-                    className="object-cover"
-                  />
-                  {/* <div
-                  className={`absolute inset-0 flex flex-col items-center justify-center gap-y-2 transition-opacity duration-500`}
-                >
-                  <h2 className="flex flex-col items-center justify-center gap-2 text-center uppercase">
-                    <MaskText>
-                      <span
-                        dangerouslySetInnerHTML={{ __html: el.brand1 }}
-                        className={`text-raleway font-regular leading-none text-sm lg:text-[2.5rem] text-white`}
-                      ></span>
-                    </MaskText>
-                    <span className="relative w-2 h-4 mx-2 lg:h-8 lg:w-8 2xl:w-[5rem]">
-                      <Image
-                        src="/assets/cofactory_nuovaX_green.svg"
-                        fill
-                        className="object-cover"
-                        alt="logo"
-                      />
-                    </span>
-                    <MaskText>
-                      <span
-                        dangerouslySetInnerHTML={{ __html: el.brand2 }}
-                        className={`text-raleway font-regular leading-tight text-sm lg:text-[2.5rem] text-white`}
-                      ></span>
-                    </MaskText>
-                  </h2>
-                </div> */}
-                </motion.div>
-                {/* </Link> */}
-              </>
+              <div
+                key={`${el.button || el.img}-${i}`}
+                className="relative block overflow-hidden group aspect-square rounded-xs"
+              >
+                <Image
+                  src={el.img}
+                  alt={el.name || `${el.brand1} ${el.brand2}`}
+                  fill
+                  sizes={
+                    numberOfColumns === 3
+                      ? "(min-width: 768px) 30vw, 90vw"
+                      : numberOfColumns === 2
+                        ? "(min-width: 768px) 45vw, 90vw"
+                        : "90vw"
+                  }
+                  className="object-cover"
+                />
+              </div>
             ))}
-          </div>
+          </motion.div>
         ))}
       </div>
       <div className="h-auto lg:h-[138vh] "></div>

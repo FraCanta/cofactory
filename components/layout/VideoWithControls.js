@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
-import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaPause, FaPlay } from "react-icons/fa6";
+import { PiSpeakerHighFill, PiSpeakerSlashFill } from "react-icons/pi";
 
 export default function VideoWithControls({ src }) {
   const videoRef = useRef(null);
@@ -164,13 +165,11 @@ export default function VideoWithControls({ src }) {
                 onClick={togglePlay}
                 className="p-1 rounded-full bg-third/50 backdrop-blur-lg"
               >
-                <Icon
-                  icon={
-                    isPlaying ? "flowbite:pause-solid" : "flowbite:play-solid"
-                  }
-                  width="28"
-                  className="transition-all duration-300 ease-in-out"
-                />
+                {isPlaying ? (
+                  <FaPause className="transition-all duration-300 ease-in-out" size={28} />
+                ) : (
+                  <FaPlay className="transition-all duration-300 ease-in-out" size={28} />
+                )}
               </button>
 
               {/* VOLUME */}
@@ -181,13 +180,11 @@ export default function VideoWithControls({ src }) {
                     onClick={toggleMute}
                     className="p-2 ml-[2px] rounded-full"
                   >
-                    <Icon
-                      icon={
-                        muted ? "mage:volume-mute" : "mage:volume-down-fill"
-                      }
-                      width="22"
-                      className="transition-all duration-500"
-                    />
+                    {muted ? (
+                      <PiSpeakerSlashFill className="transition-all duration-500" size={22} />
+                    ) : (
+                      <PiSpeakerHighFill className="transition-all duration-500" size={22} />
+                    )}
                   </button>
 
                   {/* SLIDER */}
