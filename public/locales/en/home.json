@@ -2,35 +2,32 @@
   "home": {
     "head": {
       "title": "Cofactory | A brand matchmaking agency",
-      "description": "We create high-impact partnerships, connecting leading brands to deliver distinctive co-marketing campaigns.",
+      "description": "Cofactory is a brand matchmaking agency creating partnerships, collaborations and joint communication campaigns between companies.",
       "keywords": "brand matchmaking, brand collaborations, brand partnerships, brand collaboration agency, joint marketing campaigns",
       "robots": "index, follow",
       "canonical": "https://cofactory.it/en",
-
       "og": {
         "title": "Cofactory | A brand matchmaking agency",
-        "description": "We create high-impact partnerships, connecting leading brands to deliver distinctive co-marketing campaigns.",
+        "description": "Cofactory is a brand matchmaking agency creating partnerships, collaborations and joint communication campaigns between companies.",
         "type": "website",
         "url": "https://cofactory.it/en",
         "image": "https://cofactory.it/og-image.jpeg",
         "site_name": "Cofactory"
       },
-
       "twitter": {
         "card": "summary_large_image",
         "title": "Cofactory | A brand matchmaking agency",
-        "description": "We create high-impact partnerships, connecting leading brands to deliver distinctive co-marketing campaigns.",
+        "description": "Cofactory is a brand matchmaking agency creating partnerships, collaborations and joint communication campaigns between companies.",
         "image": "https://cofactory.it/og-image.jpeg"
       },
-
       "schema": {
         "organization": {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Cofactory",
           "url": "https://cofactory.it/en",
-          "logo": "https://cofactory.it/logo.png",
-          "description": "We create high-impact partnerships, connecting leading brands to deliver distinctive co-marketing campaigns."
+          "logo": "https://cofactory.it/assets/logo/logo_intero.png",
+          "description": "Cofactory is a brand matchmaking agency creating partnerships, collaborations and joint communication campaigns between companies."
         },
         "website": {
           "@context": "https://schema.org",
@@ -42,7 +39,6 @@
     },
     "hero": {
       "title": "<div class='block mb-2'>YES. WE ARE A<BR/>  <span class=' text-stroke2'>MATCHMAKING</span> AGENCY.</div>",
-
       "description": [
         {
           "text": "We are the first <span class='px-1 italic2 text-second font-raleway'>matchmaking</span> agency for brands: we conceive and develop joint marketing campaigns. "
@@ -52,7 +48,6 @@
         }
       ]
     },
-
     "modal": [
       {
         "title": "Don’t worry,<br/> <span class='text-stroke3 font-bebas'>We make the first move.</span>",
@@ -76,7 +71,9 @@
       "text6": "meet our stories",
       "text7": "meet our stories"
     },
-    "ctaMarquee": { "text1": "scopri le nostre storie" },
+    "ctaMarquee": {
+      "text1": "scopri le nostre storie"
+    },
     "cases": [
       {
         "media": "/assets/cases/calzedonia/Calzedonia_x_CT.webp",
@@ -84,7 +81,12 @@
         "name": "Calzedonia x Cime Tempestose",
         "brand1": "Calzedonia",
         "brand2": "\"CIME TEMPESTOSE\"",
-        "casesItemFeatured": ["digital", "social", "paid influencer", "event"]
+        "casesItemFeatured": [
+          "digital",
+          "social",
+          "paid influencer",
+          "event"
+        ]
       },
       {
         "media": "/assets/cases/santanna/SantannaPro_x_MissionImpossible2.webp",
@@ -137,7 +139,12 @@
         "name": "Cooltra x Sonic 3",
         "brand1": "Cooltra",
         "brand2": "Sonic 3",
-        "casesItemFeatured": ["scooter pop", "contest", "meta ads", "digital"]
+        "casesItemFeatured": [
+          "scooter pop",
+          "contest",
+          "meta ads",
+          "digital"
+        ]
       },
       {
         "media": "/assets/cases/carpisa/Carpisa_x_PaddingtonInPeru.mp4",
@@ -145,7 +152,11 @@
         "name": "Carpisa x Paddington in Perù",
         "brand1": "Carpisa",
         "brand2": "Paddington in Perù",
-        "casesItemFeatured": ["window sticker", "digital", "pop"]
+        "casesItemFeatured": [
+          "window sticker",
+          "digital",
+          "pop"
+        ]
       },
       {
         "media": "/assets/cases/milka/Milka_x_ToysCenter24_25.webp",
@@ -153,7 +164,12 @@
         "name": "MILKA x Toys Center - Natale 2024 2025",
         "brand1": "MILKA",
         "brand2": "Toys Center ",
-        "casesItemFeatured": ["box", "digital", "social", "pop"]
+        "casesItemFeatured": [
+          "box",
+          "digital",
+          "social",
+          "pop"
+        ]
       },
       {
         "media": "/assets/video/UntilDown_x_Romics25.mp4",
@@ -188,7 +204,13 @@
         "name": "TRECCANI x Fao Schwarz",
         "brand1": "TRECCANI",
         "brand2": "Fao Schwarz",
-        "casesItemFeatured": ["pack", "pop", "event", "digital", "social"]
+        "casesItemFeatured": [
+          "pack",
+          "pop",
+          "event",
+          "digital",
+          "social"
+        ]
       },
       {
         "media": "/assets/cases/bobble/bobblebobble.webp",
@@ -196,7 +218,12 @@
         "name": "BOBBLE BOBBLE x Transformers One",
         "brand1": "BOBBLE BOBBLE",
         "brand2": "Transformers One",
-        "casesItemFeatured": ["pack", "pop", "social", "contest"]
+        "casesItemFeatured": [
+          "pack",
+          "pop",
+          "social",
+          "contest"
+        ]
       },
       {
         "media": "/assets/cases/rossopomodoro/Rossopomodoro_x_TartarugheNinja-CaosMutante.mp4",
@@ -204,16 +231,24 @@
         "name": "ROSSOPOMODORO x Tartarughe Ninja: Caos Mutante",
         "brand1": "ROSSOPOMODORO",
         "brand2": "Tartarughe Ninja: Caos Mutante",
-        "casesItemFeatured": ["spot", "pack", "pop", "social"]
+        "casesItemFeatured": [
+          "spot",
+          "pack",
+          "pop",
+          "social"
+        ]
       },
-
       {
         "media": "/assets/cases/nestle/Nestle_x_Aquaman.webp",
         "type": "image",
         "name": "Nestlè x Aquaman",
         "brand1": "Nestlè",
         "brand2": "Aquaman e Il Regno Perduto",
-        "casesItemFeatured": ["pack", "pop", "digital"]
+        "casesItemFeatured": [
+          "pack",
+          "pop",
+          "digital"
+        ]
       },
       {
         "media": "/assets/cases/eathappy/BulletTrain_x_Eathappy2.webp",

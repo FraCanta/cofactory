@@ -58,6 +58,7 @@ function FloatingFilters({ show, selectedCategory, handleCategorySelect }) {
 const Stories = ({ translation }) => {
   const router = useRouter();
   const cases = translation.cards;
+  const schemas = Object.values(translation.head.schema || {}).filter(Boolean);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filtersRef = useRef(null);
@@ -124,19 +125,13 @@ const Stories = ({ translation }) => {
         />
         <meta name="twitter:image" content={translation.head.twitter.image} />
 
-        {/* Schema.org */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(translation.head.schema.organization),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(translation.head.schema.website),
-          }}
-        />
+        {schemas.map((schema) => (
+          <script
+            key={schema["@type"]}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
       </Head>
       {/* FILTRI FLOTTANTI */}
       <FloatingFilters

@@ -15,6 +15,13 @@ import { AiFillCloseSquare } from "react-icons/ai";
 
 const Home = ({ translation }) => {
   const router = useRouter();
+  const schemas = [
+    {
+      ...translation.head.schema.organization,
+      logo: "https://cofactory.it/assets/logo/logo_intero.png",
+    },
+    translation.head.schema.website,
+  ].filter(Boolean);
   const [openModal, setOpenModal] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const colors = ["#1b1b1c", "#80c0c0", "#bb5471"]; // colori diversi per le sezioni
@@ -86,22 +93,13 @@ const Home = ({ translation }) => {
         />
         <meta name="twitter:image" content={translation.head.twitter.image} />
 
-        {/* Schema.org */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              ...translation.head.schema.organization,
-              logo: "https://cofactory.it/assets/logo/logo_intero.png",
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(translation.head.schema.website),
-          }}
-        />
+        {schemas.map((schema) => (
+          <script
+            key={schema["@type"]}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
       </Head>
       <HeroLogo />
       <Hero>
